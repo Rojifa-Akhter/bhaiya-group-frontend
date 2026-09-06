@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-manrope: "Manrope", sans-serif;
+  --color-brand-blue: #2C4798;
+  --color-font-color: #131313; 
+}
+
+/* Custom Styles for Header Links */
+@layer components {
+  .nav-link {
+    @apply font-bold transition-colors duration-300;
+    color: var(--color-font-color); 
+    font-size: 16px;
+  }
+
+  .nav-link:hover {
+    @apply text-brand-blue; 
+  }
+
+  .active-link {
+    @apply text-brand-blue; 
+  }
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/manrope/Manrope-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/manrope/Manrope-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/manrope/Manrope-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

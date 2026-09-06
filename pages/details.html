@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhaiya Group</title>
+
+    <!-- Outfit Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Local CSS (Tailwind compiled output) -->
+    <link rel="stylesheet" href="../assets/css/input.css" />
+    <!-- Custom Scrollbar Style -->
+    <style>
+      .slant-badge {
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+      }
+    </style>
+  </head>
+
+  <body class="font-manrope">
+    <header class="bg-white sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between"
+      >
+        <!-- Logo Section -->
+        <div class="flex-shrink-0">
+          <a href="/" class="flex flex-col items-center">
+            <img src="../assets/images/logo.png" alt="logo" class="h-14" />
+          </a>
+        </div>
+
+        <!-- Navigation Links (Desktop) -->
+        <nav class="hidden lg:flex items-center space-x-10">
+          <!-- Home link matches your color now via .nav-link CSS -->
+          <a href="#" class="nav-link active-link">Home</a>
+          <div class="relative group">
+            <button class="nav-link flex items-center gap-1 cursor-pointer">
+              Destination
+              <i class="fa-solid fa-chevron-down text-[10px] mt-1"></i>
+            </button>
+            <div
+              class="absolute hidden group-hover:block top-full left-0 bg-white shadow-xl rounded-lg p-4 w-48 border border-gray-100"
+            >
+              <a href="#" class="block py-2 hover:text-brand-blue"
+                >Sajek Valley</a
+              >
+              <a href="#" class="block py-2 hover:text-brand-blue"
+                >Cox's Bazar</a
+              >
+            </div>
+          </div>
+          <a href="#" class="nav-link">About Us</a>
+          <a href="#" class="nav-link">Blogs</a>
+          <a href="#" class="nav-link">Hotels</a>
+        </nav>
+
+        <!-- Right Side Button -->
+        <div class="flex items-center gap-4">
+          <a
+            href="#"
+            class="hidden md:flex bg-brand-blue text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition"
+          >
+            Get In Touch
+          </a>
+          <button id="menu-toggle" class="lg:hidden text-gray-800 text-2xl">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE DRAWER -->
+      <div
+        id="mobile-drawer"
+        class="fixed inset-0 z-[60] lg:hidden translate-x-full transition-transform duration-300"
+      >
+        <div
+          id="drawer-overlay"
+          class="absolute inset-0 bg-black/40 backdrop-blur-sm"
+        ></div>
+        <div
+          class="absolute right-0 top-0 h-full w-[280px] bg-white p-8 shadow-2xl flex flex-col"
+        >
+          <div class="flex justify-between items-center mb-10">
+            <span class="font-bold text-xl text-brand-blue">Menu</span>
+            <button id="close-drawer" class="text-gray-500 text-2xl">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="flex flex-col space-y-6">
+            <a href="#" class="nav-link active-link text-lg">Home</a>
+            <a href="#" class="nav-link text-lg border-b border-gray-50 pb-2"
+              >Destination</a
+            >
+            <a href="#" class="nav-link text-lg border-b border-gray-50 pb-2"
+              >About Us</a
+            >
+            <a href="#" class="nav-link text-lg border-b border-gray-50 pb-2"
+              >Blogs</a
+            >
+            <a href="#" class="nav-link text-lg border-b border-gray-50 pb-2"
+              >Hotels</a
+            >
+            <div class="pt-6">
+              <a
+                href="#"
+                class="w-full inline-block text-center bg-brand-blue text-white py-3 rounded-lg font-bold"
+                >Get In Touch</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content Area -->
+    <main class="bg-white">
+      <!-- HERO SECTION -->
+      <section class="bg-white py-12 md:py-20 border-t border-gray-200">
+        <div class="container mx-auto px-4 md:px-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- LEFT: Video -->
+            <div class="lg:col-span-8 flex flex-col">
+              <!-- Header tab: sits ABOVE the video, flush left -->
+              <div class="flex items-stretch h-9 w-fit mb-0">
+                <div
+                  class="slant-badge bg-[#DFE8FF] pl-4 pr-10 flex items-center gap-2 border border-gray-200 border-b-0 border-l-0"
+                >
+                  <div
+                    class="border border-gray-200 border-b-0 px-1 flex items-center gap-1.5"
+                  >
+                    <div class="w-12 h-12 flex items-center justify-center">
+                      <svg
+                        width="80"
+                        height="80"
+                        viewBox="0 0 56 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M20.9974 38.5H45.5C51.2986 38.5 56 33.7986 56 28C56 22.2014 51.2986 17.5 45.5 17.5H20.9974C18.7282 15.7928 15.9647 14.8713 13.125 14.875C5.88087 14.875 0 20.7559 0 28C0 35.2441 5.88087 41.125 13.125 41.125C16.0772 41.125 18.8037 40.1476 20.9974 38.5Z"
+                          fill="#F51E1E"
+                        />
+
+                        <path
+                          d="M13.125 39.375C19.4072 39.375 24.5 34.2822 24.5 28C24.5 21.7178 19.4072 16.625 13.125 16.625C6.84276 16.625 1.75 21.7178 1.75 28C1.75 34.2822 6.84276 39.375 13.125 39.375Z"
+                          fill="white"
+                        />
+
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.066 21.1191C9.93294 21.042 9.78196 21.0014 9.62821 21.0011C9.47446 21.0008 9.32334 21.041 9.19002 21.1176C9.0567 21.1942 8.94587 21.3045 8.86864 21.4374C8.79141 21.5704 8.75049 21.7213 8.75001 21.8751V34.1251C8.74942 34.2792 8.78966 34.4308 8.86664 34.5644C8.94361 34.698 9.05458 34.8088 9.18826 34.8856C9.32195 34.9624 9.47357 35.0024 9.62774 35.0016C9.78191 35.0008 9.93312 34.9592 10.066 34.8811L20.566 28.7561C20.6982 28.679 20.8079 28.5687 20.8841 28.436C20.9603 28.3034 21.0005 28.1531 21.0005 28.0001C21.0005 27.8471 20.9603 27.6968 20.8841 27.5641C20.8079 27.4314 20.6982 27.3211 20.566 27.2441L10.066 21.1191Z"
+                          fill="#F51E1E"
+                        />
+
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M47.25 27.125V25.375H49C49.2321 25.375 49.4546 25.2828 49.6187 25.1187C49.7828 24.9546 49.875 24.7321 49.875 24.5C49.875 24.2679 49.7828 24.0454 49.6187 23.8813C49.4546 23.7172 49.2321 23.625 49 23.625H46.375C46.1429 23.625 45.9204 23.7172 45.7563 23.8813C45.5922 24.0454 45.5 24.2679 45.5 24.5V31.5C45.5 31.7321 45.5922 31.9546 45.7563 32.1187C45.9204 32.2828 46.1429 32.375 46.375 32.375H49C49.2321 32.375 49.4546 32.2828 49.6187 32.1187C49.7828 31.9546 49.875 31.7321 49.875 31.5C49.875 31.2679 49.7828 31.0454 49.6187 30.8813C49.4546 30.7172 49.2321 30.625 49 30.625H47.25V28.875H49C49.2321 28.875 49.4546 28.7828 49.6187 28.6187C49.7828 28.4546 49.875 28.2321 49.875 28C49.875 27.7679 49.7828 27.5454 49.6187 27.3813C49.4546 27.2172 49.2321 27.125 49 27.125H47.25ZM42.0262 24.2874L41.125 27.8924L40.2238 24.2874C40.166 24.0637 40.0222 23.872 39.8237 23.7539C39.6251 23.6359 39.3879 23.6012 39.1639 23.6573C38.9398 23.7134 38.7471 23.8559 38.6276 24.0536C38.5082 24.2513 38.4717 24.4882 38.5262 24.7126L40.2762 31.7126C40.3237 31.9018 40.4329 32.0698 40.5867 32.1897C40.7405 32.3097 40.9299 32.3749 41.125 32.3749C41.3201 32.3749 41.5095 32.3097 41.6633 32.1897C41.8171 32.0698 41.9263 31.9018 41.9738 31.7126L43.7238 24.7126C43.7783 24.4882 43.7418 24.2513 43.6224 24.0536C43.5029 23.8559 43.3102 23.7134 43.0861 23.6573C42.8621 23.6012 42.6249 23.6359 42.4263 23.7539C42.2278 23.872 42.084 24.0637 42.0262 24.2874ZM36.75 31.5V24.5C36.75 24.2679 36.6578 24.0454 36.4937 23.8813C36.3296 23.7172 36.1071 23.625 35.875 23.625C35.6429 23.625 35.4204 23.7172 35.2563 23.8813C35.0922 24.0454 35 24.2679 35 24.5V31.5C35 31.7321 35.0922 31.9546 35.2563 32.1187C35.4204 32.2828 35.6429 32.375 35.875 32.375C36.1071 32.375 36.3296 32.2828 36.4937 32.1187C36.6578 31.9546 36.75 31.7321 36.75 31.5ZM28.875 24.5V31.5C28.875 31.7321 28.9672 31.9546 29.1313 32.1187C29.2954 32.2828 29.5179 32.375 29.75 32.375H32.375C32.6071 32.375 32.8296 32.2828 32.9937 32.1187C33.1578 31.9546 33.25 31.7321 33.25 31.5C33.25 31.2679 33.1578 31.0454 32.9937 30.8813C32.8296 30.7172 32.6071 30.625 32.375 30.625H30.625V24.5C30.625 24.2679 30.5328 24.0454 30.3687 23.8813C30.2046 23.7172 29.9821 23.625 29.75 23.625C29.5179 23.625 29.2954 23.7172 29.1313 23.8813C28.9672 24.0454 28.875 24.2679 28.875 24.5Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span
+                    class="text-[#174BD4] text-sm font-medium whitespace-nowrap"
+                    >Salt Bay Project</span
+                  >
+                </div>
+              </div>
+
+              <!-- Video container — top-left corner is square to connect with tab -->
+              <div
+                class="relative w-full overflow-hidden shadow-xl group cursor-pointer"
+                style="aspect-ratio: 16/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1519449556851-5720b33024e7?q=80&w=2071&auto=format&fit=crop"
+                  alt="Salt Bay"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <!-- Overlay -->
+                <div
+                  class="absolute inset-0 bg-black/15 group-hover:bg-black/25 transition-all duration-300"
+                ></div>
+                <!-- Play button -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div
+                    class="w-16 h-16 md:w-20 md:h-20 bg-white/90 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(0,0,0,0.25)] group-hover:scale-110 transition-all duration-500"
+                  >
+                    <i
+                      class="fa-solid fa-play text-[#2c4294] text-xl md:text-2xl ml-1"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: Interest Form -->
+            <div class="lg:col-span-4 md:mt-8">
+              <div
+                class="bg-[#DFE8FF] p-7 md:p-8 rounded-lg border border-blue-50 flex flex-col gap-4"
+              >
+                <h2
+                  class="text-xl md:text-2xl font-bold text-gray-800 leading-snug mb-1"
+                >
+                  I am interested in this project.
+                </h2>
+
+                <!-- Name -->
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="w-full bg-white px-5 py-3.5 text-sm outline-none placeholder:text-gray-400 shadow-sm focus:ring-2 focus:ring-[#2c4294]/20 transition-all"
+                />
+
+                <!-- Phone -->
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  class="w-full bg-white px-5 py-3.5 text-sm outline-none placeholder:text-gray-400 shadow-sm focus:ring-2 focus:ring-[#2c4294]/20 transition-all"
+                />
+
+                <!-- Email -->
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="w-full bg-white px-5 py-3.5 text-sm outline-none placeholder:text-gray-400 shadow-sm focus:ring-2 focus:ring-[#2c4294]/20 transition-all"
+                />
+
+                <!-- Designation select -->
+                <div class="relative">
+                  <select
+                    class="w-full bg-white px-5 py-3.5 text-sm outline-none text-gray-400 shadow-sm appearance-none focus:ring-2 focus:ring-[#2c4294]/20 transition-all cursor-pointer"
+                  >
+                    <option value="" disabled selected>Designation</option>
+                    <option>Manager</option>
+                    <option>CEO</option>
+                    <option>Investor</option>
+                  </select>
+                  <i
+                    class="fa-solid fa-chevron-down absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 text-[10px] pointer-events-none"
+                  ></i>
+                </div>
+
+                <!-- Textarea -->
+                <textarea
+                  placeholder="What do you want to know?"
+                  rows="4"
+                  class="w-full bg-white px-5 py-3.5 text-sm outline-none placeholder:text-gray-400 shadow-sm focus:ring-2 focus:ring-[#2c4294]/20 transition-all resize-none"
+                ></textarea>
+
+                <!-- Submit -->
+                <button
+                  type="submit"
+                  class="w-full bg-[#2C4798] hover:bg-[#1e2d6b] text-white py-4 rounded-xl font-bold text-base flex items-center justify-center gap-3 transition-all shadow-lg shadow-blue-900/20 active:scale-[0.98] mt-1"
+                >
+                  <i class="fa-solid fa-paper-plane text-sm"></i>
+                  Submit Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- HOTEL SLIDER SECTION -->
+      <section class="bg-[#f2f6ff] py-16 md:py-24">
+        <div class="container mx-auto px-6 md:px-10">
+          <!-- Header Info -->
+          <div class="mb-12">
+            <h2 class="text-[32px] md:text-3xl font-bold mb-4">
+              Salt Bay 5 Star Hotel in Cox’sbazar
+            </h2>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2 text-sm md:text-base">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Inani Beach, Cox’s Bazar,</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm md:text-base">
+                <i class="fa-solid fa-vector-square"></i>
+                <span>3,025 Sq Ft</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Wrapper -->
+          <div class="relative group">
+            <div class="swiper hotelSwiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+                    class="w-full aspect-[4/5] object-cover"
+                    alt="Hotel 1"
+                  />
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1571011299480-13a66557b44a?q=80&w=2070&auto=format&fit=crop"
+                    class="w-full aspect-[4/5] object-cover"
+                    alt="Hotel 2"
+                  />
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop"
+                    class="w-full aspect-[4/5] object-cover"
+                    alt="Hotel 3"
+                  />
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
+                    class="w-full aspect-[4/5] object-cover"
+                    alt="Hotel 4"
+                  />
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop"
+                    class="w-full aspect-[4/5] object-cover"
+                    alt="Hotel 5"
+                  />
+                </div>
+              </div>
+
+              <!-- Swiper Navigation Buttons -->
+              <div
+                class="swiper-button-prev !hidden md:!flex !w-12 !h-12 bg-white/50 hover:bg-white/80 !text-black rounded-full after:!text-lg transition-all !left-4"
+              ></div>
+
+              <div
+                class="swiper-button-next !hidden md:!flex !w-12 !h-12 bg-white/50 hover:bg-white/80 !text-black rounded-full after:!text-lg transition-all !right-4"
+              ></div>
+            </div>
+
+            <!-- Custom Pagination Dots  -->
+            <div class="swiper-pagination text-[#2C4798] !relative !mt-8"></div>
+          </div>
+        </div>
+      </section>
+      <!-- PROJECT DETAILS SECTION -->
+      <section class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-6 md:px-10">
+          <!-- Main Grid Container -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+            <!-- LEFT COLUMN (7/12) -->
+            <div
+              class="lg:col-span-7 lg:border-r border-gray-200 flex flex-col"
+            >
+              <div class="lg:pr-16 pb-14">
+                <!-- 1. Project At a Glance -->
+                <div class="mb-14">
+                  <div class="border-l-[3px] border-[#224194] pl-4 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-900">
+                      Project At a Glance
+                    </h2>
+                  </div>
+                  <div class="grid grid-cols-2 gap-y-6">
+                    <div
+                      class="flex items-center gap-4 text-[#3F3F3F] font-medium"
+                    >
+                      <i class="fa-solid fa-bed text-[#224194] text-lg w-6"></i>
+                      <span class="text-base">Bedrooms: 3,4</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 text-[#3F3F3F] font-medium"
+                    >
+                      <i
+                        class="fa-solid fa-kitchen-set text-[#224194] text-lg w-6"
+                      ></i>
+                      <span class="text-base">Kitchen: 01</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 text-[#3F3F3F] font-medium"
+                    >
+                      <i
+                        class="fa-solid fa-utensils text-[#224194] text-lg w-6"
+                      ></i>
+                      <span class="text-base">Dining room: 01</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 text-[#3F3F3F] font-medium"
+                    >
+                      <i
+                        class="fa-solid fa-bath text-[#224194] text-lg w-6"
+                      ></i>
+                      <span class="text-base">Bathrooms: 3,4</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-4 text-[#3F3F3F] font-medium"
+                    >
+                      <i
+                        class="fa-solid fa-couch text-[#224194] text-lg w-6"
+                      ></i>
+                      <span class="text-base">Living room: 01</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. All the benefits -->
+                <div class="mb-10">
+                  <div class="border-l-[3px] border-[#224194] pl-4 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-900">
+                      All the benefits are there
+                    </h2>
+                  </div>
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 mb-8"
+                  >
+                    <div
+                      class="flex items-center gap-3 text-[#3F3F3F] text-base font-medium"
+                    >
+                      <span class="w-1.5 h-1.5 bg-gray-800 rounded-full"></span>
+                      62% Open Space
+                    </div>
+                    <div
+                      class="flex items-center gap-3 text-[#3F3F3F] text-base font-medium"
+                    >
+                      <span class="w-1.5 h-1.5 bg-gray-800 rounded-full"></span>
+                      0.4 KM Jogging Track
+                    </div>
+                    <div
+                      class="flex items-center gap-3 text-[#3F3F3F] text-base font-medium"
+                    >
+                      <span class="w-1.5 h-1.5 bg-gray-800 rounded-full"></span>
+                      Kids' Play Area
+                    </div>
+                    <div
+                      class="flex items-center gap-3 text-[#3F3F3F] text-base font-medium"
+                    >
+                      <span class="w-1.5 h-1.5 bg-gray-800 rounded-full"></span>
+                      Swimming Pool & Kids' Pool
+                    </div>
+                    <div
+                      class="flex items-center gap-3 text-[#3F3F3F] text-base font-medium"
+                    >
+                      <span class="w-1.5 h-1.5 bg-gray-800 rounded-full"></span>
+                      Rooftop Garden
+                    </div>
+                    <div
+                      class="flex items-center gap-3 text-[#3F3F3F] text-base font-medium"
+                    >
+                      <span class="w-1.5 h-1.5 bg-gray-800 rounded-full"></span>
+                      Daycare Center for Children
+                    </div>
+                    <div
+                      class="flex items-center gap-3 text-[#3F3F3F] text-base font-medium"
+                    >
+                      <span class="w-1.5 h-1.5 bg-gray-800 rounded-full"></span>
+                      Kids' Play Area
+                    </div>
+                    <div
+                      class="flex items-center gap-3 text-[#3F3F3F] text-base font-medium"
+                    >
+                      <span class="w-1.5 h-1.5 bg-gray-800 rounded-full"></span>
+                      Swimming Pool & Kids' Pool
+                    </div>
+                    <div
+                      class="flex items-center gap-3 text-[#3F3F3F] text-base font-medium"
+                    >
+                      <span class="w-1.5 h-1.5 bg-gray-800 rounded-full"></span>
+                      62% Open Space
+                    </div>
+                    <div
+                      class="flex items-center gap-3 text-[#3F3F3F] text-base font-medium"
+                    >
+                      <span class="w-1.5 h-1.5 bg-gray-800 rounded-full"></span>
+                      Jogging Track
+                    </div>
+                  </div>
+                  <p class="text-[#3F3F3F] leading-[1.8] text-base">
+                    Blue Nilima Palace is a thoughtfully planned residential
+                    complex located in the heart of Dhaka, Dhanmondi. The
+                    project features a children's play area, open terrace, and
+                    all essential urban facilities.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3. Download Section -->
+              <div class="border-t border-gray-200 pt-12 lg:pr-16 flex-grow">
+                <div class="border-l-[3px] border-[#224194] pl-4 mb-8">
+                  <h2 class="text-2xl font-bold text-gray-900 leading-tight">
+                    Download for more detailed information.
+                  </h2>
+                </div>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-3 bg-[#224194] text-white px-8 py-3.5 rounded-lg font-bold text-base hover:opacity-90 transition"
+                >
+                  <i class="fa-solid fa-cloud-arrow-down text-lg"></i>
+                  Download Now
+                </a>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN (5/12) -->
+            <div class="lg:col-span-5 lg:pl-16 pt-16 lg:pt-0">
+              <h2 class="text-2xl font-bold text-gray-900 mb-8">
+                Related Projects
+              </h2>
+
+              <div class="divide-y divide-gray-100 border-b border-gray-100">
+                <!-- Project Card -->
+                <div
+                  class="flex items-start gap-5 py-6 first:pt-0 group cursor-pointer"
+                >
+                  <div
+                    class="w-32 h-24 flex-shrink-0 overflow-hidden rounded-md bg-gray-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400&fit=crop"
+                      class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    />
+                  </div>
+                  <div class="space-y-1.5">
+                    <h4
+                      class="font-bold text-gray-900 text-xl leading-snug group-hover:text-[#224194]"
+                    >
+                      Eden Bay 5 Star Hotel In Coxbazar
+                    </h4>
+                    <div class="flex items-center gap-2 text-gray-500 text-sm">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>Inani beach, Cox's bazar,</span>
+                    </div>
+                    <a
+                      href="#"
+                      class="inline-flex items-center gap-2 text-[#224194] font-bold text-base mt-1"
+                    >
+                      View Details
+                      <i class="fa-solid fa-arrow-right text-base"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-start gap-5 py-6 first:pt-0 group cursor-pointer"
+                >
+                  <div
+                    class="w-32 h-24 flex-shrink-0 overflow-hidden rounded-md bg-gray-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400&fit=crop"
+                      class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    />
+                  </div>
+                  <div class="space-y-1.5">
+                    <h4
+                      class="font-bold text-gray-900 text-xl leading-snug group-hover:text-[#224194]"
+                    >
+                      Eden Bay 5 Star Hotel In Coxbazar
+                    </h4>
+                    <div class="flex items-center gap-2 text-gray-500 text-sm">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>Inani beach, Cox's bazar,</span>
+                    </div>
+                    <a
+                      href="#"
+                      class="inline-flex items-center gap-2 text-[#224194] font-bold text-base mt-1"
+                    >
+                      View Details
+                      <i class="fa-solid fa-arrow-right text-base"></i>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-5 py-6 first:pt-0 group cursor-pointer"
+                >
+                  <div
+                    class="w-32 h-24 flex-shrink-0 overflow-hidden rounded-md bg-gray-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400&fit=crop"
+                      class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    />
+                  </div>
+                  <div class="space-y-1.5">
+                    <h4
+                      class="font-bold text-gray-900 text-xl leading-snug group-hover:text-[#224194]"
+                    >
+                      Eden Bay 5 Star Hotel In Coxbazar
+                    </h4>
+                    <div class="flex items-center gap-2 text-gray-500 text-sm">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>Inani beach, Cox's bazar,</span>
+                    </div>
+                    <a
+                      href="#"
+                      class="inline-flex items-center gap-2 text-[#224194] font-bold text-base mt-1"
+                    >
+                      View Details
+                      <i class="fa-solid fa-arrow-right text-base"></i>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-5 py-6 first:pt-0 group cursor-pointer"
+                >
+                  <div
+                    class="w-32 h-24 flex-shrink-0 overflow-hidden rounded-md bg-gray-50"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400&fit=crop"
+                      class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    />
+                  </div>
+                  <div class="space-y-1.5">
+                    <h4
+                      class="font-bold text-gray-900 text-xl leading-snug group-hover:text-[#224194]"
+                    >
+                      Eden Bay 5 Star Hotel In Coxbazar
+                    </h4>
+                    <div class="flex items-center gap-2 text-gray-500 text-sm">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>Inani beach, Cox's bazar,</span>
+                    </div>
+                    <a
+                      href="#"
+                      class="inline-flex items-center gap-2 text-[#224194] font-bold text-base mt-1"
+                    >
+                      View Details
+                      <i class="fa-solid fa-arrow-right text-base"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-[#050a18] text-white pt-20 pb-8 font-manrope">
+      <div class="container mx-auto">
+        <!-- Main Content Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-stretch border-b border-[#3D7B59]"
+        >
+          <!-- Column 1: Logo & Social -->
+          <div class="px-6 lg:px-10 pb-16 lg:pb-20">
+            <div class="mb-6">
+              <img
+                src="../assets/images/footer-logo.png"
+                alt="Bhaiya Group"
+                class="h-12 md:h-18 mb-1"
+                onerror="
+                  this.src =
+                    'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'
+                "
+              />
+            </div>
+            <p
+              class="text-white/60 text-base leading-relaxed mb-8 max-w-[280px]"
+            >
+              You'll find your next Home lean valu you profer You'll find your
+              next Home lean valu you profer
+            </p>
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3">
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-[#4D6356] flex items-center justify-center hover:bg-[#2c4294] transition"
+              >
+                <i class="fa-brands fa-facebook-f text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-sm bg-[#4D6356] flex items-center justify-center hover:bg-[#2c4294] transition"
+              >
+                <i class="fa-brands fa-linkedin-in text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-[#4D6356] flex items-center justify-center hover:bg-[#2c4294] transition"
+              >
+                <i class="fa-brands fa-twitter text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-lg bg-[#4D6356] flex items-center justify-center hover:bg-[#2c4294] transition"
+              >
+                <i class="fa-brands fa-instagram text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="border-t lg:border-t-0 lg:border-l border-[#3D7B59] px-6 lg:px-12 flex flex-col items-center text-center pb-16 lg:pb-20 pt-12 lg:pt-0"
+          >
+            <h3 class="text-xl font-bold uppercase tracking-[0.2em] mb-4">
+              Subscribe
+            </h3>
+            <p class="text-white/60 text-base mb-8 max-w-[220px]">
+              You'll find your next Home lean valu you profer
+            </p>
+
+            <div class="w-full max-w-[280px] space-y-4">
+              <input
+                type="email"
+                placeholder="Email Address"
+                class="w-full bg-transparent border border-white/20 rounded-full px-6 py-2.5 text-base focus:outline-none focus:border-white/50 text-center placeholder:text-white/30"
+              />
+              <button
+                class="w-full bg-[#2c4294] hover:bg-blue-800 text-white py-3 rounded-full font-bold text-base uppercase tracking-widest transition"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+          <!-- Column 3: MENU (এর বাম পাশে ইমেজের দ্বিতীয় লাইনটি থাকবে) -->
+          <div
+            class="border-t lg:border-t-0 lg:border-l border-[#3D7B59] px-6 lg:pl-20 pb-16 lg:pb-20 pt-12 lg:pt-0"
+          >
+            <h3 class="text-xl font-bold uppercase tracking-[0.2em] mb-8">
+              Menu
+            </h3>
+            <ul class="space-y-4 text-base text-white/60">
+              <li>
+                <a href="#" class="hover:text-white transition">Destinations</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">Partnerships</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">Privacy</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: INFORMATION -->
+          <div
+            class="border-t lg:border-t-0 px-6 lg:pl-10 pb-16 lg:pb-20 pt-12 lg:pt-0"
+          >
+            <h3 class="text-xl font-bold uppercase tracking-[0.2em] mb-8">
+              Information
+            </h3>
+            <ul class="space-y-4 text-base text-white/60">
+              <li>
+                <a href="#" class="hover:text-white transition">Our Agents</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">Contact Us</a>
+              </li>
+              <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+              <li>
+                <a href="#" class="hover:text-white transition"
+                  >Terms & Conditions</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright (ইমেজের নিচের টেক্সট) -->
+        <div class="pt-8 text-center px-6">
+          <p class="text-white/60 text-sm tracking-widest">
+            @ 2025. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script for Mobile Hamburger Menu Toggle -->
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".hotelSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const closeDrawer = document.getElementById("close-drawer"); // ID matching
+      const mobileDrawer = document.getElementById("mobile-drawer"); // ID matching
+      const drawerOverlay = document.getElementById("drawer-overlay");
+
+      function toggleMenu() {
+        mobileDrawer.classList.toggle("translate-x-full");
+      }
+
+      menuToggle.addEventListener("click", toggleMenu);
+      closeDrawer.addEventListener("click", toggleMenu);
+      drawerOverlay.addEventListener("click", toggleMenu);
+    </script>
+    <!-- JS for Arrow Navigation -->
+  </body>
+</html>
