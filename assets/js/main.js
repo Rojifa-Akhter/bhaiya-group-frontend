@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // বাইরে ক্লিক করলে বন্ধ হবে
     document.addEventListener('click', (e) => {
       if (wrapper && !wrapper.contains(e.target)) {
         closeMenu();
