@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.award-card').forEach(card => {
+  document.querySelectorAll('.award-card, .reveal-left-wipe').forEach(card => {
     awardsObserver.observe(card);
   });
 
@@ -249,3 +249,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
