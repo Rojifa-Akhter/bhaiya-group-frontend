@@ -70,6 +70,19 @@
       opacity: 1;
       transform: translateX(-50%) translateY(0) scale(1);
     }
+
+    .reveal-left-wipe img,
+    .reveal-left-wipe .reveal-text {
+      clip-path: inset(0 100% 0 0);
+      opacity: 0;
+      transition: clip-path 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.2s ease-out;
+    }
+
+    .reveal-left-wipe.active img,
+    .reveal-left-wipe.active .reveal-text {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
   </style>
 </head>
 
@@ -130,7 +143,7 @@
         <nav class="hidden lg:flex items-center space-x-5 xl:space-x-8">
           <!-- About Us -->
           <div class="relative py-8 menu-wrapper" id="about-menu-wrapper">
-            <!-- About Us ???? -->
+            <!-- About Us বাটন -->
             <button id="about-toggle"
               class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
               <div class="flex items-center gap-1.5">
@@ -539,416 +552,467 @@
       </div>
     </div>
   </header>
+
   <main>
-        <!-- Hero Section -->
-    <section class="relative w-full h-[90vh] min-h-[400px] overflow-hidden">
-      <img src="./assets/images/concern/details-hero.png" alt="Bhaiya Housing" class="absolute inset-0 w-full h-full object-cover object-center" />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80"></div>
+
+
+                <!-- Stories Details Hero Section -->
+    <section class="w-full bg-[#111827] h-auto lg:h-[574px] overflow-hidden pt-20 lg:pt-0 font-manrope relative">
       
-      <div class="container mx-auto px-4 md:px-10 h-full relative z-10 flex flex-col justify-between pt-20 md:pt-28 pb-10 md:pb-12">
-        <div>
-          <a href="concerns.html" class="inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors text-sm font-medium tracking-wide">
-            <i class="fa-solid fa-arrow-left"></i>
-            Back to Concerns
+      <!-- Back Link -->
+      <div class="container mx-auto px-4 md:px-10 lg:absolute lg:top-12 lg:left-0 lg:right-0 z-20">
+        <div class="mb-8 lg:mb-0">
+          <a href="events.html" class="inline-flex items-center gap-3 text-white/90 hover:text-white transition-colors text-sm font-medium tracking-wide">
+            <i class="fa-solid fa-arrow-left text-xs"></i>
+            Back to Events
           </a>
         </div>
-        <div>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wider drop-shadow-md">Bhaiya Housing</h1>
+      </div>
+
+      <div class="container mx-auto px-4 md:px-10 relative z-10 h-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 h-full">
+          
+          <!-- Left Content -->
+          <div class="flex flex-col justify-center max-w-xl self-center h-full pb-10 lg:pb-0 lg:pt-16">
+            <div class="flex items-center gap-2 text-white/90 text-sm mb-4 font-medium">
+              <i class="fa-regular fa-calendar"></i>
+              <span>Jul 18, 2026</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl lg:text-[44px] font-bold text-white uppercase tracking-wider mb-6 leading-tight drop-shadow-md">
+              BHAIYA GROUP OF COMPANY VISION IN REAL STATE BUSINESS
+            </h1>
+            <p class="text-white/70 text-sm md:text-base leading-relaxed">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1500s, when an unknown printer took a galley of type.
+            </p>
+          </div>
+          
+          <!-- Right Image with Custom Frame aligned to bottom -->
+          <div class="relative w-full flex justify-center lg:justify-end items-end h-[400px] lg:h-full lg:pt-16">
+            <!-- Outer Frame -->
+            <div class="w-full max-w-[550px] bg-[#1a2333] p-2 pb-0 shadow-2xl h-full lg:h-[480px] rounded-t-sm">
+              <!-- Inner Border -->
+              <div class="w-full h-full border border-b-0 border-gray-500/50 p-3 pb-0 rounded-t-sm">
+                <img src="./assets/images/events/3.png" alt="Chairman" class="w-full h-full object-cover object-right shadow-inner">
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
+    <!-- Content Section -->
+    <section class="w-full bg-[#F9FAFB] font-manrope">
+            <!-- Breadcrumbs -->
+      <div class="w-full bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4 md:px-10 py-4 flex items-center gap-2 text-sm text-gray-500 overflow-x-auto whitespace-nowrap hide-scrollbar">
+          <a href="index.html" class="hover:text-gray-900 transition-colors">Home</a>
+          <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+          <a href="#" class="hover:text-gray-900 transition-colors">Media</a>
+          <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+          <a href="events.html" class="hover:text-gray-900 transition-colors">Event</a>
+          <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+          <span class="text-gray-900">Bhaiya Group of BHAIYA GROUP OF COMPANY VISION IN REAL STATE BUSINESS</span>
+        </div>
+      </div>
+      
+      <div class="container mx-auto px-4 md:px-10 py-12 md:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+          
+          <!-- Left Content -->
+          <div class="lg:col-span-8 space-y-6 text-[#4B5563] text-sm md:text-base leading-relaxed lg:border-r lg:border-gray-200 lg:pr-10">
+            <h3 class="font-bold text-gray-900 text-lg">Introduction:</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1960s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            
+            <p>Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software.</p>
+            
+            <p>Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software. James Mosley, the librarian at St Bride Printing Library, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's.</p>
+            
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-12 mb-6">About this Event</h2>
+            
+            <h4 class="font-bold text-gray-900">Lorem Ipsum is simply dummy text:</h4>
+            <p>Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software. James Mosley, the librarian at St Bride Printing Library, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" with desktop publishing software.</p>
+            
+            <h4 class="font-bold text-gray-900 mt-8">Lorem Ipsum is simply dummy text:</h4>
+            <p>Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software.</p>
+          </div>
+          
+                              <!-- Right Sidebar -->
+          <div class="lg:col-span-4 space-y-8">
+            
+            <!-- Event Info Card -->
+            <div class="bg-white rounded shadow-sm p-6 md:p-8">
+              <ul class="space-y-6">
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded bg-[#EFF6FF] text-[#3B82F6] flex items-center justify-center shrink-0 mt-1">
+                    <i class="fa-regular fa-calendar-days text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-1">Date & Time:</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">Jul 18-Aug 5, 2024<br>8:00 am - 8:30 pm</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded bg-[#EFF6FF] text-[#3B82F6] flex items-center justify-center shrink-0 mt-1">
+                    <i class="fa-solid fa-location-dot text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-1">Location:</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">EventCity Club & 19 th Street<br>Chicago, IL,Bangladesh</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded bg-[#EFF6FF] text-[#3B82F6] flex items-center justify-center shrink-0 mt-1">
+                    <i class="fa-solid fa-tags text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-1">Category</h4>
+                    <p class="text-sm text-gray-600">Real state business</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded bg-[#EFF6FF] text-[#3B82F6] flex items-center justify-center shrink-0 mt-1">
+                    <i class="fa-regular fa-circle-user text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-1">Organized by</h4>
+                    <p class="text-sm text-gray-600">Bhaiya Group</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Contact Card -->
+            <div class="bg-[#3B82F6] rounded p-6 md:p-8 text-white shadow-sm">
+              <h3 class="text-xl font-bold mb-6 leading-snug">For Media Related Enquiries, Please Contact</h3>
+              
+              <div class="text-sm space-y-1 opacity-90 mb-6">
+                <p>Maroof Sattar Ali</p>
+                <p>Group Head, Communication & Brand</p>
+                <p>Bhaiya group Pvt. Ltd.</p>
+              </div>
+              
+              <div class="text-sm space-y-1 opacity-90">
+                <p>Call: +02025 0000 000 / 2400-5000</p>
+                <p>Fax: +445-32565-6589-25 / 42</p>
+                <p>Mail: example@gmail.com</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
     
 
-        <!-- Sticky Navigation -->
-    <div class="w-full bg-white border-b border-gray-200 sticky top-0 z-40" id="sticky-nav">
-      <div class="container mx-auto px-4 md:px-10 flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
-        <a href="#bhaiya-housing" class="nav-tab py-4 text-[#2563EB] text-sm md:text-base font-semibold border-b-2 border-[#2563EB] transition-colors">Bhaiya Housing</a>
-        <a href="#brands" class="nav-tab py-4 text-gray-500 hover:text-gray-900 text-sm md:text-base font-medium border-b-2 border-transparent transition-colors">Brands</a>
-        <a href="#countries" class="nav-tab py-4 text-gray-500 hover:text-gray-900 text-sm md:text-base font-medium border-b-2 border-transparent transition-colors">Countries</a>
-        <a href="#stories" class="nav-tab py-4 text-gray-500 hover:text-gray-900 text-sm md:text-base font-medium border-b-2 border-transparent transition-colors">Stories</a>
-      </div>
-    </div>
-
-    <!-- Content Area -->
-    <section id="bhaiya-housing" class="container mx-auto px-4 md:px-10 py-16 md:py-24 font-manrope">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-        
-        <!-- Left Content -->
-        <div class="lg:col-span-8 text-[#4B5563] text-sm md:text-base leading-relaxed space-y-6">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <p>Type sheets. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
-          <p>Type sheets. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
-          
-          <h3 class="text-xl md:text-2xl font-bold text-black pt-4 pb-2">Bhaiya Housing has few vision</h3>
-          
-          <h4 class="font-bold text-black">Lorem Ipsum is simply dummy text:</h4>
-          <p>Type sheets. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-          
-          <h4 class="font-bold text-black mt-6">Lorem Ipsum is simply dummy text:</h4>
-          <p>Type sheets. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-          
-          <h4 class="font-bold text-black mt-6">Lorem Ipsum is simply dummy text:</h4>
-          <p>Type sheets. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
-          
-          <h4 class="font-bold text-black mt-6">Lorem Ipsum is simply dummy text:</h4>
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-        </div>
-
-        <!-- Right Sidebar -->
-        <div class="lg:col-span-4 space-y-12 lg:border-l lg:border-gray-300 lg:pl-10 lg:-ml-10">
-          
-                    <!-- Website -->
-          <div>
-            <h3 class="text-xl md:text-2xl text-black font-semibold mb-4">Website:</h3>
-            <a href="#" class="group inline-flex items-center gap-4 border border-[#2563EB] bg-transparent text-[#2563EB] pl-6 pr-2 py-1.5 rounded-full text-sm font-semibold hover:bg-blue-50 transition w-fit">
-              <div class="relative h-5 overflow-hidden pointer-events-none">
-                <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Click to Visit</span>
-                <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Click to Visit</span>
-              </div>
-              <div class="relative w-8 h-8 rounded-full border border-[#2563EB] flex items-center justify-center overflow-hidden ml-1">
-                <i class="fa-solid fa-location-arrow absolute text-xs transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                <i class="fa-solid fa-location-arrow absolute text-xs transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
-              </div>
-            </a>
-          </div>
-
-          <!-- Social Connect -->
-          <div>
-            <h3 class="text-xl md:text-2xl text-black font-semibold mb-4">Stay Connect with us:</h3>
-            <div class="flex items-center gap-4">
-              <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 text-gray-700 rounded hover:bg-[#111827] hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 text-gray-700 rounded hover:bg-[#111827] hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 text-gray-700 rounded hover:bg-[#111827] hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 text-gray-700 rounded hover:bg-[#111827] hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
-        <!-- Brands Section -->
+        <!-- Related Events Section -->
     <style>
-      .reveal-left-wipe .logo-box, .reveal-left-wipe .reveal-text {
-        clip-path: inset(0 100% 0 0);
+      .reveal-fade-up {
         opacity: 0;
-        transition: clip-path 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.2s ease-out;
+        transform: translateY(40px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .reveal-left-wipe.active .logo-box, .reveal-left-wipe.active .reveal-text {
-        clip-path: inset(0 0 0 0);
+      .reveal-fade-up.active {
         opacity: 1;
+        transform: translateY(0);
       }
     </style>
-    <section id="brands" class="w-full bg-[#111827] py-16 md:py-24 font-manrope">
+
+    <section class="w-full bg-white py-12 md:py-20 font-manrope">
       <div class="container mx-auto px-4 md:px-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-10">Brands</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#111827] mb-8 md:mb-12">Related Events</h2>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          
-          <!-- Card 1 -->
-          <div class="reveal-left-wipe group cursor-pointer">
-            <div class="logo-box w-full bg-white h-40 flex items-center justify-center p-6 mb-4">
-              <img src="./assets/images/concern/housing.png" alt="Bhaiya Housing" class="max-h-full max-w-full object-contain" />
+        <div class="flex flex-col max-w-7xl mx-auto">
+          <!-- Event Card 1 -->
+          <div class="reveal-fade-up flex flex-col lg:flex-row bg-transparent overflow-hidden mb-16 md:mb-24 group">
+            <!-- Left Side: Date / Content -->
+            <div class="flex flex-1 flex-col sm:flex-row items-start lg:items-center pr-0 lg:pr-10 mb-6 lg:mb-0">
+              <!-- Date Column -->
+              <div class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
+                <span class="text-4xl md:text-5xl font-medium text-gray-800 leading-none mb-1">18</span>
+                <span class="text-xl md:text-2xl font-medium text-gray-800">Jul</span>
+              </div>
+              
+              <!-- Content Column -->
+              <div class="pl-6 md:pl-10 flex flex-col justify-center pt-2 sm:pt-0">
+                <div class="flex items-center gap-2 text-gray-600 text-xs md:text-sm font-semibold mb-4">
+                  <div class="w-7 h-7 rounded bg-blue-50 flex items-center justify-center text-[#2563EB]">
+                    <i class="fa-regular fa-calendar"></i>
+                  </div>
+                  <span>Jul 18, 2024 8:00 am - Aug 5, 2024 8:30 pm</span>
+                </div>
+                
+                <h3 class="text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
+                  Bhaiya Group of Company Vision in Real State Business
+                </h3>
+                
+                <p class="text-xs md:text-sm text-gray-800 font-medium mb-5">
+                  EventCity Club & 19th Street, Chicago,<br>IL, Bangladesh
+                </p>
+                
+                <p class="text-sm text-gray-500 mb-8 leading-relaxed max-w-2xl">
+                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun. Taste, explore, and be part of a vibrant community
+                </p>
+                
+                <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#2563EB] text-sm font-bold transition w-fit">
+                  <div class="relative h-5 overflow-hidden pointer-events-none">
+                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                    <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  </div>
+                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="reveal-text">
-              <h3 class="text-white text-lg font-medium mb-1 group-hover:text-blue-400 transition-colors">Bhaiya Housing</h3>
-              <a href="#" class="inline-flex items-center gap-2 text-white text-xs font-semibold uppercase tracking-wider group-hover:text-blue-400 transition-colors">
-                See Details <i class="fa-solid fa-angle-right"></i>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Card 2 -->
-          <div class="reveal-left-wipe group cursor-pointer">
-            <div class="logo-box w-full bg-white h-40 flex items-center justify-center p-6 mb-4" style="transition-delay: 150ms;">
-              <img src="./assets/images/concern/hotels.png" alt="Bhaiya Hotel & Resorts" class="max-h-full max-w-full object-contain" />
-            </div>
-            <div class="reveal-text" style="transition-delay: 150ms;">
-              <h3 class="text-white text-lg font-medium mb-1 group-hover:text-blue-400 transition-colors">Bhaiya Hotel & Resorts</h3>
-              <a href="#" class="inline-flex items-center gap-2 text-white text-xs font-semibold uppercase tracking-wider group-hover:text-blue-400 transition-colors">
-                See Details <i class="fa-solid fa-angle-right"></i>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Card 3 -->
-          <div class="reveal-left-wipe group cursor-pointer">
-            <div class="logo-box w-full bg-white h-40 flex items-center justify-center p-6 mb-4" style="transition-delay: 300ms;">
-              <img src="./assets/images/concern/pinecity.png" alt="Pine City" class="max-h-full max-w-full object-contain" />
-            </div>
-            <div class="reveal-text" style="transition-delay: 300ms;">
-              <h3 class="text-white text-lg font-medium mb-1 group-hover:text-blue-400 transition-colors">Pine City</h3>
-              <a href="#" class="inline-flex items-center gap-2 text-white text-xs font-semibold uppercase tracking-wider group-hover:text-blue-400 transition-colors">
-                See Details <i class="fa-solid fa-angle-right"></i>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Card 4 -->
-          <div class="reveal-left-wipe group cursor-pointer">
-            <div class="logo-box w-full bg-white h-40 flex items-center justify-center p-6 mb-4" style="transition-delay: 450ms;">
-              <img src="./assets/images/concern/duria.png" alt="Duria Food" class="max-h-full max-w-full object-contain" />
-            </div>
-            <div class="reveal-text" style="transition-delay: 450ms;">
-              <h3 class="text-white text-lg font-medium mb-1 group-hover:text-blue-400 transition-colors">Duria Food</h3>
-              <a href="#" class="inline-flex items-center gap-2 text-white text-xs font-semibold uppercase tracking-wider group-hover:text-blue-400 transition-colors">
-                See Details <i class="fa-solid fa-angle-right"></i>
-              </a>
+            
+            <!-- Right Side: Image -->
+            <div class="w-full lg:w-[400px] xl:w-[450px] aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
+              <img src="./assets/images/home/hero2.jpg" alt="Event Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
             </div>
           </div>
-          
+          <!-- Event Card 2 -->
+          <div class="reveal-fade-up flex flex-col lg:flex-row bg-transparent overflow-hidden mb-16 md:mb-24 group">
+            <!-- Left Side: Date / Content -->
+            <div class="flex flex-1 flex-col sm:flex-row items-start lg:items-center pr-0 lg:pr-10 mb-6 lg:mb-0">
+              <!-- Date Column -->
+              <div class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
+                <span class="text-4xl md:text-5xl font-medium text-gray-800 leading-none mb-1">19</span>
+                <span class="text-xl md:text-2xl font-medium text-gray-800">Jul</span>
+              </div>
+              
+              <!-- Content Column -->
+              <div class="pl-6 md:pl-10 flex flex-col justify-center pt-2 sm:pt-0">
+                <div class="flex items-center gap-2 text-gray-600 text-xs md:text-sm font-semibold mb-4">
+                  <div class="w-7 h-7 rounded bg-blue-50 flex items-center justify-center text-[#2563EB]">
+                    <i class="fa-regular fa-calendar"></i>
+                  </div>
+                  <span>Jul 18, 2024 8:00 am - Aug 5, 2024 8:30 pm</span>
+                </div>
+                
+                <h3 class="text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
+                  Bhaiya Group of Company Vision in Real State Business
+                </h3>
+                
+                <p class="text-xs md:text-sm text-gray-800 font-medium mb-5">
+                  EventCity Club & 19th Street, Chicago,<br>IL, Bangladesh
+                </p>
+                
+                <p class="text-sm text-gray-500 mb-8 leading-relaxed max-w-2xl">
+                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun. Taste, explore, and be part of a vibrant community
+                </p>
+                
+                <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#2563EB] text-sm font-bold transition w-fit">
+                  <div class="relative h-5 overflow-hidden pointer-events-none">
+                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                    <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  </div>
+                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Right Side: Image -->
+            <div class="w-full lg:w-[400px] xl:w-[450px] aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
+              <img src="./assets/images/home/hero3.jpg" alt="Event Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
+            </div>
+          </div>
+          <!-- Event Card 3 -->
+          <div class="reveal-fade-up flex flex-col lg:flex-row bg-transparent overflow-hidden mb-16 md:mb-24 group">
+            <!-- Left Side: Date / Content -->
+            <div class="flex flex-1 flex-col sm:flex-row items-start lg:items-center pr-0 lg:pr-10 mb-6 lg:mb-0">
+              <!-- Date Column -->
+              <div class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
+                <span class="text-4xl md:text-5xl font-medium text-gray-800 leading-none mb-1">20</span>
+                <span class="text-xl md:text-2xl font-medium text-gray-800">Jul</span>
+              </div>
+              
+              <!-- Content Column -->
+              <div class="pl-6 md:pl-10 flex flex-col justify-center pt-2 sm:pt-0">
+                <div class="flex items-center gap-2 text-gray-600 text-xs md:text-sm font-semibold mb-4">
+                  <div class="w-7 h-7 rounded bg-blue-50 flex items-center justify-center text-[#2563EB]">
+                    <i class="fa-regular fa-calendar"></i>
+                  </div>
+                  <span>Jul 18, 2024 8:00 am - Aug 5, 2024 8:30 pm</span>
+                </div>
+                
+                <h3 class="text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
+                  Bhaiya Group of Company Vision in Real State Business
+                </h3>
+                
+                <p class="text-xs md:text-sm text-gray-800 font-medium mb-5">
+                  EventCity Club & 19th Street, Chicago,<br>IL, Bangladesh
+                </p>
+                
+                <p class="text-sm text-gray-500 mb-8 leading-relaxed max-w-2xl">
+                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun. Taste, explore, and be part of a vibrant community
+                </p>
+                
+                <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#2563EB] text-sm font-bold transition w-fit">
+                  <div class="relative h-5 overflow-hidden pointer-events-none">
+                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                    <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  </div>
+                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Right Side: Image -->
+            <div class="w-full lg:w-[400px] xl:w-[450px] aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
+              <img src="./assets/images/home/hero1.jpg" alt="Event Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-        <!-- Global Map Section -->
-    <section id="countries" class="relative w-full py-16 md:py-24 bg-gray-200 overflow-hidden font-manrope">
-      <!-- Background Map -->
-      <img src="./assets/images/concern/map.png" alt="Global Map" class="absolute inset-0 w-full h-full object-cover opacity-40 z-0 pointer-events-none">
-      
-      <div class="container mx-auto px-4 md:px-10 relative z-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#111827] mb-8 md:mb-12 drop-shadow-sm">Countries</h2>
+    <!-- Scroll Animation Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
         
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-          
-          <!-- Card 1 -->
-          <div class="bg-[#111827] p-3 flex flex-col items-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
-            <img src="./assets/images/concern/bd_flag.png" alt="Bangladesh Flag" class="w-full aspect-[3/2] object-cover mb-3" />
-            <span class="text-white text-xs md:text-sm font-medium pb-1">Bangladesh</span>
-          </div>
-          
-          <!-- Card 2 -->
-          <div class="bg-[#111827] p-3 flex flex-col items-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
-            <img src="./assets/images/concern/bd_flag.png" alt="Bangladesh Flag" class="w-full aspect-[3/2] object-cover mb-3" />
-            <span class="text-white text-xs md:text-sm font-medium pb-1">Bangladesh</span>
-          </div>
-          
-          <!-- Card 3 -->
-          <div class="bg-[#111827] p-3 flex flex-col items-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
-            <img src="./assets/images/concern/bd_flag.png" alt="Bangladesh Flag" class="w-full aspect-[3/2] object-cover mb-3" />
-            <span class="text-white text-xs md:text-sm font-medium pb-1">Bangladesh</span>
-          </div>
-          
-          <!-- Card 4 -->
-          <div class="bg-[#111827] p-3 flex flex-col items-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
-            <img src="./assets/images/concern/bd_flag.png" alt="Bangladesh Flag" class="w-full aspect-[3/2] object-cover mb-3" />
-            <span class="text-white text-xs md:text-sm font-medium pb-1">Bangladesh</span>
-          </div>
-          
-          <!-- Card 5 -->
-          <div class="bg-[#111827] p-3 flex flex-col items-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
-            <img src="./assets/images/concern/bd_flag.png" alt="Bangladesh Flag" class="w-full aspect-[3/2] object-cover mb-3" />
-            <span class="text-white text-xs md:text-sm font-medium pb-1">Bangladesh</span>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- Stories Section -->
-    <section id="stories" class="container mx-auto px-4 md:px-10 py-16 md:py-24 font-manrope">
-      <h2 class="text-2xl md:text-4xl font-extrabold text-[#111827] mb-8">Stories</h2>
-      
-      <div class="relative w-full h-[350px] md:h-[500px] overflow-hidden rounded group shadow-lg">
-        <img src="./assets/images/concern/story.png" alt="Story" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        
-        <!-- Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
-        
-        <!-- Content -->
-        <div class="absolute inset-0 flex items-end">
-          <div class="p-6 md:p-12 w-full md:w-3/5 text-white">
-            <span class="text-xs md:text-sm font-medium tracking-widest uppercase mb-2 block text-gray-300">Sustainability</span>
-            <h3 class="text-xl md:text-3xl lg:text-4xl font-bold uppercase leading-tight mb-4 md:mb-6">
-              PIONEERING CIRCULAR FASHION<br>WITH NEXT-GEN FIBERS
-            </h3>
-            <p class="text-xs md:text-sm text-gray-300 mb-6 max-w-lg hidden md:block">
-              We are pioneers in developing sustainable solutions, significantly reducing carbon footprint while constructing the resilient foundations of modern, sustainable cities and smart infrastructures worldwide.
-            </p>
-            <a href="#" class="inline-flex items-center gap-3 border border-white/50 bg-transparent px-5 py-2 rounded-full text-xs md:text-sm font-semibold hover:bg-white hover:text-black transition-colors w-fit group/btn">
-              <span>Read more</span>
-              <i class="fa-solid fa-arrow-right-long text-[10px] transform transition-transform group-hover/btn:translate-x-1"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 01 Outline overlay -->
-        <div class="absolute bottom-4 right-8 pointer-events-none hidden md:block">
-          <span class="text-[120px] lg:text-[180px] font-bold text-transparent leading-none opacity-40" style="-webkit-text-stroke: 1.5px white;">01</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Graphic Placeholder -->
-    <div class="w-full">
-      <img src="./assets/images/home/footer.jpg" alt="Bhaiya Group Footer" class="w-full h-auto object-cover border-b-4 border-[#111827]">
-    </div>
-  </main>
-  <!-- FOOTER SECTION -->
-  <footer class="bg-[#111827] text-[#E7E7E7] pt-20 pb-8 font-manrope">
-    <div class="container mx-auto px-4 md:px-10">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
-        <!-- Logo and Contact -->
-        <div class="lg:col-span-2 space-y-6">
-          <img src="./assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
-          <div class="space-y-5 text-sm md:text-base opacity-90">
-            <div class="flex items-start gap-4">
-              <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
-              <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor), Motijheel C/A,
-                Dhaka-1000, Bangladesh</p>
-            </div>
-            <div class="flex items-center gap-4">
-              <i class="fa-regular fa-envelope text-xl"></i>
-              <p>info@bhaiya-group.com</p>
-            </div>
-            <div class="flex items-center gap-4">
-              <i class="fa-solid fa-phone-volume text-xl"></i>
-              <p>+88-02-9551750, +88-02-9552395</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
-          <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
-          </ul>
-        </div>
-
-        <!-- Others Links -->
-        <div>
-          <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
-          <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- Concerns Link -->
-        <div>
-          <h4 class="text-lg md:text-2xl font-semibold mb-6">Concerns Link</h4>
-          <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya Housing <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                  stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                  stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food & Beverage <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                  stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati Insurance <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                  stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Duria <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                  stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg></a></li>
-          </ul>
-        </div>
-
-        <!-- Social -->
-        <div>
-          <h4 class="text-lg md:text-2xl font-semibold mb-6">Social</h4>
-          <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
-                  class="fa-brands fa-square-facebook text-2xl"></i> Facebook</a></li>
-            <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
-                  class="fa-brands fa-youtube text-2xl"></i> Youtube</a></li>
-            <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
-                  class="fa-brands fa-linkedin text-2xl"></i> LinkedIn</a></li>
-            <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
-                  class="fa-brands fa-instagram text-2xl"></i> Instagram</a></li>
-            <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
-                  class="fa-brands fa-x-twitter text-2xl"></i> Twitter</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div
-        class="mt-16 pt-8 border-t border-white flex flex-col md:flex-row justify-between items-center gap-4 text-sm md:text-lg font-normal opacity-80">
-        <p>Copyright &copy; 1972-2026 BHAIYA GROUP, All rights reserved</p>
-        <p>Designed by Bhaiya Digital</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Script for Mobile Hamburger Menu Toggle -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script type="module" src="./assets/js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const tabs = document.querySelectorAll('.nav-tab');
-      const sections = document.querySelectorAll('section[id]');
-      const stickyNav = document.getElementById('sticky-nav');
-      
-      // Smooth scroll to section
-      tabs.forEach(tab => {
-        tab.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetId = tab.getAttribute('href').substring(1);
-          const targetSection = document.getElementById(targetId);
-          if (targetSection) {
-            const headerOffset = stickyNav ? stickyNav.offsetHeight : 60;
-            const elementPosition = targetSection.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.scrollY - headerOffset;
-          
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
-        });
+        document.querySelectorAll('.reveal-fade-up').forEach(el => observer.observe(el));
       });
+    </script>
 
-      // Update active tab on scroll
-      window.addEventListener('scroll', () => {
-        let current = 'bhaiya-housing'; // default
-        const headerOffset = (stickyNav ? stickyNav.offsetHeight : 60) + 10;
-        
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          if (window.scrollY >= (sectionTop - headerOffset)) {
-            current = section.getAttribute('id');
-          }
-        });
-        
-        tabs.forEach(tab => {
-          // Reset all tabs to inactive state
-          tab.classList.remove('text-[#2563EB]', 'font-semibold', 'border-[#2563EB]');
-          tab.classList.add('text-gray-500', 'font-medium', 'border-transparent');
-          
-          // Set active state for current tab
-          if (tab.getAttribute('href') === '#' + current) {
-            tab.classList.add('text-[#2563EB]', 'font-semibold', 'border-[#2563EB]');
-            tab.classList.remove('text-gray-500', 'font-medium', 'border-transparent');
-          }
-        });
-      });
-    });
-  </script>
+    <!-- FOOTER SECTION -->
+    <footer class="bg-[#111827] text-[#E7E7E7] pt-20 pb-8 font-manrope">
+      <div class="container mx-auto px-4 md:px-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
+          <!-- Logo and Contact -->
+          <div class="lg:col-span-2 space-y-6">
+            <img src="./assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
+            <div class="space-y-5 text-sm md:text-base opacity-90">
+              <div class="flex items-start gap-4">
+                <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
+                <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor), Motijheel
+                  C/A,
+                  Dhaka-1000, Bangladesh</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <i class="fa-regular fa-envelope text-xl"></i>
+                <p>info@bhaiya-group.com</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <i class="fa-solid fa-phone-volume text-xl"></i>
+                <p>+88-02-9551750, +88-02-9552395</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
+            </ul>
+          </div>
+
+          <!-- Others Links -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Concerns Link -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Concerns Link</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya Housing <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food & Beverage
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati Insurance <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Duria <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Social</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-square-facebook text-2xl"></i> Facebook</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-youtube text-2xl"></i> Youtube</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-linkedin text-2xl"></i> LinkedIn</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-instagram text-2xl"></i> Instagram</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-x-twitter text-2xl"></i> Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="mt-16 pt-8 border-t border-white flex flex-col md:flex-row justify-between items-center gap-4 text-sm md:text-lg font-normal opacity-80">
+          <p>Copyright &copy; 1972-2026 BHAIYA GROUP, All rights reserved</p>
+          <p>Designed by Bhaiya Digital</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script for Mobile Hamburger Menu Toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
 
 
 

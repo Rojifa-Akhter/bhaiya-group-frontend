@@ -1,0 +1,1314 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Bhaiya Group | Exploring New Horizons</title>
+  <meta name="description"
+    content="Bhaiya Group has been exploring new horizons for the last 50 years. Specializing in Hotels, Resorts, Housing, and Software." />
+  <meta name="keywords" content="Bhaiya Group, Real Estate, Hotels and Resorts, Bhaiya Housing, software company" />
+  <link rel="canonical" href="https://yourwebsite.com/" />
+
+  <!-- Open Graph (For Social Sharing) -->
+  <meta property="og:title" content="Bhaiya Group | Official Website" />
+  <meta property="og:description" content="Our journey over the last 50 years has been about exploring new horizons." />
+  <meta property="og:image" content="./assets/images/logo.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Icons & Swiper CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="./assets/css/input.css" />
+  <style>
+    .h1-wrapper {
+      overflow: hidden;
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .h1-wrapper h1 {
+      display: block;
+      transform: translateY(105%);
+      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .swiper-slide-active .h1-wrapper h1 {
+      transform: translateY(0);
+    }
+
+    .swiper-slide:not(.swiper-slide-active) .h1-wrapper h1 {
+      transform: translateY(105%);
+      transition: none;
+    }
+
+    /* Dropdown and Arrow Expand Animations */
+    .dropdown-menu {
+      opacity: 0;
+      transform: translateY(-8px) scale(0.97);
+      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .dropdown-menu.open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    .down-indicator {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-4px) scale(0.5);
+      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .down-indicator.open {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    .reveal-left-wipe img,
+    .reveal-left-wipe .reveal-text {
+      clip-path: inset(0 100% 0 0);
+      opacity: 0;
+      transition: clip-path 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.2s ease-out;
+    }
+
+    .reveal-left-wipe.active img,
+    .reveal-left-wipe.active .reveal-text {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="font-manrope overflow-x-hidden">
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-drawer-overlay"
+    class="fixed inset-0 bg-black/60 z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobile-drawer"
+    class="fixed top-0 right-0 w-[280px] h-full bg-[#0B1F3A] text-white z-[70] translate-x-full transition-transform duration-300 ease-in-out p-6 shadow-2xl">
+    <div class="flex justify-between items-center mb-8">
+      <img src="./assets/images/logo.png" alt="Bhaiya Group" class="h-10" />
+      <button id="mobile-drawer-close" class="text-2xl text-white"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="flex flex-col space-y-4 font-medium overflow-y-auto h-[calc(100vh-120px)]">
+      <a href="#" class="py-2 border-b border-white/10">About Us</a>
+      <a href="#" class="py-2 border-b border-white/10">Our Concerns</a>
+      <a href="#" class="py-2 border-b border-white/10">Our Products</a>
+      <a href="#" class="py-2 border-b border-white/10">Media Center</a>
+      <a href="#" class="py-2 border-b border-white/10">Sustainability</a>
+      <a href="#" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
+    </nav>
+  </aside>
+  <!-- Header: Absolute to stay on top of Slider -->
+  <header class="relative top-0 left-0 w-full z-50">
+    <!-- Top Bar -->
+    <div class="bg-[#111827] border-b border-white/10 py-2 hidden lg:block text-[#E7E7E7]">
+      <div
+        class="container mx-auto px-4 md:px-10 flex justify-between items-center text-base font-normal tracking-wide">
+        <!-- Left: Phone -->
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-phone"></i>
+          <span>+880 1938-886333</span>
+        </div>
+        <!-- Center: Text -->
+        <div class="opacity-90">
+          Our journey over the last 50 years has been about exploring new
+          horizons
+        </div>
+        <!-- Right: Social Icons -->
+        <div class="flex items-center gap-5 text-base">
+          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="bg-[#111827] border-b border-white/10 w-full">
+      <div class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between text-white">
+        <div class="flex-shrink-0">
+          <a href="#">
+            <img src="./assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
+          </a>
+        </div>
+
+        <nav class="hidden lg:flex items-center space-x-5 xl:space-x-8">
+          <!-- About Us -->
+          <div class="relative py-8 menu-wrapper" id="about-menu-wrapper">
+            <!-- About Us বাটন -->
+            <button id="about-toggle"
+              class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
+              <div class="flex items-center gap-1.5">
+                <div class="relative h-6 overflow-hidden pointer-events-none">
+                  <span
+                    class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                    About Us
+                  </span>
+                  <span
+                    class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                    About Us
+                  </span>
+                </div>
+                <i id="about-icon"
+                  class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+              </div>
+              <!-- Custom Down Arrow (matching reference design) -->
+              <div id="about-indicator"
+                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 21, 4 5, 12 9, 20 5" />
+                </svg>
+              </div>
+            </button>
+            <!-- Dropdown Box -->
+            <div id="about-dropdown"
+              class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[480px] z-50">
+              <div class="grid grid-cols-2 gap-3.5">
+                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header11.jpg" alt="Our Legacy"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Our Legacy</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header12.png" alt="Our Purpose"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Our Purpose</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header13.jpg" alt="Mission & Vision"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Mission & Vision</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header14.png" alt="Leadership"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Leadership</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Our Concerns -->
+          <div class="relative py-8 menu-wrapper" id="concern-menu-wrapper">
+            <button id="concern-toggle"
+              class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
+              <div class="flex items-center gap-1.5">
+                <div class="relative h-6 overflow-hidden pointer-events-none">
+                  <span
+                    class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                    Our Concerns
+                  </span>
+                  <span
+                    class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                    Our Concerns
+                  </span>
+                </div>
+                <i id="concern-icon"
+                  class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+              </div>
+              <!-- Custom Down Arrow (matching reference design) -->
+              <div id="concern-indicator"
+                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 21, 4 5, 12 9, 20 5" />
+                </svg>
+              </div>
+            </button>
+            <!-- Dropdown Box (3 Columns) -->
+            <div id="concern-dropdown"
+              class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
+              <div class="grid grid-cols-3 gap-3 md:gap-3.5">
+                <!-- 1. Real state -->
+                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header21.jpg" alt="Real state"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Real state</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 2. Restaurant -->
+                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header22.png" alt="Restaurant"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Restaurant</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 3. Media -->
+                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header23.jpg" alt="Media"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-xs font-medium tracking-wide flex items-center gap-1.5">
+                    <span>Media</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 4. Software -->
+                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header24.jpg" alt="Software"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Software</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 5. See all Concerns -->
+                <a href="./pages/details.html"
+                  class="relative h-24 md:h-28 rounded bg-[#EEF4FF] hover:bg-[#E0EBFF] transition-colors flex items-center justify-center gap-2 group  p-2">
+                  <span class="text-[#1864FF] text-sm font-normal whitespace-nowrap">See all Concerns</span>
+                  <svg
+                    class="w-4 h-4 text-[#1864FF] fill-current inline-block transition-transform duration-300 group-hover:translate-x-1"
+                    viewBox="0 0 24 24">
+                    <polygon points="21 12, 5 4, 9 12, 5 20" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="#"
+            class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+            <div class="relative h-6 overflow-hidden pointer-events-none">
+              <span
+                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                Our Products
+              </span>
+              <span
+                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                Our Products
+              </span>
+            </div>
+            <i
+              class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+          </a>
+          <!-- Media Center -->
+          <div class="relative py-8 menu-wrapper" id="media-menu-wrapper">
+            <button id="media-toggle"
+              class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
+              <div class="flex items-center gap-1.5">
+                <div class="relative h-6 overflow-hidden pointer-events-none">
+                  <span
+                    class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                    Media Center
+                  </span>
+                  <span
+                    class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                    Media Center
+                  </span>
+                </div>
+                <i id="media-icon"
+                  class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+              </div>
+              <!-- Custom Down Arrow (matching reference design) -->
+              <div id="media-indicator"
+                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 21, 4 5, 12 9, 20 5" />
+                </svg>
+              </div>
+            </button>
+            <!-- Dropdown Box (3 Columns) -->
+            <div id="media-dropdown"
+              class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
+              <div class="grid grid-cols-3 gap-3 md:gap-3.5">
+                <!-- 1. Stories -->
+                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header31.png" alt="Stories"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Stories</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 2. Events -->
+                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header32.png" alt="Events"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Events</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 3. News Room -->
+                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header33.png" alt="News Room"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>News Room</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 4. Newsletter -->
+                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header34.jpg" alt="Newsletter"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Newsletter</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 5. Photo & Video gallery -->
+                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="./assets/images/home/header35.jpg" alt="Photo & Video gallery"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Photo & Video gallery</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#"
+            class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+            <div class="relative h-6 overflow-hidden pointer-events-none">
+              <span
+                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                Sustainability
+              </span>
+              <span
+                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                Sustainability
+              </span>
+            </div>
+            <i
+              class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+          </a>
+          <a href="#"
+            class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+            <div class="relative h-6 overflow-hidden pointer-events-none">
+              <span
+                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                Investor Relation
+              </span>
+              <span
+                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                Investor Relation
+              </span>
+            </div>
+            <i
+              class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+          </a>
+          <a href="#"
+            class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+            <div class="relative h-6 overflow-hidden pointer-events-none">
+              <span
+                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                Office Location
+              </span>
+              <span
+                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                Office Location
+              </span>
+            </div>
+            <i
+              class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+          </a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <a href="#"
+            class="group relative bg-[#1864FF] text-white px-7 py-2.5 rounded-full font-semibold text-base hover:bg-blue-600 transition shadow-md whitespace-nowrap overflow-hidden inline-flex items-center justify-center">
+            <div class="relative h-5 overflow-hidden pointer-events-none">
+              <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                Contact Now
+              </span>
+              <span
+                class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                Contact Now
+              </span>
+            </div>
+          </a>
+        </div>
+        <!-- Mobile Toggle Button (Visible only on mobile/tablet) -->
+        <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl p-2 ml-2 focus:outline-none"
+          aria-label="Open Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- Investor Hero Section -->
+    <section class="relative w-full h-[60vh] min-h-[450px] flex items-end pb-12 md:pb-16 mt-0">
+      <!-- Background Image -->
+      <img src="./assets/images/home/hero1.jpg" alt="Investor Relations" class="absolute inset-0 w-full h-full object-cover z-0">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 z-0"></div>
+      
+      <!-- Content -->
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px] relative z-10">
+        <h1 class="text-4xl md:text-5xl lg:text-[56px] font-bold text-white uppercase tracking-wide leading-[1.1] drop-shadow-lg">
+          SUSTAINABLE GROWTH<br>FOR INVESTORS
+        </h1>
+      </div>
+    </section>
+
+    <!-- Sub Navigation Tabs -->
+    <div class="w-full bg-white border-b border-gray-200 shadow-sm sticky top-0 z-40">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px] flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
+        <a href="#" class="py-4 md:py-5 text-[#2563EB] text-sm md:text-[15px] font-semibold border-b-[3px] border-[#2563EB]">Why Invest</a>
+        <a href="#" class="py-4 md:py-5 text-gray-500 hover:text-gray-900 transition-colors text-sm md:text-[15px] font-medium border-b-[3px] border-transparent hover:border-gray-300">Message To Investors</a>
+        <a href="#" class="py-4 md:py-5 text-gray-500 hover:text-gray-900 transition-colors text-sm md:text-[15px] font-medium border-b-[3px] border-transparent hover:border-gray-300">Corporate Directors</a>
+      </div>
+    </div>
+
+    <!-- Intro Text Section -->
+    <section class="w-full bg-[#FAFAFA] py-20 md:py-32">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-gray-600 font-serif italic text-lg md:text-[22px] lg:text-[24px] leading-[1.8] tracking-wide">
+            Bhaiya Group is one of Bangladesh's leading conglomerates, with a strong presence in real estate, housing, hospitality, food & beverage, and media industries. Driven by innovation and sustainable development, we continue to expand our footprint across the country. Our commitment to transparency, operational excellence, and long-term value creation ensures confidence among investors and stakeholders.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chairman Message Section -->
+    <section class="w-full bg-white py-20 md:py-32 font-manrope">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+        
+        <h2 class="text-3xl md:text-[40px] font-bold text-[#111827] mb-12 md:mb-16">Chairman Message To Investors</h2>
+        
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 items-stretch">
+          
+          <!-- Left Column (Image & Borders) -->
+          <div class="w-full lg:w-[45%] shrink-0">
+            <!-- The precise border configuration -->
+            <div class="border border-[#93C5FD] w-full aspect-[4/4.2] md:aspect-[4/3.8] lg:aspect-[4/4.5] relative bg-transparent">
+              <!-- Image Wrapper -->
+              <div class="absolute top-0 left-0 w-[96%] h-[90%] flex">
+                <img src="./assets/images/stories/chairman2.png" alt="Chairman" class="flex-1 w-full h-full object-cover">
+                <!-- Thick Blue Line -->
+                <div class="w-[8px] shrink-0 h-full bg-[#2563EB]"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (Text Content) -->
+          <div class="w-full lg:w-[55%] flex flex-col justify-start">
+            
+            <div class="text-gray-600 font-serif italic text-sm md:text-[15px] leading-[1.9] space-y-6 mb-10 lg:mb-12">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum. specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, rema
+              </p>
+              <p>
+                t has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum. specimen book.
+              </p>
+              
+              <ul class="space-y-4 pt-2">
+                <li>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummyary, too</li>
+                <li>2. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummyary, too</li>
+                <li>3. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummyary, too</li>
+              </ul>
+            </div>
+
+            <!-- Signature block -->
+            <div class="mt-auto">
+              <h3 class="text-2xl md:text-[28px] font-bold text-[#111827] mb-1.5">Maroof Sattar Ali</h3>
+              <p class="text-[#2563EB] text-[15px] font-semibold">Chairman, Bhaiya Group</p>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment Highlights Section -->
+    <section class="w-full bg-[#0F172A] py-20 md:py-28 font-manrope">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+        
+        <!-- Header Row -->
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-16">
+          <div class="w-full lg:w-1/2">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-[1px] bg-white"></div>
+              <span class="text-white text-sm tracking-wide">Key Strengths &middot;</span>
+            </div>
+            <h2 class="text-3xl md:text-[42px] font-bold text-white leading-tight">
+              Investment Highlights
+            </h2>
+          </div>
+          <div class="w-full lg:w-1/3">
+            <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
+              Our competitive advantages create a strong foundation for sustainable growth and market leadership.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card 1 -->
+          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+            <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">55+ Years of Excellence</h3>
+            <p class="text-gray-400 text-[13px] leading-[1.8]">
+              A proven track record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+            <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
+              <i class="fa-regular fa-building"></i>
+            </div>
+            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">50+ Completed Projects</h3>
+            <p class="text-gray-400 text-[13px] leading-[1.8]">
+              Successfully executed and delivered over fifty landmark projects on time and within budget. developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+            <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">Strong Financial Performance</h3>
+            <p class="text-gray-400 text-[13px] leading-[1.8]">
+              Maintaining robust balance sheets and delivering above-market yields for our investment partners. record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+            <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">Prime Land Portfolio</h3>
+            <p class="text-gray-400 text-[13px] leading-[1.8]">
+              A proven track record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+            <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
+              <i class="fa-regular fa-building"></i>
+            </div>
+            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">High Customer Trust</h3>
+            <p class="text-gray-400 text-[13px] leading-[1.8]">
+              Successfully executed and delivered over fifty landmark projects on time and within budget. developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+            <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">Diversified Business Model</h3>
+            <p class="text-gray-400 text-[13px] leading-[1.8]">
+              Maintaining robust balance sheets and delivering above-market yields for our investment partners. record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio / Business Strength Section -->
+    <section class="w-full bg-[#F9FAFB] py-20 md:py-28 font-manrope">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+        
+        <!-- Header -->
+        <div class="text-center mb-12 md:mb-16">
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <div class="w-12 h-[1px] bg-gray-400"></div>
+            <span class="text-gray-600 text-[15px] font-medium tracking-wide">Portfolio</span>
+            <div class="w-12 h-[1px] bg-gray-400"></div>
+          </div>
+          <h2 class="text-3xl md:text-[40px] font-bold text-[#111827] uppercase tracking-wide">
+            OUR BUSINESS STRENGTH
+          </h2>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Card 1 -->
+          <div class="relative w-full aspect-[16/10] overflow-hidden group cursor-pointer rounded-sm shadow-sm">
+            <!-- Background Image -->
+            <img src="./assets/images/home/hero3.jpg" alt="Bhaiya Housing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            
+            <!-- Dark Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-all duration-500 group-hover:from-[#0F172A]/95 group-hover:via-[#0F172A]/60"></div>
+            
+            <!-- Content Wrapper -->
+            <div class="absolute bottom-0 left-0 w-full p-6 lg:p-8 flex flex-col justify-end">
+              <h3 class="text-xl md:text-[22px] font-bold text-white uppercase tracking-wider transition-transform duration-500">
+                Bhaiya Housing
+              </h3>
+              
+              <!-- Expanding Content (Grid Rows Trick) -->
+              <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                <div class="overflow-hidden">
+                  <div class="pt-4 flex flex-col">
+                    <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
+                      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+                    </p>
+                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="relative w-full aspect-[16/10] overflow-hidden group cursor-pointer rounded-sm shadow-sm">
+            <img src="./assets/images/home/hero2.jpg" alt="Bhaiya Housing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-all duration-500 group-hover:from-[#0F172A]/95 group-hover:via-[#0F172A]/60"></div>
+            
+            <div class="absolute bottom-0 left-0 w-full p-6 lg:p-8 flex flex-col justify-end">
+              <h3 class="text-xl md:text-[22px] font-bold text-white uppercase tracking-wider transition-transform duration-500">
+                Bhaiya Housing
+              </h3>
+              <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                <div class="overflow-hidden">
+                  <div class="pt-4 flex flex-col">
+                    <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
+                      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+                    </p>
+                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="relative w-full aspect-[16/10] overflow-hidden group cursor-pointer rounded-sm shadow-sm">
+            <img src="./assets/images/home/hero1.jpg" alt="Bhaiya Housing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-all duration-500 group-hover:from-[#0F172A]/95 group-hover:via-[#0F172A]/60"></div>
+            
+            <div class="absolute bottom-0 left-0 w-full p-6 lg:p-8 flex flex-col justify-end">
+              <h3 class="text-xl md:text-[22px] font-bold text-white uppercase tracking-wider transition-transform duration-500">
+                Bhaiya Housing
+              </h3>
+              <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                <div class="overflow-hidden">
+                  <div class="pt-4 flex flex-col">
+                    <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
+                      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+                    </p>
+                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="relative w-full aspect-[16/10] overflow-hidden group cursor-pointer rounded-sm shadow-sm">
+            <img src="./assets/images/home/hero3.jpg" alt="Bhaiya Housing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-all duration-500 group-hover:from-[#0F172A]/95 group-hover:via-[#0F172A]/60"></div>
+            
+            <div class="absolute bottom-0 left-0 w-full p-6 lg:p-8 flex flex-col justify-end">
+              <h3 class="text-xl md:text-[22px] font-bold text-white uppercase tracking-wider transition-transform duration-500">
+                Bhaiya Housing
+              </h3>
+              <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                <div class="overflow-hidden">
+                  <div class="pt-4 flex flex-col">
+                    <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
+                      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+                    </p>
+                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="relative w-full aspect-[16/10] overflow-hidden group cursor-pointer rounded-sm shadow-sm">
+            <img src="./assets/images/home/hero2.jpg" alt="Bhaiya Housing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-all duration-500 group-hover:from-[#0F172A]/95 group-hover:via-[#0F172A]/60"></div>
+            
+            <div class="absolute bottom-0 left-0 w-full p-6 lg:p-8 flex flex-col justify-end">
+              <h3 class="text-xl md:text-[22px] font-bold text-white uppercase tracking-wider transition-transform duration-500">
+                Bhaiya Housing
+              </h3>
+              <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                <div class="overflow-hidden">
+                  <div class="pt-4 flex flex-col">
+                    <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
+                      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+                    </p>
+                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="relative w-full aspect-[16/10] overflow-hidden group cursor-pointer rounded-sm shadow-sm">
+            <img src="./assets/images/home/hero1.jpg" alt="Bhaiya Housing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-all duration-500 group-hover:from-[#0F172A]/95 group-hover:via-[#0F172A]/60"></div>
+            
+            <div class="absolute bottom-0 left-0 w-full p-6 lg:p-8 flex flex-col justify-end">
+              <h3 class="text-xl md:text-[22px] font-bold text-white uppercase tracking-wider transition-transform duration-500">
+                Bhaiya Housing
+              </h3>
+              <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+                <div class="overflow-hidden">
+                  <div class="pt-4 flex flex-col">
+                    <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
+                      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+                    </p>
+                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Pagination Controls -->
+        <div class="flex justify-center mt-12 md:mt-16">
+          <div class="bg-gray-200/80 rounded-full px-5 py-2 flex items-center gap-6 text-gray-500 shadow-sm border border-gray-300/50">
+            <button class="hover:text-[#111827] transition-colors px-2"><i class="fa-solid fa-angle-left text-sm"></i></button>
+            <button class="hover:text-[#111827] transition-colors px-2"><i class="fa-solid fa-angle-right text-sm"></i></button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Annual Reports / Downloads Section -->
+    <section class="w-full bg-[#0F172A] py-20 md:py-28 font-manrope border-t border-[#1E293B]">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+        
+        <!-- Header Row -->
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-16">
+          <div class="w-full lg:w-1/2">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-[1px] bg-white"></div>
+              <span class="text-white text-sm tracking-wide">Downloads</span>
+            </div>
+            <h2 class="text-3xl md:text-[42px] font-bold text-white leading-tight">
+              Our Annual Reports
+            </h2>
+          </div>
+          <div class="w-full lg:w-1/3">
+            <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
+              Our competitive advantages create a strong foundation for sustainable growth and market leadership.
+            </p>
+          </div>
+        </div>
+
+        <!-- Carousel Wrapper -->
+        <div class="relative max-w-[1200px] mx-auto">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            
+            <!-- Card 1 -->
+            <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
+              <!-- Image -->
+              <img src="./assets/images/home/hero1.jpg" alt="Annual Report" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+              
+              <!-- Default Bottom Gradient -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-opacity duration-500"></div>
+              
+              <!-- Hover Dark Overlay (Dims whole image on hover) -->
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <!-- Bottom Text -->
+              <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-50">
+                <h3 class="text-[17px] md:text-[19px] font-bold text-white uppercase tracking-wide mb-1.5">
+                  Bhaiya Housing
+                </h3>
+                <p class="text-gray-300 text-xs md:text-[13px] tracking-wide">
+                  Integrated Report 2024-2025
+                </p>
+              </div>
+
+              <!-- Hover Button (Centered) -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 ease-out pointer-events-none group-hover:pointer-events-auto">
+                <a href="#" class="bg-[#2563EB] hover:bg-blue-700 text-white font-medium py-3.5 px-7 rounded-sm flex items-center gap-3 transition-colors shadow-lg">
+                  <i class="fa-solid fa-download text-lg"></i> Download Now
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
+              <img src="./assets/images/home/hero2.jpg" alt="Annual Report" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-opacity duration-500"></div>
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-50">
+                <h3 class="text-[17px] md:text-[19px] font-bold text-white uppercase tracking-wide mb-1.5">
+                  Bhaiya Housing
+                </h3>
+                <p class="text-gray-300 text-xs md:text-[13px] tracking-wide">
+                  Integrated Report 2024-2025
+                </p>
+              </div>
+
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 ease-out pointer-events-none group-hover:pointer-events-auto">
+                <a href="#" class="bg-[#2563EB] hover:bg-blue-700 text-white font-medium py-3.5 px-7 rounded-sm flex items-center gap-3 transition-colors shadow-lg">
+                  <i class="fa-solid fa-download text-lg"></i> Download Now
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
+              <img src="./assets/images/home/hero3.jpg" alt="Annual Report" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-opacity duration-500"></div>
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-50">
+                <h3 class="text-[17px] md:text-[19px] font-bold text-white uppercase tracking-wide mb-1.5">
+                  Bhaiya Housing
+                </h3>
+                <p class="text-gray-300 text-xs md:text-[13px] tracking-wide">
+                  Integrated Report 2024-2025
+                </p>
+              </div>
+
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 ease-out pointer-events-none group-hover:pointer-events-auto">
+                <a href="#" class="bg-[#2563EB] hover:bg-blue-700 text-white font-medium py-3.5 px-7 rounded-sm flex items-center gap-3 transition-colors shadow-lg">
+                  <i class="fa-solid fa-download text-lg"></i> Download Now
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slider Arrow (Desktop only) -->
+          <button class="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2 w-10 h-10 border border-[#475569] hover:border-white rounded items-center justify-center text-white hover:bg-white hover:text-[#0F172A] transition-colors">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Growth Opportunities Section -->
+    <section class="w-full bg-[#F9FAFB] py-20 md:py-28 font-manrope">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+        
+        <!-- Header Row -->
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-12 md:mb-16">
+          <div class="w-full lg:w-1/2">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-[1.5px] bg-[#111827]"></div>
+              <span class="text-[#111827] text-[15px] font-semibold tracking-wide">Development</span>
+            </div>
+            <h2 class="text-3xl md:text-[42px] font-bold text-[#111827] leading-tight">
+              Future Growth Opportunities
+            </h2>
+          </div>
+          <div class="w-full lg:w-1/3 lg:pb-2">
+            <p class="text-gray-500 text-sm md:text-[15px] leading-[1.8]">
+              A robust pipeline of high-value projects securing our revenue streams for the next decade.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Card 1 -->
+          <div class="bg-white rounded-[20px] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1.5 transition-transform duration-300">
+            <!-- Image -->
+            <div class="w-full aspect-[16/10.5] overflow-hidden">
+              <img src="./assets/images/home/hero3.jpg" alt="Aura Financial Center" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            
+            <!-- Body -->
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+              <h3 class="text-[17px] md:text-[19px] font-bold text-[#111827] uppercase tracking-wide mb-6">
+                AURA FINANCIAL CENTER
+              </h3>
+              
+              <!-- Info List -->
+              <div class="flex flex-col gap-3.5 mb-8 text-[14px] text-gray-500">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i>
+                  <span>Downtown Metro</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-person-digging w-4 text-center text-gray-400"></i>
+                  <span>Under Construction</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-regular fa-calendar w-4 text-center text-gray-400"></i>
+                  <span>Expected: <strong class="text-[#111827]">Q3 2026</strong></span>
+                </div>
+              </div>
+              
+              <!-- Progress Bar -->
+              <div class="mt-auto">
+                <div class="flex justify-between items-center mb-2.5 text-[13px]">
+                  <span class="text-gray-600 font-medium">Progress</span>
+                  <span class="text-[#111827] font-bold">65%</span>
+                </div>
+                <div class="w-full h-1.5 bg-[#E0E7FF] rounded-full overflow-hidden">
+                  <div class="h-full bg-[#2563EB] rounded-full transition-all duration-1000" style="width: 65%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-[20px] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1.5 transition-transform duration-300">
+            <div class="w-full aspect-[16/10.5] overflow-hidden">
+              <img src="./assets/images/home/hero3.jpg" alt="Aura Financial Center" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+              <h3 class="text-[17px] md:text-[19px] font-bold text-[#111827] uppercase tracking-wide mb-6">
+                AURA FINANCIAL CENTER
+              </h3>
+              
+              <div class="flex flex-col gap-3.5 mb-8 text-[14px] text-gray-500">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i>
+                  <span>Downtown Metro</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-person-digging w-4 text-center text-gray-400"></i>
+                  <span>Under Construction</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-regular fa-calendar w-4 text-center text-gray-400"></i>
+                  <span>Expected: <strong class="text-[#111827]">Q3 2026</strong></span>
+                </div>
+              </div>
+              
+              <div class="mt-auto">
+                <div class="flex justify-between items-center mb-2.5 text-[13px]">
+                  <span class="text-gray-600 font-medium">Progress</span>
+                  <span class="text-[#111827] font-bold">65%</span>
+                </div>
+                <div class="w-full h-1.5 bg-[#E0E7FF] rounded-full overflow-hidden">
+                  <div class="h-full bg-[#2563EB] rounded-full transition-all duration-1000" style="width: 65%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-[20px] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1.5 transition-transform duration-300">
+            <div class="w-full aspect-[16/10.5] overflow-hidden">
+              <img src="./assets/images/home/hero3.jpg" alt="Aura Financial Center" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+              <h3 class="text-[17px] md:text-[19px] font-bold text-[#111827] uppercase tracking-wide mb-6">
+                AURA FINANCIAL CENTER
+              </h3>
+              
+              <div class="flex flex-col gap-3.5 mb-8 text-[14px] text-gray-500">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i>
+                  <span>Downtown Metro</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-person-digging w-4 text-center text-gray-400"></i>
+                  <span>Under Construction</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-regular fa-calendar w-4 text-center text-gray-400"></i>
+                  <span>Expected: <strong class="text-[#111827]">Q3 2026</strong></span>
+                </div>
+              </div>
+              
+              <div class="mt-auto">
+                <div class="flex justify-between items-center mb-2.5 text-[13px]">
+                  <span class="text-gray-600 font-medium">Progress</span>
+                  <span class="text-[#111827] font-bold">65%</span>
+                </div>
+                <div class="w-full h-1.5 bg-[#E0E7FF] rounded-full overflow-hidden">
+                  <div class="h-full bg-[#2563EB] rounded-full transition-all duration-1000" style="width: 65%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Pagination Controls -->
+        <div class="flex justify-center mt-12 md:mt-16">
+          <div class="bg-[#D1D5DB] rounded-full px-5 py-2 flex items-center gap-6 text-white shadow-sm cursor-pointer">
+            <button class="hover:text-gray-600 transition-colors px-1"><i class="fa-solid fa-angle-left text-sm"></i></button>
+            <button class="hover:text-gray-600 transition-colors px-1"><i class="fa-solid fa-angle-right text-sm"></i></button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<!-- FOOTER SECTION -->
+    <footer class="bg-[#111827] text-[#E7E7E7] pt-20 pb-8 font-manrope">
+      <div class="container mx-auto px-4 md:px-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
+          <!-- Logo and Contact -->
+          <div class="lg:col-span-2 space-y-6">
+            <img src="./assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
+            <div class="space-y-5 text-sm md:text-base opacity-90">
+              <div class="flex items-start gap-4">
+                <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
+                <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor), Motijheel
+                  C/A,
+                  Dhaka-1000, Bangladesh</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <i class="fa-regular fa-envelope text-xl"></i>
+                <p>info@bhaiya-group.com</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <i class="fa-solid fa-phone-volume text-xl"></i>
+                <p>+88-02-9551750, +88-02-9552395</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
+            </ul>
+          </div>
+
+          <!-- Others Links -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Concerns Link -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Concerns Link</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya Housing <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food & Beverage
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati Insurance <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Duria <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Social</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-square-facebook text-2xl"></i> Facebook</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-youtube text-2xl"></i> Youtube</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-linkedin text-2xl"></i> LinkedIn</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-instagram text-2xl"></i> Instagram</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-x-twitter text-2xl"></i> Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="mt-16 pt-8 border-t border-white flex flex-col md:flex-row justify-between items-center gap-4 text-sm md:text-lg font-normal opacity-80">
+          <p>Copyright &copy; 1972-2026 BHAIYA GROUP, All rights reserved</p>
+          <p>Designed by Bhaiya Digital</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script for Mobile Hamburger Menu Toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
