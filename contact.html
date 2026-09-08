@@ -70,6 +70,19 @@
       opacity: 1;
       transform: translateX(-50%) translateY(0) scale(1);
     }
+
+    .reveal-left-wipe img,
+    .reveal-left-wipe .reveal-text {
+      clip-path: inset(0 100% 0 0);
+      opacity: 0;
+      transition: clip-path 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.2s ease-out;
+    }
+
+    .reveal-left-wipe.active img,
+    .reveal-left-wipe.active .reveal-text {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
   </style>
 </head>
 
@@ -130,7 +143,7 @@
         <nav class="hidden lg:flex items-center space-x-5 xl:space-x-8">
           <!-- About Us -->
           <div class="relative py-8 menu-wrapper" id="about-menu-wrapper">
-            <!-- About Us ???? -->
+            <!-- About Us বাটন -->
             <button id="about-toggle"
               class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
               <div class="flex items-center gap-1.5">
@@ -539,416 +552,410 @@
       </div>
     </div>
   </header>
-  <main>
-        <!-- Hero Section -->
-    <section class="relative w-full h-[90vh] min-h-[400px] overflow-hidden">
-      <img src="./assets/images/concern/details-hero.png" alt="Bhaiya Housing" class="absolute inset-0 w-full h-full object-cover object-center" />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80"></div>
+
+    <!-- Grid Background Hero Section -->
+    <section class="relative w-full bg-[#FAFAFA] pt-32 pb-24 overflow-hidden font-manrope">
+      <!-- Grid Pattern Overlay -->
+      <div class="absolute inset-0 z-0 opacity-40 pointer-events-none" style="background-image: linear-gradient(#E5E7EB 1px, transparent 1px), linear-gradient(90deg, #E5E7EB 1px, transparent 1px); background-size: 40px 40px;"></div>
       
-      <div class="container mx-auto px-4 md:px-10 h-full relative z-10 flex flex-col justify-between pt-20 md:pt-28 pb-10 md:pb-12">
-        <div>
-          <a href="concerns.html" class="inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors text-sm font-medium tracking-wide">
-            <i class="fa-solid fa-arrow-left"></i>
-            Back to Concerns
-          </a>
-        </div>
-        <div>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wider drop-shadow-md">Bhaiya Housing</h1>
-        </div>
+      <div class="container mx-auto px-4 relative z-10 text-center">
+        <h1 class="text-3xl md:text-5xl lg:text-[42px] font-bold text-[#111827] uppercase tracking-wide mb-6">
+          FEEL FREE TO GET IN TOUCH
+        </h1>
+        <p class="text-gray-500 text-sm md:text-[15px] max-w-2xl mx-auto leading-relaxed">
+          With over 50 years of experience, we can deliver great results for your online business without additional costs or commitments.
+        </p>
       </div>
     </section>
-    
 
-        <!-- Sticky Navigation -->
-    <div class="w-full bg-white border-b border-gray-200 sticky top-0 z-40" id="sticky-nav">
-      <div class="container mx-auto px-4 md:px-10 flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
-        <a href="#bhaiya-housing" class="nav-tab py-4 text-[#2563EB] text-sm md:text-base font-semibold border-b-2 border-[#2563EB] transition-colors">Bhaiya Housing</a>
-        <a href="#brands" class="nav-tab py-4 text-gray-500 hover:text-gray-900 text-sm md:text-base font-medium border-b-2 border-transparent transition-colors">Brands</a>
-        <a href="#countries" class="nav-tab py-4 text-gray-500 hover:text-gray-900 text-sm md:text-base font-medium border-b-2 border-transparent transition-colors">Countries</a>
-        <a href="#stories" class="nav-tab py-4 text-gray-500 hover:text-gray-900 text-sm md:text-base font-medium border-b-2 border-transparent transition-colors">Stories</a>
-      </div>
-    </div>
-
-    <!-- Content Area -->
-    <section id="bhaiya-housing" class="container mx-auto px-4 md:px-10 py-16 md:py-24 font-manrope">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+    <!-- Contact Form & Info Section -->
+    <section class="w-full bg-[#FAFAFA] py-16 md:py-24 font-manrope border-t border-gray-100">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1200px]">
         
-        <!-- Left Content -->
-        <div class="lg:col-span-8 text-[#4B5563] text-sm md:text-base leading-relaxed space-y-6">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <p>Type sheets. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
-          <p>Type sheets. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
-          <h3 class="text-xl md:text-2xl font-bold text-black pt-4 pb-2">Bhaiya Housing has few vision</h3>
-          
-          <h4 class="font-bold text-black">Lorem Ipsum is simply dummy text:</h4>
-          <p>Type sheets. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-          
-          <h4 class="font-bold text-black mt-6">Lorem Ipsum is simply dummy text:</h4>
-          <p>Type sheets. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-          
-          <h4 class="font-bold text-black mt-6">Lorem Ipsum is simply dummy text:</h4>
-          <p>Type sheets. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
-          
-          <h4 class="font-bold text-black mt-6">Lorem Ipsum is simply dummy text:</h4>
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-        </div>
+          <!-- Left Column: Form (Takes up 3/5 width on lg) -->
+          <div class="lg:col-span-7 bg-white rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 p-8 md:p-10">
+            <h2 class="text-[22px] font-bold text-[#111827] mb-8">Contact Information</h2>
+            
+            <form action="#" class="space-y-6">
+              
+              <!-- Row 1: Name & Phone -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Full Name -->
+                <div class="flex flex-col gap-2.5">
+                  <label class="text-[14px] font-semibold text-[#111827]">Full Name <span class="text-gray-500">*</span></label>
+                  <input type="text" placeholder="First name" class="w-full bg-[#F9FAFB] rounded-lg px-4 py-3.5 text-[14px] text-gray-700 outline-none focus:ring-2 focus:ring-[#2563EB] transition-all border border-gray-200 focus:border-[#2563EB]">
+                </div>
+                
+                <!-- Phone Number -->
+                <div class="flex flex-col gap-2.5">
+                  <label class="text-[14px] font-semibold text-[#111827]">Phone Number <span class="text-gray-500">*</span></label>
+                  <div class="flex bg-[#F9FAFB] rounded-lg overflow-hidden border border-gray-200 focus-within:ring-2 focus-within:ring-[#2563EB] focus-within:border-[#2563EB] transition-all">
+                    <div class="flex items-center px-4 border-r border-gray-200 bg-[#F9FAFB] text-[14px] font-medium text-[#111827] cursor-pointer">
+                      US <i class="fa-solid fa-chevron-down ml-2 text-[10px] text-gray-500"></i>
+                    </div>
+                    <input type="text" placeholder="+1(655) 000-0000" class="w-full bg-transparent px-4 py-3.5 text-[14px] text-gray-700 outline-none">
+                  </div>
+                </div>
+              </div>
 
-        <!-- Right Sidebar -->
-        <div class="lg:col-span-4 space-y-12 lg:border-l lg:border-gray-300 lg:pl-10 lg:-ml-10">
-          
-                    <!-- Website -->
-          <div>
-            <h3 class="text-xl md:text-2xl text-black font-semibold mb-4">Website:</h3>
-            <a href="#" class="group inline-flex items-center gap-4 border border-[#2563EB] bg-transparent text-[#2563EB] pl-6 pr-2 py-1.5 rounded-full text-sm font-semibold hover:bg-blue-50 transition w-fit">
-              <div class="relative h-5 overflow-hidden pointer-events-none">
-                <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Click to Visit</span>
-                <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Click to Visit</span>
+              <!-- Row 2: Email -->
+              <div class="flex flex-col gap-2.5">
+                <label class="text-[14px] font-semibold text-[#111827]">Email Address <span class="text-gray-500">*</span></label>
+                <input type="email" placeholder="you@company.com" class="w-full bg-[#F9FAFB] rounded-lg px-4 py-3.5 text-[14px] text-gray-700 outline-none focus:ring-2 focus:ring-[#2563EB] transition-all border border-gray-200 focus:border-[#2563EB]">
               </div>
-              <div class="relative w-8 h-8 rounded-full border border-[#2563EB] flex items-center justify-center overflow-hidden ml-1">
-                <i class="fa-solid fa-location-arrow absolute text-xs transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                <i class="fa-solid fa-location-arrow absolute text-xs transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"></i>
+
+              <!-- Row 3: Subject -->
+              <div class="flex flex-col gap-2.5">
+                <label class="text-[14px] font-semibold text-[#111827]">Subject</label>
+                <input type="text" placeholder="Subject" class="w-full bg-[#F9FAFB] rounded-lg px-4 py-3.5 text-[14px] text-gray-700 outline-none focus:ring-2 focus:ring-[#2563EB] transition-all border border-gray-200 focus:border-[#2563EB]">
               </div>
-            </a>
+
+              <!-- Row 4: Message -->
+              <div class="flex flex-col gap-2.5">
+                <label class="text-[14px] font-semibold text-[#111827]">You Message</label>
+                <textarea rows="4" placeholder="Tell us how we can help you" class="w-full bg-[#F9FAFB] rounded-lg px-4 py-3.5 text-[14px] text-gray-700 outline-none focus:ring-2 focus:ring-[#2563EB] transition-all border border-gray-200 focus:border-[#2563EB] resize-none"></textarea>
+              </div>
+
+              <!-- Row 5: Checkboxes -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 pt-2">
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-[#2563EB] focus:ring-[#2563EB] cursor-pointer">
+                  <span class="text-[14px] font-medium text-[#374151] group-hover:text-[#111827]">Bhaiya Housing</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-[#2563EB] focus:ring-[#2563EB] cursor-pointer">
+                  <span class="text-[14px] font-medium text-[#374151] group-hover:text-[#111827]">Real State</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-[#2563EB] focus:ring-[#2563EB] cursor-pointer">
+                  <span class="text-[14px] font-medium text-[#374151] group-hover:text-[#111827]">Hotel & Resorts</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-[#2563EB] focus:ring-[#2563EB] cursor-pointer">
+                  <span class="text-[14px] font-medium text-[#374151] group-hover:text-[#111827]">Food & Beverage</span>
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="pt-6">
+                <button type="submit" class="w-full bg-[#2563EB] hover:bg-blue-700 text-white font-semibold py-3.5 rounded-lg flex items-center justify-center gap-2.5 text-[15px] transition-colors shadow-md">
+                  <i class="fa-solid fa-location-arrow text-[13px] transform rotate-45"></i> Send Message
+                </button>
+              </div>
+
+            </form>
           </div>
 
-          <!-- Social Connect -->
-          <div>
-            <h3 class="text-xl md:text-2xl text-black font-semibold mb-4">Stay Connect with us:</h3>
-            <div class="flex items-center gap-4">
-              <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 text-gray-700 rounded hover:bg-[#111827] hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 text-gray-700 rounded hover:bg-[#111827] hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 text-gray-700 rounded hover:bg-[#111827] hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-200 text-gray-700 rounded hover:bg-[#111827] hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+          <!-- Right Column: Info Cards (Takes up 2/5 width on lg) -->
+          <div class="lg:col-span-5 bg-[#0F172A] rounded-2xl rounded-tr-[70px] p-8 md:p-10 text-white shadow-xl h-full flex flex-col justify-between">
+            
+            <div class="flex flex-col gap-10">
+              <!-- Chat -->
+              <div>
+                <h3 class="text-[17px] font-bold mb-1">Chat with us</h3>
+                <p class="text-gray-400 text-[13px] mb-5">Speak to our friendly team via live chat.</p>
+                <div class="flex flex-col gap-3.5">
+                  <a href="#" class="flex items-center gap-3 text-[14px] text-gray-300 hover:text-white transition-colors">
+                    <i class="fa-regular fa-comment-dots text-[15px] w-5 text-center"></i> Start a live chat
+                  </a>
+                  <a href="#" class="flex items-center gap-3 text-[14px] text-gray-300 hover:text-white transition-colors">
+                    <i class="fa-regular fa-paper-plane text-[15px] w-5 text-center"></i> Shoot us an email
+                  </a>
+                  <a href="#" class="flex items-center gap-3 text-[14px] text-gray-300 hover:text-white transition-colors">
+                    <i class="fa-brands fa-twitter text-[15px] w-5 text-center"></i> Message us on Twitter
+                  </a>
+                </div>
+              </div>
+
+              <div class="w-full h-[1px] bg-gray-800"></div>
+
+              <!-- Call Us -->
+              <div>
+                <h3 class="text-[17px] font-bold mb-1">Call us</h3>
+                <p class="text-gray-400 text-[13px] mb-5">Call our team Mon-Fri from 8am to 6pm.</p>
+                <div class="flex flex-col gap-3.5">
+                  <a href="#" class="flex items-center gap-3 text-[14px] text-gray-300 hover:text-white transition-colors">
+                    <i class="fa-solid fa-phone text-[15px] w-5 text-center"></i> 136 366
+                  </a>
+                  <a href="#" class="flex items-center gap-3 text-[14px] text-gray-300 hover:text-white transition-colors">
+                    <i class="fa-solid fa-phone text-[15px] w-5 text-center"></i> +61424 007 007
+                  </a>
+                </div>
+              </div>
+
+              <div class="w-full h-[1px] bg-gray-800"></div>
+
+              <!-- Working Hours -->
+              <div>
+                <h3 class="text-[17px] font-bold mb-1">Working Hours</h3>
+                <p class="text-gray-400 text-[13px] mb-5">Call our team Mon-Fri from 8am to 6pm.</p>
+                <div class="flex flex-col gap-2.5 text-[13.5px] text-gray-300">
+                  <div class="flex gap-4">
+                    <span class="w-10">Sun:</span>
+                    <span>10 Am - 10 pm</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <span class="w-10">Mon:</span>
+                    <span>10 Am - 10 pm</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <span class="w-10">Tue:</span>
+                    <span>10 Am - 10 pm</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <span class="w-10">Wed:</span>
+                    <span>10 Am - 10 pm</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <span class="w-10">Thu:</span>
+                    <span>10 Am - 10 pm</span>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
           
         </div>
+
       </div>
     </section>
 
-        <!-- Brands Section -->
+        <!-- Office Location Cards Section -->
     <style>
-      .reveal-left-wipe .logo-box, .reveal-left-wipe .reveal-text {
-        clip-path: inset(0 100% 0 0);
-        opacity: 0;
-        transition: clip-path 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.2s ease-out;
-      }
-      .reveal-left-wipe.active .logo-box, .reveal-left-wipe.active .reveal-text {
-        clip-path: inset(0 0 0 0);
-        opacity: 1;
-      }
+      .hover-card-purple:hover .icon-box { background-color: #d8b4fe !important; color: #ffffff !important; }
+      .hover-card-purple:hover .icon-icon { transform: scale(1.1); }
+      .hover-card-green:hover .icon-box { background-color: #10b981 !important; color: #ffffff !important; }
+      .hover-card-green:hover .icon-icon { transform: scale(1.1); }
     </style>
-    <section id="brands" class="w-full bg-[#111827] py-16 md:py-24 font-manrope">
-      <div class="container mx-auto px-4 md:px-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-10">Brands</h2>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+    <section class="w-full bg-[#FAFAFA] pb-24 font-manrope">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1200px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           
-          <!-- Card 1 -->
-          <div class="reveal-left-wipe group cursor-pointer">
-            <div class="logo-box w-full bg-white h-40 flex items-center justify-center p-6 mb-4">
-              <img src="./assets/images/concern/housing.png" alt="Bhaiya Housing" class="max-h-full max-w-full object-contain" />
+          <!-- Card 1 (Purple) -->
+          <div class="bg-white rounded-2xl shadow-sm flex flex-col p-8 md:p-10 hover:shadow-xl hover-card-purple transition-shadow duration-300" style="border-top: 5px solid #d8b4fe;">
+            
+            <div class="icon-box w-[60px] h-[60px] rounded-2xl flex items-center justify-center transition-colors duration-300 mb-8 shadow-sm" style="background-color: #f3e8ff; color: #d8b4fe;">
+              <i class="icon-icon fa-solid fa-location-dot text-2xl transition-transform duration-300"></i>
             </div>
-            <div class="reveal-text">
-              <h3 class="text-white text-lg font-medium mb-1 group-hover:text-blue-400 transition-colors">Bhaiya Housing</h3>
-              <a href="#" class="inline-flex items-center gap-2 text-white text-xs font-semibold uppercase tracking-wider group-hover:text-blue-400 transition-colors">
-                See Details <i class="fa-solid fa-angle-right"></i>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Card 2 -->
-          <div class="reveal-left-wipe group cursor-pointer">
-            <div class="logo-box w-full bg-white h-40 flex items-center justify-center p-6 mb-4" style="transition-delay: 150ms;">
-              <img src="./assets/images/concern/hotels.png" alt="Bhaiya Hotel & Resorts" class="max-h-full max-w-full object-contain" />
-            </div>
-            <div class="reveal-text" style="transition-delay: 150ms;">
-              <h3 class="text-white text-lg font-medium mb-1 group-hover:text-blue-400 transition-colors">Bhaiya Hotel & Resorts</h3>
-              <a href="#" class="inline-flex items-center gap-2 text-white text-xs font-semibold uppercase tracking-wider group-hover:text-blue-400 transition-colors">
-                See Details <i class="fa-solid fa-angle-right"></i>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Card 3 -->
-          <div class="reveal-left-wipe group cursor-pointer">
-            <div class="logo-box w-full bg-white h-40 flex items-center justify-center p-6 mb-4" style="transition-delay: 300ms;">
-              <img src="./assets/images/concern/pinecity.png" alt="Pine City" class="max-h-full max-w-full object-contain" />
-            </div>
-            <div class="reveal-text" style="transition-delay: 300ms;">
-              <h3 class="text-white text-lg font-medium mb-1 group-hover:text-blue-400 transition-colors">Pine City</h3>
-              <a href="#" class="inline-flex items-center gap-2 text-white text-xs font-semibold uppercase tracking-wider group-hover:text-blue-400 transition-colors">
-                See Details <i class="fa-solid fa-angle-right"></i>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Card 4 -->
-          <div class="reveal-left-wipe group cursor-pointer">
-            <div class="logo-box w-full bg-white h-40 flex items-center justify-center p-6 mb-4" style="transition-delay: 450ms;">
-              <img src="./assets/images/concern/duria.png" alt="Duria Food" class="max-h-full max-w-full object-contain" />
-            </div>
-            <div class="reveal-text" style="transition-delay: 450ms;">
-              <h3 class="text-white text-lg font-medium mb-1 group-hover:text-blue-400 transition-colors">Duria Food</h3>
-              <a href="#" class="inline-flex items-center gap-2 text-white text-xs font-semibold uppercase tracking-wider group-hover:text-blue-400 transition-colors">
-                See Details <i class="fa-solid fa-angle-right"></i>
-              </a>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
-        <!-- Global Map Section -->
-    <section id="countries" class="relative w-full py-16 md:py-24 bg-gray-200 overflow-hidden font-manrope">
-      <!-- Background Map -->
-      <img src="./assets/images/concern/map.png" alt="Global Map" class="absolute inset-0 w-full h-full object-cover opacity-40 z-0 pointer-events-none">
-      
-      <div class="container mx-auto px-4 md:px-10 relative z-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#111827] mb-8 md:mb-12 drop-shadow-sm">Countries</h2>
-        
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-          
-          <!-- Card 1 -->
-          <div class="bg-[#111827] p-3 flex flex-col items-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
-            <img src="./assets/images/concern/bd_flag.png" alt="Bangladesh Flag" class="w-full aspect-[3/2] object-cover mb-3" />
-            <span class="text-white text-xs md:text-sm font-medium pb-1">Bangladesh</span>
-          </div>
-          
-          <!-- Card 2 -->
-          <div class="bg-[#111827] p-3 flex flex-col items-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
-            <img src="./assets/images/concern/bd_flag.png" alt="Bangladesh Flag" class="w-full aspect-[3/2] object-cover mb-3" />
-            <span class="text-white text-xs md:text-sm font-medium pb-1">Bangladesh</span>
-          </div>
-          
-          <!-- Card 3 -->
-          <div class="bg-[#111827] p-3 flex flex-col items-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
-            <img src="./assets/images/concern/bd_flag.png" alt="Bangladesh Flag" class="w-full aspect-[3/2] object-cover mb-3" />
-            <span class="text-white text-xs md:text-sm font-medium pb-1">Bangladesh</span>
-          </div>
-          
-          <!-- Card 4 -->
-          <div class="bg-[#111827] p-3 flex flex-col items-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
-            <img src="./assets/images/concern/bd_flag.png" alt="Bangladesh Flag" class="w-full aspect-[3/2] object-cover mb-3" />
-            <span class="text-white text-xs md:text-sm font-medium pb-1">Bangladesh</span>
-          </div>
-          
-          <!-- Card 5 -->
-          <div class="bg-[#111827] p-3 flex flex-col items-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
-            <img src="./assets/images/concern/bd_flag.png" alt="Bangladesh Flag" class="w-full aspect-[3/2] object-cover mb-3" />
-            <span class="text-white text-xs md:text-sm font-medium pb-1">Bangladesh</span>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- Stories Section -->
-    <section id="stories" class="container mx-auto px-4 md:px-10 py-16 md:py-24 font-manrope">
-      <h2 class="text-2xl md:text-4xl font-extrabold text-[#111827] mb-8">Stories</h2>
-      
-      <div class="relative w-full h-[350px] md:h-[500px] overflow-hidden rounded group shadow-lg">
-        <img src="./assets/images/concern/story.png" alt="Story" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        
-        <!-- Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
-        
-        <!-- Content -->
-        <div class="absolute inset-0 flex items-end">
-          <div class="p-6 md:p-12 w-full md:w-3/5 text-white">
-            <span class="text-xs md:text-sm font-medium tracking-widest uppercase mb-2 block text-gray-300">Sustainability</span>
-            <h3 class="text-xl md:text-3xl lg:text-4xl font-bold uppercase leading-tight mb-4 md:mb-6">
-              PIONEERING CIRCULAR FASHION<br>WITH NEXT-GEN FIBERS
+            
+            <h3 class="text-[17px] md:text-[19px] font-bold text-[#111827] uppercase tracking-wide mb-7">
+              MOTIJHEEL CORPORATE OFFICE
             </h3>
-            <p class="text-xs md:text-sm text-gray-300 mb-6 max-w-lg hidden md:block">
-              We are pioneers in developing sustainable solutions, significantly reducing carbon footprint while constructing the resilient foundations of modern, sustainable cities and smart infrastructures worldwide.
-            </p>
-            <a href="#" class="inline-flex items-center gap-3 border border-white/50 bg-transparent px-5 py-2 rounded-full text-xs md:text-sm font-semibold hover:bg-white hover:text-black transition-colors w-fit group/btn">
-              <span>Read more</span>
-              <i class="fa-solid fa-arrow-right-long text-[10px] transform transition-transform group-hover/btn:translate-x-1"></i>
+            
+            <div class="flex flex-col gap-4 mb-10 text-[14px] text-gray-500">
+              <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i><span>Motijheel, Dhaka</span></div>
+              <div class="flex items-center gap-3"><i class="fa-solid fa-phone w-4 text-center text-gray-400"></i><span>+880 2 955 1234</span></div>
+              <div class="flex items-center gap-3"><i class="fa-regular fa-envelope w-4 text-center text-gray-400"></i><span>corporate@company.com.bd</span></div>
+              <div class="flex items-center gap-3"><i class="fa-regular fa-clock w-4 text-center text-gray-400"></i><span>Sun-Thu: 9:00 AM - 6:00 PM</span></div>
+            </div>
+            
+            <div class="mt-auto">
+              <a href="#" class="w-full border border-gray-300 text-gray-700 hover:border-gray-400 rounded-lg py-3.5 flex items-center justify-center gap-2.5 text-[14px] font-semibold transition-all">
+                <i class="fa-regular fa-map text-[16px]"></i> View On Map
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 (Green) -->
+          <div class="bg-white rounded-2xl shadow-sm flex flex-col p-8 md:p-10 hover:shadow-xl hover-card-green transition-shadow duration-300" style="border-top: 5px solid #10b981;">
+            
+            <div class="icon-box w-[60px] h-[60px] rounded-2xl flex items-center justify-center transition-colors duration-300 mb-8 shadow-sm" style="background-color: #d1fae5; color: #10b981;">
+              <i class="icon-icon fa-solid fa-location-dot text-2xl transition-transform duration-300"></i>
+            </div>
+            
+            <h3 class="text-[17px] md:text-[19px] font-bold text-[#111827] uppercase tracking-wide mb-7">
+              GULSHAN BRANCH OFFICE
+            </h3>
+            
+            <div class="flex flex-col gap-4 mb-10 text-[14px] text-gray-500">
+              <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i><span>Motijheel, Dhaka</span></div>
+              <div class="flex items-center gap-3"><i class="fa-solid fa-phone w-4 text-center text-gray-400"></i><span>+880 2 955 1234</span></div>
+              <div class="flex items-center gap-3"><i class="fa-regular fa-envelope w-4 text-center text-gray-400"></i><span>corporate@company.com.bd</span></div>
+              <div class="flex items-center gap-3"><i class="fa-regular fa-clock w-4 text-center text-gray-400"></i><span>Sun-Thu: 9:00 AM - 6:00 PM</span></div>
+            </div>
+            
+            <div class="mt-auto">
+              <a href="#" class="w-full border border-gray-300 text-gray-700 hover:border-gray-400 rounded-lg py-3.5 flex items-center justify-center gap-2.5 text-[14px] font-semibold transition-all">
+                <i class="fa-regular fa-map text-[16px]"></i> View On Map
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="w-full h-[450px] md:h-[550px] relative font-manrope">
+      <!-- Standard Google Map Iframe -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116834.00977793739!2d90.33728809424706!3d23.78077774441094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1715000000000!5m2!1sen!2sbd" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      <!-- Custom Info Overlay matching the provided image and covering the default Google card -->
+      <div class="absolute top-[10px] left-[10px] bg-white shadow-[0_2px_15px_rgba(0,0,0,0.15)] rounded-sm p-4 w-[290px] md:w-[320px] min-h-[120px] z-10">
+        <div class="flex justify-between items-start mb-2.5">
+          <h3 class="text-[#111827] font-semibold text-[14.5px] leading-tight pr-2 pt-1">Bhaiya Group of Company</h3>
+          <div class="flex gap-2 shrink-0">
+            <a href="#" class="w-[30px] h-[30px] rounded-full bg-[#EEF2FF] text-[#2563EB] flex items-center justify-center hover:bg-blue-100 transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[13px]"></i>
+            </a>
+            <a href="#" class="w-[30px] h-[30px] rounded-full bg-[#EEF2FF] text-[#2563EB] flex items-center justify-center hover:bg-blue-100 transition-colors">
+              <i class="fa-solid fa-plus text-[13px]"></i>
             </a>
           </div>
         </div>
-
-        <!-- 01 Outline overlay -->
-        <div class="absolute bottom-4 right-8 pointer-events-none hidden md:block">
-          <span class="text-[120px] lg:text-[180px] font-bold text-transparent leading-none opacity-40" style="-webkit-text-stroke: 1.5px white;">01</span>
-        </div>
+        <p class="text-gray-600 text-[11.5px] leading-[1.6]">
+          2B/A-3, Toyenbee Circular Road,<br>
+          Sandip Bhaban (7th Floor)<br>
+          Motijheel C/A, Dhaka - 1000,<br>
+          Banglades
+        </p>
       </div>
     </section>
 
-    <!-- Footer Graphic Placeholder -->
-    <div class="w-full">
-      <img src="./assets/images/home/footer.jpg" alt="Bhaiya Group Footer" class="w-full h-auto object-cover border-b-4 border-[#111827]">
-    </div>
-  </main>
-  <!-- FOOTER SECTION -->
-  <footer class="bg-[#111827] text-[#E7E7E7] pt-20 pb-8 font-manrope">
-    <div class="container mx-auto px-4 md:px-10">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
-        <!-- Logo and Contact -->
-        <div class="lg:col-span-2 space-y-6">
-          <img src="./assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
-          <div class="space-y-5 text-sm md:text-base opacity-90">
-            <div class="flex items-start gap-4">
-              <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
-              <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor), Motijheel C/A,
-                Dhaka-1000, Bangladesh</p>
+<!-- FOOTER SECTION -->
+    <footer class="bg-[#111827] text-[#E7E7E7] pt-20 pb-8 font-manrope">
+      <div class="container mx-auto px-4 md:px-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
+          <!-- Logo and Contact -->
+          <div class="lg:col-span-2 space-y-6">
+            <img src="./assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
+            <div class="space-y-5 text-sm md:text-base opacity-90">
+              <div class="flex items-start gap-4">
+                <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
+                <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor), Motijheel
+                  C/A,
+                  Dhaka-1000, Bangladesh</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <i class="fa-regular fa-envelope text-xl"></i>
+                <p>info@bhaiya-group.com</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <i class="fa-solid fa-phone-volume text-xl"></i>
+                <p>+88-02-9551750, +88-02-9552395</p>
+              </div>
             </div>
-            <div class="flex items-center gap-4">
-              <i class="fa-regular fa-envelope text-xl"></i>
-              <p>info@bhaiya-group.com</p>
-            </div>
-            <div class="flex items-center gap-4">
-              <i class="fa-solid fa-phone-volume text-xl"></i>
-              <p>+88-02-9551750, +88-02-9552395</p>
-            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
+            </ul>
+          </div>
+
+          <!-- Others Links -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Concerns Link -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Concerns Link</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya Housing <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food & Beverage
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati Insurance <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Duria <svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div>
+            <h4 class="text-lg md:text-2xl font-semibold mb-6">Social</h4>
+            <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-square-facebook text-2xl"></i> Facebook</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-youtube text-2xl"></i> Youtube</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-linkedin text-2xl"></i> LinkedIn</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-instagram text-2xl"></i> Instagram</a></li>
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                    class="fa-brands fa-x-twitter text-2xl"></i> Twitter</a></li>
+            </ul>
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
-          <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
-          </ul>
-        </div>
-
-        <!-- Others Links -->
-        <div>
-          <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
-          <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- Concerns Link -->
-        <div>
-          <h4 class="text-lg md:text-2xl font-semibold mb-6">Concerns Link</h4>
-          <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya Housing <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                  stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                  stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food & Beverage <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                  stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati Insurance <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                  stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Duria <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                  stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                </svg></a></li>
-          </ul>
-        </div>
-
-        <!-- Social -->
-        <div>
-          <h4 class="text-lg md:text-2xl font-semibold mb-6">Social</h4>
-          <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
-                  class="fa-brands fa-square-facebook text-2xl"></i> Facebook</a></li>
-            <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
-                  class="fa-brands fa-youtube text-2xl"></i> Youtube</a></li>
-            <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
-                  class="fa-brands fa-linkedin text-2xl"></i> LinkedIn</a></li>
-            <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
-                  class="fa-brands fa-instagram text-2xl"></i> Instagram</a></li>
-            <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
-                  class="fa-brands fa-x-twitter text-2xl"></i> Twitter</a></li>
-          </ul>
+        <!-- Footer Bottom -->
+        <div
+          class="mt-16 pt-8 border-t border-white flex flex-col md:flex-row justify-between items-center gap-4 text-sm md:text-lg font-normal opacity-80">
+          <p>Copyright &copy; 1972-2026 BHAIYA GROUP, All rights reserved</p>
+          <p>Designed by Bhaiya Digital</p>
         </div>
       </div>
+    </footer>
 
-      <!-- Footer Bottom -->
-      <div
-        class="mt-16 pt-8 border-t border-white flex flex-col md:flex-row justify-between items-center gap-4 text-sm md:text-lg font-normal opacity-80">
-        <p>Copyright &copy; 1972-2026 BHAIYA GROUP, All rights reserved</p>
-        <p>Designed by Bhaiya Digital</p>
-      </div>
-    </div>
-  </footer>
+    <!-- Script for Mobile Hamburger Menu Toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Script for Mobile Hamburger Menu Toggle -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script type="module" src="./assets/js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const tabs = document.querySelectorAll('.nav-tab');
-      const sections = document.querySelectorAll('section[id]');
-      const stickyNav = document.getElementById('sticky-nav');
-      
-      // Smooth scroll to section
-      tabs.forEach(tab => {
-        tab.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetId = tab.getAttribute('href').substring(1);
-          const targetSection = document.getElementById(targetId);
-          if (targetSection) {
-            const headerOffset = stickyNav ? stickyNav.offsetHeight : 60;
-            const elementPosition = targetSection.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.scrollY - headerOffset;
-          
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-
-      // Update active tab on scroll
-      window.addEventListener('scroll', () => {
-        let current = 'bhaiya-housing'; // default
-        const headerOffset = (stickyNav ? stickyNav.offsetHeight : 60) + 10;
-        
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          if (window.scrollY >= (sectionTop - headerOffset)) {
-            current = section.getAttribute('id');
-          }
-        });
-        
-        tabs.forEach(tab => {
-          // Reset all tabs to inactive state
-          tab.classList.remove('text-[#2563EB]', 'font-semibold', 'border-[#2563EB]');
-          tab.classList.add('text-gray-500', 'font-medium', 'border-transparent');
-          
-          // Set active state for current tab
-          if (tab.getAttribute('href') === '#' + current) {
-            tab.classList.add('text-[#2563EB]', 'font-semibold', 'border-[#2563EB]');
-            tab.classList.remove('text-gray-500', 'font-medium', 'border-transparent');
-          }
-        });
-      });
-    });
-  </script>
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
