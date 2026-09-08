@@ -21,6 +21,19 @@
   .active-link {
     @apply text-brand-blue; 
   }
+
+  /* Reusable Section Typography Classes */
+  .section-title {
+    @apply text-3xl md:text-[40px] font-bold uppercase tracking-tight;
+  }
+  
+  .section-text {
+    @apply text-sm md:text-base leading-relaxed;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-2xl font-bold uppercase tracking-widest;
+  }
 }
 
 @font-face {
