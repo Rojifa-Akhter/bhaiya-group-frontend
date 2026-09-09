@@ -23,54 +23,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Local CSS -->
-  <link rel="stylesheet" href="./assets/css/input.css" />
-  <style>
-    .h1-wrapper {
-      overflow: hidden;
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    .h1-wrapper h1 {
-      display: block;
-      transform: translateY(105%);
-      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .swiper-slide-active .h1-wrapper h1 {
-      transform: translateY(0);
-    }
-
-    .swiper-slide:not(.swiper-slide-active) .h1-wrapper h1 {
-      transform: translateY(105%);
-      transition: none;
-    }
-
-    /* Dropdown and Arrow Expand Animations */
-    .dropdown-menu {
-      opacity: 0;
-      transform: translateY(-8px) scale(0.97);
-      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      pointer-events: none;
-    }
-
-    .dropdown-menu.open {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      pointer-events: auto;
-    }
-
-    .down-indicator {
-      opacity: 0;
-      transform: translateX(-50%) translateY(-4px) scale(0.5);
-      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .down-indicator.open {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0) scale(1);
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/input.css" />
+  <link rel="stylesheet" href="../assets/css/custom.css" />
 </head>
 
 <body class="font-manrope overflow-x-hidden">
@@ -80,16 +34,16 @@
   <aside id="mobile-drawer"
     class="fixed top-0 right-0 w-[280px] h-full bg-[#0B1F3A] text-white z-[70] translate-x-full transition-transform duration-300 ease-in-out p-6 shadow-2xl">
     <div class="flex justify-between items-center mb-8">
-      <img src="./assets/images/logo.png" alt="Bhaiya Group" class="h-10" />
+      <img src="../assets/images/logo.png" alt="Bhaiya Group" class="h-10" />
       <button id="mobile-drawer-close" class="text-2xl text-white"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <nav class="flex flex-col space-y-4 font-medium overflow-y-auto h-[calc(100vh-120px)]">
       <a href="#" class="py-2 border-b border-white/10">About Us</a>
-      <a href="#" class="py-2 border-b border-white/10">Our Concerns</a>
-      <a href="#" class="py-2 border-b border-white/10">Our Products</a>
-      <a href="#" class="py-2 border-b border-white/10">Media Center</a>
-      <a href="#" class="py-2 border-b border-white/10">Sustainability</a>
-      <a href="#" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
+      <a href="./concerns.html" class="py-2 border-b border-white/10">Our Concerns</a>
+      <a href="./our-products.html" class="py-2 border-b border-white/10">Our Products</a>
+      <a href="./stories.html" class="py-2 border-b border-white/10">Media Center</a>
+      <a href="./sustainability.html" class="py-2 border-b border-white/10">Sustainability</a>
+      <a href="./contact.html" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
     </nav>
   </aside>
   <!-- Header: Absolute to stay on top of Slider -->
@@ -110,9 +64,9 @@
         </div>
         <!-- Right: Social Icons -->
         <div class="flex items-center gap-5 text-base">
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+          <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
           <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
@@ -122,8 +76,8 @@
     <div class="bg-black/25 backdrop-blur-[2px] border-b border-white/10 w-full">
       <div class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between text-white">
         <div class="flex-shrink-0">
-          <a href="#">
-            <img src="./assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
+          <a href="../index.html">
+            <img src="../assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
           </a>
         </div>
 
@@ -160,8 +114,8 @@
             <div id="about-dropdown"
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[480px] z-50">
               <div class="grid grid-cols-2 gap-3.5">
-                <a href="./pages/legacy.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header11.jpg" alt="Our Legacy"
+                <a href="./legacy.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header11.jpg" alt="Our Legacy"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -175,8 +129,8 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header12.png" alt="Our Purpose"
+                <a href="./details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header12.png" alt="Our Purpose"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -190,8 +144,8 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header13.jpg" alt="Mission & Vision"
+                <a href="./missionVission.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header13.jpg" alt="Mission & Vision"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -205,8 +159,8 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header14.png" alt="Leadership"
+                <a href="./details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header14.png" alt="Leadership"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -256,8 +210,8 @@
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
               <div class="grid grid-cols-3 gap-3 md:gap-3.5">
                 <!-- 1. Real state -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header21.jpg" alt="Real state"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header21.jpg" alt="Real state"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -273,8 +227,8 @@
                 </a>
 
                 <!-- 2. Restaurant -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header22.png" alt="Restaurant"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header22.png" alt="Restaurant"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -290,8 +244,8 @@
                 </a>
 
                 <!-- 3. Media -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header23.jpg" alt="Media"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header23.jpg" alt="Media"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -307,8 +261,8 @@
                 </a>
 
                 <!-- 4. Software -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header24.jpg" alt="Software"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header24.jpg" alt="Software"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -324,7 +278,7 @@
                 </a>
 
                 <!-- 5. See all Concerns -->
-                <a href="./pages/details.html"
+                <a href="./details.html"
                   class="relative h-24 md:h-28 rounded bg-[#EEF4FF] hover:bg-[#E0EBFF] transition-colors flex items-center justify-center gap-2 group  p-2">
                   <span class="text-[#1864FF] text-sm font-normal whitespace-nowrap">See all Concerns</span>
                   <svg
@@ -337,7 +291,7 @@
             </div>
           </div>
 
-          <a href="#"
+          <a href="./our-products.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -384,8 +338,8 @@
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
               <div class="grid grid-cols-3 gap-3 md:gap-3.5">
                 <!-- 1. Stories -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header31.png" alt="Stories"
+                <a href="./stories.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header31.png" alt="Stories"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -401,8 +355,8 @@
                 </a>
 
                 <!-- 2. Events -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header32.png" alt="Events"
+                <a href="./events.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header32.png" alt="Events"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -418,8 +372,8 @@
                 </a>
 
                 <!-- 3. News Room -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header33.png" alt="News Room"
+                <a href="./newsroom.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header33.png" alt="News Room"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -435,8 +389,8 @@
                 </a>
 
                 <!-- 4. Newsletter -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header34.jpg" alt="Newsletter"
+                <a href="./newsletter.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header34.jpg" alt="Newsletter"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -452,8 +406,8 @@
                 </a>
 
                 <!-- 5. Photo & Video gallery -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header35.jpg" alt="Photo & Video gallery"
+                <a href="./photo-gallery.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header35.jpg" alt="Photo & Video gallery"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -470,7 +424,7 @@
               </div>
             </div>
           </div>
-          <a href="#"
+          <a href="./our-products.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -485,7 +439,7 @@
             <i
               class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
           </a>
-          <a href="#"
+          <a href="./sustainability.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -542,7 +496,7 @@
     <!-- Hero Section -->
     <section class="relative w-full h-[60vh] lg:h-[75vh] flex flex-col justify-center items-center overflow-hidden">
       <!-- Background Image -->
-      <img src="./assets/images/home/hero2.jpg" alt="Sustainability Forest" class="absolute inset-0 w-full h-full object-cover z-0">
+      <img src="../assets/images/home/hero2.jpg" alt="Sustainability Forest" class="absolute inset-0 w-full h-full object-cover z-0">
       <div class="absolute inset-0 bg-black/60 z-0"></div>
       
       <!-- Content -->
@@ -633,7 +587,7 @@
     <section class="w-full bg-white pb-24 font-manrope">
       <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-7xl">
         <div class="w-full aspect-[21/9] lg:aspect-[24/9] bg-gray-200 overflow-hidden mb-8 shadow-sm">
-          <img src="./assets/images/home/hero3.jpg" alt="Sustainability Initiative" class="w-full h-full object-cover">
+          <img src="../assets/images/home/hero3.jpg" alt="Sustainability Initiative" class="w-full h-full object-cover">
         </div>
         
         <!-- Slider Controls -->
@@ -671,7 +625,7 @@
           <div class="flex flex-col bg-[#1E293B] rounded-xl overflow-hidden shadow-2xl transition-transform duration-300 hover:-translate-y-2">
             <!-- Image Top -->
             <div class="w-full h-64 lg:h-72 overflow-hidden shrink-0">
-              <img src="./assets/images/home/hero2.jpg" alt="Environmental" class="w-full h-full object-cover">
+              <img src="../assets/images/home/hero2.jpg" alt="Environmental" class="w-full h-full object-cover">
             </div>
             <!-- Content Bottom -->
             <div class="p-8 lg:p-10 flex flex-col flex-1">
@@ -722,7 +676,7 @@
                 <div class="h-full bg-[#10B981] rounded-full" style="width: 85%;"></div>
               </div>
               
-              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#10B981] text-sm font-bold transition w-fit group">
+              <a href="./sustainability.html" class="inline-flex items-center gap-3 bg-transparent text-[#10B981] text-sm font-bold transition w-fit group">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
                   <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Learn More</span>
                   <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Learn More</span>
@@ -735,7 +689,7 @@
             </div>
             <!-- Image Bottom -->
             <div class="w-full h-64 lg:h-72 overflow-hidden shrink-0">
-              <img src="./assets/images/home/hero3.jpg" alt="Social" class="w-full h-full object-cover">
+              <img src="../assets/images/home/hero3.jpg" alt="Social" class="w-full h-full object-cover">
             </div>
           </div>
 
@@ -743,7 +697,7 @@
           <div class="flex flex-col bg-[#1E293B] rounded-xl overflow-hidden shadow-2xl transition-transform duration-300 hover:-translate-y-2">
             <!-- Image Top -->
             <div class="w-full h-64 lg:h-72 overflow-hidden shrink-0">
-              <img src="./assets/images/home/hero1.jpg" alt="Governance" class="w-full h-full object-cover">
+              <img src="../assets/images/home/hero1.jpg" alt="Governance" class="w-full h-full object-cover">
             </div>
             <!-- Content Bottom -->
             <div class="p-8 lg:p-10 flex flex-col flex-1">
@@ -814,7 +768,7 @@
             </div>
             <!-- Right Image -->
             <div class="w-full md:w-1/2 h-64 md:h-full relative">
-              <img src="./assets/images/home/hero3.jpg" alt="Green Construction" class="w-full h-full object-cover">
+              <img src="../assets/images/home/hero3.jpg" alt="Green Construction" class="w-full h-full object-cover">
             </div>
           </div>
 
@@ -840,7 +794,7 @@
             </div>
             <!-- Right Image -->
             <div class="w-full md:w-1/2 h-64 md:h-full relative">
-              <img src="./assets/images/home/hero2.jpg" alt="Water Conservation" class="w-full h-full object-cover">
+              <img src="../assets/images/home/hero2.jpg" alt="Water Conservation" class="w-full h-full object-cover">
             </div>
           </div>
 
@@ -866,7 +820,7 @@
             </div>
             <!-- Right Image -->
             <div class="w-full md:w-1/2 h-64 md:h-full relative">
-              <img src="./assets/images/home/hero1.jpg" alt="Renewable Energy" class="w-full h-full object-cover">
+              <img src="../assets/images/home/hero1.jpg" alt="Renewable Energy" class="w-full h-full object-cover">
             </div>
           </div>
 
@@ -892,7 +846,7 @@
             </div>
             <!-- Right Image -->
             <div class="w-full md:w-1/2 h-64 md:h-full relative">
-              <img src="./assets/images/home/hero3.jpg" alt="Community Development" class="w-full h-full object-cover">
+              <img src="../assets/images/home/hero3.jpg" alt="Community Development" class="w-full h-full object-cover">
             </div>
           </div>
 
@@ -1051,7 +1005,7 @@
             <!-- Card 1 -->
             <div class="bg-[#1E293B]/30 border border-[#334155] p-5 flex flex-col">
               <div class="w-full aspect-square overflow-hidden mb-6">
-                <img src="./assets/images/home/hero3.jpg" alt="Annual Report 2025" class="w-full h-full object-cover">
+                <img src="../assets/images/home/hero3.jpg" alt="Annual Report 2025" class="w-full h-full object-cover">
               </div>
               <h3 class="text-lg md:text-xl font-bold text-white mb-4">Annual Report 2025</h3>
               
@@ -1074,7 +1028,7 @@
             <!-- Card 2 -->
             <div class="bg-[#1E293B]/30 border border-[#334155] p-5 flex flex-col">
               <div class="w-full aspect-square overflow-hidden mb-6">
-                <img src="./assets/images/home/hero2.jpg" alt="ESG Report 2024" class="w-full h-full object-cover">
+                <img src="../assets/images/home/hero2.jpg" alt="ESG Report 2024" class="w-full h-full object-cover">
               </div>
               <h3 class="text-lg md:text-xl font-bold text-white mb-4">ESG Report 2024</h3>
               
@@ -1089,7 +1043,7 @@
                 </div>
               </div>
               
-              <a href="#" class="w-full py-3.5 border border-[#475569] rounded text-sm text-white font-semibold flex items-center justify-center gap-3 hover:bg-white hover:text-[#0F172A] transition-colors mt-auto">
+              <a href="./sustainability.html" class="w-full py-3.5 border border-[#475569] rounded text-sm text-white font-semibold flex items-center justify-center gap-3 hover:bg-white hover:text-[#0F172A] transition-colors mt-auto">
                 <i class="fa-solid fa-download"></i> Download PDF
               </a>
             </div>
@@ -1097,7 +1051,7 @@
             <!-- Card 3 -->
             <div class="bg-[#1E293B]/30 border border-[#334155] p-5 flex flex-col">
               <div class="w-full aspect-square overflow-hidden mb-6">
-                <img src="./assets/images/home/hero1.jpg" alt="CSR Activities" class="w-full h-full object-cover">
+                <img src="../assets/images/home/hero1.jpg" alt="CSR Activities" class="w-full h-full object-cover">
               </div>
               <h3 class="text-lg md:text-xl font-bold text-white mb-4">CSR Activities</h3>
               
@@ -1134,7 +1088,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
         <!-- Logo and Contact -->
         <div class="lg:col-span-2 space-y-6">
-          <img src="./assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
+          <img src="../assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
           <div class="space-y-5 text-sm md:text-base opacity-90">
             <div class="flex items-start gap-4">
               <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
@@ -1157,10 +1111,10 @@
           <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
           <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
             <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
+            <li><a href="./concerns.html" class="hover:text-white transition-colors">Our Concerns</a></li>
+            <li><a href="./our-products.html" class="hover:text-white transition-colors">Our Products</a></li>
+            <li><a href="./stories.html" class="hover:text-white transition-colors">Media Center</a></li>
+            <li><a href="./office-locations.html" class="hover:text-white transition-colors">Office Location</a></li>
           </ul>
         </div>
 
@@ -1169,10 +1123,10 @@
           <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
           <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
             <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="./newsletter.html" class="hover:text-white transition-colors">Newsletters</a></li>
+            <li><a href="./sustainability.html" class="hover:text-white transition-colors">Sustainability</a></li>
+            <li><a href="./investor.html" class="hover:text-white transition-colors">Investor Relation</a></li>
+            <li><a href="./contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
           </ul>
         </div>
 
@@ -1238,10 +1192,18 @@
   <!-- Script for Mobile Hamburger Menu Toggle -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <script type="module" src="./assets/js/main.js"></script>
+  <script type="module" src="../assets/js/main.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
 
 
 

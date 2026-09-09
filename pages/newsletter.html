@@ -23,67 +23,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Local CSS -->
-  <link rel="stylesheet" href="./assets/css/input.css" />
-  <style>
-    .h1-wrapper {
-      overflow: hidden;
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    .h1-wrapper h1 {
-      display: block;
-      transform: translateY(105%);
-      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .swiper-slide-active .h1-wrapper h1 {
-      transform: translateY(0);
-    }
-
-    .swiper-slide:not(.swiper-slide-active) .h1-wrapper h1 {
-      transform: translateY(105%);
-      transition: none;
-    }
-
-    /* Dropdown and Arrow Expand Animations */
-    .dropdown-menu {
-      opacity: 0;
-      transform: translateY(-8px) scale(0.97);
-      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      pointer-events: none;
-    }
-
-    .dropdown-menu.open {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      pointer-events: auto;
-    }
-
-    .down-indicator {
-      opacity: 0;
-      transform: translateX(-50%) translateY(-4px) scale(0.5);
-      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .down-indicator.open {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0) scale(1);
-    }
-
-    .reveal-left-wipe img,
-    .reveal-left-wipe .reveal-text {
-      clip-path: inset(0 100% 0 0);
-      opacity: 0;
-      transition: clip-path 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.2s ease-out;
-    }
-
-    .reveal-left-wipe.active img,
-    .reveal-left-wipe.active .reveal-text {
-      clip-path: inset(0 0 0 0);
-      opacity: 1;
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/input.css" />
+  <link rel="stylesheet" href="../assets/css/custom.css" />
 </head>
 
 <body class="font-manrope overflow-x-hidden">
@@ -93,16 +34,16 @@
   <aside id="mobile-drawer"
     class="fixed top-0 right-0 w-[280px] h-full bg-[#0B1F3A] text-white z-[70] translate-x-full transition-transform duration-300 ease-in-out p-6 shadow-2xl">
     <div class="flex justify-between items-center mb-8">
-      <img src="./assets/images/logo.png" alt="Bhaiya Group" class="h-10" />
+      <img src="../assets/images/logo.png" alt="Bhaiya Group" class="h-10" />
       <button id="mobile-drawer-close" class="text-2xl text-white"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <nav class="flex flex-col space-y-4 font-medium overflow-y-auto h-[calc(100vh-120px)]">
       <a href="#" class="py-2 border-b border-white/10">About Us</a>
-      <a href="#" class="py-2 border-b border-white/10">Our Concerns</a>
-      <a href="#" class="py-2 border-b border-white/10">Our Products</a>
-      <a href="#" class="py-2 border-b border-white/10">Media Center</a>
-      <a href="#" class="py-2 border-b border-white/10">Sustainability</a>
-      <a href="#" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
+      <a href="./concerns.html" class="py-2 border-b border-white/10">Our Concerns</a>
+      <a href="./our-products.html" class="py-2 border-b border-white/10">Our Products</a>
+      <a href="./stories.html" class="py-2 border-b border-white/10">Media Center</a>
+      <a href="./sustainability.html" class="py-2 border-b border-white/10">Sustainability</a>
+      <a href="./contact.html" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
     </nav>
   </aside>
   <!-- Header: Absolute to stay on top of Slider -->
@@ -123,9 +64,9 @@
         </div>
         <!-- Right: Social Icons -->
         <div class="flex items-center gap-5 text-base">
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+          <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
           <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
@@ -135,8 +76,8 @@
     <div class="bg-[#111827] border-b border-white/10 w-full">
       <div class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between text-white">
         <div class="flex-shrink-0">
-          <a href="#">
-            <img src="./assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
+          <a href="../index.html">
+            <img src="../assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
           </a>
         </div>
 
@@ -173,8 +114,8 @@
             <div id="about-dropdown"
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[480px] z-50">
               <div class="grid grid-cols-2 gap-3.5">
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header11.jpg" alt="Our Legacy"
+                <a href="./details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header11.jpg" alt="Our Legacy"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -188,8 +129,8 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header12.png" alt="Our Purpose"
+                <a href="./details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header12.png" alt="Our Purpose"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -203,8 +144,8 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header13.jpg" alt="Mission & Vision"
+                <a href="./missionVission.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header13.jpg" alt="Mission & Vision"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -218,8 +159,8 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header14.png" alt="Leadership"
+                <a href="./details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header14.png" alt="Leadership"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -269,8 +210,8 @@
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
               <div class="grid grid-cols-3 gap-3 md:gap-3.5">
                 <!-- 1. Real state -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header21.jpg" alt="Real state"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header21.jpg" alt="Real state"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -286,8 +227,8 @@
                 </a>
 
                 <!-- 2. Restaurant -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header22.png" alt="Restaurant"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header22.png" alt="Restaurant"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -303,8 +244,8 @@
                 </a>
 
                 <!-- 3. Media -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header23.jpg" alt="Media"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header23.jpg" alt="Media"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -320,8 +261,8 @@
                 </a>
 
                 <!-- 4. Software -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header24.jpg" alt="Software"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header24.jpg" alt="Software"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -337,7 +278,7 @@
                 </a>
 
                 <!-- 5. See all Concerns -->
-                <a href="./pages/details.html"
+                <a href="./details.html"
                   class="relative h-24 md:h-28 rounded bg-[#EEF4FF] hover:bg-[#E0EBFF] transition-colors flex items-center justify-center gap-2 group  p-2">
                   <span class="text-[#1864FF] text-sm font-normal whitespace-nowrap">See all Concerns</span>
                   <svg
@@ -350,7 +291,7 @@
             </div>
           </div>
 
-          <a href="#"
+          <a href="./our-products.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -397,8 +338,8 @@
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
               <div class="grid grid-cols-3 gap-3 md:gap-3.5">
                 <!-- 1. Stories -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header31.png" alt="Stories"
+                <a href="./stories.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header31.png" alt="Stories"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -414,8 +355,8 @@
                 </a>
 
                 <!-- 2. Events -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header32.png" alt="Events"
+                <a href="./events.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header32.png" alt="Events"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -431,8 +372,8 @@
                 </a>
 
                 <!-- 3. News Room -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header33.png" alt="News Room"
+                <a href="./newsroom.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header33.png" alt="News Room"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -448,8 +389,8 @@
                 </a>
 
                 <!-- 4. Newsletter -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header34.jpg" alt="Newsletter"
+                <a href="./newsletter.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header34.jpg" alt="Newsletter"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -465,8 +406,8 @@
                 </a>
 
                 <!-- 5. Photo & Video gallery -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header35.jpg" alt="Photo & Video gallery"
+                <a href="./photo-gallery.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header35.jpg" alt="Photo & Video gallery"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -483,7 +424,7 @@
               </div>
             </div>
           </div>
-          <a href="#"
+          <a href="./our-products.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -498,7 +439,7 @@
             <i
               class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
           </a>
-          <a href="#"
+          <a href="./sustainability.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -560,35 +501,35 @@
 
     <section
       class="animate-hero-height w-full h-[60vh] lg:h-[65vh] xl:h-[70vh] relative overflow-hidden flex flex-col items-center justify-center">
-      <img src="./assets/images/stories/hero.jpg" alt="Legacy Hero"
+      <img src="../assets/images/stories/hero.jpg" alt="Legacy Hero"
         class="absolute inset-0 w-full h-full object-cover object-center animate-zoom-slow" />
       <div class="absolute inset-0 bg-black/40"></div>
 
       <div class="relative z-10 text-center text-white px-4 mt-10">
-        <h1 class="text-3xl md:text-5xl font-bold uppercase tracking-wide leading-tight mb-4">
-          PHOTO & VIDEO GALLERY
+        <h1 class="section-title text-white mb-4">
+          NEWS ROOM
         </h1>
        <div class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal">
                     <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
                     <i class="fa-solid fa-angle-right text-xs mx-1"></i>
-                    <a href="#" class="hover:text-blue-400 transition">Media Center</a>
+                    <a href="./stories.html" class="hover:text-blue-400 transition">Media Center</a>
                     <i class="fa-solid fa-angle-right text-xs mx-1"></i>
-                    <span class="text-white">PHOTO & VIDEO GALLERY</span>
+                    <span class="text-white">NEWS ROOM</span>
                 </div>
       </div>
     </section>
-        <!-- Navigation Tabs -->
+            <!-- Navigation Tabs -->
     <div class="w-full bg-white border-b border-gray-200 shadow-sm sticky top-0 z-40">
       <div class="container mx-auto px-4 md:px-10 flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
-        <a href="stories.html" class="py-4 text-gray-500 hover:text-gray-900 transition-colors text-sm md:text-base font-medium border-b-2 border-transparent hover:border-gray-300">Stories</a>
-        <a href="events.html" class="py-4 text-gray-500 hover:text-gray-900 transition-colors text-sm md:text-base font-medium border-b-2 border-transparent hover:border-gray-300">Events</a>
-        <a href="newsroom.html" class="py-4 text-gray-500 hover:text-gray-900 transition-colors text-sm md:text-base font-medium border-b-2 border-transparent hover:border-gray-300">News Room</a>
-        <a href="#" class="py-4 text-gray-500 hover:text-gray-900 transition-colors text-sm md:text-base font-medium border-b-2 border-transparent hover:border-gray-300">Newsletter</a>
-        <a href="photo-gallery.html" class="py-4 text-[#2563EB] text-sm md:text-base font-semibold border-b-2 border-[#2563EB]">Photo & Video gallery</a>
+        <a href="stories.html" class="nav-link py-4 border-b-2 border-transparent">Stories</a>
+        <a href="events.html" class="nav-link py-4 border-b-2 border-transparent">Events</a>
+        <a href="newsroom.html" class="nav-link py-4 border-b-2 border-transparent">News Room</a>
+        <a href="newsletter.html" class="nav-link py-4 active-link border-b-2 border-brand-blue">Newsletter</a>
+        <a href="photo-gallery.html" class="nav-link py-4 border-b-2 border-transparent">Photo & Video gallery</a>
       </div>
     </div>
 
-        <!-- Photo & Video Gallery Section -->
+        <!-- News List Section -->
     <style>
       .reveal-fade-up {
         opacity: 0;
@@ -599,134 +540,245 @@
         opacity: 1;
         transform: translateY(0);
       }
-    </style>
+    
+    /* Hero Animations from legacy.html */
+    @keyframes zoomSlow {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+    .animate-zoom-slow { animation: zoomSlow 20s linear infinite alternate; }
+
+    @keyframes shrinkHeight {
+      0% { height: 100vh; }
+    }
+    .animate-hero-height { animation: shrinkHeight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+</style>
     
     <section class="w-full bg-[#FAFAFA] py-16 md:py-24 font-manrope">
       <div class="container mx-auto px-4 md:px-10">
         
-        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          
-          <!-- COLUMN 1 ITEMS -->
-          
-          <!-- 1. Hotel & Resorts -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[500px]">
-            <img src="./assets/images/home/hero1.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-white text-[15px] font-medium tracking-wide">Hotel & Resorts</div>
-          </div>
-          
-          <!-- 2. Empty Medium -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[250px]">
-            <img src="./assets/images/home/hero2.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-          </div>
-          
-          <!-- 3. Real state Development -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[500px]">
-            <img src="./assets/images/home/hero3.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-white text-[15px] font-medium tracking-wide">Real state Development</div>
-          </div>
-          
-          <!-- 4. Pine City Housing (Video) -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[250px]">
-            <img src="./assets/images/home/hero1.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute bottom-6 left-6 flex items-center gap-4 text-white">
-              <div class="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors shrink-0">
-                <i class="fa-solid fa-play ml-0.5 text-sm"></i>
-              </div>
-              <div class="text-[13px] font-medium leading-snug">Pine City Housing<br>Version 2025</div>
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-8 md:gap-y-12">
+          <!-- News Card 1 -->
+          <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
+            <!-- Image -->
+            <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
+              <img src="../assets/images/news/1.png" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            </div>
+            
+            <!-- Overlapping Dark Box -->
+            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+              <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
+              
+              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+                <div class="relative h-5 overflow-hidden pointer-events-none">
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                </div>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                </div>
+              </a>
             </div>
           </div>
-
-          <!-- COLUMN 2 ITEMS -->
-
-          <!-- 5. Empty Short -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[200px]">
-            <img src="./assets/images/home/hero2.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-          </div>
-          
-          <!-- 6. Empty Short -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[200px]">
-            <img src="./assets/images/home/hero3.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-          </div>
-
-          <!-- 7. Housing Developments -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[600px]">
-            <img src="./assets/images/home/hero1.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-white text-[15px] font-medium tracking-wide">Housing Developments</div>
-          </div>
-
-          <!-- 8. RightAit Hospital (Video) -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[250px]">
-            <img src="./assets/images/home/hero2.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute bottom-6 left-6 flex items-center gap-4 text-white">
-              <div class="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors shrink-0">
-                <i class="fa-solid fa-play ml-0.5 text-sm"></i>
-              </div>
-              <div class="text-[13px] font-medium leading-snug">RightAit Hospital<br>Version 2025</div>
+          <!-- News Card 2 -->
+          <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
+            <!-- Image -->
+            <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
+              <img src="../assets/images/news/2.png" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            </div>
+            
+            <!-- Overlapping Dark Box -->
+            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+              <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
+              
+              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+                <div class="relative h-5 overflow-hidden pointer-events-none">
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                </div>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                </div>
+              </a>
             </div>
           </div>
-
-          <!-- 9. Greenwitch Hill View (Video) -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[250px]">
-            <img src="./assets/images/home/hero3.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute bottom-6 left-6 flex items-center gap-4 text-white">
-              <div class="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors shrink-0">
-                <i class="fa-solid fa-play ml-0.5 text-sm"></i>
-              </div>
-              <div class="text-[13px] font-medium leading-snug">Greenwitch Hill View<br>ResortVersion 2025</div>
+          <!-- News Card 3 -->
+          <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
+            <!-- Image -->
+            <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
+              <img src="../assets/images/news/3.png" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            </div>
+            
+            <!-- Overlapping Dark Box -->
+            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+              <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
+              
+              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+                <div class="relative h-5 overflow-hidden pointer-events-none">
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                </div>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                </div>
+              </a>
             </div>
           </div>
-
-          <!-- COLUMN 3 ITEMS -->
-
-          <!-- 10. Food & Beverage -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[500px]">
-            <img src="./assets/images/home/hero1.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-white text-[15px] font-medium tracking-wide">Food & Beverage</div>
-          </div>
-
-          <!-- 11. Gereenwitch resort (Video) -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[250px]">
-            <img src="./assets/images/home/hero2.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute bottom-6 left-6 flex items-center gap-4 text-white">
-              <div class="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors shrink-0">
-                <i class="fa-solid fa-play ml-0.5 text-sm"></i>
-              </div>
-              <div class="text-[13px] font-medium leading-snug">Gereenwitch resort<br>Version 2025</div>
+          <!-- News Card 4 -->
+          <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
+            <!-- Image -->
+            <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
+              <img src="../assets/images/home/hero2.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            </div>
+            
+            <!-- Overlapping Dark Box -->
+            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+              <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
+              
+              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+                <div class="relative h-5 overflow-hidden pointer-events-none">
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                </div>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                </div>
+              </a>
             </div>
           </div>
-
-          <!-- 12. Eden Bay 5 Star Hotel (Video) -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[250px]">
-            <img src="./assets/images/home/hero3.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute bottom-6 left-6 flex items-center gap-4 text-white">
-              <div class="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors shrink-0">
-                <i class="fa-solid fa-play ml-0.5 text-sm"></i>
-              </div>
-              <div class="text-[13px] font-medium leading-snug">Eden Bay 5 Star Hotel Video<br>Version 2025</div>
+          <!-- News Card 5 -->
+          <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
+            <!-- Image -->
+            <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
+              <img src="../assets/images/home/hero3.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            </div>
+            
+            <!-- Overlapping Dark Box -->
+            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+              <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
+              
+              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+                <div class="relative h-5 overflow-hidden pointer-events-none">
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                </div>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                </div>
+              </a>
             </div>
           </div>
-
-          <!-- 13. Salt Bay 5 Star Hotel -->
-          <div class="reveal-fade-up relative w-full break-inside-avoid rounded-sm overflow-hidden group cursor-pointer h-[500px]">
-            <img src="./assets/images/home/hero1.jpg" alt="Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute bottom-10 inset-x-0 flex items-center justify-center text-white text-[15px] font-medium tracking-wide">Salt Bay 5 Star Hotel</div>
+          <!-- News Card 6 -->
+          <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
+            <!-- Image -->
+            <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
+              <img src="../assets/images/home/hero1.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            </div>
+            
+            <!-- Overlapping Dark Box -->
+            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+              <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
+              
+              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+                <div class="relative h-5 overflow-hidden pointer-events-none">
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                </div>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- News Card 7 -->
+          <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
+            <!-- Image -->
+            <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
+              <img src="../assets/images/home/hero2.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            </div>
+            
+            <!-- Overlapping Dark Box -->
+            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+              <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
+              
+              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+                <div class="relative h-5 overflow-hidden pointer-events-none">
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                </div>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- News Card 8 -->
+          <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
+            <!-- Image -->
+            <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
+              <img src="../assets/images/home/hero3.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            </div>
+            
+            <!-- Overlapping Dark Box -->
+            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+              <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
+              
+              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+                <div class="relative h-5 overflow-hidden pointer-events-none">
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                </div>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- News Card 9 -->
+          <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
+            <!-- Image -->
+            <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
+              <img src="../assets/images/home/hero1.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+            </div>
+            
+            <!-- Overlapping Dark Box -->
+            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+              <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
+              
+              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+                <div class="relative h-5 overflow-hidden pointer-events-none">
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
+                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                </div>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                </div>
+              </a>
+            </div>
           </div>
 
         </div>
 
+  
+      <!-- Pagination -->
+        <div class="flex justify-end items-center gap-2 pt-12 md:pt-16">
+          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Prev</a>
+          <a href="#" class="border border-[#2563EB] bg-[#2563EB] text-white px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium transition-colors">1</a>
+          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">2</a>
+          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">3</a>
+          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">4</a>
+          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Next</a>
+        </div>
       </div>
     </section>
 
@@ -752,7 +804,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
           <!-- Logo and Contact -->
           <div class="lg:col-span-2 space-y-6">
-            <img src="./assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
+            <img src="../assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
             <div class="space-y-5 text-sm md:text-base opacity-90">
               <div class="flex items-start gap-4">
                 <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
@@ -776,10 +828,10 @@
             <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
             <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
               <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
+              <li><a href="./concerns.html" class="hover:text-white transition-colors">Our Concerns</a></li>
+              <li><a href="./our-products.html" class="hover:text-white transition-colors">Our Products</a></li>
+              <li><a href="./stories.html" class="hover:text-white transition-colors">Media Center</a></li>
+              <li><a href="./office-locations.html" class="hover:text-white transition-colors">Office Location</a></li>
             </ul>
           </div>
 
@@ -788,10 +840,10 @@
             <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
             <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
               <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="./newsletter.html" class="hover:text-white transition-colors">Newsletters</a></li>
+              <li><a href="./sustainability.html" class="hover:text-white transition-colors">Sustainability</a></li>
+              <li><a href="./investor.html" class="hover:text-white transition-colors">Investor Relation</a></li>
+              <li><a href="./contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
@@ -857,10 +909,22 @@
     <!-- Script for Mobile Hamburger Menu Toggle -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="../assets/js/main.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
