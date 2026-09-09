@@ -64,9 +64,12 @@
         </div>
         <!-- Right: Social Icons -->
         <div class="flex items-center gap-5 text-base">
-          <a href="./pages/our-products.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-          <a href="./pages/sustainability.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="./pages/contact.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+          <a href="./pages/our-products.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="./pages/sustainability.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-x-twitter"></i></a>
+          <a href="./pages/contact.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-youtube"></i></a>
           <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
@@ -619,7 +622,7 @@
       </div>
     </section>
     <!-- Company At Glance Section -->
-    <section class="py-20 bg-white font-manrope">
+    <section class="py-6 md:py-20 bg-white">
       <div class="container mx-auto px-4 md:px-10">
         <!-- Header -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-8">
@@ -642,11 +645,10 @@
             <!-- Card 1 -->
             <div
               class="bg-[#355C7D] text-white p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
-              <!-- Cutout Top Right -->
               <div class="absolute -top-1 -right-1 w-14 h-14 bg-white rounded-bl-2xl"></div>
               <div class="z-10 text-center mt-2">
                 <p class="text-xs md:text-lg font-medium mb-1 opacity-90">Stablished Since</p>
-                <h3 class="text-[36px] md:text-[40px] font-bold">1972</h3>
+                <h3 class="text-[36px] md:text-[40px] font-bold count-up" data-target="1972" data-suffix="">0</h3>
                 <p class="text-[10px] md:text-lg text-right mt-1 opacity-80">Years</p>
               </div>
             </div>
@@ -654,11 +656,10 @@
             <!-- Card 2 -->
             <div
               class="bg-[#EEF4FF] text-[#050a18] p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
-              <!-- Cutout Top Left -->
               <div class="absolute -top-1 -left-1 w-14 h-14 bg-white rounded-br-2xl"></div>
               <div class="z-10 text-center mt-2">
                 <p class="text-xs md:text-lg font-medium mb-1 opacity-90">Active Concerns</p>
-                <h3 class="text-4xl font-bold">20+</h3>
+                <h3 class="text-4xl font-bold count-up" data-target="20" data-suffix="+">0</h3>
                 <p class="text-[10px] md:text-lg text-right mt-1 opacity-80">Years</p>
               </div>
             </div>
@@ -666,11 +667,10 @@
             <!-- Card 3 -->
             <div
               class="bg-[#EEF4FF] text-[#050a18] p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
-              <!-- Cutout Bottom Right -->
               <div class="absolute -bottom-1 -right-1 w-14 h-14 bg-white rounded-tl-2xl"></div>
               <div class="z-10 text-center mb-2">
                 <p class="text-xs md:text-lg font-medium mb-1 opacity-90">Projects in Development</p>
-                <h3 class="text-4xl font-bold">15+</h3>
+                <h3 class="text-4xl font-bold count-up" data-target="15" data-suffix="+">0</h3>
                 <p class="text-[10px] md:text-lg text-right mt-1 opacity-80">Years</p>
               </div>
             </div>
@@ -678,11 +678,10 @@
             <!-- Card 4 -->
             <div
               class="bg-[#355C7D] text-white p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
-              <!-- Cutout Top Left -->
               <div class="absolute -top-1 -left-1 w-14 h-14 bg-white rounded-br-2xl"></div>
               <div class="z-10 text-center mt-2">
                 <p class="text-xs md:text-lg font-medium mb-1 opacity-90">Employees</p>
-                <h3 class="text-[36px] md:text-[40px] font-bold">5500+</h3>
+                <h3 class="text-[36px] md:text-[40px] font-bold count-up" data-target="5500" data-suffix="+">0</h3>
                 <p class="text-[10px] md:text-lg text-right mt-1 opacity-80">Years</p>
               </div>
             </div>
@@ -701,32 +700,24 @@
               </p>
               <a href="#"
                 class="group inline-flex items-center gap-4 bg-[#1864FF] text-white pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-blue-600 transition shadow-md w-fit">
-
-                <!-- Text Animation -->
                 <div class="relative h-5 overflow-hidden pointer-events-none">
                   <span
-                    class="block text-sm md:text-base leading-5 transition-transform duration-500 group-hover:-translate-y-full">
-                    See More
-                  </span>
+                    class="block text-sm md:text-base leading-5 transition-transform duration-500 group-hover:-translate-y-full">See
+                    More</span>
                   <span
-                    class="absolute top-0 left-0 block text-sm md:text-base leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
-                    See More
-                  </span>
+                    class="absolute top-0 left-0 block text-sm md:text-base leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">See
+                    More</span>
                 </div>
-
-                <!-- Arrow Animation -->
                 <div
                   class="relative w-8 h-8 rounded-full border-2 border-white flex items-center justify-center overflow-hidden ml-1">
                   <img src="./assets/images/home/right-arrow.png" alt="arrow"
                     class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
-
                   <img src="./assets/images/home/right-arrow.png" alt="arrow"
                     class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                 </div>
               </a>
             </div>
             <div class="w-full md:w-[45%] min-h-[250px] relative rounded-2xl shrink-0 z-10">
-              <!-- Cutout Top Left for Image -->
               <div class="absolute -top-1 -left-1 w-14 h-14 bg-[#EEF4FF] rounded-br-2xl"></div>
               <img src="./assets/images/home/glance.jpg" height="401px" width="371px" alt="Building"
                 class="w-full h-full object-cover rounded-2xl" />
@@ -736,8 +727,47 @@
         </div>
       </div>
     </section>
+
+    <!-- Count Up Script -->
+    <script>
+      (function () {
+        function animateCount(el) {
+          var target = parseInt(el.getAttribute('data-target'), 10);
+          var suffix = el.getAttribute('data-suffix') || '';
+          var duration = 2000; // ms
+          var startTime = null;
+
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var progress = Math.min((timestamp - startTime) / duration, 1);
+            // easeOutQuad for a smooth finish
+            var eased = 1 - (1 - progress) * (1 - progress);
+            var value = Math.floor(eased * target);
+            el.textContent = value.toLocaleString() + suffix;
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              el.textContent = target.toLocaleString() + suffix;
+            }
+          }
+          requestAnimationFrame(step);
+        }
+
+        var counters = document.querySelectorAll('.count-up');
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCount(entry.target);
+              observer.unobserve(entry.target); // একবারই চলবে
+            }
+          });
+        }, { threshold: 0.4 });
+
+        counters.forEach(function (c) { observer.observe(c); });
+      })();
+    </script>
     <!-- Company History Section -->
-    <section class="relative w-full h-[650px] md:h-[700px] bg-cover bg-center overflow-hidden font-manrope"
+    <section class="relative w-full h-[650px] md:h-[700px] bg-cover bg-center overflow-hidden"
       style="background-image: url('./assets/images/home/history.jpg');">
       <!-- Dark overlay -->
       <div class="absolute inset-0 bg-black/70"></div>
@@ -804,7 +834,7 @@
                   <div class="absolute -top-[44px] left-6 w-max">
                     <p class="text-sm md:text-lg mb-0.5">Bhaiya Group</p>
                     <div class="flex items-end gap-1.5">
-                      <h3 class="text-[32px] md:text-[40px] font-bold leading-none">1972</h3>
+                      <h3 class="text-[32px] md:text-[40px] font-bold leading-none year-count" data-target="1972">0</h3>
                       <span class="text-sm md:text-lg opacity-80 pb-1">Years</span>
                     </div>
                   </div>
@@ -820,9 +850,9 @@
                     <div class="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                   <div class="absolute -top-[44px] left-6 w-max">
-                    <p class="text-sm md:text-lg mb-0.5">Nabisco Biscuit & Bread Factory</p>
+                    <p class="text-sm md:text-lg mb-0.5">Nabisco Biscuit &amp; Bread Factory</p>
                     <div class="flex items-end gap-1.5">
-                      <h3 class="text-[32px] md:text-[40px] font-bold leading-none">1983</h3>
+                      <h3 class="text-[32px] md:text-[40px] font-bold leading-none year-count" data-target="1983">0</h3>
                       <span class="text-sm md:text-lg pb-1">Years</span>
                     </div>
                   </div>
@@ -840,7 +870,7 @@
                   <div class="absolute -top-[44px] left-6 w-max">
                     <p class="text-sm md:text-lg mb-0.5">Bhaiya Housing</p>
                     <div class="flex items-end gap-1.5">
-                      <h3 class="text-[32px] md:text-[40px] font-bold leading-none">2012</h3>
+                      <h3 class="text-[32px] md:text-[40px] font-bold leading-none year-count" data-target="2012">0</h3>
                       <span class="text-sm md:text-lg pb-1">Years</span>
                     </div>
                   </div>
@@ -858,7 +888,7 @@
                   <div class="absolute -top-[44px] left-6 w-max">
                     <p class="text-sm md:text-lg mb-0.5">Rupali Bangladesh</p>
                     <div class="flex items-end gap-1.5">
-                      <h3 class="text-[32px] md:text-[40px] font-bold leading-none">2022</h3>
+                      <h3 class="text-[32px] md:text-[40px] font-bold leading-none year-count" data-target="2022">0</h3>
                       <span class="text-sm md:text-lg pb-1">Years</span>
                     </div>
                   </div>
@@ -869,6 +899,60 @@
         </div>
       </div>
     </section>
+
+    <!-- Timeline Reveal + Count Up Script -->
+    <script>
+      (function () {
+        function animateYear(el) {
+          var target = parseInt(el.getAttribute('data-target'), 10);
+          var duration = 1500; // ms, matches the reveal duration
+          var startTime = null;
+
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var progress = Math.min((timestamp - startTime) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+            el.textContent = Math.floor(eased * target);
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              el.textContent = target;
+            }
+          }
+          requestAnimationFrame(step);
+        }
+
+        var timelineContainer = document.getElementById('timeline-container');
+        if (!timelineContainer) return;
+
+        var items = timelineContainer.querySelectorAll('.timeline-content');
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var el = entry.target;
+              var delayMatch = (el.className.match(/delay-\[(\d+)ms\]/) || [])[1];
+              var delay = delayMatch ? parseInt(delayMatch, 10) : 0;
+
+              // Reveal (slide up + fade in)
+              el.classList.remove('opacity-0', 'translate-y-full');
+
+              // Count up, synced with the same delay as the reveal
+              var yearEl = el.querySelector('.year-count');
+              if (yearEl) {
+                setTimeout(function () {
+                  animateYear(yearEl);
+                }, delay);
+              }
+
+              observer.unobserve(el); // run once
+            }
+          });
+        }, { threshold: 0.3 });
+
+        items.forEach(function (item) { observer.observe(item); });
+      })();
+    </script>
     <!-- Founder Section -->
     <section id="founder-section" class="w-full flex flex-col lg:flex-row overflow-hidden"
       style="background-image: url('./assets/images/home/sirfatherleftbg.png');">
@@ -1167,23 +1251,19 @@
     <style>
       /* Glass Card Styling */
       .biz-card {
-        background: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(15px);
-        border: 1.5px solid rgba(255, 255, 255, 0.08);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1.5px solid rgba(255, 255, 255, 0.15);
         border-radius: 14px;
-        overflow: visible;
-        /* Allows the building to pop out */
+        overflow: hidden;
         position: relative;
         transition: 0.5s ease;
       }
 
-      /* Bottom-aligned staggered glass boxes */
-      .biz-card-short {
-        height: 260px;
-      }
-
+      /* All cards same height */
+      .biz-card-short,
       .biz-card-tall {
-        height: 360px;
+        height: 450px;
       }
 
       /* Vertical Sidebar Text */
@@ -1202,11 +1282,11 @@
       class="relative w-full min-h-screen bg-[#020307] py-20 overflow-hidden flex flex-col justify-center font-manrope text-white">
 
       <!-- Background Layers -->
-      <video class="absolute inset-0 w-full h-full object-cover z-0 opacity-40" src="./assets/video/home.mp4" autoplay
-        loop muted playsinline></video>
+      <video class="absolute inset-0 w-full h-full object-cover z-0" src="./assets/video/home.mp4" autoplay loop muted
+        playsinline></video>
 
       <!-- Content -->
-      <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-10">
+      <div class="relative z-10 container mx-auto w-full pt-10">
 
         <!-- Header -->
         <div class="flex flex-col md:flex-row justify-between items-start mb-10">
@@ -1243,14 +1323,16 @@
         <div class="relative w-full z-10 mt-16 md:mt-24">
           <div class="swiper bizSwiper !overflow-visible">
             <!-- items-end makes the short and tall cards align perfectly at the bottom -->
-            <div class="swiper-wrapper items-end">
+            <div class="swiper-wrapper">
 
-              <!-- Card 1: REAL STATE (Short) -->
+              <!-- Card 1: REAL STATE -->
               <div class="swiper-slide">
                 <div class="biz-card biz-card-short group p-5 flex flex-col justify-end">
+                  <!-- Cutout Top Left -->
+                  <div class="absolute -top-[1px] -left-[1px] w-12 md:w-[100px] h-12 bg-[#020307] rounded-br-2xl z-30"></div>
                   <!-- Building popping out -->
-                  <img src="./assets/images/home/business1.png"
-                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[110%] max-w-none h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0">
+                  <img src="./assets/images/home/history (2).png"
+                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[140%] h-[400px] transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0">
 
                   <!-- Glass inner gradient -->
                   <div
@@ -1263,16 +1345,21 @@
                       <p class="text-gray-400 text-[9px] mt-1 drop-shadow-md">Lorem Ipsum is simply dummy text of</p>
                     </div>
                     <div
-                      class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/50 flex items-center justify-center shrink-0 text-[10px] hover:bg-white hover:text-black transition-all cursor-pointer">
-                      <i class="fa-solid fa-paper-plane transform rotate-45 ml-[-2px] mb-[-2px]"></i>
+                      class="relative w-8 h-8 md:w-9 md:h-9 rounded-full border border-white flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-white/20 transition-colors duration-500">
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Card 2: HOSPITAL (Tall) -->
+              <!-- Card 2: HOSPITAL -->
               <div class="swiper-slide">
                 <div class="biz-card biz-card-tall group p-5 flex flex-col justify-end">
+                  <!-- Cutout Top Right -->
+                  <div class="absolute -top-[1px] -right-[1px] w-12 md:w-[100px] h-12 bg-[#020307] rounded-bl-2xl z-30"></div>
                   <!-- Building popping out -->
                   <img src="./assets/images/home/business2.png"
                     class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] md:w-[95%] max-w-none h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0">
@@ -1287,16 +1374,21 @@
                       <p class="text-gray-400 text-[9px] mt-1 drop-shadow-md">Lorem Ipsum is simply dummy text of</p>
                     </div>
                     <div
-                      class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/50 flex items-center justify-center shrink-0 text-[10px] hover:bg-white hover:text-black transition-all cursor-pointer">
-                      <i class="fa-solid fa-paper-plane transform rotate-45 ml-[-2px] mb-[-2px]"></i>
+                      class="relative w-8 h-8 md:w-9 md:h-9 rounded-full border border-white flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-white/20 transition-colors duration-500">
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Card 3: REAL STATE (Short) -->
+              <!-- Card 3: REAL STATE -->
               <div class="swiper-slide">
                 <div class="biz-card biz-card-short group p-5 flex flex-col justify-end">
+                  <!-- Cutout Top Left -->
+                  <div class="absolute -top-[1px] -left-[1px] w-12 md:w-[100px] h-12 bg-[#020307] rounded-br-2xl z-30"></div>
                   <img src="./assets/images/home/business1.png"
                     class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[110%] max-w-none h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0">
                   <div
@@ -1309,16 +1401,21 @@
                       <p class="text-gray-400 text-[9px] mt-1 drop-shadow-md">Lorem Ipsum is simply dummy text of</p>
                     </div>
                     <div
-                      class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/50 flex items-center justify-center shrink-0 text-[10px] hover:bg-white hover:text-black transition-all cursor-pointer">
-                      <i class="fa-solid fa-paper-plane transform rotate-45 ml-[-2px] mb-[-2px]"></i>
+                      class="relative w-8 h-8 md:w-9 md:h-9 rounded-full border border-white flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-white/20 transition-colors duration-500">
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Card 4: HOSPITAL (Tall) -->
+              <!-- Card 4: HOSPITAL -->
               <div class="swiper-slide">
                 <div class="biz-card biz-card-tall group p-5 flex flex-col justify-end">
+                  <!-- Cutout Top Right -->
+                  <div class="absolute -top-[1px] -right-[1px] w-12 md:w-[100px] h-12 bg-[#020307] rounded-bl-2xl z-30"></div>
                   <img src="./assets/images/home/business2.png"
                     class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] md:w-[95%] max-w-none h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0">
                   <div
@@ -1331,8 +1428,11 @@
                       <p class="text-gray-400 text-[9px] mt-1 drop-shadow-md">Lorem Ipsum is simply dummy text of</p>
                     </div>
                     <div
-                      class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/50 flex items-center justify-center shrink-0 text-[10px] hover:bg-white hover:text-black transition-all cursor-pointer">
-                      <i class="fa-solid fa-paper-plane transform rotate-45 ml-[-2px] mb-[-2px]"></i>
+                      class="relative w-8 h-8 md:w-9 md:h-9 rounded-full border border-white flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-white/20 transition-colors duration-500">
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                     </div>
                   </div>
                 </div>
@@ -2783,7 +2883,8 @@
             <li><a href="./pages/concerns.html" class="hover:text-white transition-colors">Our Concerns</a></li>
             <li><a href="./pages/our-products.html" class="hover:text-white transition-colors">Our Products</a></li>
             <li><a href="./pages/stories.html" class="hover:text-white transition-colors">Media Center</a></li>
-            <li><a href="./pages/office-locations.html" class="hover:text-white transition-colors">Office Location</a></li>
+            <li><a href="./pages/office-locations.html" class="hover:text-white transition-colors">Office Location</a>
+            </li>
           </ul>
         </div>
 
@@ -2865,9 +2966,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
