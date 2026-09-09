@@ -23,55 +23,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Local CSS -->
-  <style>
-    .h1-wrapper {
-      overflow: hidden;
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    .h1-wrapper h1 {
-      display: block;
-      transform: translateY(105%);
-      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .swiper-slide-active .h1-wrapper h1 {
-      transform: translateY(0);
-    }
-
-    .swiper-slide:not(.swiper-slide-active) .h1-wrapper h1 {
-      transform: translateY(105%);
-      transition: none;
-    }
-
-    /* Dropdown and Arrow Expand Animations */
-    .dropdown-menu {
-      opacity: 0;
-      transform: translateY(-8px) scale(0.97);
-      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      pointer-events: none;
-    }
-
-    .dropdown-menu.open {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      pointer-events: auto;
-    }
-
-    .down-indicator {
-      opacity: 0;
-      transform: translateX(-50%) translateY(-4px) scale(0.5);
-      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .down-indicator.open {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0) scale(1);
-    }
-  </style>
-  <script type="module" crossorigin src="/assets/index-CyZFse5L.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BqyHDdHy.css">
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+  <script type="module" crossorigin src="/assets/index-C7W81Fob.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DuECHdFO.css">
 </head>
 
 <body class="font-manrope overflow-x-hidden">
@@ -176,7 +130,7 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
+                <a href="./pages/purpose.html" class="relative h-28 rounded overflow-hidden group  block">
                   <img src="/assets/header12-DiLVUYHQ.png" alt="Our Purpose"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -2029,7 +1983,8 @@
     </section>
 
     <!-- Sustainability & CSR Section -->
-    <section class="w-full text-black py-16 md:py-32 relative overflow-hidden bg-cover bg-center" style="background-image: url('/assets/SustainabilityBg-D4PYlypt.png');">
+    <section class="w-full text-black py-16 md:py-32 relative overflow-hidden bg-cover bg-center"
+      style="background-image: url('/assets/SustainabilityBg-D4PYlypt.png');">
       <!-- Background Overlay (low opacity) -->
       <div class="absolute inset-0 bg-white/90"></div>
       <div class="container mx-auto px-4 md:px-8 relative z-10">
@@ -2082,7 +2037,7 @@
 
         <!-- Content Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           <!-- Left side: Images Swiper (Takes 7 columns on LG) -->
           <div class="lg:col-span-7 overflow-hidden py-12 -my-12">
             <div class="swiper csr-swiper !overflow-visible">
@@ -2145,7 +2100,7 @@
     <!-- Explore Our Events Section -->
     <section class="w-full bg-[#111827] py-16 md:py-24">
       <div class="container mx-auto px-4 md:px-8">
-        
+
         <!-- Header Area -->
         <div class="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
           <!-- Left side title -->
@@ -2190,33 +2145,42 @@
 
         <!-- Events Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          
+
           <!-- Card 1 -->
-          <div class="bg-white rounded-xl overflow-hidden flex flex-col shadow-lg transition-transform hover:-translate-y-2">
+          <div
+            class="bg-white rounded-xl overflow-hidden flex flex-col shadow-lg transition-transform hover:-translate-y-2">
             <div class="relative w-full h-[220px]">
               <img src="/assets/Events-2oI63z8P.jpg" alt="Event" class="w-full h-full object-cover">
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <span class="inline-block bg-[#F3F4F6] text-[#4B5563] text-sm font-semibold px-3 py-1 rounded-full w-fit mb-4">
+              <span
+                class="inline-block bg-[#F3F4F6] text-[#4B5563] text-sm font-semibold px-3 py-1 rounded-full w-fit mb-4">
                 Housing
               </span>
               <h3 class="text-xl font-bold text-black mb-6">
                 Concord Aurora Heights
               </h3>
-              <a href="#" class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 mb-6 hover:text-blue-700 transition w-fit">
+              <a href="#"
+                class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 mb-6 hover:text-blue-700 transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Explore Event</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Explore Event</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Explore
+                    Event</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Explore
+                    Event</span>
                 </div>
                 <div class="relative overflow-hidden flex items-center justify-center w-5 h-4 ml-1">
                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                    class="absolute w-3 h-3 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                    class="absolute w-3 h-3 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0"
+                    style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                    class="absolute w-3 h-3 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                    class="absolute w-3 h-3 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                    style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                 </div>
               </a>
               <!-- Footer -->
-              <div class="mt-auto pt-4 border-t border-gray-200 flex flex-wrap items-center justify-between text-gray-600 text-sm gap-2">
+              <div
+                class="mt-auto pt-4 border-t border-gray-200 flex flex-wrap items-center justify-between text-gray-600 text-sm gap-2">
                 <div class="flex items-start gap-2 max-w-[60%]">
                   <i class="fa-solid fa-location-dot mt-[2px]"></i>
                   <span class="leading-tight text-black">Banani DOHS Community<br>Center, Dhaka</span>
@@ -2230,31 +2194,40 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-white rounded-xl overflow-hidden flex flex-col shadow-lg transition-transform hover:-translate-y-2">
+          <div
+            class="bg-white rounded-xl overflow-hidden flex flex-col shadow-lg transition-transform hover:-translate-y-2">
             <div class="relative w-full h-[220px]">
               <img src="/assets/Events-2oI63z8P.jpg" alt="Event" class="w-full h-full object-cover">
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <span class="inline-block bg-[#F3F4F6] text-[#4B5563] text-sm font-semibold px-3 py-1 rounded-full w-fit mb-4">
+              <span
+                class="inline-block bg-[#F3F4F6] text-[#4B5563] text-sm font-semibold px-3 py-1 rounded-full w-fit mb-4">
                 Housing
               </span>
               <h3 class="text-xl font-bold text-black mb-6">
                 Concord Aurora Heights
               </h3>
-              <a href="#" class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 mb-6 hover:text-blue-700 transition w-fit">
+              <a href="#"
+                class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 mb-6 hover:text-blue-700 transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Explore Event</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Explore Event</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Explore
+                    Event</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Explore
+                    Event</span>
                 </div>
                 <div class="relative overflow-hidden flex items-center justify-center w-5 h-4 ml-1">
                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                    class="absolute w-3 h-3 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                    class="absolute w-3 h-3 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0"
+                    style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                    class="absolute w-3 h-3 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                    class="absolute w-3 h-3 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                    style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                 </div>
               </a>
               <!-- Footer -->
-              <div class="mt-auto pt-4 border-t border-gray-200 flex flex-wrap items-center justify-between text-gray-600 text-sm gap-2">
+              <div
+                class="mt-auto pt-4 border-t border-gray-200 flex flex-wrap items-center justify-between text-gray-600 text-sm gap-2">
                 <div class="flex items-start gap-2 max-w-[60%]">
                   <i class="fa-solid fa-location-dot mt-[2px] text-gray-600"></i>
                   <span class="leading-tight text-black">Banani DOHS Community<br>Center, Dhaka</span>
@@ -2268,31 +2241,40 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-white rounded-xl overflow-hidden flex flex-col shadow-lg transition-transform hover:-translate-y-2">
+          <div
+            class="bg-white rounded-xl overflow-hidden flex flex-col shadow-lg transition-transform hover:-translate-y-2">
             <div class="relative w-full h-[220px]">
               <img src="/assets/Events-2oI63z8P.jpg" alt="Event" class="w-full h-full object-cover">
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <span class="inline-block bg-[#F3F4F6] text-[#4B5563] text-sm font-semibold px-3 py-1 rounded-full w-fit mb-4">
+              <span
+                class="inline-block bg-[#F3F4F6] text-[#4B5563] text-sm font-semibold px-3 py-1 rounded-full w-fit mb-4">
                 Housing
               </span>
               <h3 class="text-xl font-bold text-black mb-6">
                 Concord Aurora Heights
               </h3>
-              <a href="#" class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 mb-6 hover:text-blue-700 transition w-fit">
+              <a href="#"
+                class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 mb-6 hover:text-blue-700 transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Explore Event</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Explore Event</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Explore
+                    Event</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Explore
+                    Event</span>
                 </div>
                 <div class="relative overflow-hidden flex items-center justify-center w-5 h-4 ml-1">
                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                    class="absolute w-3 h-3 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                    class="absolute w-3 h-3 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0"
+                    style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                    class="absolute w-3 h-3 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                    class="absolute w-3 h-3 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                    style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                 </div>
               </a>
               <!-- Footer -->
-              <div class="mt-auto pt-4 border-t border-gray-200 flex flex-wrap items-center justify-between text-gray-600 text-sm gap-2">
+              <div
+                class="mt-auto pt-4 border-t border-gray-200 flex flex-wrap items-center justify-between text-gray-600 text-sm gap-2">
                 <div class="flex items-start gap-2 max-w-[60%]">
                   <i class="fa-solid fa-location-dot mt-[2px] text-gray-600"></i>
                   <span class="leading-tight text-black">Banani DOHS Community<br>Center, Dhaka</span>
@@ -2306,31 +2288,40 @@
           </div>
 
           <!-- Card 4 -->
-          <div class="bg-white rounded-xl overflow-hidden flex flex-col shadow-lg transition-transform hover:-translate-y-2">
+          <div
+            class="bg-white rounded-xl overflow-hidden flex flex-col shadow-lg transition-transform hover:-translate-y-2">
             <div class="relative w-full h-[220px]">
               <img src="/assets/Events-2oI63z8P.jpg" alt="Event" class="w-full h-full object-cover">
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <span class="inline-block bg-[#F3F4F6] text-[#4B5563] text-sm font-semibold px-3 py-1 rounded-full w-fit mb-4">
+              <span
+                class="inline-block bg-[#F3F4F6] text-[#4B5563] text-sm font-semibold px-3 py-1 rounded-full w-fit mb-4">
                 Housing
               </span>
               <h3 class="text-xl font-bold text-black mb-6">
                 Concord Aurora Heights
               </h3>
-              <a href="#" class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 mb-6 hover:text-blue-700 transition w-fit">
+              <a href="#"
+                class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 mb-6 hover:text-blue-700 transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Explore Event</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Explore Event</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Explore
+                    Event</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Explore
+                    Event</span>
                 </div>
                 <div class="relative overflow-hidden flex items-center justify-center w-5 h-4 ml-1">
                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                    class="absolute w-3 h-3 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                    class="absolute w-3 h-3 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0"
+                    style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                    class="absolute w-3 h-3 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                    class="absolute w-3 h-3 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                    style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                 </div>
               </a>
               <!-- Footer -->
-              <div class="mt-auto pt-4 border-t border-gray-200 flex flex-wrap items-center justify-between text-gray-600 text-sm gap-2">
+              <div
+                class="mt-auto pt-4 border-t border-gray-200 flex flex-wrap items-center justify-between text-gray-600 text-sm gap-2">
                 <div class="flex items-start gap-2 max-w-[60%]">
                   <i class="fa-solid fa-location-dot mt-[2px] text-gray-600"></i>
                   <span class="leading-tight text-black">Banani DOHS Community<br>Center, Dhaka</span>
@@ -2346,7 +2337,7 @@
         </div>
       </div>
     </section>
-    
+
 
     <!-- Investment Opportunities / Flagship Highlight Section -->
     <section class="w-full bg-white py-16 md:py-24">
@@ -2359,26 +2350,40 @@
             <span class="text-xs md:text-lg font-medium tracking-widest text-[#414652]">Investment Opportunities</span>
             <div class="w-12 h-[1px] bg-gray-400"></div>
           </div>
-          <h2 class="text-3xl md:text-[40px] font-bold text-black uppercase tracking-tight mb-3">Our Flagship Highlight</h2>
-          <p class="text-gray-500 text-sm md:text-lg">Explore premium investment opportunities across our diverse portfolio</p>
+          <h2 class="text-3xl md:text-[40px] font-bold text-black uppercase tracking-tight mb-3">Our Flagship Highlight
+          </h2>
+          <p class="text-gray-500 text-sm md:text-lg">Explore premium investment opportunities across our diverse
+            portfolio</p>
         </div>
 
         <!-- Tab Filters -->
         <div class="flex flex-wrap items-center justify-center gap-3 mb-10" id="investment-tabs">
-          <button onclick="switchInvestmentTab(this, 'hotels')" class="invest-tab active-tab px-5 py-2 rounded-full text-base font-semibold border transition-all duration-300 bg-[#195AFF] text-white border-[#195AFF]">Hotels &amp; Resorts</button>
-          <button onclick="switchInvestmentTab(this, 'housing')" class="invest-tab px-5 py-2 rounded-full text-base font-semibold border transition-all duration-300 bg-white text-gray-700 border-gray-300 hover:bg-[#195AFF] hover:text-white hover:border-[#195AFF]">Housing &amp; Apartments</button>
-          <button onclick="switchInvestmentTab(this, 'food')" class="invest-tab px-5 py-2 rounded-full text-base font-semibold border transition-all duration-300 bg-white text-gray-700 border-gray-300 hover:bg-[#195AFF] hover:text-white hover:border-[#195AFF]">Food &amp; Beverage Industries</button>
+          <button onclick="switchInvestmentTab(this, 'hotels')"
+            class="invest-tab active-tab px-5 py-2 rounded-full text-base font-semibold border transition-all duration-300 bg-[#195AFF] text-white border-[#195AFF]">Hotels
+            &amp; Resorts</button>
+          <button onclick="switchInvestmentTab(this, 'housing')"
+            class="invest-tab px-5 py-2 rounded-full text-base font-semibold border transition-all duration-300 bg-white text-gray-700 border-gray-300 hover:bg-[#195AFF] hover:text-white hover:border-[#195AFF]">Housing
+            &amp; Apartments</button>
+          <button onclick="switchInvestmentTab(this, 'food')"
+            class="invest-tab px-5 py-2 rounded-full text-base font-semibold border transition-all duration-300 bg-white text-gray-700 border-gray-300 hover:bg-[#195AFF] hover:text-white hover:border-[#195AFF]">Food
+            &amp; Beverage Industries</button>
         </div>
 
         <!-- Featured Flagship Card -->
         <div class="bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row mb-14 border border-gray-200">
           <!-- Left: Image -->
           <div class="relative w-full md:w-[55%] min-h-[300px] md:min-h-[380px]">
-            <img src="/assets/flagship_hotel-Dx9WMy6m.jpg" alt="Salt By 5 Star Hotel" class="w-full h-full object-cover">
-            <div class="absolute top-4 left-4 group bg-white text-[#D4A017] text-base font-bold px-5 py-2 rounded-xl shadow cursor-default flex items-center justify-center">
+            <img src="/assets/flagship_hotel-Dx9WMy6m.jpg" alt="Salt By 5 Star Hotel"
+              class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 left-4 group bg-white text-[#D4A017] text-base font-bold px-5 py-2 rounded-xl shadow cursor-default flex items-center justify-center">
               <div class="relative h-6 overflow-hidden pointer-events-none">
-                <span class="block leading-6 transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Now open For Investment</span>
-                <span class="absolute top-0 left-0 block leading-6 translate-y-full transition-transform duration-500 group-hover:translate-y-0 whitespace-nowrap">Now open For Investment</span>
+                <span
+                  class="block leading-6 transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Now
+                  open For Investment</span>
+                <span
+                  class="absolute top-0 left-0 block leading-6 translate-y-full transition-transform duration-500 group-hover:translate-y-0 whitespace-nowrap">Now
+                  open For Investment</span>
               </div>
             </div>
           </div>
@@ -2387,13 +2392,21 @@
             <div>
               <!-- Location -->
               <div class="flex items-center gap-2 text-[#5E5E5E] text-xs md:text-base mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
                 <span>Inani beach, Cox's bazar, Chittagong, Bangladesh</span>
               </div>
               <!-- Title -->
-              <h3 class="text-2xl md:text-3xl font-bold text-black mb-4 leading-tight">Salt By 5 Star Hotel in Cox'sbazar</h3>
+              <h3 class="text-2xl md:text-3xl font-bold text-black mb-4 leading-tight">Salt By 5 Star Hotel in
+                Cox'sbazar</h3>
               <!-- Description -->
-              <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-6">A 5-star eco-luxury resort nestled along pristine coastline, featuring 80 oceanfront villas with world-class amenities and sustainable design principles. featuring 80 oceanfront villas</p>
+              <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-6">A 5-star eco-luxury resort nestled
+                along pristine coastline, featuring 80 oceanfront villas with world-class amenities and sustainable
+                design principles. featuring 80 oceanfront villas</p>
 
               <!-- Stats Grid -->
               <div class="grid grid-cols-2 gap-x-8 gap-y-5 mb-8">
@@ -2437,11 +2450,15 @@
               class="group inline-flex items-center justify-center gap-3 bg-[#195AFF] text-white pl-6 pr-2 py-2 rounded-full text-base font-semibold transition-all duration-300 hover:bg-blue-700 w-full mx-auto">
               <!-- Text Animation -->
               <div class="relative h-5 overflow-hidden pointer-events-none">
-                <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Invest Now</span>
-                <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Invest Now</span>
+                <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Invest
+                  Now</span>
+                <span
+                  class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Invest
+                  Now</span>
               </div>
               <!-- Arrow Circle (sliding animation) -->
-              <div class="relative w-8 h-8 rounded-full border border-white/50 bg-white/10 flex items-center justify-center overflow-hidden shrink-0">
+              <div
+                class="relative w-8 h-8 rounded-full border border-white/50 bg-white/10 flex items-center justify-center overflow-hidden shrink-0">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
                   class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
@@ -2457,84 +2474,123 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
             <!-- Opportunity Card 1 -->
-            <div class="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div
+              class="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div class="relative h-52 overflow-hidden">
-                <img src="/assets/resort_pool-7NGF0V0R.jpg" alt="Eden Bay Hotel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute top-3 left-3 group bg-white text-[#D4A017] text-base font-bold px-5 py-2 rounded-xl cursor-default flex items-center justify-center shadow-sm">
+                <img src="/assets/resort_pool-7NGF0V0R.jpg" alt="Eden Bay Hotel"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div
+                  class="absolute top-3 left-3 group bg-white text-[#D4A017] text-base font-bold px-5 py-2 rounded-xl cursor-default flex items-center justify-center shadow-sm">
                   <div class="relative h-6 overflow-hidden pointer-events-none">
-                    <span class="block leading-6 transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Now open For Investment</span>
-                    <span class="absolute top-0 left-0 block leading-6 translate-y-full transition-transform duration-500 group-hover:translate-y-0 whitespace-nowrap">Now open For Investment</span>
+                    <span
+                      class="block leading-6 transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Now
+                      open For Investment</span>
+                    <span
+                      class="absolute top-0 left-0 block leading-6 translate-y-full transition-transform duration-500 group-hover:translate-y-0 whitespace-nowrap">Now
+                      open For Investment</span>
                   </div>
                 </div>
               </div>
               <div class="p-5">
                 <h4 class="font-medium text-black text-base md:text-2xl mb-3">Eden Bay 5 Star Hotel In Coxbazar</h4>
-                <a href="#" class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 hover:text-blue-700 transition w-fit">
+                <a href="#"
+                  class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 hover:text-blue-700 transition w-fit">
                   <div class="relative h-5 overflow-hidden pointer-events-none">
-                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">See More</span>
-                    <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">See More</span>
+                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">See
+                      More</span>
+                    <span
+                      class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">See
+                      More</span>
                   </div>
                   <div class="relative w-6 h-6 flex items-center justify-center overflow-hidden shrink-0 ml-1">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0"
+                      style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                      style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                   </div>
                 </a>
               </div>
             </div>
 
             <!-- Opportunity Card 2 -->
-            <div class="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div
+              class="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div class="relative h-52 overflow-hidden">
-                <img src="/assets/resort_pool-7NGF0V0R.jpg" alt="Eden Bay Hotel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute top-3 left-3 group bg-white text-[#D4A017] text-base font-bold px-5 py-2 rounded-xl cursor-default flex items-center justify-center shadow-sm">
+                <img src="/assets/resort_pool-7NGF0V0R.jpg" alt="Eden Bay Hotel"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div
+                  class="absolute top-3 left-3 group bg-white text-[#D4A017] text-base font-bold px-5 py-2 rounded-xl cursor-default flex items-center justify-center shadow-sm">
                   <div class="relative h-6 overflow-hidden pointer-events-none">
-                    <span class="block leading-6 transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Now open For Investment</span>
-                    <span class="absolute top-0 left-0 block leading-6 translate-y-full transition-transform duration-500 group-hover:translate-y-0 whitespace-nowrap">Now open For Investment</span>
+                    <span
+                      class="block leading-6 transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Now
+                      open For Investment</span>
+                    <span
+                      class="absolute top-0 left-0 block leading-6 translate-y-full transition-transform duration-500 group-hover:translate-y-0 whitespace-nowrap">Now
+                      open For Investment</span>
                   </div>
                 </div>
               </div>
               <div class="p-5">
                 <h4 class="font-medium text-black text-base md:text-2xl mb-3">Eden Bay 5 Star Hotel In Coxbazar</h4>
-                <a href="#" class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 hover:text-blue-700 transition w-fit">
+                <a href="#"
+                  class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 hover:text-blue-700 transition w-fit">
                   <div class="relative h-5 overflow-hidden pointer-events-none">
-                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">See More</span>
-                    <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">See More</span>
+                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">See
+                      More</span>
+                    <span
+                      class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">See
+                      More</span>
                   </div>
                   <div class="relative w-6 h-6 flex items-center justify-center overflow-hidden shrink-0 ml-1">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0"
+                      style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                      style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                   </div>
                 </a>
               </div>
             </div>
 
             <!-- Opportunity Card 3 -->
-            <div class="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div
+              class="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div class="relative h-52 overflow-hidden">
-                <img src="/assets/resort_pool-7NGF0V0R.jpg" alt="Eden Bay Hotel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute top-3 left-3 group bg-white text-[#D4A017] text-base font-bold px-5 py-2 rounded-xl cursor-default flex items-center justify-center shadow-sm">
+                <img src="/assets/resort_pool-7NGF0V0R.jpg" alt="Eden Bay Hotel"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div
+                  class="absolute top-3 left-3 group bg-white text-[#D4A017] text-base font-bold px-5 py-2 rounded-xl cursor-default flex items-center justify-center shadow-sm">
                   <div class="relative h-6 overflow-hidden pointer-events-none">
-                    <span class="block leading-6 transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Now open For Investment</span>
-                    <span class="absolute top-0 left-0 block leading-6 translate-y-full transition-transform duration-500 group-hover:translate-y-0 whitespace-nowrap">Now open For Investment</span>
+                    <span
+                      class="block leading-6 transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Now
+                      open For Investment</span>
+                    <span
+                      class="absolute top-0 left-0 block leading-6 translate-y-full transition-transform duration-500 group-hover:translate-y-0 whitespace-nowrap">Now
+                      open For Investment</span>
                   </div>
                 </div>
               </div>
               <div class="p-5">
                 <h4 class="font-medium text-black text-base md:text-2xl mb-3">Eden Bay 5 Star Hotel In Coxbazar</h4>
-                <a href="#" class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 hover:text-blue-700 transition w-fit">
+                <a href="#"
+                  class="group text-[#195AFF] font-semibold text-base flex items-center gap-2 hover:text-blue-700 transition w-fit">
                   <div class="relative h-5 overflow-hidden pointer-events-none">
-                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">See More</span>
-                    <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">See More</span>
+                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">See
+                      More</span>
+                    <span
+                      class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">See
+                      More</span>
                   </div>
                   <div class="relative w-6 h-6 flex items-center justify-center overflow-hidden shrink-0 ml-1">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform group-hover:-translate-x-4 group-hover:opacity-0"
+                      style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAvgAAAL4BsOPnlwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADnSURBVEiJxdW/LkRBFAfg71yFf80+gF7EM/AOetHtO6x30OokFN6AVr21iEIv0aPaDUczm2yEvdddw0l+9ZfM/OZMZKaIWMnMNxWmiYgbPEbEKCIGNZBTZMkzTrCVmX4jsIbbOSQxwQV2lwaKso2XT0jiHVfYWwooyOEXwHzGOEDTCyjIWQuSeMAQq32Addx1QBJPOMagM1CQHbx2RFqb9121jn4ALGzeov6e90BmzbvGfhuwgfueyCyXjdrzL0ek5iWrWVO1H5qaq0LNZafmulb7w/EHX+a4NGLU1og+CWximpkTFeYDUiOlbiBN+VYAAAAASUVORK5CYII=" alt="arrow"
-                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
+                      class="absolute w-2.5 h-2.5 transition-all duration-500 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                      style="filter: invert(48%) sepia(85%) saturate(3015%) hue-rotate(205deg) brightness(101%) contrast(96%);" />
                   </div>
                 </a>
               </div>
@@ -2693,22 +2749,20 @@
     });
   </script>
 
-  <!-- Pre-Footer Image -->
-  <div class="w-full flex">
-    <img src="/assets/footer-xFfvUCMZ.jpg" alt="Bhaiya Group Banner" class="w-full h-auto object-cover block">
-  </div>
-
-  <!-- FOOTER SECTION -->
   <footer class="bg-[#111827] text-[#E7E7E7] pt-12 pb-8">
+    <div class="w-full flex mb-10">
+      <img src="../assets/images/home/footer.jpg" alt="Bhaiya Group Banner" class="w-full h-auto object-cover block">
+    </div>
     <div class="container mx-auto px-4 md:px-10">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
         <!-- Logo and Contact -->
         <div class="lg:col-span-2 space-y-6">
-          <img src="/assets/logo-BTMHRH1f.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
+          <img src="../assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
           <div class="space-y-5 text-sm md:text-base opacity-90">
             <div class="flex items-start gap-4">
               <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
-              <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor), Motijheel C/A,
+              <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor),
+                Motijheel C/A,
                 Dhaka-1000, Bangladesh</p>
             </div>
             <div class="flex items-center gap-4">
@@ -2750,23 +2804,23 @@
         <div>
           <h4 class="text-lg md:text-2xl font-semibold mb-6">Concerns Link</h4>
           <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya Housing <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya
+                Housing <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                   stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                 </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                   stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                 </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food & Beverage <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food &
+                Beverage <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                   stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                 </svg></a></li>
-            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati Insurance <svg
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati
+                Insurance <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                   stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                 </svg></a></li>

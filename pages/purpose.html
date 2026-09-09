@@ -25,79 +25,7 @@
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="../assets/css/input.css" />
-    <style>
-        .h1-wrapper {
-            overflow: hidden;
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .h1-wrapper h1 {
-            display: block;
-            transform: translateY(105%);
-            transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .swiper-slide-active .h1-wrapper h1 {
-            transform: translateY(0);
-        }
-
-        .swiper-slide:not(.swiper-slide-active) .h1-wrapper h1 {
-            transform: translateY(105%);
-            transition: none;
-        }
-
-        /* Dropdown and Arrow Expand Animations */
-        .dropdown-menu {
-            opacity: 0;
-            transform: translateY(-8px) scale(0.97);
-            transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            pointer-events: none;
-        }
-
-        .dropdown-menu.open {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            pointer-events: auto;
-        }
-
-        .down-indicator {
-            opacity: 0;
-            transform: translateX(-50%) translateY(-4px) scale(0.5);
-            transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .down-indicator.open {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0) scale(1);
-        }
-
-        @keyframes zoomSlow {
-            0% {
-                transform: scale(1);
-            }
-
-            100% {
-                transform: scale(1.1);
-            }
-        }
-
-        .animate-zoom-slow {
-            animation: zoomSlow 20s linear infinite alternate;
-        }
-
-        /* Hero Height Animation */
-        @keyframes shrinkHeight {
-            0% {
-                height: 100vh;
-            }
-        }
-
-        .animate-hero-height {
-            animation: shrinkHeight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
 </head>
 
 <body class="font-manrope overflow-x-hidden">
@@ -112,11 +40,11 @@
         </div>
         <nav class="flex flex-col space-y-4 font-medium overflow-y-auto h-[calc(100vh-120px)]">
             <a href="#" class="py-2 border-b border-white/10">About Us</a>
-            <a href="#" class="py-2 border-b border-white/10">Our Concerns</a>
-            <a href="#" class="py-2 border-b border-white/10">Our Products</a>
-            <a href="#" class="py-2 border-b border-white/10">Media Center</a>
-            <a href="#" class="py-2 border-b border-white/10">Sustainability</a>
-            <a href="#" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
+            <a href="./concerns.html" class="py-2 border-b border-white/10">Our Concerns</a>
+            <a href="./our-products.html" class="py-2 border-b border-white/10">Our Products</a>
+            <a href="./stories.html" class="py-2 border-b border-white/10">Media Center</a>
+            <a href="./sustainability.html" class="py-2 border-b border-white/10">Sustainability</a>
+            <a href="./contact.html" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
         </nav>
     </aside>
     <!-- Header: Fixed to stay on top while scrolling -->
@@ -137,9 +65,9 @@
                 </div>
                 <!-- Right: Social Icons -->
                 <div class="flex items-center gap-5 text-base">
-                    <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
                     <a href="#" class="hover:text-blue-400 transition-colors"><i
                             class="fa-brands fa-facebook-f"></i></a>
                 </div>
@@ -150,7 +78,7 @@
         <div class="bg-[#111827] border-b border-white/10 w-full">
             <div class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between text-white">
                 <div class="flex-shrink-0">
-                    <a href="#">
+                    <a href="../index.html">
                         <img src="../assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
                     </a>
                 </div>
@@ -381,7 +309,7 @@
                         </div>
                     </div>
 
-                    <a href="#"
+                    <a href="./our-products.html"
                         class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
                         <div class="relative h-6 overflow-hidden pointer-events-none">
                             <span
@@ -524,7 +452,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#"
+                    <a href="./our-products.html"
                         class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
                         <div class="relative h-6 overflow-hidden pointer-events-none">
                             <span
@@ -539,7 +467,7 @@
                         <i
                             class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
                     </a>
-                    <a href="#"
+                    <a href="./sustainability.html"
                         class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
                         <div class="relative h-6 overflow-hidden pointer-events-none">
                             <span
@@ -981,10 +909,10 @@
                     <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
                     <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
                         <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
+                        <li><a href="./concerns.html" class="hover:text-white transition-colors">Our Concerns</a></li>
+                        <li><a href="./our-products.html" class="hover:text-white transition-colors">Our Products</a></li>
+                        <li><a href="./stories.html" class="hover:text-white transition-colors">Media Center</a></li>
+                        <li><a href="./office-locations.html" class="hover:text-white transition-colors">Office Location</a></li>
                     </ul>
                 </div>
 
@@ -993,10 +921,10 @@
                     <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
                     <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
                         <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="./newsletter.html" class="hover:text-white transition-colors">Newsletters</a></li>
+                        <li><a href="./sustainability.html" class="hover:text-white transition-colors">Sustainability</a></li>
+                        <li><a href="./investor.html" class="hover:text-white transition-colors">Investor Relation</a></li>
+                        <li><a href="./contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -1071,3 +999,9 @@
 </body>
 
 </html>
+
+
+
+
+
+

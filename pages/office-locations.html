@@ -23,67 +23,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Local CSS -->
-  <link rel="stylesheet" href="./assets/css/input.css" />
-  <style>
-    .h1-wrapper {
-      overflow: hidden;
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    .h1-wrapper h1 {
-      display: block;
-      transform: translateY(105%);
-      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .swiper-slide-active .h1-wrapper h1 {
-      transform: translateY(0);
-    }
-
-    .swiper-slide:not(.swiper-slide-active) .h1-wrapper h1 {
-      transform: translateY(105%);
-      transition: none;
-    }
-
-    /* Dropdown and Arrow Expand Animations */
-    .dropdown-menu {
-      opacity: 0;
-      transform: translateY(-8px) scale(0.97);
-      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      pointer-events: none;
-    }
-
-    .dropdown-menu.open {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      pointer-events: auto;
-    }
-
-    .down-indicator {
-      opacity: 0;
-      transform: translateX(-50%) translateY(-4px) scale(0.5);
-      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .down-indicator.open {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0) scale(1);
-    }
-
-    .reveal-left-wipe img,
-    .reveal-left-wipe .reveal-text {
-      clip-path: inset(0 100% 0 0);
-      opacity: 0;
-      transition: clip-path 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.2s ease-out;
-    }
-
-    .reveal-left-wipe.active img,
-    .reveal-left-wipe.active .reveal-text {
-      clip-path: inset(0 0 0 0);
-      opacity: 1;
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/input.css" />
+  <link rel="stylesheet" href="../assets/css/custom.css" />
 </head>
 
 <body class="font-manrope overflow-x-hidden">
@@ -93,16 +34,16 @@
   <aside id="mobile-drawer"
     class="fixed top-0 right-0 w-[280px] h-full bg-[#0B1F3A] text-white z-[70] translate-x-full transition-transform duration-300 ease-in-out p-6 shadow-2xl">
     <div class="flex justify-between items-center mb-8">
-      <img src="./assets/images/logo.png" alt="Bhaiya Group" class="h-10" />
+      <img src="../assets/images/logo.png" alt="Bhaiya Group" class="h-10" />
       <button id="mobile-drawer-close" class="text-2xl text-white"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <nav class="flex flex-col space-y-4 font-medium overflow-y-auto h-[calc(100vh-120px)]">
       <a href="#" class="py-2 border-b border-white/10">About Us</a>
-      <a href="#" class="py-2 border-b border-white/10">Our Concerns</a>
-      <a href="#" class="py-2 border-b border-white/10">Our Products</a>
-      <a href="#" class="py-2 border-b border-white/10">Media Center</a>
-      <a href="#" class="py-2 border-b border-white/10">Sustainability</a>
-      <a href="#" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
+      <a href="./concerns.html" class="py-2 border-b border-white/10">Our Concerns</a>
+      <a href="./our-products.html" class="py-2 border-b border-white/10">Our Products</a>
+      <a href="./stories.html" class="py-2 border-b border-white/10">Media Center</a>
+      <a href="./sustainability.html" class="py-2 border-b border-white/10">Sustainability</a>
+      <a href="./contact.html" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
     </nav>
   </aside>
   <!-- Header: Absolute to stay on top of Slider -->
@@ -123,9 +64,9 @@
         </div>
         <!-- Right: Social Icons -->
         <div class="flex items-center gap-5 text-base">
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+          <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
           <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
@@ -135,8 +76,8 @@
     <div class="bg-[#111827] border-b border-white/10 w-full">
       <div class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between text-white">
         <div class="flex-shrink-0">
-          <a href="#">
-            <img src="./assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
+          <a href="../index.html">
+            <img src="../assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
           </a>
         </div>
 
@@ -173,8 +114,8 @@
             <div id="about-dropdown"
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[480px] z-50">
               <div class="grid grid-cols-2 gap-3.5">
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header11.jpg" alt="Our Legacy"
+                <a href="./details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header11.jpg" alt="Our Legacy"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -188,8 +129,8 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header12.png" alt="Our Purpose"
+                <a href="./details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header12.png" alt="Our Purpose"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -203,8 +144,8 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header13.jpg" alt="Mission & Vision"
+                <a href="./missionVission.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header13.jpg" alt="Mission & Vision"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -218,8 +159,8 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header14.png" alt="Leadership"
+                <a href="./details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header14.png" alt="Leadership"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -269,8 +210,8 @@
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
               <div class="grid grid-cols-3 gap-3 md:gap-3.5">
                 <!-- 1. Real state -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header21.jpg" alt="Real state"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header21.jpg" alt="Real state"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -286,8 +227,8 @@
                 </a>
 
                 <!-- 2. Restaurant -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header22.png" alt="Restaurant"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header22.png" alt="Restaurant"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -303,8 +244,8 @@
                 </a>
 
                 <!-- 3. Media -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header23.jpg" alt="Media"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header23.jpg" alt="Media"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -320,8 +261,8 @@
                 </a>
 
                 <!-- 4. Software -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header24.jpg" alt="Software"
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header24.jpg" alt="Software"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -337,7 +278,7 @@
                 </a>
 
                 <!-- 5. See all Concerns -->
-                <a href="./pages/details.html"
+                <a href="./details.html"
                   class="relative h-24 md:h-28 rounded bg-[#EEF4FF] hover:bg-[#E0EBFF] transition-colors flex items-center justify-center gap-2 group  p-2">
                   <span class="text-[#1864FF] text-sm font-normal whitespace-nowrap">See all Concerns</span>
                   <svg
@@ -350,7 +291,7 @@
             </div>
           </div>
 
-          <a href="#"
+          <a href="./our-products.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -397,8 +338,8 @@
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
               <div class="grid grid-cols-3 gap-3 md:gap-3.5">
                 <!-- 1. Stories -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header31.png" alt="Stories"
+                <a href="./stories.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header31.png" alt="Stories"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -414,8 +355,8 @@
                 </a>
 
                 <!-- 2. Events -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header32.png" alt="Events"
+                <a href="./events.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header32.png" alt="Events"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -431,8 +372,8 @@
                 </a>
 
                 <!-- 3. News Room -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header33.png" alt="News Room"
+                <a href="./newsroom.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header33.png" alt="News Room"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -448,8 +389,8 @@
                 </a>
 
                 <!-- 4. Newsletter -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header34.jpg" alt="Newsletter"
+                <a href="./newsletter.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header34.jpg" alt="Newsletter"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -465,8 +406,8 @@
                 </a>
 
                 <!-- 5. Photo & Video gallery -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                  <img src="./assets/images/home/header35.jpg" alt="Photo & Video gallery"
+                <a href="./photo-gallery.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header35.jpg" alt="Photo & Video gallery"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
                   <div
@@ -483,7 +424,7 @@
               </div>
             </div>
           </div>
-          <a href="#"
+          <a href="./our-products.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -498,7 +439,7 @@
             <i
               class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
           </a>
-          <a href="#"
+          <a href="./sustainability.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -553,179 +494,222 @@
     </div>
   </header>
 
-  <main>
-
-
-    <!-- Hero Section for Concerns Page -->
-
-    <section
-      class="animate-hero-height w-full h-[60vh] lg:h-[65vh] xl:h-[70vh] relative overflow-hidden flex flex-col items-center justify-center">
-      <img src="./assets/images/products/hero.jpg" alt="Legacy Hero"
-        class="absolute inset-0 w-full h-full object-cover object-center animate-zoom-slow" />
-      <div class="absolute inset-0 bg-black/40"></div>
-
-      <div class="relative z-10 text-center text-white px-4 mt-10">
-        <h1 class="text-3xl md:text-5xl font-bold uppercase tracking-wide leading-tight mb-4">
-          OUR PRODUCTS
+    <!-- Hero Section -->
+    <section class="relative w-full h-[55vh] min-h-[450px]">
+      <!-- Background Image -->
+      <img src="../assets/images/home/hero3.jpg" alt="Office Locations" class="absolute inset-0 w-full h-full object-cover z-0">
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-[#02130C]/80 z-0"></div>
+      
+      <!-- Content -->
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 z-10 -mt-16">
+        <h1 class="text-3xl md:text-5xl lg:text-[44px] font-bold text-white uppercase tracking-wider mb-5">
+          OFFICE LOCATIONS & BRANCHES
         </h1>
-        <div class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal">
-          <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
-
-
-          <i class="fa-solid fa-angle-right text-xs mx-1"></i>
-          <span class="text-white">Our Products</span>
-        </div>
-      </div>
-    </section>
-    <!-- Products List Section -->
-    <section class="container mx-auto px-4 md:px-10 py-16 md:py-24">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-        <div
-          class="bg-[#FFD0E7] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Duria
-            Saltee Biscuit </span>
-          <img src="./assets/images/products/salee-biscuit.png" alt="Duria Baby Toast 1"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#A4FFC8] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Duria
-            Baby Toast </span>
-          <img src="./assets/images/products/babytoast.png" alt="Duria Baby Toast 2"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#FFD7B7] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Desh
-            Coriander Powder</span>
-          <img src="./assets/images/products/deshcorianderpowder.png" alt="Desh Coriander Powder"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#E3C8FF] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Tasters
-            Biscuit Balls </span>
-          <img src="./assets/images/products/tasters-biscuit-balls.png" alt="Tasters Biscuit Balls"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#FFE0BD] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Duria
-            Premium Toast</span>
-          <img src="./assets/images/products/Duria-Premium-Toast.png" alt="Duria Premium Toast"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#FFD0E7] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Duria
-            Saltee Biscuit </span>
-          <img src="./assets/images/products/salee-biscuit.png" alt="Duria Baby Toast 1"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#FFD0E7] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Duria
-            Saltee Biscuit </span>
-          <img src="./assets/images/products/salee-biscuit.png" alt="Duria Baby Toast 1"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#A4FFC8] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Duria
-            Baby Toast </span>
-          <img src="./assets/images/products/babytoast.png" alt="Duria Baby Toast 2"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#FFD7B7] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Desh
-            Coriander Powder</span>
-          <img src="./assets/images/products/deshcorianderpowder.png" alt="Desh Coriander Powder"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#E3C8FF] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Tasters
-            Biscuit Balls </span>
-          <img src="./assets/images/products/tasters-biscuit-balls.png" alt="Tasters Biscuit Balls"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#FFE0BD] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Duria
-            Premium Toast</span>
-          <img src="./assets/images/products/Duria-Premium-Toast.png" alt="Duria Premium Toast"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#FFD0E7] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Duria
-            Saltee Biscuit </span>
-          <img src="./assets/images/products/salee-biscuit.png" alt="Duria Baby Toast 1"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-<div
-          class="bg-[#FFD0E7] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Duria
-            Saltee Biscuit </span>
-          <img src="./assets/images/products/salee-biscuit.png" alt="Duria Baby Toast 1"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#A4FFC8] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Duria
-            Baby Toast </span>
-          <img src="./assets/images/products/babytoast.png" alt="Duria Baby Toast 2"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-        <div
-          class="bg-[#FFD7B7] aspect-square flex items-center justify-center p-12 relative group overflow-hidden cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow">
-          <span
-            class="absolute top-4 left-0 bg-[#2563eb] text-white text-sm md:text-lg font-semibold px-4 py-1.5 rounded-r-full -translate-x-[120%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 z-10">Desh
-            Coriander Powder</span>
-          <img src="./assets/images/products/deshcorianderpowder.png" alt="Desh Coriander Powder"
-            class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
-        </div>
-      </div>
-
-      <!-- Pagination -->
-      <div class="flex justify-end items-center gap-2 pt-12 md:pt-16">
-        <a href="#"
-          class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Prev</a>
-        <a href="#"
-          class="border border-[#2563EB] bg-[#2563EB] text-white px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium transition-colors">1</a>
-        <a href="#"
-          class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">2</a>
-        <a href="#"
-          class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">3</a>
-        <a href="#"
-          class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">4</a>
-        <a href="#"
-          class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Next</a>
+        <p class="text-gray-300 text-sm md:text-[15px] font-medium max-w-2xl mx-auto leading-[1.8]">
+          Visit our offices across Bangladesh and connect with our team for business inquiries, partnerships, and customer support.
+        </p>
       </div>
     </section>
 
-    <!-- FOOTER SECTION -->
+    <!-- Overlapping Information Box Section -->
+    <section class="w-full bg-[#FAFAFA] relative z-20 pb-24 font-manrope pt-1">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1200px]">
+        
+        <!-- The White Box (Using inline style to guarantee overlap bypasses Tailwind JIT issues) -->
+        <div class="bg-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] py-12 px-8 md:px-16 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 relative z-30 border border-gray-100" style="margin-top: -130px; border-radius: 0;">
+          
+          <!-- Column 1 -->
+          <div class="flex flex-col items-start group cursor-pointer p-2 -m-2 rounded-xl transition-all">
+            <div class="w-[52px] h-[52px] bg-[#EFF6FF] group-hover:bg-[#2563EB] rounded-xl flex items-center justify-center text-[#2563EB] group-hover:text-white transition-colors duration-300 mb-7 shadow-sm">
+              <i class="fa-solid fa-location-dot text-xl transition-transform duration-300 group-hover:scale-110"></i>
+            </div>
+            <h3 class="text-xl md:text-[22px] font-bold text-[#111827] mb-2.5">2</h3>
+            <h4 class="text-[#374151] text-[15px] font-semibold mb-2 group-hover:text-[#2563EB] transition-colors">Office Locations</h4>
+            <p class="text-gray-400 text-[13.5px]">Strategic locations in Dhaka</p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="flex flex-col items-start group cursor-pointer p-2 -m-2 rounded-xl transition-all">
+            <div class="w-[52px] h-[52px] bg-[#EFF6FF] group-hover:bg-[#2563EB] rounded-xl flex items-center justify-center text-[#2563EB] group-hover:text-white transition-colors duration-300 mb-7 shadow-sm">
+              <i class="fa-solid fa-globe text-xl transition-transform duration-300 group-hover:scale-110"></i>
+            </div>
+            <h3 class="text-xl md:text-[22px] font-bold text-[#111827] mb-2.5">Dhaka</h3>
+            <h4 class="text-[#374151] text-[15px] font-semibold mb-2 group-hover:text-[#2563EB] transition-colors">Serving Clients Nationwide</h4>
+            <p class="text-gray-400 text-[13.5px]">Reaching all of Bangladesh</p>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="flex flex-col items-start group cursor-pointer p-2 -m-2 rounded-xl transition-all">
+            <div class="w-[52px] h-[52px] bg-[#EFF6FF] group-hover:bg-[#2563EB] rounded-xl flex items-center justify-center text-[#2563EB] group-hover:text-white transition-colors duration-300 mb-7 shadow-sm">
+              <i class="fa-regular fa-building text-xl transition-transform duration-300 group-hover:scale-110"></i>
+            </div>
+            <h3 class="text-xl md:text-[22px] font-bold text-[#111827] mb-2.5">Corporate & Branch</h3>
+            <h4 class="text-[#374151] text-[15px] font-semibold mb-2 group-hover:text-[#2563EB] transition-colors">Business Support Centers</h4>
+            <p class="text-gray-400 text-[13.5px]">Dedicated to your success</p>
+          </div>
+            <h3 class="text-xl md:text-[22px] font-bold text-[#111827] mb-2.5">Corporate & Branch</h3>
+            <h4 class="text-[#374151] text-[15px] font-semibold mb-2">Business Support Centers</h4>
+            <p class="text-gray-400 text-[13.5px]">Dedicated to your success</p>
+          </div>
+
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Our Offices Section -->
+    <section class="w-full bg-[#FAFAFA] pb-24 font-manrope">
+      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+        
+        <!-- Header Row -->
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-12 md:mb-16">
+          <div class="w-full lg:w-1/2">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-[1.5px] bg-[#111827]"></div>
+              <span class="text-[#111827] text-[15px] font-semibold tracking-wide">Development</span>
+            </div>
+            <h2 class="text-3xl md:text-[42px] font-bold text-[#111827] leading-tight">
+              Our Offices
+            </h2>
+          </div>
+          <div class="w-full lg:w-1/3 lg:pb-2">
+            <p class="text-gray-500 text-sm md:text-[15px] leading-[1.8]">
+              Find us at our strategic locations across Dhaka. We are ready to assist you with your business needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Card 1 -->
+          <div class="bg-white rounded-[20px] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col group/card hover:-translate-y-1.5 transition-transform duration-300">
+            <div class="relative w-full aspect-[16/11] overflow-hidden">
+              <img src="../assets/images/home/hero3.jpg" alt="Corporate Office" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+              <span class="absolute top-4 left-4 md:top-5 md:left-5 bg-white text-[#374151] px-4 py-1.5 rounded-full text-[13px] font-bold shadow-sm">
+                Corporate Headquarters
+              </span>
+            </div>
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+              <h3 class="text-[17px] md:text-[19px] font-bold text-[#111827] uppercase tracking-wide mb-6">
+                MOTIJHEEL CORPORATE OFFICE
+              </h3>
+              <div class="flex flex-col gap-3.5 mb-8 text-[14px] text-gray-500">
+                <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i><span>Motijheel, Dhaka</span></div>
+                <div class="flex items-center gap-3"><i class="fa-solid fa-phone w-4 text-center text-gray-400"></i><span>+880 2 955 1234</span></div>
+                <div class="flex items-center gap-3"><i class="fa-regular fa-envelope w-4 text-center text-gray-400"></i><span>corporate@company.com.bd</span></div>
+                <div class="flex items-center gap-3"><i class="fa-regular fa-clock w-4 text-center text-gray-400"></i><span>Sun-Thu: 9:00 AM - 6:00 PM</span></div>
+              </div>
+              <div class="mt-auto grid grid-cols-2 gap-3">
+                <a href="#" class="bg-[#2563EB] hover:bg-blue-700 text-white rounded-lg py-3 flex items-center justify-center gap-2.5 text-[13.5px] md:text-[14px] font-semibold transition-colors group">
+                  <i class="fa-regular fa-map text-[17px]"></i><span>View On Map</span>
+                </a>
+                <a href="#" onmouseover="this.querySelector('i').style.transform='rotate(45deg)'" onmouseout="this.querySelector('i').style.transform='rotate(0deg)'" class="border border-[#6B7280] hover:border-[#2563EB] hover:text-[#2563EB] text-[#374151] rounded-lg py-3 flex items-center justify-center gap-2.5 text-[13.5px] md:text-[14px] font-semibold transition-all group">
+                  <i class="fa-regular fa-paper-plane text-[17px]" style="transition: transform 0.3s ease;"></i><span>Get Directions</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-[20px] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col group/card hover:-translate-y-1.5 transition-transform duration-300">
+            <div class="relative w-full aspect-[16/11] overflow-hidden">
+              <img src="../assets/images/home/hero3.jpg" alt="Corporate Office" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+              <span class="absolute top-4 left-4 md:top-5 md:left-5 bg-white text-[#374151] px-4 py-1.5 rounded-full text-[13px] font-bold shadow-sm">
+                Corporate Headquarters
+              </span>
+            </div>
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+              <h3 class="text-[17px] md:text-[19px] font-bold text-[#111827] uppercase tracking-wide mb-6">
+                MOTIJHEEL CORPORATE OFFICE
+              </h3>
+              <div class="flex flex-col gap-3.5 mb-8 text-[14px] text-gray-500">
+                <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i><span>Motijheel, Dhaka</span></div>
+                <div class="flex items-center gap-3"><i class="fa-solid fa-phone w-4 text-center text-gray-400"></i><span>+880 2 955 1234</span></div>
+                <div class="flex items-center gap-3"><i class="fa-regular fa-envelope w-4 text-center text-gray-400"></i><span>corporate@company.com.bd</span></div>
+                <div class="flex items-center gap-3"><i class="fa-regular fa-clock w-4 text-center text-gray-400"></i><span>Sun-Thu: 9:00 AM - 6:00 PM</span></div>
+              </div>
+              <div class="mt-auto grid grid-cols-2 gap-3">
+                <a href="#" class="bg-[#2563EB] hover:bg-blue-700 text-white rounded-lg py-3 flex items-center justify-center gap-2.5 text-[13.5px] md:text-[14px] font-semibold transition-colors group">
+                  <i class="fa-regular fa-map text-[17px]"></i><span>View On Map</span>
+                </a>
+                <a href="#" onmouseover="this.querySelector('i').style.transform='rotate(45deg)'" onmouseout="this.querySelector('i').style.transform='rotate(0deg)'" class="border border-[#6B7280] hover:border-[#2563EB] hover:text-[#2563EB] text-[#374151] rounded-lg py-3 flex items-center justify-center gap-2.5 text-[13.5px] md:text-[14px] font-semibold transition-all group">
+                  <i class="fa-regular fa-paper-plane text-[17px]" style="transition: transform 0.3s ease;"></i><span>Get Directions</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-[20px] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col group/card hover:-translate-y-1.5 transition-transform duration-300">
+            <div class="relative w-full aspect-[16/11] overflow-hidden">
+              <img src="../assets/images/home/hero3.jpg" alt="Branch Office" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+              <span class="absolute top-4 left-4 md:top-5 md:left-5 bg-white text-[#374151] px-4 py-1.5 rounded-full text-[13px] font-bold shadow-sm">
+                Branch Office
+              </span>
+            </div>
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+              <h3 class="text-[17px] md:text-[19px] font-bold text-[#111827] uppercase tracking-wide mb-6">
+                GULSHAN BRANCH OFFICE
+              </h3>
+              <div class="flex flex-col gap-3.5 mb-8 text-[14px] text-gray-500">
+                <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i><span>Gulshan, Dhaka</span></div>
+                <div class="flex items-center gap-3"><i class="fa-solid fa-phone w-4 text-center text-gray-400"></i><span>+880 2 955 6789</span></div>
+                <div class="flex items-center gap-3"><i class="fa-regular fa-envelope w-4 text-center text-gray-400"></i><span>branch@company.com.bd</span></div>
+                <div class="flex items-center gap-3"><i class="fa-regular fa-clock w-4 text-center text-gray-400"></i><span>Sun-Thu: 9:00 AM - 6:00 PM</span></div>
+              </div>
+              <div class="mt-auto grid grid-cols-2 gap-3">
+                <a href="#" class="bg-[#2563EB] hover:bg-blue-700 text-white rounded-lg py-3 flex items-center justify-center gap-2.5 text-[13.5px] md:text-[14px] font-semibold transition-colors group">
+                  <i class="fa-regular fa-map text-[17px]"></i><span>View On Map</span>
+                </a>
+                <a href="#" onmouseover="this.querySelector('i').style.transform='rotate(45deg)'" onmouseout="this.querySelector('i').style.transform='rotate(0deg)'" class="border border-[#6B7280] hover:border-[#2563EB] hover:text-[#2563EB] text-[#374151] rounded-lg py-3 flex items-center justify-center gap-2.5 text-[13.5px] md:text-[14px] font-semibold transition-all group">
+                  <i class="fa-regular fa-paper-plane text-[17px]" style="transition: transform 0.3s ease;"></i><span>Get Directions</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Map Location Section -->
+    <section class="w-full font-manrope flex flex-col">
+      <!-- Header Area -->
+      <div class="bg-[#0F172A] w-full pt-20 pb-20 flex flex-col items-center justify-center text-center px-4 border-b border-[#1E293B]">
+        <h2 class="text-3xl md:text-[38px] font-bold text-white mb-3">Find Us on the Map</h2>
+        <p class="text-gray-400 text-sm md:text-[15px]">Visit our corporate and branch offices in Dhaka</p>
+      </div>
+      
+      <!-- Interactive Map Container -->
+      <div class="w-full h-[500px] md:h-[650px] relative bg-[#0a0a0a]">
+        <!-- 
+          CSS Filter magic to create the custom dark theme with yellow pins:
+          1. invert(100%) makes the light map dark and turns standard red pins to cyan.
+          2. hue-rotate(225deg) shifts cyan to yellow/gold.
+          3. contrast(95%) and sepia(10%) smooths out the colors for a sleek look.
+        -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116834.00977793739!2d90.33728809424706!3d23.78077774441094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1715000000000!5m2!1sen!2sbd" 
+          width="100%" 
+          height="100%" 
+          style="border:0; filter: invert(100%) hue-rotate(225deg) contrast(95%) sepia(10%); pointer-events: auto;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+<!-- FOOTER SECTION -->
     <footer class="bg-[#111827] text-[#E7E7E7] pt-20 pb-8 font-manrope">
       <div class="container mx-auto px-4 md:px-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
           <!-- Logo and Contact -->
           <div class="lg:col-span-2 space-y-6">
-            <img src="./assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
+            <img src="../assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
             <div class="space-y-5 text-sm md:text-base opacity-90">
               <div class="flex items-start gap-4">
                 <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
@@ -749,10 +733,10 @@
             <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
             <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
               <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
+              <li><a href="./concerns.html" class="hover:text-white transition-colors">Our Concerns</a></li>
+              <li><a href="./our-products.html" class="hover:text-white transition-colors">Our Products</a></li>
+              <li><a href="./stories.html" class="hover:text-white transition-colors">Media Center</a></li>
+              <li><a href="./office-locations.html" class="hover:text-white transition-colors">Office Location</a></li>
             </ul>
           </div>
 
@@ -761,10 +745,10 @@
             <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
             <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
               <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="./newsletter.html" class="hover:text-white transition-colors">Newsletters</a></li>
+              <li><a href="./sustainability.html" class="hover:text-white transition-colors">Sustainability</a></li>
+              <li><a href="./investor.html" class="hover:text-white transition-colors">Investor Relation</a></li>
+              <li><a href="./contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
@@ -830,7 +814,41 @@
     <!-- Script for Mobile Hamburger Menu Toggle -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="../assets/js/main.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

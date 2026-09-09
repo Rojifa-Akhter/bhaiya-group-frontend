@@ -24,53 +24,7 @@
 
   <!-- Local CSS -->
   <link rel="stylesheet" href="./assets/css/input.css" />
-  <style>
-    .h1-wrapper {
-      overflow: hidden;
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    .h1-wrapper h1 {
-      display: block;
-      transform: translateY(105%);
-      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .swiper-slide-active .h1-wrapper h1 {
-      transform: translateY(0);
-    }
-
-    .swiper-slide:not(.swiper-slide-active) .h1-wrapper h1 {
-      transform: translateY(105%);
-      transition: none;
-    }
-
-    /* Dropdown and Arrow Expand Animations */
-    .dropdown-menu {
-      opacity: 0;
-      transform: translateY(-8px) scale(0.97);
-      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      pointer-events: none;
-    }
-
-    .dropdown-menu.open {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      pointer-events: auto;
-    }
-
-    .down-indicator {
-      opacity: 0;
-      transform: translateX(-50%) translateY(-4px) scale(0.5);
-      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .down-indicator.open {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0) scale(1);
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/custom.css" />
 </head>
 
 <body class="font-manrope overflow-x-hidden">
@@ -85,11 +39,11 @@
     </div>
     <nav class="flex flex-col space-y-4 font-medium overflow-y-auto h-[calc(100vh-120px)]">
       <a href="#" class="py-2 border-b border-white/10">About Us</a>
-      <a href="#" class="py-2 border-b border-white/10">Our Concerns</a>
-      <a href="#" class="py-2 border-b border-white/10">Our Products</a>
-      <a href="#" class="py-2 border-b border-white/10">Media Center</a>
-      <a href="#" class="py-2 border-b border-white/10">Sustainability</a>
-      <a href="#" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
+      <a href="./pages/concerns.html" class="py-2 border-b border-white/10">Our Concerns</a>
+      <a href="./pages/our-products.html" class="py-2 border-b border-white/10">Our Products</a>
+      <a href="./pages/stories.html" class="py-2 border-b border-white/10">Media Center</a>
+      <a href="./pages/sustainability.html" class="py-2 border-b border-white/10">Sustainability</a>
+      <a href="./pages/contact.html" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
     </nav>
   </aside>
   <!-- Header: Absolute to stay on top of Slider -->
@@ -110,9 +64,9 @@
         </div>
         <!-- Right: Social Icons -->
         <div class="flex items-center gap-5 text-base">
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+          <a href="./pages/our-products.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          <a href="./pages/sustainability.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="./pages/contact.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
           <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
@@ -122,7 +76,7 @@
     <div class="bg-black/25 backdrop-blur-[2px] border-b border-white/10 w-full">
       <div class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between text-white">
         <div class="flex-shrink-0">
-          <a href="#">
+          <a href="./index.html">
             <img src="./assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
           </a>
         </div>
@@ -190,7 +144,7 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
+                <a href="./pages/missionVission.html" class="relative h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header13.jpg" alt="Mission & Vision"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -256,7 +210,7 @@
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
               <div class="grid grid-cols-3 gap-3 md:gap-3.5">
                 <!-- 1. Real state -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header21.jpg" alt="Real state"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -273,7 +227,7 @@
                 </a>
 
                 <!-- 2. Restaurant -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header22.png" alt="Restaurant"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -290,7 +244,7 @@
                 </a>
 
                 <!-- 3. Media -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header23.jpg" alt="Media"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -307,7 +261,7 @@
                 </a>
 
                 <!-- 4. Software -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header24.jpg" alt="Software"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -337,7 +291,7 @@
             </div>
           </div>
 
-          <a href="#"
+          <a href="./pages/our-products.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -384,7 +338,7 @@
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
               <div class="grid grid-cols-3 gap-3 md:gap-3.5">
                 <!-- 1. Stories -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/stories.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header31.png" alt="Stories"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -401,7 +355,7 @@
                 </a>
 
                 <!-- 2. Events -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/events.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header32.png" alt="Events"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -418,7 +372,7 @@
                 </a>
 
                 <!-- 3. News Room -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/newsroom.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header33.png" alt="News Room"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -435,7 +389,7 @@
                 </a>
 
                 <!-- 4. Newsletter -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/newsletter.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header34.jpg" alt="Newsletter"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -452,7 +406,7 @@
                 </a>
 
                 <!-- 5. Photo & Video gallery -->
-                <a href="./pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/photo-gallery.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header35.jpg" alt="Photo & Video gallery"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -470,7 +424,7 @@
               </div>
             </div>
           </div>
-          <a href="#"
+          <a href="./pages/our-products.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -485,7 +439,7 @@
             <i
               class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
           </a>
-          <a href="#"
+          <a href="./pages/sustainability.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -1486,7 +1440,7 @@
           <!-- Buttons -->
           <div class="flex flex-wrap gap-4 items-center mt-2">
             <!-- First Button: Explore Bhaiya Housing -->
-            <a href="#"
+            <a href="./pages/sustainability.html"
               class="group inline-flex items-center gap-4 bg-[#2563EB] text-white pl-6 pr-2 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl w-fit">
               <!-- Text Animation -->
               <div class="relative h-5 overflow-hidden pointer-events-none">
@@ -1822,7 +1776,7 @@
               believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
               programs, we invest in education,
             </p>
-            <a href="#"
+            <a href="./pages/sustainability.html"
               class="group inline-flex items-center gap-4 border border-[#111827] bg-transparent text-[#111827] pl-6 pr-2 py-2 rounded-full text-sm md:text-base font-semibold hover:bg-gray-100 transition w-fit">
               <div class="relative h-5 overflow-hidden pointer-events-none">
                 <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">View
@@ -2163,7 +2117,7 @@
               believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
               programs, we invest in education,
             </p>
-            <a href="#"
+            <a href="./pages/sustainability.html"
               class="group inline-flex items-center gap-4 border border-white bg-transparent text-white pl-6 pr-2 py-2 rounded-full text-sm font-semibold transition mt-2 w-fit">
               <!-- Text Animation -->
               <div class="relative h-5 overflow-hidden pointer-events-none">
@@ -2826,10 +2780,10 @@
           <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
           <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
             <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
+            <li><a href="./pages/concerns.html" class="hover:text-white transition-colors">Our Concerns</a></li>
+            <li><a href="./pages/our-products.html" class="hover:text-white transition-colors">Our Products</a></li>
+            <li><a href="./pages/stories.html" class="hover:text-white transition-colors">Media Center</a></li>
+            <li><a href="./pages/office-locations.html" class="hover:text-white transition-colors">Office Location</a></li>
           </ul>
         </div>
 
@@ -2838,10 +2792,10 @@
           <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
           <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
             <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="./pages/newsletter.html" class="hover:text-white transition-colors">Newsletters</a></li>
+            <li><a href="./pages/sustainability.html" class="hover:text-white transition-colors">Sustainability</a></li>
+            <li><a href="./pages/investor.html" class="hover:text-white transition-colors">Investor Relation</a></li>
+            <li><a href="./pages/contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
           </ul>
         </div>
 
@@ -2911,3 +2865,9 @@
 </body>
 
 </html>
+
+
+
+
+
+
