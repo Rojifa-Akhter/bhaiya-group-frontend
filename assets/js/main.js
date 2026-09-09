@@ -1,3 +1,11 @@
+import Lenis from 'https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/+esm';
+const lenis = new Lenis();
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+window.lenis = lenis; // Export to window for other scripts to use
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Swiper Slider Initialization
   const swiperElement = document.querySelector('.heroSwiper');
@@ -262,3 +270,86 @@ document.addEventListener('DOMContentLoaded', () => {
     purposeObserver.observe(card);
   });
 });
+
+// ====== SCROLL PARALLAX EFFECT ======
+(function () {
+    const els = document.querySelectorAll('.scroll-move');
+    if (!els.length) return;
+
+    els.forEach(el => {
+        const speed = parseFloat(el.dataset.speed ?? 0.15);
+
+        const rawAxis = (el.dataset.axis ?? 'Y').toUpperCase().trim();
+        const isNegative = rawAxis.startsWith('-');
+        const baseAxis = rawAxis.replace('-', '');
+        const dirMultiplier = isNegative ? -1 : 1;
+
+        const lerp  = parseFloat(el.dataset.lerp ?? 0.08);
+
+        let initialOffset = 0;
+        let target  = 0;
+        let current = 0;
+        let rafId   = null;
+
+        function calculateOffset() {
+            el.style.translate = 'none';
+
+            const rect = el.getBoundingClientRect();
+
+            const windowCenterY = window.innerHeight / 2;
+            const elementCenterY = rect.height / 2;
+            const absolutePosY = rect.top + window.scrollY;
+
+            initialOffset = absolutePosY - windowCenterY + elementCenterY;
+        }
+
+        function applyTranslate(value) {
+            const finalValue = value * dirMultiplier;
+
+            if (baseAxis === 'X') {
+                el.style.translate = `${finalValue}px 0px`;
+            } else {
+                el.style.translate = `0px ${finalValue}px`;
+            }
+        }
+
+        function tick() {
+            current += (target - current) * lerp;
+
+            if (Math.abs(target - current) < 0.01) {
+                current = target;
+                rafId   = null;
+            } else {
+                rafId = requestAnimationFrame(tick);
+            }
+
+            applyTranslate(current);
+        }
+
+        function onScroll(scrollPos) {
+            target = -(scrollPos - initialOffset) * speed;
+            if (!rafId) rafId = requestAnimationFrame(tick);
+        }
+
+        calculateOffset();
+
+        const startScroll = window.scrollY;
+        target = -(startScroll - initialOffset) * speed;
+        current = target;
+
+        applyTranslate(current);
+
+        if (typeof lenis !== 'undefined') {
+            lenis.on('scroll', ({ scroll }) => onScroll(scroll));
+        } else {
+            window.addEventListener('scroll', () => onScroll(window.scrollY));
+        }
+
+        window.addEventListener('resize', () => {
+            calculateOffset();
+            onScroll(window.scrollY);
+        });
+    });
+})();
+
+
