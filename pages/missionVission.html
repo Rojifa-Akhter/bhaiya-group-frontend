@@ -97,75 +97,6 @@
             animation: shrinkHeight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        /* Legacy Section Styles */
-        #our-legacy {
-            background-color: #ffffff;
-        }
-
-        .legacySwiper {
-            padding-top: 20px;
-            padding-bottom: 50px;
-        }
-
-        .legacySwiper .swiper-slide {
-            width: 100%;
-            max-width: 640px;
-            transition: all 0.5s ease;
-            filter: grayscale(100%);
-            opacity: 0.6;
-        }
-
-        .legacySwiper .swiper-slide-active {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-
-        .legacySwiper .swiper-slide-active img {
-            border: 2px solid #1864FF;
-            padding: 10px;
-            background-color: #0B1F3A;
-        }
-
-        .legacySwiper img {
-            width: 100%;
-            height: 442px;
-            object-fit: cover;
-            display: block;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.5s ease;
-        }
-
-        .legacy-nav-wrapper {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .legacy-prev,
-        .legacy-next {
-            width: 45px;
-            height: 45px;
-            border: 1px solid #1864FF !important;
-            background: #fff !important;
-            color: #1864FF !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .legacy-prev:hover,
-        .legacy-next:hover {
-            background: #1864FF !important;
-            color: #fff !important;
-        }
-
-        .legacy-prev.swiper-button-disabled,
-        .legacy-next.swiper-button-disabled {
-            display: none !important;
-        }
     </style>
 </head>
 
@@ -188,8 +119,8 @@
             <a href="#" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
         </nav>
     </aside>
-    <!-- Header: Absolute to stay on top of Slider -->
-    <header class="absolute top-0 left-0 w-full z-50">
+    <!-- Header: Fixed to stay on top while scrolling -->
+    <header class="fixed top-0 left-0 w-full z-50">
         <!-- Top Bar -->
         <div class="bg-[#0B1F3A] border-b border-white/10 py-2 hidden lg:block text-[#E7E7E7]">
             <div
@@ -673,450 +604,98 @@
             <div class="absolute inset-0 bg-black/40"></div>
 
             <div class="relative z-10 text-center text-white px-4 mt-10">
-                <h1 class="text-3xl md:text-5xl font-bold uppercase tracking-wide leading-tight mb-4">
-                    Creating a Legacy<br />of Success
+                <h1 class="section-title tracking-wide leading-tight mb-4">
+                    Our Mission, Our <br />Future
                 </h1>
                 <div class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal">
                     <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
                     <i class="fa-solid fa-angle-right text-xs mx-1"></i>
                     <a href="#" class="hover:text-blue-400 transition">About Us</a>
                     <i class="fa-solid fa-angle-right text-xs mx-1"></i>
-                    <span class="text-white">Legacy</span>
+                    <span class="text-white">Our Mission & Vision</span>
                 </div>
             </div>
         </section>
 
         <!-- Tabs Navigation Section -->
-        <section class="relative w-full bg-white shadow-sm mb-4 md:mb-20">
+        <section class="relative w-full bg-white shadow-sm sticky top-[96px] lg:top-[136px] z-40 mb-4 md:mb-10">
             <div class="container mx-auto px-4 md:px-10">
                 <ul
-                    class="flex items-start justify-start gap-8 md:gap-14 overflow-x-auto no-scrollbar whitespace-nowrap">
+                    class="flex items-start justify-start gap-8 md:gap-14 overflow-x-auto text-[#111827] no-scrollbar whitespace-nowrap">
                     <li>
-                        <a href="#our-legacy"
-                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium text-[#111827] border-b-2 border-[#1864FF]">Our
-                            Legacy</a>
-                    </li>
-                    <li>
-                        <a href="#about-company"
-                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium text-[#4B5563] hover:text-[#111827] transition-colors border-b-2 border-transparent hover:border-gray-300">About
-                            Company</a>
-                    </li>
-                    <li>
-                        <a href="#our-heritage"
-                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium text-[#4B5563] hover:text-[#111827] transition-colors border-b-2 border-transparent hover:border-gray-300">Our
-                            Heritage</a>
-                    </li>
-                    <li>
-                        <a href="#our-journey"
-                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium text-[#4B5563] hover:text-[#111827] transition-colors border-b-2 border-transparent hover:border-gray-300">Our
-                            Journey</a>
+                        <a href="./missionVission.html"
+                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium  border-b-2 border-[#1864FF]">Our Mission & Vision</a>
                     </li>
                 </ul>
             </div>
         </section>
-        <!-- Our Legacy Section -->
-        <section id="our-legacy" class="py-16 md:py-24 overflow-hidden bg-[#F8FAFC]">
-            <div class="mx-auto px-4">
-                <!-- Title -->
-                <h2 class="section-title text-[#111827] text-center mb-16">
-                    Our Legacy
-                </h2>
 
-                <!-- Swiper -->
-                <div class="swiper legacySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="../assets/images/legacy/legacy (3).png" alt="Legacy">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../assets/images/legacy/legacy (1).png" alt="Legacy">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../assets/images/legacy/legacy (2).png" alt="Legacy">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../assets/images/legacy/legacy (3).png" alt="Legacy">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../assets/images/legacy/legacy (1).png" alt="Legacy">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../assets/images/legacy/legacy (2).png" alt="Legacy">
+        <!-- Our Mission Section -->
+        <section class="py-16 md:py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-4 md:px-10 max-w-7xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    
+                    <!-- Images Layout -->
+                    <div class="relative h-[500px] md:h-[650px] w-full mt-10 md:mt-0 lg:-ml-10">
+                        <!-- Main Building Image (with 'C' shape cutout via an overlay) -->
+                        <div class="absolute left-0 top-0 bottom-0 w-[85%] md:w-[80%] rounded-r-[60px] md:rounded-r-[120px] overflow-hidden shadow-xl">
+                            <img src="../assets/images/purpose/purpose (1).jpg" alt="Building" class="w-full h-full object-cover">
+                            
+                            <!-- The white cutout overlay to create the 'C' shape -->
+                            <div class="absolute -right-1 top-[20%] bottom-[20%] w-[55%] bg-white rounded-l-[40px] md:rounded-l-[80px]"></div>
                         </div>
 
+                        <!-- Portrait Image (Overlapping in the cutout) -->
+                        <div class="absolute right-0 md:right-[5%] top-[28%] bottom-[12%] w-[55%] md:w-[50%] z-10 group">
+                            <!-- A background decorative shape (matches the beige background in screenshot) -->
+                            <div class="absolute -inset-6 bg-[#F8EFEA] rounded-[40px] md:rounded-[60px] transform rotate-[-8deg] translate-y-4 md:translate-y-8 z-0"></div>
+                            
+                            <div class="absolute inset-0 rounded-[30px] overflow-hidden shadow-2xl z-10 border-4 border-white">
+                                <img src="../assets/images/home/concernDirecotr.jpg" alt="Portrait" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="legacy-nav-wrapper">
-                    <div class="legacy-prev"><i class="fa-solid fa-angle-left"></i></div>
-                    <div class="legacy-next"><i class="fa-solid fa-angle-right"></i></div>
-                </div>
+                    <!-- Text Content -->
+                    <div class="lg:pl-8 z-10 relative">
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold text-[#0B1F3A] mb-8">Our Mission</h2>
+                        
+                        <div class="text-gray-600 space-y-6 text-sm md:text-[15px] leading-relaxed mb-10">
+                            <p>
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            </p>
+                            <p>
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of Lorem Ipsum is simply.
+                            </p>
+                        </div>
 
-                <!-- Text Content -->
-                <div class="container mx-auto text-center mt-12 text-[#111827] md:mt-16">
-                    <h3 class="text-2xl md:text-3xl font-bold uppercase mb-4">Founder Chairman</h3>
-                    <p class="text-base italic mb-8">Founding father and the man who set up many of pre-independent
-                        India's critical industries.</p>
-                    <div class="text-sm md:text-base space-y-6 leading-relaxed">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.</p>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                            here', making it look like readable English. Many desktop publishing packages and web page
-                            editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-                            uncover many web sites still in their infancy. Various versions have evolved over the years,
-                            sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                            classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
-                            Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-                            Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-                            word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
-                            sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-                            Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-                            popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-                            amet..", comes from a line in section 1.10.32.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4">
+                                <div class="w-6 h-6 rounded-full bg-[#0BB671] flex items-center justify-center text-white shrink-0 shadow-md">
+                                    <i class="fa-solid fa-check text-[10px]"></i>
+                                </div>
+                                <span class="text-gray-800 font-medium text-sm md:text-base">Fostering Sustainable Growth and Green Development</span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <div class="w-6 h-6 rounded-full bg-[#0BB671] flex items-center justify-center text-white shrink-0 shadow-md">
+                                    <i class="fa-solid fa-check text-[10px]"></i>
+                                </div>
+                                <span class="text-gray-800 font-medium text-sm md:text-base">Innovating for a Sustainable Future</span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <div class="w-6 h-6 rounded-full bg-[#0BB671] flex items-center justify-center text-white shrink-0 shadow-md">
+                                    <i class="fa-solid fa-check text-[10px]"></i>
+                                </div>
+                                <span class="text-gray-800 font-medium text-sm md:text-base">Customer-Centric Approach</span>
+                            </li>
+                        </ul>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- About Company Section -->
-        <section id="about-company" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 md:px-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-                    <!-- Left: Images & Badge -->
-                    <div class="relative w-full h-[450px] md:h-[550px] flex items-center justify-center">
-                        <!-- Top Left Image -->
-                        <div class="absolute top-0 left-0 w-[75%] h-[75%] rounded-3xl overflow-hidden shadow-xl">
-                            <img src="../assets/images/legacy/companyAbout (2).jpg" alt="About Company 1"
-                                class="w-full h-full object-cover">
-                        </div>
-
-                        <!-- Floating Badge -->
-                        <div class="absolute top-[10%] right-[5%] z-20 drop-shadow-2xl">
-                            <!-- Main Rectangle -->
-                            <div
-                                class="bg-[#111827] text-white py-6 md:py-8 pl-8 pr-4 rounded-l-2xl relative z-10 w-[140px] md:w-[160px]">
-                                <h3 class="text-3xl lg:text-4xl font-bold mb-1">50+</h3>
-                                <p class="text-sm md:text-base text-gray-300 leading-tight">years<br>of experiences</p>
-
-                                <!-- Right Slanted Extension -->
-                                <div class="absolute top-0 bottom-0 right-[-30px] md:right-[-40px] w-[60px] md:w-[80px] bg-[#111827] rounded-r-2xl -z-10"
-                                    style="transform: skewX(-15deg); transform-origin: bottom left;">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bottom Right Image -->
-                        <div
-                            class="absolute bottom-0 right-0 w-[45%] h-[40%] rounded-3xl overflow-hidden  shadow-2xl z-10">
-                            <img src="../assets/images/legacy/companyAbout (1).jpg" alt="About Company 2"
-                                class="w-full h-full object-cover">
-                        </div>
-                    </div>
-
-                    <!-- Right: Text Content -->
-                    <div class="flex flex-col justify-center">
-                        <h4 class="text-[#1864FF] text-xs md:text-sm font-bold uppercase tracking-widest mb-3">Company
-                            About</h4>
-                        <h2 class="section-title text-[#111827] leading-tight mb-6">
-                            One Of The Fastest Way To Gain<br class="hidden md:block">Business
-                        </h2>
-
-                        <div class="text-gray-600 text-sm md:text-base space-y-5 mb-8 leading-relaxed">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled</p>
-                        </div>
-
-                        <h5 class="text-[#111827] text-lg font-bold mb-6">Development Special Services</h5>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-6">
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-[#00C675] flex items-center justify-center text-white text-xs flex-shrink-0">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <span class="text-gray-700 font-medium text-sm md:text-base">Emergency Solutions
-                                    Anytime</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-[#00C675] flex items-center justify-center text-white text-xs flex-shrink-0">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <span class="text-gray-700 font-medium text-sm md:text-base">Reliable & Experienced
-                                    Team</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-[#00C675] flex items-center justify-center text-white text-xs flex-shrink-0">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <span class="text-gray-700 font-medium text-sm md:text-base">How to improve
-                                    business</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-[#00C675] flex items-center justify-center text-white text-xs flex-shrink-0">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <span class="text-gray-700 font-medium text-sm md:text-base">Affordable price upto 2
-                                    years</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="bg-[#111827] py-12 md:py-16">
-            <div class="container mx-auto px-4 md:px-10">
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:divide-x lg:divide-gray-700">
-                    <div
-                        class="flex flex-col md:flex-row items-center justify-center gap-4 text-white text-center md:text-left">
-                        <div
-                            class="w-14 h-14 rounded-full bg-[#4a4f5b] flex items-center justify-center text-2xl flex-shrink-0">
-                            <img src="../assets/images/legacy/Group.png" alt="group">
-                        </div>
-                        <div>
-                            <h3 class="text-2xl md:text-4xl font-bold">20+</h3>
-                            <p class="text-sm md:text-lg text-gray-300 mt-1">Active Concerns</p>
-                        </div>
-                    </div>
-                    <div
-                        class="flex flex-col md:flex-row items-center justify-center gap-4 text-white text-center md:text-left">
-                        <div
-                            class="w-14 h-14 rounded-full bg-[#4a4f5b] flex items-center justify-center text-2xl flex-shrink-0">
-                            <img src="../assets/images/legacy/Group (1).png" alt="group">
-                        </div>
-                        <div>
-                            <h3 class="text-2xl md:text-4xl font-bold">40+</h3>
-                            <p class="text-sm md:text-lg text-gray-300 mt-1">Projects in Development</p>
-                        </div>
-                    </div>
-                    <div
-                        class="flex flex-col md:flex-row items-center justify-center gap-4 text-white text-center md:text-left">
-                        <div
-                            class="w-14 h-14 rounded-full bg-[#4a4f5b] flex items-center justify-center text-2xl flex-shrink-0">
-                            <img src="../assets/images/legacy/Group (2).png" alt="group">
-                        </div>
-                        <div>
-                            <h3 class="text-2xl md:text-3xl font-bold">5,000+</h3>
-                            <p class="text-sm md:text-lg text-gray-300 mt-1">Employees</p>
-                        </div>
-                    </div>
-                    <div
-                        class="flex flex-col md:flex-row items-center justify-center gap-4 text-white text-center md:text-left">
-                        <div
-                            class="w-14 h-14 rounded-full bg-[#4a4f5b] flex items-center justify-center text-2xl flex-shrink-0">
-                            <img src="../assets/images/legacy/Frame.png" alt="group">
-                        </div>
-                        <div>
-                            <h3 class="text-2xl md:text-3xl font-bold">08</h3>
-                            <p class="text-sm md:text-lg text-gray-300 mt-1">Divisions</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Heritage Section -->
-        <section id="our-heritage" class="py-16 md:py-24 bg-[#f3f4f6] overflow-hidden">
-            <div class="container mx-auto px-4 md:px-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <!-- Left: Text -->
-                    <div class="lg:col-span-4 space-y-6">
-                        <h2 class="section-title text-[#111827] mb-6 md:mb-0">Our
-                            Heritage</h2>
-                        <p class="text-gray-600 text-sm md:text-base leading-relaxed">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form, by injected humour, or randomised words which don't look
-                            even slightly.
-                        </p>
-                        <a href="#"
-                            class="group inline-flex items-center gap-4 bg-transparent border border-[#111827] text-[#111827] pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-[#111827] hover:text-white transition-colors duration-300 w-fit">
-                            <!-- Text Animation -->
-                            <div class="relative h-5 overflow-hidden pointer-events-none">
-                                <span
-                                    class="block text-sm md:text-base leading-5 transition-transform duration-500 group-hover:-translate-y-full">
-                                    See More
-                                </span>
-                                <span
-                                    class="absolute top-0 left-0 block text-sm md:text-base leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
-                                    See More
-                                </span>
-                            </div>
-                            <!-- Arrow Animation -->
-                            <div
-                                class="relative w-8 h-8 rounded-full border border-[#111827] group-hover:border-white transition-colors duration-300 flex items-center justify-center overflow-hidden ml-1">
-                                <img src="../assets/images/home/right-arrow.png" alt="arrow"
-                                    class="absolute w-3 h-3 brightness-0 transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0 group-hover:invert" />
-                                <img src="../assets/images/home/right-arrow.png" alt="arrow"
-                                    class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Right: Polaroid Grid -->
-                    <div class="lg:col-span-8">
-                        <style>
-                            .polaroid {
-                                background: white;
-                                padding: 8px 8px 25px 8px;
-                                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-                                position: relative;
-                                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                            }
-
-                            .polaroid:hover {
-                                transform: scale(1.1) rotate(0deg) !important;
-                                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-                                z-index: 10;
-                            }
-
-                            .polaroid img {
-                                width: 100%;
-                                height: 110px;
-                                object-fit: cover;
-                            }
-
-                            .tape {
-                                position: absolute;
-                                top: -8px;
-                                left: 50%;
-                                transform: translateX(-50%);
-                                width: 35px;
-                                height: 16px;
-                                background-color: rgba(147, 197, 253, 0.7);
-                                /* Light blue translucent tape */
-                                z-index: 5;
-                            }
-
-                            @media (min-width: 768px) {
-                                .polaroid img {
-                                    height: 130px;
-                                }
-                            }
-
-                            @media (min-width: 1024px) {
-                                .polaroid img {
-                                    height: 140px;
-                                }
-                            }
-                        </style>
-
-                        <div
-                            class="grid grid-cols-2 md:grid-cols-5 gap-x-4 gap-y-10 md:gap-y-14 relative mt-10 lg:mt-0">
-                            <!-- Row 1 -->
-                            <div class="polaroid" style="transform: rotate(-3deg);">
-                                <div class="tape" style="transform: translateX(-50%) rotate(-2deg);"></div>
-                                <img src="../assets/images/legacy/heritage (1).jpg" alt="Heritage 1">
-                            </div>
-                            <div class="polaroid" style="transform: rotate(3deg); margin-top: 15px;">
-                                <div class="tape" style="transform: translateX(-50%) rotate(3deg);"></div>
-                                <img src="../assets/images/legacy/heritage (8).png" alt="Heritage 2">
-                            </div>
-                            <div class="polaroid" style="transform: rotate(-2deg); margin-top: -5px;">
-                                <div class="tape" style="transform: translateX(-50%) rotate(-1deg);"></div>
-                                <img src="../assets/images/legacy/heritage (6).png" alt="Heritage 3">
-                            </div>
-                            <div class="polaroid" style="transform: rotate(4deg); margin-top: 10px;">
-                                <div class="tape" style="transform: translateX(-50%) rotate(2deg);"></div>
-                                <img src="../assets/images/legacy/heritage (3).png" alt="Heritage 4">
-                            </div>
-                            <div class="polaroid" style="transform: rotate(4deg); margin-top: 10px;">
-                                <div class="tape" style="transform: translateX(-50%) rotate(2deg);"></div>
-                                <img src="../assets/images/legacy/heritage (1).png" alt="Heritage 4">
-                            </div>
-
-                            <!-- Row 2 -->
-                            <div class="polaroid" style="transform: rotate(2deg);">
-                                <div class="tape" style="transform: translateX(-50%) rotate(1deg);"></div>
-                                <img src="../assets/images/legacy/heritage (4).png" alt="Heritage 5">
-                            </div>
-                            <div class="polaroid" style="transform: rotate(-4deg); margin-top: 15px;">
-                                <div class="tape" style="transform: translateX(-50%) rotate(-2deg);"></div>
-                                <img src="../assets/images/legacy/heritage (2).png" alt="Heritage 6">
-                            </div>
-                            <div class="polaroid" style="transform: rotate(3deg); margin-top: -8px;">
-                                <div class="tape" style="transform: translateX(-50%) rotate(4deg);"></div>
-                                <img src="../assets/images/legacy/heritage (2).jpg" alt="Heritage 7">
-                            </div>
-                            <div class="polaroid" style="transform: rotate(-2deg); margin-top: 5px;">
-                                <div class="tape" style="transform: translateX(-50%) rotate(-1deg);"></div>
-                                <img src="../assets/images/legacy/heritage (7).png" alt="Heritage 8">
-                            </div>
-                            <div class="polaroid" style="transform: rotate(-2deg); margin-top: 5px;">
-                                <div class="tape" style="transform: translateX(-50%) rotate(-1deg);"></div>
-                                <img src="../assets/images/legacy/heritage (5).png" alt="Heritage 8">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Journey Section -->
-        <section id="our-journey"
-            class="relative w-full h-[50vh] md:h-[120vh] flex items-center justify-center overflow-hidden">
-
-            <!-- Background Video Player -->
-            <video id="journey-video" class="absolute inset-0 w-full h-full object-cover" autoplay muted loop
-                playsinline>
-                <source src="../assets/video/legacy.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-            <!-- Dark tint for text readability -->
-            <div id="journey-tint" class="absolute inset-0 bg-black/40 pointer-events-none"></div>
-
-            <!-- Content Overlay -->
-            <div id="journey-overlay"
-                class="relative z-10 flex flex-col items-center text-center text-white w-full h-full justify-center">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase tracking-widest mb-6">Our Journey
-                </h2>
-
-                <button onclick="playJourneyVideo()"
-                    class="flex flex-col items-center justify-center group hover:scale-110 transition-transform duration-300 cursor-pointer">
-                    <div
-                        class="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-white flex items-center justify-center mb-3 group-hover:bg-white group-hover:text-[#111827] transition-colors">
-                        <i class="fa-solid fa-play text-xl md:text-2xl ml-1"></i>
-                    </div>
-                    <span class="text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase">Watch Video</span>
-                </button>
-            </div>
-
-            <script>
-                function playJourneyVideo() {
-                    const video = document.getElementById('journey-video');
-                    const overlay = document.getElementById('journey-overlay');
-                    const tint = document.getElementById('journey-tint');
-
-                    // Enable sound and controls
-                    video.muted = false;
-                    video.setAttribute('controls', 'true');
-                    video.currentTime = 0;
-                    video.play();
-
-                    // Hide the overlay elements
-                    overlay.classList.add('hidden');
-                    if (tint) tint.classList.add('hidden');
-                }
-            </script>
-        </section>
+    
 
     </main>
 
@@ -1242,33 +821,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script type="module" src="../assets/js/main.js"></script>
-
-    <!-- Page Specific Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            if (document.querySelector('.legacySwiper')) {
-                new Swiper('.legacySwiper', {
-                    effect: 'coverflow',
-                    grabCursor: true,
-                    centeredSlides: true,
-                    centeredSlidesBounds: true,
-                    slidesPerView: 'auto',
-                    loop: false,
-                    coverflowEffect: {
-                        rotate: 35,
-                        stretch: -80,
-                        depth: 200,
-                        modifier: 1,
-                        slideShadows: false,
-                    },
-                    navigation: {
-                        nextEl: '.legacy-next',
-                        prevEl: '.legacy-prev',
-                    },
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>

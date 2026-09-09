@@ -1,1 +1,1073 @@
-e
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Bhaiya Group | Exploring New Horizons</title>
+    <meta name="description"
+        content="Bhaiya Group has been exploring new horizons for the last 50 years. Specializing in Hotels, Resorts, Housing, and Software." />
+    <meta name="keywords" content="Bhaiya Group, Real Estate, Hotels and Resorts, Bhaiya Housing, software company" />
+    <link rel="canonical" href="https://yourwebsite.com/" />
+
+    <!-- Open Graph (For Social Sharing) -->
+    <meta property="og:title" content="Bhaiya Group | Official Website" />
+    <meta property="og:description"
+        content="Our journey over the last 50 years has been about exploring new horizons." />
+    <meta property="og:image" content="./assets/images/logo.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Icons & Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../assets/css/input.css" />
+    <style>
+        .h1-wrapper {
+            overflow: hidden;
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .h1-wrapper h1 {
+            display: block;
+            transform: translateY(105%);
+            transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .swiper-slide-active .h1-wrapper h1 {
+            transform: translateY(0);
+        }
+
+        .swiper-slide:not(.swiper-slide-active) .h1-wrapper h1 {
+            transform: translateY(105%);
+            transition: none;
+        }
+
+        /* Dropdown and Arrow Expand Animations */
+        .dropdown-menu {
+            opacity: 0;
+            transform: translateY(-8px) scale(0.97);
+            transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+        }
+
+        .dropdown-menu.open {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .down-indicator {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-4px) scale(0.5);
+            transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .down-indicator.open {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0) scale(1);
+        }
+
+        @keyframes zoomSlow {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .animate-zoom-slow {
+            animation: zoomSlow 20s linear infinite alternate;
+        }
+
+        /* Hero Height Animation */
+        @keyframes shrinkHeight {
+            0% {
+                height: 100vh;
+            }
+        }
+
+        .animate-hero-height {
+            animation: shrinkHeight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+    </style>
+</head>
+
+<body class="font-manrope overflow-x-hidden">
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer-overlay"
+        class="fixed inset-0 bg-black/60 z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <aside id="mobile-drawer"
+        class="fixed top-0 right-0 w-[280px] h-full bg-[#0B1F3A] text-white z-[70] translate-x-full transition-transform duration-300 ease-in-out p-6 shadow-2xl">
+        <div class="flex justify-between items-center mb-8">
+            <img src="../assets/images/logo.png" alt="Bhaiya Group" class="h-10" />
+            <button id="mobile-drawer-close" class="text-2xl text-white"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="flex flex-col space-y-4 font-medium overflow-y-auto h-[calc(100vh-120px)]">
+            <a href="#" class="py-2 border-b border-white/10">About Us</a>
+            <a href="#" class="py-2 border-b border-white/10">Our Concerns</a>
+            <a href="#" class="py-2 border-b border-white/10">Our Products</a>
+            <a href="#" class="py-2 border-b border-white/10">Media Center</a>
+            <a href="#" class="py-2 border-b border-white/10">Sustainability</a>
+            <a href="#" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
+        </nav>
+    </aside>
+    <!-- Header: Fixed to stay on top while scrolling -->
+    <header class="fixed top-0 left-0 w-full z-50">
+        <!-- Top Bar -->
+        <div class="bg-[#0B1F3A] border-b border-white/10 py-2 hidden lg:block text-[#E7E7E7]">
+            <div
+                class="container mx-auto px-4 md:px-10 flex justify-between items-center text-base font-normal tracking-wide">
+                <!-- Left: Phone -->
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+880 1938-886333</span>
+                </div>
+                <!-- Center: Text -->
+                <div class="opacity-90">
+                    Our journey over the last 50 years has been about exploring new
+                    horizons
+                </div>
+                <!-- Right: Social Icons -->
+                <div class="flex items-center gap-5 text-base">
+                    <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition-colors"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <div class="bg-[#111827] border-b border-white/10 w-full">
+            <div class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between text-white">
+                <div class="flex-shrink-0">
+                    <a href="#">
+                        <img src="../assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
+                    </a>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-5 xl:space-x-8">
+                    <!-- About Us -->
+                    <div class="relative py-8 menu-wrapper" id="about-menu-wrapper">
+                        <!-- About Us বাটন -->
+                        <button id="about-toggle"
+                            class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
+                            <div class="flex items-center gap-1.5">
+                                <div class="relative h-6 overflow-hidden pointer-events-none">
+                                    <span
+                                        class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                                        About Us
+                                    </span>
+                                    <span
+                                        class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                                        About Us
+                                    </span>
+                                </div>
+                                <i id="about-icon"
+                                    class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+                            </div>
+                            <!-- Custom Down Arrow (matching reference design) -->
+                            <div id="about-indicator"
+                                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
+                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 21, 4 5, 12 9, 20 5" />
+                                </svg>
+                            </div>
+                        </button>
+                        <!-- Dropdown Box -->
+                        <div id="about-dropdown"
+                            class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[480px] z-50">
+                            <div class="grid grid-cols-2 gap-3.5">
+                                <a href="./pages/legacy.html"
+                                    class="relative h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header11.jpg" alt="Our Legacy"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Our Legacy</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="./pages/purpose.html"
+                                    class="relative h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header12.png" alt="Our Purpose"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Our Purpose</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="./pages/details.html"
+                                    class="relative h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header13.jpg" alt="Mission & Vision"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Mission & Vision</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="./pages/details.html"
+                                    class="relative h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header14.png" alt="Leadership"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Leadership</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Our Concerns -->
+                    <div class="relative py-8 menu-wrapper" id="concern-menu-wrapper">
+                        <button id="concern-toggle"
+                            class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
+                            <div class="flex items-center gap-1.5">
+                                <div class="relative h-6 overflow-hidden pointer-events-none">
+                                    <span
+                                        class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                                        Our Concerns
+                                    </span>
+                                    <span
+                                        class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                                        Our Concerns
+                                    </span>
+                                </div>
+                                <i id="concern-icon"
+                                    class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+                            </div>
+                            <!-- Custom Down Arrow (matching reference design) -->
+                            <div id="concern-indicator"
+                                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
+                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 21, 4 5, 12 9, 20 5" />
+                                </svg>
+                            </div>
+                        </button>
+                        <!-- Dropdown Box (3 Columns) -->
+                        <div id="concern-dropdown"
+                            class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
+                            <div class="grid grid-cols-3 gap-3 md:gap-3.5">
+                                <!-- 1. Real state -->
+                                <a href="./pages/details.html"
+                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header21.jpg" alt="Real state"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Real state</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <!-- 2. Restaurant -->
+                                <a href="./pages/details.html"
+                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header22.png" alt="Restaurant"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Restaurant</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <!-- 3. Media -->
+                                <a href="./pages/details.html"
+                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header23.jpg" alt="Media"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 left-2.5 text-white text-xs font-medium tracking-wide flex items-center gap-1.5">
+                                        <span>Media</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <!-- 4. Software -->
+                                <a href="./pages/details.html"
+                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header24.jpg" alt="Software"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Software</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <!-- 5. See all Concerns -->
+                                <a href="./pages/details.html"
+                                    class="relative h-24 md:h-28 rounded bg-[#EEF4FF] hover:bg-[#E0EBFF] transition-colors flex items-center justify-center gap-2 group  p-2">
+                                    <span class="text-[#1864FF] text-sm font-normal whitespace-nowrap">See all
+                                        Concerns</span>
+                                    <svg class="w-4 h-4 text-[#1864FF] fill-current inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                        viewBox="0 0 24 24">
+                                        <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+                        <div class="relative h-6 overflow-hidden pointer-events-none">
+                            <span
+                                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                                Our Products
+                            </span>
+                            <span
+                                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                                Our Products
+                            </span>
+                        </div>
+                        <i
+                            class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+                    </a>
+                    <!-- Media Center -->
+                    <div class="relative py-8 menu-wrapper" id="media-menu-wrapper">
+                        <button id="media-toggle"
+                            class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
+                            <div class="flex items-center gap-1.5">
+                                <div class="relative h-6 overflow-hidden pointer-events-none">
+                                    <span
+                                        class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                                        Media Center
+                                    </span>
+                                    <span
+                                        class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                                        Media Center
+                                    </span>
+                                </div>
+                                <i id="media-icon"
+                                    class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+                            </div>
+                            <!-- Custom Down Arrow (matching reference design) -->
+                            <div id="media-indicator"
+                                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
+                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 21, 4 5, 12 9, 20 5" />
+                                </svg>
+                            </div>
+                        </button>
+                        <!-- Dropdown Box (3 Columns) -->
+                        <div id="media-dropdown"
+                            class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
+                            <div class="grid grid-cols-3 gap-3 md:gap-3.5">
+                                <!-- 1. Stories -->
+                                <a href="./pages/details.html"
+                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header31.png" alt="Stories"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Stories</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <!-- 2. Events -->
+                                <a href="./pages/details.html"
+                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header32.png" alt="Events"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Events</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <!-- 3. News Room -->
+                                <a href="./pages/details.html"
+                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header33.png" alt="News Room"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>News Room</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <!-- 4. Newsletter -->
+                                <a href="./pages/details.html"
+                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header34.jpg" alt="Newsletter"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Newsletter</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <!-- 5. Photo & Video gallery -->
+                                <a href="../pages/details.html"
+                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                                    <img src="../assets/images/home/header35.jpg" alt="Photo & Video gallery"
+                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                                        <span>Photo & Video gallery</span>
+                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+                        <div class="relative h-6 overflow-hidden pointer-events-none">
+                            <span
+                                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                                Sustainability
+                            </span>
+                            <span
+                                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                                Sustainability
+                            </span>
+                        </div>
+                        <i
+                            class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+                    </a>
+                    <a href="#"
+                        class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+                        <div class="relative h-6 overflow-hidden pointer-events-none">
+                            <span
+                                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                                Investor Relation
+                            </span>
+                            <span
+                                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                                Investor Relation
+                            </span>
+                        </div>
+                        <i
+                            class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+                    </a>
+                    <a href="#"
+                        class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+                        <div class="relative h-6 overflow-hidden pointer-events-none">
+                            <span
+                                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                                Office Location
+                            </span>
+                            <span
+                                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                                Office Location
+                            </span>
+                        </div>
+                        <i
+                            class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+                    </a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <a href="#"
+                        class="group relative bg-[#1864FF] text-white px-7 py-2.5 rounded-full font-semibold text-base hover:bg-blue-600 transition shadow-md whitespace-nowrap overflow-hidden inline-flex items-center justify-center">
+                        <div class="relative h-5 overflow-hidden pointer-events-none">
+                            <span
+                                class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                                Contact Now
+                            </span>
+                            <span
+                                class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                                Contact Now
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Mobile Toggle Button (Visible only on mobile/tablet) -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl p-2 ml-2 focus:outline-none"
+                    aria-label="Open Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero section  -->
+        <section
+            class="animate-hero-height w-full h-[60vh] lg:h-[65vh] xl:h-[70vh] relative overflow-hidden flex flex-col items-center justify-center">
+            <img src="../assets/images/home/hero3.jpg" alt="Legacy Hero"
+                class="absolute inset-0 w-full h-full object-cover object-center animate-zoom-slow" />
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <div class="relative z-10 text-center text-white px-4 mt-10">
+                <h1 class="text-3xl md:text-5xl font-bold uppercase tracking-wide leading-tight mb-4">
+                    OUR GROUP PURPOSE<br />of Success
+                </h1>
+                <div class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal">
+                    <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
+                    <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+                    <a href="#" class="hover:text-blue-400 transition">About Us</a>
+                    <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+                    <span class="text-white">Our purpose</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs Navigation Section -->
+        <section class="relative w-full bg-white shadow-sm sticky top-[96px] lg:top-[136px] z-40 mb-4 md:mb-20">
+            <div class="container mx-auto px-4 md:px-10">
+                <ul
+                    class="flex items-start justify-start gap-8 md:gap-14 overflow-x-auto text-[#111827] no-scrollbar whitespace-nowrap">
+                    <li>
+                        <a href="./purpose.html"
+                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium  border-b-2 border-[#1864FF]">Overview
+                            & Purpose</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium hover:text-[#111827] transition-colors border-b-2 border-transparent hover:border-gray-300">Chairman's
+                            Note</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium hover:text-[#111827] transition-colors border-b-2 border-transparent hover:border-gray-300">Managing
+                            Director Note</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium hover:text-[#111827] transition-colors border-b-2 border-transparent hover:border-gray-300">CEO
+                            Note</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Concerns Our Purpose Section -->
+        <section class="w-full">
+            <style>
+                .hollow-text {
+                    color: transparent;
+                    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+                }
+
+                @media (min-width: 768px) {
+                    .clip-right-block {
+                        clip-path: polygon(100% 0, 100% 100%, 0 100%, 4% 90%, 0 80%, 4% 70%, 0 60%, 4% 50%, 0 40%, 4% 30%, 0 20%, 4% 10%, 0 0);
+                        margin-left: -2%;
+                        padding-left: 6%;
+                    }
+
+                    .clip-left-block {
+                        clip-path: polygon(0 0, 100% 0, 96% 10%, 100% 20%, 96% 30%, 100% 40%, 96% 50%, 100% 60%, 96% 70%, 100% 80%, 96% 90%, 100% 100%, 0 100%);
+                        margin-right: -2%;
+                        padding-right: 6%;
+                    }
+                    .purpose-text-animate > * {
+                        opacity: 0;
+                        transform: translateY(3rem);
+                        transition: all 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+                    }
+                    .purpose-text-animate.is-visible > * {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                    .purpose-text-animate.is-visible > *:nth-child(1) { transition-delay: 100ms; }
+                    .purpose-text-animate.is-visible > *:nth-child(2) { transition-delay: 200ms; }
+                    .purpose-text-animate.is-visible > *:nth-child(3) { transition-delay: 300ms; }
+                    .purpose-text-animate.is-visible > *:nth-child(4) { transition-delay: 400ms; }
+                    .purpose-text-animate.is-visible > *:nth-child(5) { transition-delay: 500ms; }
+                }
+            </style>
+
+            <div class="py-10">
+                <h2 class="section-title tracking-widest text-[#1f2937] text-center mb-6">
+                    DISCOVER OUR PRURPOSE
+                </h2>
+            </div>
+
+            <!-- 01 LAND (KATHA) -->
+            <div class="flex flex-col md:flex-row w-full max-h-[600px] sticky top-[170px] lg:top-[210px] shadow-sm z-10">
+                <div class="w-full md:w-[1327px] relative z-0">
+                    <img src="../assets/images/purpose/purpose (1).jpg" alt="Land" class="w-full h-full object-cover">
+                </div>
+                <div
+                    class="w-full md:w-[640px] relative z-10 bg-[#0BB671] text-white flex flex-col justify-center px-8 md:px-16 py-12 clip-right-block">
+                    <div class="max-w-md mx-auto md:ml-0 purpose-text-animate mb-4">
+                        <div class="section-title mb-4 tracking-wider">01</div>
+                        <h3 class="text-xl md:text-[32px] font-bold uppercase mb-4 tracking-wide">LAND (KATHA)</h3>
+                        <p class="section-text mb-6 leading-relaxed">Explore premium land opportunities measured
+                            in katha, designed for smart investments and future growth. Strategically located.</p>
+                        <ul class="section-text space-y-3 font-light">
+                            <li>&bull; Prime Location Access</li>
+                            <li>&bull; Flexible Plot Sizes</li>
+                            <li>&bull; High Investment Potential</li>
+                            <li>&bull; Secure Legal Documentation</li>
+                        </ul>
+                        <a href="#"
+                            class="group inline-flex items-center gap-4 bg-transparent text-white pl-6 pr-2 py-2 rounded-full text-sm font-semibold hover:bg-white/10 transition mt-6 w-fit">
+                            <!-- Text Animation -->
+                            <div class="relative h-5 overflow-hidden pointer-events-none">
+                                <span
+                                    class="block md:text-lg leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                                    Explore Now
+                                </span>
+                                <span
+                                    class="absolute md:text-lg top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                                    Explore Now
+                                </span>
+                            </div>
+
+                            <!-- Arrow Animation -->
+                            <div
+                                class="relative w-8 h-8 rounded-full flex items-center justify-center overflow-hidden ml-1">
+                                <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                                    class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                                <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                                    class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 HOUSING -->
+            <div class="flex flex-col md:flex-row w-full max-h-[600px] sticky top-[210px] lg:top-[290px] shadow-sm z-20">
+                <div
+                    class="w-full md:w-[640px] relative z-10 bg-[#0854D2] text-white flex flex-col justify-center px-8 md:px-16 py-12 order-2 md:order-1 clip-left-block">
+                    <div class="max-w-md mx-auto md:mr-0 md:ml-auto purpose-text-animate mb-4">
+                        <div class="section-title mb-4 tracking-wider">02</div>
+                        <h3 class="text-xl md:text-[32px] font-bold uppercase mb-4 tracking-wide">HOUSING</h3>
+                        <p class="section-text mb-6 leading-relaxed">Modern housing solutions crafted for
+                            comfortable living and long-term value. Designed with quality construction, smart layouts
+                            and</p>
+                        <ul class="section-text space-y-3 font-light">
+                            <li>&bull; Contemporary Architectural Design</li>
+                            <li>&bull; Premium Lifestyle Amenities</li>
+                            <li>&bull; Secure & Gated Community</li>
+                            <li>&bull; Reliable Construction Quality</li>
+                        </ul>
+                        <a href="#"
+                            class="group inline-flex items-center gap-4 bg-transparent text-white pl-6 pr-2 py-2 rounded-full text-sm font-semibold hover:bg-white/10 transition mt-6 w-fit">
+                            <!-- Text Animation -->
+                            <div class="relative h-5 overflow-hidden pointer-events-none">
+                                <span
+                                    class="block md:text-lg leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                                    Explore Now
+                                </span>
+                                <span
+                                    class="absolute md:text-lg top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                                    Explore Now
+                                </span>
+                            </div>
+
+                            <!-- Arrow Animation -->
+                            <div
+                                class="relative w-8 h-8 rounded-full flex items-center justify-center overflow-hidden ml-1">
+                                <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                                    class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                                <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                                    class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-[1327px] relative z-0 order-1 md:order-2">
+                    <img src="../assets/images/purpose/purpose (4).jpg" alt="Housing"
+                        class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- 03 HOTELS & RESORTS -->
+            <div class="flex flex-col md:flex-row w-full max-h-[600px] sticky top-[250px] lg:top-[370px] shadow-sm z-30">
+                <div class="w-full md:w-[1327px] relative z-0">
+                    <img src="../assets/images/purpose/Rectangle 21.png" alt="Hotels & Resorts"
+                        class="w-full h-full object-cover">
+                </div>
+                <div
+                    class="w-full md:w-[640px] relative z-10 bg-[#CD4BF4] text-white flex flex-col justify-center px-8 md:px-16 py-12 clip-right-block">
+                    <div class="max-w-md mx-auto md:ml-0 purpose-text-animate mb-4">
+                        <div class="section-title mb-4 tracking-wider">03</div>
+                        <h3 class="text-xl md:text-[32px] font-bold uppercase mb-4 tracking-wide">HOTELS & RESORTS</h3>
+                        <p class="section-text mb-6 leading-relaxed">Experience exceptional hospitality through
+                            premium hotels and resort destinations designed for comfort and leisure.</p>
+                        <ul class="section-text space-y-3 font-light">
+                            <li>&bull; Luxury Accommodation</li>
+                            <li>&bull; Scenic Locations</li>
+                            <li>&bull; World-Class Amenities</li>
+                            <li>&bull; Exceptional Guest Service</li>
+                        </ul>
+                        <a href="#"
+                            class="group inline-flex items-center gap-4 bg-transparent text-white pl-6 pr-2 py-2 rounded-full text-sm font-semibold hover:bg-white/10 transition mt-6 w-fit">
+                            <!-- Text Animation -->
+                            <div class="relative h-5 overflow-hidden pointer-events-none">
+                                <span
+                                    class="block md:text-lg leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                                    Explore Now
+                                </span>
+                                <span
+                                    class="absolute md:text-lg top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                                    Explore Now
+                                </span>
+                            </div>
+
+                            <!-- Arrow Animation -->
+                            <div
+                                class="relative w-8 h-8 rounded-full flex items-center justify-center overflow-hidden ml-1">
+                                <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                                    class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                                <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                                    class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 04 APARTMENTS -->
+            <div class="flex flex-col md:flex-row w-full max-h-[600px] sticky top-[290px] lg:top-[370px] shadow-sm z-40">
+                <div
+                    class="w-full md:w-[640px] relative z-10 bg-[#D19624] text-white flex flex-col justify-center px-8 md:px-16 py-12 order-2 md:order-1 clip-left-block">
+                    <div class="max-w-md mx-auto md:mr-0 md:ml-auto purpose-text-animate mb-4">
+                        <div class="section-title mb-4 tracking-wider">04</div>
+                        <h3 class="text-xl md:text-[32px] font-bold uppercase mb-4 tracking-wide">APARTMENTS</h3>
+                        <p class="section-text mb-6 leading-relaxed">Thoughtfully designed apartments that offer
+                            modern comfort, convenience, and lasting value. Built to enhance urban</p>
+                        <ul class="section-text space-y-3 font-light">
+                            <li>&bull; Spacious Floor Plans</li>
+                            <li>&bull; Modern Interior Design</li>
+                            <li>&bull; Prime Urban Locations</li>
+                            <li>&bull; 24/7 Security & Maintenance</li>
+                        </ul>
+                        <a href="#"
+                            class="group inline-flex items-center gap-4 bg-transparent text-white pl-6 pr-2 py-2 rounded-full text-sm font-semibold hover:bg-white/10 transition mt-6 w-fit">
+                            <!-- Text Animation -->
+                            <div class="relative h-5 overflow-hidden pointer-events-none">
+                                <span
+                                    class="block md:text-lg leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                                    Explore Now
+                                </span>
+                                <span
+                                    class="absolute md:text-lg top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                                    Explore Now
+                                </span>
+                            </div>
+
+                            <!-- Arrow Animation -->
+                            <div
+                                class="relative w-8 h-8 rounded-full flex items-center justify-center overflow-hidden ml-1">
+                                <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                                    class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                                <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                                    class="absolute w-3 h-3 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-[1327px] relative z-0 order-1 md:order-2">
+                    <img src="../assets/images/purpose/purpose (3).jpg" alt="Apartments"
+                        class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Notes Section -->
+        <section class="py-20 bg-[#F8FAFC]">
+            <div class="container mx-auto px-4 md:px-10 space-y-32">
+
+                <!-- Chairman's Note -->
+                <div class="relative">
+                    <h3 class="section-title mb-8 text-[#111827]">Chairman's Note</h3>
+                    <div class="flex flex-col md:flex-row items-center">
+                        <!-- Image Container -->
+                        <div class="w-full max-w-[280px] md:max-w-[380px] h-[380px] md:h-[520px] rounded-[140px] md:rounded-[190px] overflow-hidden shrink-0 shadow-2xl relative z-10 bg-white">
+                            <img src="../assets/images/home/concernDirecotr.jpg" class="w-full h-full object-cover"
+                                alt="Chairman">
+                        </div>
+                        <!-- Text Card -->
+                        <div class="bg-white rounded-3xl p-6 pt-24 md:p-8 md:py-12 md:pr-16 md:pl-28 shadow-[0_10px_40px_rgba(0,0,0,0.06)] relative flex-1 -mt-20 md:mt-0 md:-ml-20 z-0">
+                            <!-- Quote Icon -->
+                            <div class="mb-6">
+                                <svg width="36" height="30" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 2.51929H13.6256L8.60833 13.9056H16V33.6898H0V13.9056L8.01478 0.519287H16V2.51929ZM40 2.51929H37.6256L32.6083 13.9056H40V33.6898H24V13.9056L32.0148 0.519287H40V2.51929Z" fill="#111827"/>
+                                </svg>
+                            </div>
+                            <div class="section-text leading-relaxed font-serif italic mb-8 space-y-4">
+                                <p>
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                                </p>
+                                <p>
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure.
+                                </p>
+                            </div>
+                            <h4 class="font-bold text-lg text-[#111827] uppercase tracking-wide">Tariq A. Bhaiya</h4>
+                            <p class="text-[#64748B] text-sm mt-1">Chairman, Bhaiya Group</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MD's Note -->
+                <div class="relative">
+                    <h3 class="section-title mb-8 text-[#111827]">MD's Note</h3>
+                    <div class="flex flex-col md:flex-row-reverse items-center">
+                        <!-- Image Container -->
+                        <div class="w-full max-w-[280px] md:max-w-[380px] h-[380px] md:h-[520px] rounded-[140px] md:rounded-[190px] overflow-hidden shrink-0 shadow-2xl relative z-10 bg-white">
+                            <img src="../assets/images/purpose/purpose (2).jpg" class="w-full h-full object-cover"
+                                alt="MD">
+                        </div>
+                        <!-- Text Card -->
+                        <div class="bg-white rounded-3xl p-6 pt-24 md:p-8 md:py-12 md:pl-16 md:pr-28 shadow-[0_10px_40px_rgba(0,0,0,0.06)] relative flex-1 -mt-20 md:mt-0 md:-mr-20 z-0">
+                            <!-- Quote Icon -->
+                            <div class="mb-6">
+                                <svg width="36" height="30" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 2.51929H13.6256L8.60833 13.9056H16V33.6898H0V13.9056L8.01478 0.519287H16V2.51929ZM40 2.51929H37.6256L32.6083 13.9056H40V33.6898H24V13.9056L32.0148 0.519287H40V2.51929Z" fill="#111827"/>
+                                </svg>
+                            </div>
+                            <div class="section-text leading-relaxed italic mb-8 space-y-4">
+                                <p>
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                                </p>
+                                <p>
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure.
+                                </p>
+                            </div>
+                            <h4 class="section-subtitle tracking-wide">Maroof Sattar Ali</h4>
+                            <p class="text-[#64748B] text-sm mt-1">Managing Director, Bhaiya Group</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-[#111827] text-[#E7E7E7] pt-12 pb-8">
+        <div class="w-full flex mb-10">
+            <img src="../assets/images/home/footer.jpg" alt="Bhaiya Group Banner"
+                class="w-full h-auto object-cover block">
+        </div>
+        <div class="container mx-auto px-4 md:px-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
+                <!-- Logo and Contact -->
+                <div class="lg:col-span-2 space-y-6">
+                    <img src="../assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px"
+                        width="78px" />
+                    <div class="space-y-5 text-sm md:text-base opacity-90">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
+                            <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor),
+                                Motijheel C/A,
+                                Dhaka-1000, Bangladesh</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-regular fa-envelope text-xl"></i>
+                            <p>info@bhaiya-group.com</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone-volume text-xl"></i>
+                            <p>+88-02-9551750, +88-02-9552395</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Our Concerns</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Our Products</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Media Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Office Location</a></li>
+                    </ul>
+                </div>
+
+                <!-- Others Links -->
+                <div>
+                    <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
+                    <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+                        <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Newsletters</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Investor Relation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Concerns Link -->
+                <div>
+                    <h4 class="text-lg md:text-2xl font-semibold mb-6">Concerns Link</h4>
+                    <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+                        <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya
+                                Housing <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg></a></li>
+                        <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg></a></li>
+                        <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food &
+                                Beverage <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg></a></li>
+                        <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati
+                                Insurance <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg></a></li>
+                        <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Duria <svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg></a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div>
+                    <h4 class="text-lg md:text-2xl font-semibold mb-6">Social</h4>
+                    <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
+                        <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-square-facebook text-2xl"></i> Facebook</a></li>
+                        <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-youtube text-2xl"></i> Youtube</a></li>
+                        <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-linkedin text-2xl"></i> LinkedIn</a></li>
+                        <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-instagram text-2xl"></i> Instagram</a></li>
+                        <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-x-twitter text-2xl"></i> Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div
+                class="mt-16 pt-8 border-t border-white flex flex-col md:flex-row justify-between items-center gap-4 text-sm md:text-lg font-normal opacity-80">
+                <p>Copyright &copy; 1972-2026 BHAIYA GROUP, All rights reserved</p>
+                <p>Designed by Bhaiya Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Mobile Hamburger Menu Toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script type="module" src="../assets/js/main.js"></script>
+</body>
+
+</html>
