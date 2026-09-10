@@ -512,8 +512,8 @@
 
     <!-- Intro & Pillars Section -->
 <!-- Intro & Pillars Section -->
-    <section class="w-full bg-white py-16 md:py-24 font-manrope">
-      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-7xl">
+    <section class="w-full bg-white py-16 md:py-24 ">
+      <div class="container mx-auto ">
         
         <!-- Intro -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-24 mb-24 items-center scale-in-ver-bottom">
@@ -584,8 +584,8 @@
       </div>
     </section>
     <!-- Large Image Slider Section -->
-    <section class="w-full bg-white pb-24 font-manrope">
-      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-7xl">
+    <section class="w-full bg-white pb-24 ">
+      <div class="container mx-auto">
         <div class="w-full aspect-[21/9] lg:aspect-[24/9] bg-gray-200 overflow-hidden mb-8 shadow-sm scale-in-ver-bottom">
           <img src="../assets/images/home/hero3.jpg" alt="Sustainability Initiative" class="w-full h-full object-cover">
         </div>
@@ -601,7 +601,7 @@
     </section>
 
     <!-- ESG Pillars Section -->
-    <section class="w-full bg-[#0F172A] py-20 md:py-28 font-manrope">
+    <section class="w-full bg-[#0F172A] py-20 md:py-28 ">
       <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
         
         <!-- Header -->
@@ -734,7 +734,7 @@
     </section>
 
     <!-- Action In Motion / Key Initiatives Section -->
-    <section class="w-full bg-white relative py-20 md:py-32 font-manrope">
+    <section class="w-full bg-white relative py-20 md:py-32 ">
       <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
         
         <!-- Header -->
@@ -855,7 +855,7 @@
     </section>
 
     <!-- Our Impact Section -->
-    <section class="w-full bg-[#06402B] py-20 md:py-28 font-manrope scale-in-ver-bottom">
+    <section class="w-full bg-[#06402B] py-20 md:py-28  scale-in-ver-bottom">
       <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-6xl">
         
         <!-- Header -->
@@ -926,7 +926,7 @@
     </section>
 
     <!-- UN SDGs Section -->
-    <section class="w-full bg-[#FAFAFA] py-20 md:py-28 font-manrope">
+    <section class="w-full bg-[#FAFAFA] py-20 md:py-28 ">
       <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
         
         <!-- Header -->
@@ -989,33 +989,34 @@
     </section>
 
     <!-- Reports & Transparency Section -->
-    <section class="w-full bg-[#0F172A] py-20 md:py-28 font-manrope">
+    <section class="w-full bg-[#0F172A] py-20 md:py-28 ">
       <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
         
         <!-- Header -->
-        <div class="flex items-end justify-between mb-16 md:mb-20">
-          <div>
-            <h2 class="text-3xl md:text-[42px] font-bold text-white mb-6">Reports & Transparency</h2>
-            <p class="text-gray-400 text-sm md:text-base leading-[1.8] max-w-2xl">
-              Access our latest comprehensive reports detailing our financial performance, sustainability metrics, and community impact.
-            </p>
-          </div>
-          <!-- Navigation Buttons -->
-          <div class="hidden md:flex gap-3">
-            <button id="reports-prev"
-              class="w-10 h-10 rounded-full border border-[#475569] text-white flex items-center justify-center hover:bg-white hover:text-[#0F172A] transition-colors">
-              <i class="fa-solid fa-angle-left"></i>
-            </button>
-            <button id="reports-next"
-              class="w-10 h-10 rounded-full border border-[#475569] text-white flex items-center justify-center hover:bg-white hover:text-[#0F172A] transition-colors">
-              <i class="fa-solid fa-angle-right"></i>
-            </button>
-          </div>
+        <div class="text-center mb-16 md:mb-20">
+          <h2 class="text-3xl md:text-[42px] font-bold text-white mb-6">Reports & Transparency</h2>
+          <p class="text-gray-400 text-sm md:text-base leading-[1.8] max-w-2xl mx-auto">
+            Access our latest comprehensive reports detailing our financial performance, sustainability metrics, and community impact.
+          </p>
         </div>
 
         <!-- Swiper Slider -->
-        <div class="relative max-w-[1200px] mx-auto overflow-hidden">
-          <div id="reports-slider-track" class="flex transition-transform duration-500 ease-in-out">
+        <div class="relative max-w-[1200px] mx-auto">
+          
+          <!-- Left Arrow -->
+          <button id="reports-prev"
+            class="hidden absolute -left-5 md:-left-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-[#475569] bg-[#0F172A]/80 backdrop-blur-sm text-white items-center justify-center hover:bg-white hover:text-[#0F172A] transition-colors">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+
+          <!-- Right Arrow -->
+          <button id="reports-next"
+            class="hidden absolute -right-5 md:-right-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-[#475569] bg-[#0F172A]/80 backdrop-blur-sm text-white items-center justify-center hover:bg-white hover:text-[#0F172A] transition-colors">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+
+          <div class="overflow-hidden">
+            <div id="reports-slider-track" class="flex transition-transform duration-500 ease-in-out">
             
             <!-- Card 1 -->
             <div class="report-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
@@ -1156,22 +1157,6 @@
             </div>
 
           </div>
-
-          <!-- Progress Bar -->
-          <div class="w-full h-[3px] bg-[#334155] mt-10 rounded-full">
-            <div id="reports-progress" class="h-full bg-white rounded-full transition-all duration-500 ease-in-out" style="width: 50%;"></div>
-          </div>
-
-          <!-- Mobile Navigation -->
-          <div class="flex md:hidden justify-center gap-3 mt-6">
-            <button id="reports-prev-mobile"
-              class="w-10 h-10 rounded-full border border-[#475569] text-white flex items-center justify-center hover:bg-white hover:text-[#0F172A] transition-colors">
-              <i class="fa-solid fa-angle-left"></i>
-            </button>
-            <button id="reports-next-mobile"
-              class="w-10 h-10 rounded-full border border-[#475569] text-white flex items-center justify-center hover:bg-white hover:text-[#0F172A] transition-colors">
-              <i class="fa-solid fa-angle-right"></i>
-            </button>
           </div>
         </div>
       </div>
@@ -1183,10 +1168,10 @@
 
           const slides = track.querySelectorAll('.report-slide');
           const totalSlides = slides.length;
-          const progressBar = document.getElementById('reports-progress');
+          const prevBtn = document.getElementById('reports-prev');
+          const nextBtn = document.getElementById('reports-next');
           let currentIndex = 0;
 
-          // Get visible count based on screen width
           function getVisibleCount() {
             if (window.innerWidth >= 1024) return 3;
             if (window.innerWidth >= 768) return 2;
@@ -1202,41 +1187,34 @@
             const slideWidthPercent = 100 / visibleCount;
             track.style.transform = `translateX(-${currentIndex * slideWidthPercent}%)`;
 
-            // Update progress bar
-            const maxIdx = getMaxIndex();
-            if (progressBar) {
-              const progressPercent = maxIdx === 0 ? 100 : ((currentIndex + visibleCount) / totalSlides) * 100;
-              progressBar.style.width = `${Math.min(progressPercent, 100)}%`;
+            // Show/hide arrows based on position
+            if (prevBtn) {
+              if (currentIndex === 0) {
+                prevBtn.classList.add('hidden');
+                prevBtn.classList.remove('flex');
+              } else {
+                prevBtn.classList.remove('hidden');
+                prevBtn.classList.add('flex');
+              }
+            }
+            if (nextBtn) {
+              if (currentIndex >= getMaxIndex()) {
+                nextBtn.classList.add('hidden');
+                nextBtn.classList.remove('flex');
+              } else {
+                nextBtn.classList.remove('hidden');
+                nextBtn.classList.add('flex');
+              }
             }
           }
 
-          function goNext() {
-            if (currentIndex < getMaxIndex()) {
-              currentIndex++;
-              updateSlider();
-            }
-          }
+          if (prevBtn) prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) { currentIndex--; updateSlider(); }
+          });
+          if (nextBtn) nextBtn.addEventListener('click', () => {
+            if (currentIndex < getMaxIndex()) { currentIndex++; updateSlider(); }
+          });
 
-          function goPrev() {
-            if (currentIndex > 0) {
-              currentIndex--;
-              updateSlider();
-            }
-          }
-
-          // Desktop buttons
-          const prevBtn = document.getElementById('reports-prev');
-          const nextBtn = document.getElementById('reports-next');
-          if (prevBtn) prevBtn.addEventListener('click', goPrev);
-          if (nextBtn) nextBtn.addEventListener('click', goNext);
-
-          // Mobile buttons
-          const prevMobile = document.getElementById('reports-prev-mobile');
-          const nextMobile = document.getElementById('reports-next-mobile');
-          if (prevMobile) prevMobile.addEventListener('click', goPrev);
-          if (nextMobile) nextMobile.addEventListener('click', goNext);
-
-          // Reset on resize
           window.addEventListener('resize', () => {
             if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
             updateSlider();
