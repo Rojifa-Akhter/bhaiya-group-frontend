@@ -473,7 +473,7 @@ input[type="range"]::-webkit-slider-thumb {
   left: 0;
   width: 0%;
   height: 1px;
-  background-color: #e5e7eb; /* Tailwind's gray-200 */
+  background-color: #d1d5db; /* Tailwind's gray-300 (slightly darker) */
   transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .reveal-left-wipe.active.animated-top-border::before {

@@ -2,777 +2,868 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Meta Tags -->
-    <title>Bhaiya Group | Exploring New Horizons</title>
-    <meta name="description"
-        content="Bhaiya Group has been exploring new horizons for the last 50 years. Specializing in Hotels, Resorts, Housing, and Software." />
-    <meta name="keywords" content="Bhaiya Group, Real Estate, Hotels and Resorts, Bhaiya Housing, software company" />
-    <link rel="canonical" href="https://yourwebsite.com/" />
+  <!-- SEO Meta Tags -->
+  <title>Bhaiya Group | Exploring New Horizons</title>
+  <meta name="description"
+    content="Bhaiya Group has been exploring new horizons for the last 50 years. Specializing in Hotels, Resorts, Housing, and Software." />
+  <meta name="keywords" content="Bhaiya Group, Real Estate, Hotels and Resorts, Bhaiya Housing, software company" />
+  <link rel="canonical" href="https://yourwebsite.com/" />
 
-    <!-- Open Graph (For Social Sharing) -->
-    <meta property="og:title" content="Bhaiya Group | Official Website" />
-    <meta property="og:description"
-        content="Our journey over the last 50 years has been about exploring new horizons." />
-    <meta property="og:image" content="./assets/images/logo.png" />
-    <meta property="og:type" content="website" />
+  <!-- Open Graph (For Social Sharing) -->
+  <meta property="og:title" content="Bhaiya Group | Official Website" />
+  <meta property="og:description" content="Our journey over the last 50 years has been about exploring new horizons." />
+  <meta property="og:image" content="./assets/images/logo.png" />
+  <meta property="og:type" content="website" />
 
-    <!-- Icons & Swiper CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Icons & Swiper CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="../assets/css/input.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="../assets/css/input.css" />
+  <link rel="stylesheet" href="../assets/css/custom.css" />
 </head>
 
 <body class="font-manrope overflow-x-hidden">
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobile-drawer-overlay"
-        class="fixed inset-0 bg-black/60 z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
-    <aside id="mobile-drawer"
-        class="fixed top-0 right-0 w-[280px] h-full bg-[#0B1F3A] text-white z-[70] translate-x-full transition-transform duration-300 ease-in-out p-6 shadow-2xl">
-        <div class="flex justify-between items-center mb-8">
-            <img src="../assets/images/logo.png" alt="Bhaiya Group" class="h-10" />
-            <button id="mobile-drawer-close" class="text-2xl text-white"><i class="fa-solid fa-xmark"></i></button>
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-drawer-overlay"
+    class="fixed inset-0 bg-black/60 z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobile-drawer"
+    class="fixed top-0 right-0 w-[280px] h-full bg-[#0B1F3A] text-white z-[70] translate-x-full transition-transform duration-300 ease-in-out p-6 shadow-2xl">
+    <div class="flex justify-between items-center mb-8">
+      <img src="../assets/images/logo.png" alt="Bhaiya Group" class="h-10" />
+      <button id="mobile-drawer-close" class="text-2xl text-white"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="flex flex-col space-y-4 font-medium overflow-y-auto h-[calc(100vh-120px)]">
+      <a href="#" class="py-2 border-b border-white/10">About Us</a>
+      <a href="./concerns.html" class="py-2 border-b border-white/10">Our Concerns</a>
+      <a href="./our-products.html" class="py-2 border-b border-white/10">Our Products</a>
+      <a href="./stories.html" class="py-2 border-b border-white/10">Media Center</a>
+      <a href="./sustainability.html" class="py-2 border-b border-white/10">Sustainability</a>
+      <a href="./contact.html" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
+    </nav>
+  </aside>
+  <!-- Header: Absolute to stay on top of Slider -->
+  <header class="absolute top-0 left-0 w-full z-50">
+    <!-- Top Bar -->
+    <div class="bg-[#0B1F3A] border-b border-white/10 py-2 hidden lg:block text-[#E7E7E7]">
+      <div
+        class="container mx-auto px-4 md:px-10 flex justify-between items-center text-base font-normal tracking-wide">
+        <!-- Left: Phone -->
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-phone"></i>
+          <span>+880 1938-886333</span>
         </div>
-        <nav class="flex flex-col space-y-4 font-medium overflow-y-auto h-[calc(100vh-120px)]">
-            <a href="#" class="py-2 border-b border-white/10">About Us</a>
-            <a href="./concerns.html" class="py-2 border-b border-white/10">Our Concerns</a>
-            <a href="./our-products.html" class="py-2 border-b border-white/10">Our Products</a>
-            <a href="./stories.html" class="py-2 border-b border-white/10">Media Center</a>
-            <a href="./sustainability.html" class="py-2 border-b border-white/10">Sustainability</a>
-            <a href="./contact.html" class="mt-6 bg-[#1864FF] text-center py-3 rounded-full font-bold">Contact Now</a>
+        <!-- Center: Text -->
+        <div class="opacity-90">
+          Our journey over the last 50 years has been about exploring new
+          horizons
+        </div>
+        <!-- Right: Social Icons -->
+        <div class="flex items-center gap-5 text-base">
+          <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-x-twitter"></i></a>
+          <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="bg-[#111827] border-b border-white/10 w-full">
+      <div class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between text-white">
+        <div class="flex-shrink-0">
+          <a href="../index.html">
+            <img src="../assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
+          </a>
+        </div>
+
+        <nav class="hidden lg:flex items-center space-x-5 xl:space-x-8">
+          <!-- About Us -->
+          <div class="relative py-8 menu-wrapper" id="about-menu-wrapper">
+            <!-- About Us বাটন -->
+            <button id="about-toggle"
+              class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
+              <div class="flex items-center gap-1.5">
+                <div class="relative h-6 overflow-hidden pointer-events-none">
+                  <span
+                    class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                    About Us
+                  </span>
+                  <span
+                    class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                    About Us
+                  </span>
+                </div>
+                <i id="about-icon"
+                  class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+              </div>
+              <!-- Custom Down Arrow (matching reference design) -->
+              <div id="about-indicator"
+                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 21, 4 5, 12 9, 20 5" />
+                </svg>
+              </div>
+            </button>
+            <!-- Dropdown Box -->
+            <div id="about-dropdown"
+              class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[480px] z-50">
+              <div class="grid grid-cols-2 gap-3.5">
+                <a href="./legacy.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header11.jpg" alt="Our Legacy"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Our Legacy</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="./purpose.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header12.png" alt="Our Purpose"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Our Purpose</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="./missionVission.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header13.jpg" alt="Mission & Vision"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Mission & Vision</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="./details.html" class="relative h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header14.png" alt="Leadership"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Leadership</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Our Concerns -->
+          <div class="relative py-8 menu-wrapper" id="concern-menu-wrapper">
+            <button id="concern-toggle"
+              class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
+              <div class="flex items-center gap-1.5">
+                <div class="relative h-6 overflow-hidden pointer-events-none">
+                  <span
+                    class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                    Our Concerns
+                  </span>
+                  <span
+                    class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                    Our Concerns
+                  </span>
+                </div>
+                <i id="concern-icon"
+                  class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+              </div>
+              <!-- Custom Down Arrow (matching reference design) -->
+              <div id="concern-indicator"
+                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 21, 4 5, 12 9, 20 5" />
+                </svg>
+              </div>
+            </button>
+            <!-- Dropdown Box (3 Columns) -->
+            <div id="concern-dropdown"
+              class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
+              <div class="grid grid-cols-3 gap-3 md:gap-3.5">
+                <!-- 1. Real state -->
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header21.jpg" alt="Real state"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Real state</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 2. Restaurant -->
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header22.png" alt="Restaurant"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Restaurant</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 3. Media -->
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header23.jpg" alt="Media"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-xs font-medium tracking-wide flex items-center gap-1.5">
+                    <span>Media</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 4. Software -->
+                <a href="./concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header24.jpg" alt="Software"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Software</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 5. See all Concerns -->
+                <a href="./details.html"
+                  class="relative h-24 md:h-28 rounded bg-[#EEF4FF] hover:bg-[#E0EBFF] transition-colors flex items-center justify-center gap-2 group  p-2">
+                  <span class="text-[#1864FF] text-sm font-normal whitespace-nowrap">See all
+                    Concerns</span>
+                  <svg
+                    class="w-4 h-4 text-[#1864FF] fill-current inline-block transition-transform duration-300 group-hover:translate-x-1"
+                    viewBox="0 0 24 24">
+                    <polygon points="21 12, 5 4, 9 12, 5 20" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="./our-products.html"
+            class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+            <div class="relative h-6 overflow-hidden pointer-events-none">
+              <span
+                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                Our Products
+              </span>
+              <span
+                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                Our Products
+              </span>
+            </div>
+            <i
+              class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+          </a>
+          <!-- Media Center -->
+          <div class="relative py-8 menu-wrapper" id="media-menu-wrapper">
+            <button id="media-toggle"
+              class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
+              <div class="flex items-center gap-1.5">
+                <div class="relative h-6 overflow-hidden pointer-events-none">
+                  <span
+                    class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                    Media Center
+                  </span>
+                  <span
+                    class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                    Media Center
+                  </span>
+                </div>
+                <i id="media-icon"
+                  class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+              </div>
+              <!-- Custom Down Arrow (matching reference design) -->
+              <div id="media-indicator"
+                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 21, 4 5, 12 9, 20 5" />
+                </svg>
+              </div>
+            </button>
+            <!-- Dropdown Box (3 Columns) -->
+            <div id="media-dropdown"
+              class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
+              <div class="grid grid-cols-3 gap-3 md:gap-3.5">
+                <!-- 1. Stories -->
+                <a href="./stories.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header31.png" alt="Stories"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Stories</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 2. Events -->
+                <a href="./events.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header32.png" alt="Events"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Events</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 3. News Room -->
+                <a href="./newsroom.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header33.png" alt="News Room"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>News Room</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 4. Newsletter -->
+                <a href="./newsletter.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header34.jpg" alt="Newsletter"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Newsletter</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+
+                <!-- 5. Photo & Video gallery -->
+                <a href="../pages/details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                  <img src="../assets/images/home/header35.jpg" alt="Photo & Video gallery"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
+                  </div>
+                  <div
+                    class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
+                    <span>Photo & Video gallery</span>
+                    <svg
+                      class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polygon points="21 12, 5 4, 9 12, 5 20" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="./our-products.html"
+            class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+            <div class="relative h-6 overflow-hidden pointer-events-none">
+              <span
+                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                Sustainability
+              </span>
+              <span
+                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                Sustainability
+              </span>
+            </div>
+            <i
+              class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+          </a>
+          <a href="./sustainability.html"
+            class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+            <div class="relative h-6 overflow-hidden pointer-events-none">
+              <span
+                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                Investor Relation
+              </span>
+              <span
+                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                Investor Relation
+              </span>
+            </div>
+            <i
+              class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+          </a>
+          <a href="#"
+            class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+            <div class="relative h-6 overflow-hidden pointer-events-none">
+              <span
+                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
+                Office Location
+              </span>
+              <span
+                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
+                Office Location
+              </span>
+            </div>
+            <i
+              class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
+          </a>
         </nav>
-    </aside>
-    <!-- Header: Absolute to stay on top of Slider -->
-    <header class="absolute top-0 left-0 w-full z-50">
-        <!-- Top Bar -->
-        <div class="bg-[#0B1F3A] border-b border-white/10 py-2 hidden lg:block text-[#E7E7E7]">
-            <div
-                class="container mx-auto px-4 md:px-10 flex justify-between items-center text-base font-normal tracking-wide">
-                <!-- Left: Phone -->
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+880 1938-886333</span>
-                </div>
-                <!-- Center: Text -->
-                <div class="opacity-90">
-                    Our journey over the last 50 years has been about exploring new
-                    horizons
-                </div>
-                <!-- Right: Social Icons -->
-                <div class="flex items-center gap-5 text-base">
-                    <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" class="hover:text-blue-400 transition-colors"><i
-                            class="fa-brands fa-facebook-f"></i></a>
-                </div>
+
+        <div class="flex items-center gap-4">
+          <a href="#"
+            class="group relative bg-[#1864FF] text-white px-7 py-2.5 rounded-full font-semibold text-base hover:bg-blue-600 transition shadow-md whitespace-nowrap overflow-hidden inline-flex items-center justify-center">
+            <div class="relative h-5 overflow-hidden pointer-events-none">
+              <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                Contact Now
+              </span>
+              <span
+                class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                Contact Now
+              </span>
             </div>
+          </a>
         </div>
+        <!-- Mobile Toggle Button (Visible only on mobile/tablet) -->
+        <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl p-2 ml-2 focus:outline-none"
+          aria-label="Open Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-        <!-- Navbar -->
-        <div class="bg-[#111827] border-b border-white/10 w-full">
-            <div class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between text-white">
-                <div class="flex-shrink-0">
-                    <a href="../index.html">
-                        <img src="../assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
-                    </a>
-                </div>
+  <main>
+    <!-- hero section  -->
+    <section
+      class="animate-hero-height w-full h-[60vh] lg:h-[65vh] xl:h-[70vh] relative overflow-hidden flex flex-col items-center justify-center">
+      <img src="../assets/images/home/hero3.jpg" alt="Legacy Hero"
+        class="absolute inset-0 w-full h-full object-cover object-center animate-zoom-slow" />
+      <div class="absolute inset-0 bg-black/40"></div>
 
-                <nav class="hidden lg:flex items-center space-x-5 xl:space-x-8">
-                    <!-- About Us -->
-                    <div class="relative py-8 menu-wrapper" id="about-menu-wrapper">
-                        <!-- About Us বাটন -->
-                        <button id="about-toggle"
-                            class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
-                            <div class="flex items-center gap-1.5">
-                                <div class="relative h-6 overflow-hidden pointer-events-none">
-                                    <span
-                                        class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
-                                        About Us
-                                    </span>
-                                    <span
-                                        class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
-                                        About Us
-                                    </span>
-                                </div>
-                                <i id="about-icon"
-                                    class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
-                            </div>
-                            <!-- Custom Down Arrow (matching reference design) -->
-                            <div id="about-indicator"
-                                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
-                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="12 21, 4 5, 12 9, 20 5" />
-                                </svg>
-                            </div>
-                        </button>
-                        <!-- Dropdown Box -->
-                        <div id="about-dropdown"
-                            class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[480px] z-50">
-                            <div class="grid grid-cols-2 gap-3.5">
-                                <a href="./legacy.html"
-                                    class="relative h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header11.jpg" alt="Our Legacy"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Our Legacy</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a href="./purpose.html"
-                                    class="relative h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header12.png" alt="Our Purpose"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Our Purpose</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a href="./missionVission.html"
-                                    class="relative h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header13.jpg" alt="Mission & Vision"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Mission & Vision</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a href="./details.html"
-                                    class="relative h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header14.png" alt="Leadership"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2.5 left-3 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Leadership</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Our Concerns -->
-                    <div class="relative py-8 menu-wrapper" id="concern-menu-wrapper">
-                        <button id="concern-toggle"
-                            class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
-                            <div class="flex items-center gap-1.5">
-                                <div class="relative h-6 overflow-hidden pointer-events-none">
-                                    <span
-                                        class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
-                                        Our Concerns
-                                    </span>
-                                    <span
-                                        class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
-                                        Our Concerns
-                                    </span>
-                                </div>
-                                <i id="concern-icon"
-                                    class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
-                            </div>
-                            <!-- Custom Down Arrow (matching reference design) -->
-                            <div id="concern-indicator"
-                                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
-                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="12 21, 4 5, 12 9, 20 5" />
-                                </svg>
-                            </div>
-                        </button>
-                        <!-- Dropdown Box (3 Columns) -->
-                        <div id="concern-dropdown"
-                            class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
-                            <div class="grid grid-cols-3 gap-3 md:gap-3.5">
-                                <!-- 1. Real state -->
-                                <a href="./concerns.html"
-                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header21.jpg" alt="Real state"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Real state</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-
-                                <!-- 2. Restaurant -->
-                                <a href="./concerns.html"
-                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header22.png" alt="Restaurant"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Restaurant</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-
-                                <!-- 3. Media -->
-                                <a href="./concerns.html"
-                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header23.jpg" alt="Media"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2 left-2.5 text-white text-xs font-medium tracking-wide flex items-center gap-1.5">
-                                        <span>Media</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-
-                                <!-- 4. Software -->
-                                <a href="./concerns.html"
-                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header24.jpg" alt="Software"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Software</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-
-                                <!-- 5. See all Concerns -->
-                                <a href="./details.html"
-                                    class="relative h-24 md:h-28 rounded bg-[#EEF4FF] hover:bg-[#E0EBFF] transition-colors flex items-center justify-center gap-2 group  p-2">
-                                    <span class="text-[#1864FF] text-sm font-normal whitespace-nowrap">See all
-                                        Concerns</span>
-                                    <svg class="w-4 h-4 text-[#1864FF] fill-current inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                        viewBox="0 0 24 24">
-                                        <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="./our-products.html"
-                        class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
-                        <div class="relative h-6 overflow-hidden pointer-events-none">
-                            <span
-                                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
-                                Our Products
-                            </span>
-                            <span
-                                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
-                                Our Products
-                            </span>
-                        </div>
-                        <i
-                            class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
-                    </a>
-                    <!-- Media Center -->
-                    <div class="relative py-8 menu-wrapper" id="media-menu-wrapper">
-                        <button id="media-toggle"
-                            class="group relative flex flex-col items-center justify-center cursor-pointer outline-none text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors">
-                            <div class="flex items-center gap-1.5">
-                                <div class="relative h-6 overflow-hidden pointer-events-none">
-                                    <span
-                                        class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
-                                        Media Center
-                                    </span>
-                                    <span
-                                        class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
-                                        Media Center
-                                    </span>
-                                </div>
-                                <i id="media-icon"
-                                    class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
-                            </div>
-                            <!-- Custom Down Arrow (matching reference design) -->
-                            <div id="media-indicator"
-                                class="down-indicator hidden absolute -bottom-4 left-1/2 text-white pointer-events-none">
-                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="12 21, 4 5, 12 9, 20 5" />
-                                </svg>
-                            </div>
-                        </button>
-                        <!-- Dropdown Box (3 Columns) -->
-                        <div id="media-dropdown"
-                            class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
-                            <div class="grid grid-cols-3 gap-3 md:gap-3.5">
-                                <!-- 1. Stories -->
-                                <a href="./stories.html"
-                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header31.png" alt="Stories"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Stories</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-
-                                <!-- 2. Events -->
-                                <a href="./events.html"
-                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header32.png" alt="Events"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Events</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-
-                                <!-- 3. News Room -->
-                                <a href="./newsroom.html"
-                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header33.png" alt="News Room"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>News Room</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-
-                                <!-- 4. Newsletter -->
-                                <a href="./newsletter.html"
-                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header34.jpg" alt="Newsletter"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Newsletter</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-
-                                <!-- 5. Photo & Video gallery -->
-                                <a href="../pages/details.html"
-                                    class="relative h-24 md:h-28 rounded overflow-hidden group  block">
-                                    <img src="../assets/images/home/header35.jpg" alt="Photo & Video gallery"
-                                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10">
-                                    </div>
-                                    <div
-                                        class="absolute bottom-2 left-2.5 text-white text-sm font-normal tracking-wide flex items-center gap-1.5">
-                                        <span>Photo & Video gallery</span>
-                                        <svg class="w-4 h-4 text-white inline-block transition-transform duration-300 group-hover:translate-x-1"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <polygon points="21 12, 5 4, 9 12, 5 20" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="./our-products.html"
-                        class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
-                        <div class="relative h-6 overflow-hidden pointer-events-none">
-                            <span
-                                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
-                                Sustainability
-                            </span>
-                            <span
-                                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
-                                Sustainability
-                            </span>
-                        </div>
-                        <i
-                            class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
-                    </a>
-                    <a href="./sustainability.html"
-                        class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
-                        <div class="relative h-6 overflow-hidden pointer-events-none">
-                            <span
-                                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
-                                Investor Relation
-                            </span>
-                            <span
-                                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
-                                Investor Relation
-                            </span>
-                        </div>
-                        <i
-                            class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
-                    </a>
-                    <a href="#"
-                        class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
-                        <div class="relative h-6 overflow-hidden pointer-events-none">
-                            <span
-                                class="block leading-6 whitespace-nowrap transition-transform duration-500 group-hover:-translate-y-full">
-                                Office Location
-                            </span>
-                            <span
-                                class="absolute top-0 left-0 block leading-6 whitespace-nowrap translate-y-full transition-transform duration-500 group-hover:translate-y-0 ">
-                                Office Location
-                            </span>
-                        </div>
-                        <i
-                            class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
-                    </a>
-                </nav>
-
-                <div class="flex items-center gap-4">
-                    <a href="#"
-                        class="group relative bg-[#1864FF] text-white px-7 py-2.5 rounded-full font-semibold text-base hover:bg-blue-600 transition shadow-md whitespace-nowrap overflow-hidden inline-flex items-center justify-center">
-                        <div class="relative h-5 overflow-hidden pointer-events-none">
-                            <span
-                                class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">
-                                Contact Now
-                            </span>
-                            <span
-                                class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
-                                Contact Now
-                            </span>
-                        </div>
-                    </a>
-                </div>
-                <!-- Mobile Toggle Button (Visible only on mobile/tablet) -->
-                <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl p-2 ml-2 focus:outline-none"
-                    aria-label="Open Menu">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </button>
-            </div>
+      <div class="relative z-10 text-center text-white px-4 mt-10">
+        <h1 class="section-title text-white mb-4">
+          Our Stories
+        </h1>
+        <div class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal">
+          <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
+          <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+          <a href="#" class="hover:text-blue-400 transition">About Us</a>
+          <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+          <span class="text-white">Our Stories</span>
         </div>
-    </header>
-
-    <main>
-        <!-- hero section  -->
-        <section
-            class="animate-hero-height w-full h-[60vh] lg:h-[65vh] xl:h-[70vh] relative overflow-hidden flex flex-col items-center justify-center">
-            <img src="../assets/images/home/hero3.jpg" alt="Legacy Hero"
-                class="absolute inset-0 w-full h-full object-cover object-center animate-zoom-slow" />
-            <div class="absolute inset-0 bg-black/40"></div>
-
-            <div class="relative z-10 text-center text-white px-4 mt-10">
-                <h1 class="section-title text-white mb-4">
-                    Creating a Legacy<br />of Success
-                </h1>
-                <div class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal">
-                    <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
-                    <i class="fa-solid fa-angle-right text-xs mx-1"></i>
-                    <a href="#" class="hover:text-blue-400 transition">About Us</a>
-                    <i class="fa-solid fa-angle-right text-xs mx-1"></i>
-                    <span class="text-white">Legacy</span>
-                </div>
-            </div>
-        </section>
-        <!-- Navigation Tabs -->
+      </div>
+    </section>
+    <!-- Navigation Tabs -->
     <div class="w-full bg-white border-b border-gray-200 shadow-sm sticky top-0 z-40">
-      <div class="container mx-auto px-4 md:px-10 flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
-        <a href="stories.html" class="nav-link py-4 active-link border-b-2 border-brand-blue">Stories</a>
-        <a href="events.html" class="nav-link py-4 border-b-2 border-transparent">Events</a>
-        <a href="newsroom.html" class="nav-link py-4 border-b-2 border-transparent">News Room</a>
-        <a href="newsletter.html" class="nav-link py-4 border-b-2 border-transparent">Newsletter</a>
-        <a href="photo-gallery.html" class="nav-link py-4 border-b-2 border-transparent">Photo & Video gallery</a>
+      <div class="container mx-auto flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
+        <a href="stories.html"
+          class="nav-link py-4 active-link text-base lg:text-lg font-normal border-b-2 border-brand-blue">Stories</a>
+        <a href="events.html"
+          class="nav-link py-4 text-base lg:text-lg font-normal border-b-2 border-transparent">Events</a>
+        <a href="newsroom.html"
+          class="nav-link py-4 text-base lg:text-lg font-normal border-b-2 border-transparent">News Room</a>
+        <a href="newsletter.html"
+          class="nav-link py-4 text-base lg:text-lg font-normal border-b-2 border-transparent">Newsletter</a>
+        <a href="photo-gallery.html"
+          class="nav-link py-4 text-base lg:text-lg font-normal border-b-2 border-transparent">Photo & Video gallery</a>
       </div>
     </div>
 
     <!-- Stories Grid Section -->
     <section class="w-full bg-[#F8FAFC] py-12 md:py-20 font-manrope">
-      <div class="container mx-auto px-4 md:px-10">
-        
+      <div class="container mx-auto">
+
         <!-- Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <!-- Card 1 -->
-          <div onclick="window.location.href='stories-details.html'" class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] opacity-95 hover:opacity-100">
-            <img src="../assets/images/stories/bhaiayhousing.jpg" alt="Story Placeholder" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-300 ease-out group-hover:blur-[1px]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
+          <div onclick="window.location.href='stories-details.html'"
+            class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden isolate z-0 transform-gpu group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out opacity-95 hover:opacity-100">
+            <img src="../assets/images/stories/bhaiayhousing.jpg" alt="Story Placeholder"
+              class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-all duration-500 ">
+            </div>
+
             <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
               <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm mb-2">
                 <i class="fa-regular fa-calendar"></i>
                 <span>June 20, 2026</span>
               </div>
-              <h3 class="text-white text-lg md:text-xl font-semibold mb-4 drop-shadow-sm">Bhaiya Group of Company Stories </h3>
-              
-              <a href="stories-details.html" class="inline-flex items-center gap-3 bg-transparent text-white text-sm font-semibold transition w-fit">
+              <h3 class="text-white text-lg md:text-2xl font-medium mb-4 drop-shadow-sm">Bhaiya Group of Company Stories
+              </h3>
+
+              <a href="stories-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-white section-text transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
           </div>
           <!-- Card 2 -->
-          <div onclick="window.location.href='stories-details.html'" class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] opacity-95 hover:opacity-100">
-            <img src="../assets/images/stories/founder.png" alt="Story Placeholder" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-300 ease-out group-hover:blur-[1px]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
+          <div onclick="window.location.href='stories-details.html'"
+            class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden isolate z-0 transform-gpu group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out opacity-95 hover:opacity-100">
+            <img src="../assets/images/stories/founder.png" alt="Story Placeholder"
+              class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-all duration-500 ">
+            </div>
+
             <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
               <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm mb-2">
                 <i class="fa-regular fa-calendar"></i>
                 <span>July 20, 2026</span>
               </div>
-              <h3 class="text-white text-lg md:text-xl font-semibold mb-4 drop-shadow-sm">Our Founder Stories</h3>
-              
-              <a href="stories-details.html" class="inline-flex items-center gap-3 bg-transparent text-white text-sm font-semibold transition w-fit">
+              <h3 class="text-white text-lg md:text-2xl font-medium mb-4 drop-shadow-sm">Our Founder Stories</h3>
+
+              <a href="stories-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-white section-text transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
           </div>
           <!-- Card 3 -->
-          <div onclick="window.location.href='stories-details.html'" class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] opacity-95 hover:opacity-100">
-            <img src="../assets/images/stories/pinecity.jpg" alt="Story Placeholder" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-300 ease-out group-hover:blur-[1px]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
+          <div onclick="window.location.href='stories-details.html'"
+            class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden isolate z-0 transform-gpu group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out opacity-95 hover:opacity-100">
+            <img src="../assets/images/stories/pinecity.jpg" alt="Story Placeholder"
+              class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-all duration-500 ">
+            </div>
+
             <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
               <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm mb-2">
                 <i class="fa-regular fa-calendar"></i>
                 <span>June 20, 2026</span>
               </div>
-              <h3 class="text-white text-lg md:text-xl font-semibold mb-4 drop-shadow-sm">Bhaiya Group of Real Estate Stories</h3>
-              
-              <a href="stories-details.html" class="inline-flex items-center gap-3 bg-transparent text-white text-sm font-semibold transition w-fit">
+              <h3 class="text-white text-lg md:text-2xl font-medium mb-4 drop-shadow-sm">Bhaiya Group of Real Estate
+                Stories</h3>
+
+              <a href="stories-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-white section-text transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
           </div>
           <!-- Card 4 -->
-          <div onclick="window.location.href='stories-details.html'" class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] opacity-95 hover:opacity-100">
-            <img src="../assets/images/home/hero3.jpg" alt="Story Placeholder" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-300 ease-out group-hover:blur-[1px]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
+          <div onclick="window.location.href='stories-details.html'"
+            class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden isolate z-0 transform-gpu group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out opacity-95 hover:opacity-100">
+            <img src="../assets/images/home/hero3.jpg" alt="Story Placeholder"
+              class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-all duration-500 ">
+            </div>
+
             <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
               <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm mb-2">
                 <i class="fa-regular fa-calendar"></i>
                 <span>June 20, 2026</span>
               </div>
-              <h3 class="text-white text-lg md:text-xl font-semibold mb-4 drop-shadow-sm">Bhaiya Group of Company Stories 4</h3>
-              
-              <a href="stories-details.html" class="inline-flex items-center gap-3 bg-transparent text-white text-sm font-semibold transition w-fit">
+              <h3 class="text-white text-lg md:text-2xl font-medium mb-4 drop-shadow-sm">Bhaiya Group of Company Stories
+                4</h3>
+
+              <a href="stories-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-white section-text transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
           </div>
           <!-- Card 5 -->
-          <div onclick="window.location.href='stories-details.html'" class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] opacity-95 hover:opacity-100">
-            <img src="../assets/images/stories/chairman.png" alt="Story Placeholder" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-300 ease-out group-hover:blur-[1px]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
+          <div onclick="window.location.href='stories-details.html'"
+            class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden isolate z-0 transform-gpu group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out opacity-95 hover:opacity-100">
+            <img src="../assets/images/stories/chairman.png" alt="Story Placeholder"
+              class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-all duration-500 ">
+            </div>
+
             <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
               <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm mb-2">
                 <i class="fa-regular fa-calendar"></i>
                 <span>June 20, 2026</span>
               </div>
-              <h3 class="text-white text-lg md:text-xl font-semibold mb-4 drop-shadow-sm">Bhaiya Group of Company Stories 5</h3>
-              
-              <a href="stories-details.html" class="inline-flex items-center gap-3 bg-transparent text-white text-sm font-semibold transition w-fit">
+              <h3 class="text-white text-lg md:text-2xl font-medium mb-4 drop-shadow-sm">Bhaiya Group of Company Stories
+                5</h3>
+
+              <a href="stories-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-white section-text transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
           </div>
           <!-- Card 6 -->
-          <div onclick="window.location.href='stories-details.html'" class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] opacity-95 hover:opacity-100">
-            <img src="../assets/images/home/hero3.jpg" alt="Story Placeholder" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-300 ease-out group-hover:blur-[1px]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
+          <div onclick="window.location.href='stories-details.html'"
+            class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden isolate z-0 transform-gpu group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out opacity-95 hover:opacity-100">
+            <img src="../assets/images/home/hero3.jpg" alt="Story Placeholder"
+              class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-all duration-500 ">
+            </div>
+
             <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
               <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm mb-2">
                 <i class="fa-regular fa-calendar"></i>
                 <span>June 20, 2026</span>
               </div>
-              <h3 class="text-white text-lg md:text-xl font-semibold mb-4 drop-shadow-sm">Bhaiya Group of Company Stories 6</h3>
-              
-              <a href="stories-details.html" class="inline-flex items-center gap-3 bg-transparent text-white text-sm font-semibold transition w-fit">
+              <h3 class="text-white text-lg md:text-2xl font-medium mb-4 drop-shadow-sm">Bhaiya Group of Company Stories
+                6</h3>
+
+              <a href="stories-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-white section-text transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
           </div>
           <!-- Card 7 -->
-          <div onclick="window.location.href='stories-details.html'" class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] opacity-95 hover:opacity-100">
-            <img src="../assets/images/home/hero3.jpg" alt="Story Placeholder" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-300 ease-out group-hover:blur-[1px]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
+          <div onclick="window.location.href='stories-details.html'"
+            class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden isolate z-0 transform-gpu group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out opacity-95 hover:opacity-100">
+            <img src="../assets/images/home/hero3.jpg" alt="Story Placeholder"
+              class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-all duration-500 ">
+            </div>
+
             <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
               <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm mb-2">
                 <i class="fa-regular fa-calendar"></i>
                 <span>June 20, 2026</span>
               </div>
-              <h3 class="text-white text-lg md:text-xl font-semibold mb-4 drop-shadow-sm">Bhaiya Group of Company Stories 7</h3>
-              
-              <a href="stories-details.html" class="inline-flex items-center gap-3 bg-transparent text-white text-sm font-semibold transition w-fit">
+              <h3 class="text-white text-lg md:text-2xl font-medium mb-4 drop-shadow-sm">Bhaiya Group of Company Stories
+                7</h3>
+
+              <a href="stories-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-white section-text transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
           </div>
           <!-- Card 8 -->
-          <div onclick="window.location.href='stories-details.html'" class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] opacity-95 hover:opacity-100">
-            <img src="../assets/images/home/hero3.jpg" alt="Story Placeholder" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-300 ease-out group-hover:blur-[1px]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
+          <div onclick="window.location.href='stories-details.html'"
+            class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden isolate z-0 transform-gpu group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out opacity-95 hover:opacity-100">
+            <img src="../assets/images/home/hero3.jpg" alt="Story Placeholder"
+              class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-all duration-500 ">
+            </div>
+
             <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
               <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm mb-2">
                 <i class="fa-regular fa-calendar"></i>
                 <span>June 20, 2026</span>
               </div>
-              <h3 class="text-white text-lg md:text-xl font-semibold mb-4 drop-shadow-sm">Bhaiya Group of Company Stories 8</h3>
-              
-              <a href="stories-details.html" class="inline-flex items-center gap-3 bg-transparent text-white text-sm font-semibold transition w-fit">
+              <h3 class="text-white text-lg md:text-2xl font-medium mb-4 drop-shadow-sm">Bhaiya Group of Company Stories
+                8</h3>
+
+              <a href="stories-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-white section-text transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
           </div>
           <!-- Card 9 -->
-          <div onclick="window.location.href='stories-details.html'" class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] opacity-95 hover:opacity-100">
-            <img src="../assets/images/home/hero3.jpg" alt="Story Placeholder" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-300 ease-out group-hover:blur-[1px]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
+          <div onclick="window.location.href='stories-details.html'"
+            class="relative w-full md:max-w-[517px] mx-auto h-[320px] md:h-[400px] rounded-sm overflow-hidden isolate z-0 transform-gpu group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 ease-out opacity-95 hover:opacity-100">
+            <img src="../assets/images/home/hero3.jpg" alt="Story Placeholder"
+              class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-all duration-500 ">
+            </div>
+
             <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end">
               <div class="flex items-center gap-2 text-white/90 text-xs md:text-sm mb-2">
                 <i class="fa-regular fa-calendar"></i>
                 <span>June 20, 2026</span>
               </div>
-              <h3 class="text-white text-lg md:text-xl font-semibold mb-4 drop-shadow-sm">Bhaiya Group of Company Stories 9</h3>
-              
-              <a href="stories-details.html" class="inline-flex items-center gap-3 bg-transparent text-white text-sm font-semibold transition w-fit">
+              <h3 class="text-white text-lg md:text-xl font-semibold mb-4 drop-shadow-sm">Bhaiya Group of Company
+                Stories 9</h3>
+
+              <a href="stories-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-white text-sm font-semibold transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
@@ -782,29 +873,38 @@
 
         <!-- Pagination -->
         <div class="flex justify-end items-center gap-2 pt-12 md:pt-16">
-          <a href="stories-details.html" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Prev</a>
-          <a href="stories-details.html" class="border border-[#2563EB] bg-[#2563EB] text-white px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium transition-colors">1</a>
-          <a href="stories-details.html" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">2</a>
-          <a href="stories-details.html" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">3</a>
-          <a href="stories-details.html" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">4</a>
-          <a href="stories-details.html" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Next</a>
+          <a href="stories-details.html"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Prev</a>
+          <a href="stories-details.html"
+            class="border border-[#2563EB] bg-[#2563EB] text-white px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium transition-colors">1</a>
+          <a href="stories-details.html"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">2</a>
+          <a href="stories-details.html"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">3</a>
+          <a href="stories-details.html"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">4</a>
+          <a href="stories-details.html"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Next</a>
         </div>
 
       </div>
     </section>
 
     <!-- FOOTER SECTION -->
-    <footer class="bg-[#111827] text-[#E7E7E7] pt-20 pb-8 font-manrope">
+    <footer class="bg-[#111827] text-[#E7E7E7] pb-8">
+      <div class="w-full flex mb-10">
+        <img src="../assets/images/home/footer.jpg" alt="Bhaiya Group Banner" class="w-full h-auto object-cover block">
+      </div>
       <div class="container mx-auto px-4 md:px-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
           <!-- Logo and Contact -->
           <div class="lg:col-span-2 space-y-6">
             <img src="../assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
-            <div class="space-y-5 text-sm md:text-base opacity-90">
+            <div class="space-y-5 section-text opacity-90">
               <div class="flex items-start gap-4">
                 <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
-                <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor), Motijheel
-                  C/A,
+                <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor),
+                  Motijheel C/A,
                   Dhaka-1000, Bangladesh</p>
               </div>
               <div class="flex items-center gap-4">
@@ -822,11 +922,13 @@
           <div>
             <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
             <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-              <li><a href="stories-details.html" class="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="stories-details.html" class="hover:text-white transition-colors">Our Concerns</a></li>
-              <li><a href="stories-details.html" class="hover:text-white transition-colors">Our Products</a></li>
-              <li><a href="stories-details.html" class="hover:text-white transition-colors">Media Center</a></li>
-              <li><a href="stories-details.html" class="hover:text-white transition-colors">Office Location</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="./concerns.html" class="hover:text-white transition-colors">Our Concerns</a></li>
+              <li><a href="./our-products.html" class="hover:text-white transition-colors">Our Products</a>
+              </li>
+              <li><a href="./stories.html" class="hover:text-white transition-colors">Media Center</a></li>
+              <li><a href="./office-locations.html" class="hover:text-white transition-colors">Office
+                  Location</a></li>
             </ul>
           </div>
 
@@ -834,11 +936,12 @@
           <div>
             <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
             <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-              <li><a href="stories-details.html" class="hover:text-white transition-colors">Events</a></li>
-              <li><a href="stories-details.html" class="hover:text-white transition-colors">Newsletters</a></li>
-              <li><a href="stories-details.html" class="hover:text-white transition-colors">Sustainability</a></li>
-              <li><a href="stories-details.html" class="hover:text-white transition-colors">Investor Relation</a></li>
-              <li><a href="stories-details.html" class="hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
+              <li><a href="./newsletter.html" class="hover:text-white transition-colors">Newsletters</a></li>
+              <li><a href="./sustainability.html" class="hover:text-white transition-colors">Sustainability</a></li>
+              <li><a href="./investor.html" class="hover:text-white transition-colors">Investor Relation</a>
+              </li>
+              <li><a href="./contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
@@ -846,27 +949,27 @@
           <div>
             <h4 class="text-lg md:text-2xl font-semibold mb-6">Concerns Link</h4>
             <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-              <li><a href="stories-details.html" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya Housing <svg
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya
+                  Housing <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                     stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                   </svg></a></li>
-              <li><a href="stories-details.html" class="flex items-center gap-2 hover:text-white transition-colors">Pine City <svg
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                  </svg></a></li>
-              <li><a href="stories-details.html" class="flex items-center gap-2 hover:text-white transition-colors">Next Food & Beverage
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                     stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                   </svg></a></li>
-              <li><a href="stories-details.html" class="flex items-center gap-2 hover:text-white transition-colors">Provati Insurance <svg
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food &
+                  Beverage <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                     stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                   </svg></a></li>
-              <li><a href="stories-details.html" class="flex items-center gap-2 hover:text-white transition-colors">Duria <svg
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati
+                  Insurance <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Duria <svg
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                     stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
@@ -878,15 +981,15 @@
           <div>
             <h4 class="text-lg md:text-2xl font-semibold mb-6">Social</h4>
             <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-              <li><a href="stories-details.html" class="flex items-center gap-3 hover:text-white transition-colors"><i
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
                     class="fa-brands fa-square-facebook text-2xl"></i> Facebook</a></li>
-              <li><a href="stories-details.html" class="flex items-center gap-3 hover:text-white transition-colors"><i
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
                     class="fa-brands fa-youtube text-2xl"></i> Youtube</a></li>
-              <li><a href="stories-details.html" class="flex items-center gap-3 hover:text-white transition-colors"><i
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
                     class="fa-brands fa-linkedin text-2xl"></i> LinkedIn</a></li>
-              <li><a href="stories-details.html" class="flex items-center gap-3 hover:text-white transition-colors"><i
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
                     class="fa-brands fa-instagram text-2xl"></i> Instagram</a></li>
-              <li><a href="stories-details.html" class="flex items-center gap-3 hover:text-white transition-colors"><i
+              <li><a href="#" class="flex items-center gap-3 hover:text-white transition-colors"><i
                     class="fa-brands fa-x-twitter text-2xl"></i> Twitter</a></li>
             </ul>
           </div>
@@ -908,23 +1011,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

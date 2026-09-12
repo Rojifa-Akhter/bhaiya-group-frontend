@@ -32,7 +32,7 @@
   }
   
   .section-subtitle {
-    @apply text-lg md:text-2xl font-bold uppercase tracking-widest;
+    @apply text-lg md:text-2xl font-bold uppercase;
   }
 }
 

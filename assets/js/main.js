@@ -265,7 +265,7 @@ if (timelineContainer) timelineObserver.observe(timelineContainer);
       }
     });
   }, { threshold: 0.2 });
-  document.querySelectorAll('.reveal-left-wipe, .reveal-left, .award-card')
+  document.querySelectorAll('.reveal-left-wipe, .reveal-left, .award-card, .scale-in-ver-bottom')
     .forEach(el => revealObserver.observe(el));
 
   // 8. CSR Swiper (if present)
