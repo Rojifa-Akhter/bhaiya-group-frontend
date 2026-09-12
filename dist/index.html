@@ -22,9 +22,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- Local CSS -->
-  <script type="module" crossorigin src="/assets/index-B7l3Fpu_.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BJtfyXOP.css">
+  <!-- Local CSS -->
+
+
+  <script type="module" crossorigin src="/assets/index-iEI7lZkh.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-D4WOS7bT.css">
 </head>
 
 <body class="font-manrope overflow-x-hidden">
@@ -641,7 +643,7 @@
       </div>
     </section>
     <!-- Company At Glance Section -->
-    <section class="py-6 md:py-20 bg-white relative z-10">
+    <section class="py-6 md:py-20 bg-white">
       <div class="container mx-auto px-4 md:px-10">
         <!-- Header -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-8">
@@ -663,7 +665,7 @@
 
             <!-- Card 1 -->
             <div
-              class="bg-[#355C7D] text-white scroll-move p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
+              class="bg-[#355C7D] text-white p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
               <div class="absolute -top-1 -right-1 w-14 h-14 bg-white rounded-bl-2xl"></div>
               <div class="z-10 text-center mt-2">
                 <p class="text-xs md:text-lg font-medium mb-1 opacity-90">Stablished Since</p>
@@ -674,7 +676,7 @@
 
             <!-- Card 2 -->
             <div
-              class="bg-[#EEF4FF] text-[#050a18] scroll-move p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
+              class="bg-[#EEF4FF] text-[#050a18] p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
               <div class="absolute -top-1 -left-1 w-14 h-14 bg-white rounded-br-2xl"></div>
               <div class="z-10 text-center mt-2">
                 <p class="text-xs md:text-lg font-medium mb-1 opacity-90">Active Concerns</p>
@@ -685,7 +687,7 @@
 
             <!-- Card 3 -->
             <div
-              class="bg-[#EEF4FF] text-[#050a18] scroll-move p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
+              class="bg-[#EEF4FF] text-[#050a18] p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
               <div class="absolute -bottom-1 -right-1 w-14 h-14 bg-white rounded-tl-2xl"></div>
               <div class="z-10 text-center mb-2">
                 <p class="text-xs md:text-lg font-medium mb-1 opacity-90">Projects in Development</p>
@@ -696,8 +698,8 @@
 
             <!-- Card 4 -->
             <div
-              class="bg-[#355C7D] text-white scroll-move p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
-              <div class="absolute -bottom-1 -left-1 w-14 h-14 bg-white rounded-tr-2xl"></div>
+              class="bg-[#355C7D] text-white p-6 rounded-2xl relative flex flex-col items-center justify-center min-h-[180px]">
+              <div class="absolute -top-1 -left-1 w-14 h-14 bg-white rounded-br-2xl"></div>
               <div class="z-10 text-center mt-2">
                 <p class="text-xs md:text-lg font-medium mb-1 opacity-90">Employees</p>
                 <h3 class="text-[36px] md:text-[40px] font-bold count-up" data-target="5500" data-suffix="+">0</h3>
@@ -785,9 +787,8 @@
         counters.forEach(function (c) { observer.observe(c); });
       })();
     </script>
-
     <!-- Company History Section -->
-    <section class="relative w-full h-[650px] md:h-[700px] bg-cover bg-center overflow-hidden z-10"
+    <section class="relative w-full h-[650px] md:h-[700px] bg-cover bg-center overflow-hidden"
       style="background-image: url('/assets/history-C797go-S.jpg');">
       <!-- Dark overlay -->
       <div class="absolute inset-0 bg-black/70"></div>
@@ -1405,7 +1406,7 @@
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
         border: 1.5px solid rgba(255, 255, 255, 0.15);
-        border-radius: 20px;
+        border-radius: 14px;
         overflow: hidden;
         position: relative;
         transition: 0.5s ease;
@@ -1479,9 +1480,11 @@
               <!-- Card 1: REAL STATE -->
               <div class="swiper-slide">
                 <div class="biz-card biz-card-short group p-5 flex flex-col justify-end">
+                  <!-- Cutout Top Left -->
+                  <div class="absolute -top-[1px] -left-[1px] w-12 md:w-[100px] h-12 bg-[#020307] rounded-br-2xl z-30"></div>
                   <!-- Building popping out -->
                   <img src="/assets/business1-Dm8-CZhm.png"
-                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[120%] h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0 object-cover object-bottom">
+                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[140%] h-[400px] transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0">
 
                   <!-- Glass inner gradient -->
                   <div
@@ -1521,6 +1524,8 @@
               <!-- Card 2: HOSPITAL -->
               <div class="swiper-slide">
                 <div class="biz-card biz-card-tall group p-5 flex flex-col justify-end">
+                  <!-- Cutout Top Right -->
+                  <div class="absolute -top-[1px] -right-[1px] w-12 md:w-[100px] h-12 bg-[#020307] rounded-bl-2xl z-30"></div>
                   <!-- Building popping out -->
                   <img src="/assets/business2-BSA6hTRc.png"
                     class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] md:w-[100%] h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0 object-cover object-bottom">
@@ -1562,6 +1567,8 @@
               <!-- Card 3: REAL STATE -->
               <div class="swiper-slide">
                 <div class="biz-card biz-card-short group p-5 flex flex-col justify-end">
+                  <!-- Cutout Top Left -->
+                  <div class="absolute -top-[1px] -left-[1px] w-12 md:w-[100px] h-12 bg-[#020307] rounded-br-2xl z-30"></div>
                   <img src="/assets/business1-Dm8-CZhm.png"
                     class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[110%] h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0 object-cover object-bottom">
                   <div
@@ -1601,6 +1608,8 @@
               <!-- Card 4: HOSPITAL -->
               <div class="swiper-slide">
                 <div class="biz-card biz-card-tall group p-5 flex flex-col justify-end">
+                  <!-- Cutout Top Right -->
+                  <div class="absolute -top-[1px] -right-[1px] w-12 md:w-[100px] h-12 bg-[#020307] rounded-bl-2xl z-30"></div>
                   <img src="/assets/business2-BSA6hTRc.png"
                     class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] md:w-[100%] h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0 object-cover object-bottom">
                   <div
@@ -3245,7 +3254,8 @@
 
   <!-- Script for Mobile Hamburger Menu Toggle -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+
+
 </body>
 
 </html>
