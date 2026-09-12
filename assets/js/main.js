@@ -12,12 +12,41 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Swiper Slider Initialization (Hero)
   const swiperElement = document.querySelector('.heroSwiper');
   if (swiperElement) {
-    new Swiper('.heroSwiper', {
+    const heroSwiper = new Swiper('.heroSwiper', {
       loop: true,
       effect: 'fade',
+      fadeEffect: { crossFade: true },
       autoplay: { delay: 3000, disableOnInteraction: false },
       speed: 1000,
+      on: {
+        realIndexChange: function () {
+          updateHeroDots(this.realIndex);
+        }
+      }
     });
+
+    function updateHeroDots(activeIndex) {
+  document.querySelectorAll('.hero-dot').forEach(function (dot, i) {
+    var circle = dot.querySelector('.hero-dot-circle');
+    if (i === activeIndex) {
+      circle.style.width = '14px';
+      circle.style.height = '14px';
+      circle.style.background = 'white';
+      circle.style.borderColor = 'white';
+    } else {
+      circle.style.width = '10px';
+      circle.style.height = '10px';
+      circle.style.background = 'rgba(255,255,255,0.2)';
+      circle.style.borderColor = 'rgba(255,255,255,0.4)';
+    }
+  });
+}
+
+    window.heroGoTo = function (index) {
+      heroSwiper.slideToLoop(index);
+    };
+
+    updateHeroDots(0);
   }
 
   // 2. Dropdown Logic with Animated Expand & Indicator
@@ -150,21 +179,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Timeline Animation
-  const timelineObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const contents = entry.target.querySelectorAll('.timeline-content');
-        contents.forEach(content => {
-          content.classList.remove('translate-y-full', 'translate-y-12', 'opacity-0');
-          content.classList.add('translate-y-0', 'opacity-100');
-        });
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  const timelineContainer = document.getElementById('timeline-container');
-  if (timelineContainer) timelineObserver.observe(timelineContainer);
+  // 5. Timeline Animation - Line + dot + name + year সব একসাথে নিচ থেকে উঠবে
+const timelineObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const lines = entry.target.querySelectorAll('.timeline-line');
+      lines.forEach((line, i) => {
+        setTimeout(() => {
+          line.style.transform = 'scaleY(1)';
+          line.style.opacity = '1';
+          const content = line.querySelector('.timeline-content');
+          if (content) {
+            content.classList.remove('opacity-0', 'translate-y-full');
+            content.classList.add('opacity-100', 'translate-y-0');
+          }
+          const yearEl = line.querySelector('.year-count');
+          if (yearEl) {
+            const target = parseInt(yearEl.dataset.target);
+            let current = target - 30;
+            const step = () => {
+              current += 1;
+              yearEl.textContent = current;
+              if (current < target) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+          }
+        }, i * 250);
+      });
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+const timelineContainer = document.getElementById('timeline-container');
+if (timelineContainer) timelineObserver.observe(timelineContainer);
 
   // 6. Founder Section Animation
   const founderObserver = new IntersectionObserver((entries, observer) => {
@@ -178,20 +226,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { threshold: 0.2 });
+  // 6. Founder Section Animation - image left থেকে, text right থেকে
   const founderSection = document.getElementById('founder-section');
-  if (founderSection) founderObserver.observe(founderSection);
+  if (founderSection) {
+    const img = document.getElementById('founder-img');
+    const text = document.getElementById('founder-text');
 
-  // 7. Awards / Legacy Animation (adds 'active' class)
-  const awardsObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.scale-in-hor-right, .scale-in-hor-center, .scale-in-hor-left, .scale-in-ver-bottom')
-    .forEach(el => awardsObserver.observe(el));
+    if (img) {
+      img.style.opacity = '0';
+      img.style.transform = 'translateX(-80px)';
+      img.style.transition = 'opacity 0.9s ease, transform 0.9s ease';
+    }
+    if (text) {
+      text.style.opacity = '0';
+      text.style.transform = 'translateX(80px)';
+      text.style.transition = 'opacity 0.9s ease, transform 0.9s ease 0.2s';
+    }
+
+    const founderObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (img) { img.style.opacity = '1'; img.style.transform = 'translateX(0)'; }
+          if (text) { text.style.opacity = '1'; text.style.transform = 'translateX(0)'; }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    founderObserver.observe(founderSection);
+  }
 
   // 8. Reveal Left Wipe Animation (adds 'active' class)
   const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -202,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { threshold: 0.2 });
-  document.querySelectorAll('.reveal-left-wipe')
+  document.querySelectorAll('.reveal-left-wipe, .reveal-left, .award-card')
     .forEach(el => revealObserver.observe(el));
 
   // 8. CSR Swiper (if present)
