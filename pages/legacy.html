@@ -94,7 +94,7 @@
         }
 
         .animate-hero-height {
-            animation: shrinkHeight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: shrinkHeight 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         /* Legacy Section Styles */
@@ -800,11 +800,11 @@
                         </div>
 
                         <!-- Floating Badge -->
-                        <div class="absolute top-[10%] right-[5%] z-20 drop-shadow-2xl">
+                        <div class="absolute scroll-move top-[10%] right-[5%] z-20 drop-shadow-2xl">
                             <!-- Main Rectangle -->
                             <div
                                 class="bg-[#111827] text-white py-6 md:py-8 pl-8 pr-4 rounded-l-2xl relative z-10 w-[140px] md:w-[160px]">
-                                <h3 class="text-3xl lg:text-4xl font-bold mb-1">50+</h3>
+                                <h3 class="text-3xl lg:text-4xl font-bold mb-1"><span class="counter" data-target="50">0</span>+</h3>
                                 <p class="text-sm md:text-base text-gray-300 leading-tight">years<br>of experiences</p>
 
                                 <!-- Right Slanted Extension -->
@@ -816,7 +816,7 @@
 
                         <!-- Bottom Right Image -->
                         <div
-                            class="absolute bottom-0 right-0 w-[45%] h-[40%] rounded-3xl overflow-hidden  shadow-2xl z-10">
+                            class="absolute scroll-move bottom-0 right-0 w-[45%] h-[40%] rounded-3xl overflow-hidden  shadow-2xl z-10">
                             <img src="../assets/images/legacy/companyAbout (1).jpg" alt="About Company 2"
                                 class="w-full h-full object-cover">
                         </div>
@@ -892,7 +892,7 @@
                             <img src="../assets/images/legacy/Group.png" alt="group">
                         </div>
                         <div>
-                            <h3 class="text-2xl md:text-4xl font-bold">20+</h3>
+                            <h3 class="text-2xl md:text-4xl font-bold"><span class="counter" data-target="20">0</span>+</h3>
                             <p class="text-sm md:text-lg text-gray-300 mt-1">Active Concerns</p>
                         </div>
                     </div>
@@ -903,7 +903,7 @@
                             <img src="../assets/images/legacy/Group (1).png" alt="group">
                         </div>
                         <div>
-                            <h3 class="text-2xl md:text-4xl font-bold">40+</h3>
+                            <h3 class="text-2xl md:text-4xl font-bold"><span class="counter" data-target="40">0</span>+</h3>
                             <p class="text-sm md:text-lg text-gray-300 mt-1">Projects in Development</p>
                         </div>
                     </div>
@@ -914,7 +914,7 @@
                             <img src="../assets/images/legacy/Group (2).png" alt="group">
                         </div>
                         <div>
-                            <h3 class="text-2xl md:text-3xl font-bold">5,000+</h3>
+                            <h3 class="text-2xl md:text-3xl font-bold"><span class="counter" data-target="5000">0</span>+</h3>
                             <p class="text-sm md:text-lg text-gray-300 mt-1">Employees</p>
                         </div>
                     </div>
@@ -925,7 +925,7 @@
                             <img src="../assets/images/legacy/Frame.png" alt="group">
                         </div>
                         <div>
-                            <h3 class="text-2xl md:text-3xl font-bold">08</h3>
+                            <h3 class="text-2xl md:text-3xl font-bold"><span class="counter" data-target="8" data-format="pad2">00</span></h3>
                             <p class="text-sm md:text-lg text-gray-300 mt-1">Divisions</p>
                         </div>
                     </div>
@@ -939,15 +939,15 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <!-- Left: Text -->
                     <div class="lg:col-span-4 space-y-6">
-                        <h2 class="section-title text-[#111827] mb-6 md:mb-0">Our
+                        <h2 class="scroll-move section-title text-[#111827] mb-6 md:mb-0">Our
                             Heritage</h2>
-                        <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                        <p class="scroll-move text-gray-600 text-sm md:text-base leading-relaxed">
                             There are many variations of passages of Lorem Ipsum available, but the majority have
                             suffered alteration in some form, by injected humour, or randomised words which don't look
                             even slightly.
                         </p>
                         <a href="#"
-                            class="group inline-flex items-center gap-4 bg-transparent border border-[#111827] text-[#111827] pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-[#111827] hover:text-white transition-colors duration-300 w-fit">
+                            class="scroll-move group inline-flex items-center gap-4 bg-transparent border border-[#111827] text-[#111827] pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-[#111827] hover:text-white transition-colors duration-300 w-fit">
                             <!-- Text Animation -->
                             <div class="relative h-5 overflow-hidden pointer-events-none">
                                 <span
@@ -1266,8 +1266,54 @@
                         prevEl: '.legacy-prev',
                     },
                 });
-            }
-        });
+            // Counter Animation
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; // The lower the slower
+
+            const animateCounters = () => {
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText.replace(/,/g, '');
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            let nextValue = Math.ceil(count + inc);
+                            counter.innerText = nextValue.toLocaleString();
+                            setTimeout(updateCount, 20);
+                        } else {
+                            const format = counter.getAttribute('data-format');
+                            if (format === 'pad2') {
+                                counter.innerText = target.toString().padStart(2, '0');
+                            } else {
+                                counter.innerText = target.toLocaleString();
+                            }
+                        }
+                    };
+                    updateCount();
+                });
+            };
+
+            // Intersection Observer for Counter
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                let hasIntersected = false;
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        hasIntersected = true;
+                        observer.unobserve(entry.target);
+                    }
+                });
+                if (hasIntersected) {
+                    animateCounters();
+                }
+            }, { threshold: 0.5 });
+
+            const aboutSection = document.getElementById('about-company');
+            const statsSection = document.querySelector('.bg-\\[\\#111827\\]'); // Stats section
+            if (aboutSection) counterObserver.observe(aboutSection);
+            if (statsSection) counterObserver.observe(statsSection);
+            } // Close if (legacySwiperEl)
+        }); 
     </script>
 </body>
 
