@@ -841,7 +841,11 @@
               .hide-scrollbar::-webkit-scrollbar {
                 display: none;
               }
-            </style>
+            
+      #bizPrev.swiper-button-disabled, #bizNext.swiper-button-disabled {
+        display: none !important;
+      }
+    </style>
             <div class="min-w-[750px] lg:min-w-0 w-full h-full relative">
               <!-- Timeline Item 1 -->
               <div
@@ -1400,21 +1404,35 @@
     </div>
     <!-- Company Business Section -->
     <style>
-      /* Glass Card Styling */
-      .biz-card {
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        border: 1.5px solid rgba(255, 255, 255, 0.15);
-        border-radius: 14px;
-        overflow: hidden;
-        position: relative;
-        transition: 0.5s ease;
+      /* Cutout Variables for responsiveness */
+      :root {
+        --cutout-w: 120px;
+        --cutout-h: 100px;
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --cutout-w: 100px;
+          --cutout-h: 80px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        :root {
+          --cutout-w: 80px;
+          --cutout-h: 70px;
+        }
       }
 
       /* All cards same height */
-      .biz-card-short,
+      .biz-card-short {
+        height: 450px;
+        clip-path: polygon(var(--cutout-w) 0, 100% 0, 100% 100%, 0 100%, 0 var(--cutout-h));
+      }
+
       .biz-card-tall {
         height: 450px;
+        clip-path: polygon(0 0, calc(100% - var(--cutout-w)) 0, 100% var(--cutout-h), 100% 100%, 0 100%);
       }
 
       /* Vertical Sidebar Text */
@@ -1428,53 +1446,96 @@
         color: rgba(255, 255, 255, 0.35);
       }
 
+      .biz-card {
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+        transition: 0.5s ease;
+        /* সব sides এ হালকা border */
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      /* LEFT CURVE - বড় করা হয়েছে */
       .biz-card-cutout-left {
         position: absolute;
         top: -1px;
         left: -1px;
-        width: 160px;
-        height: 80px;
-        z-index: 30;
-        overflow: hidden;
-        background-color: black;
+        width: var(--cutout-w);
+        height: var(--cutout-h);
+        z-index: 40;
+        border-radius: 4px;
+        overflow: visible;
+        border-bottom-left-radius: 2%;
+        border-color: white;
+        background: transparent;
+      }
+
+      .biz-card-cutout-left::before {
+        content: '';
+        position: absolute;
+        top: var(--cutout-h);
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
       }
 
       .biz-card-cutout-left::after {
         content: '';
         position: absolute;
         top: 0;
-        left: 0;
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        background: transparent;
-        box-shadow: -80px -80px 0 0 #020307;
+        right: -2px;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
       }
 
+      /* RIGHT CURVE - Background যোগ করুন */
       .biz-card-cutout-right {
         position: absolute;
         top: -1px;
         right: -1px;
-        width: 180px;
-        height: 80px;
-        z-index: 30;
+        width: var(--cutout-w);
+        height: var(--cutout-h);
+        z-index: 40;
+        overflow: visible;
+        border-radius: 4px;
+        /* ← এই দুটি line যোগ করুন */
+        background: transparent;
+        border-color: white;
       }
 
       .biz-card-cutout-right::after {
         content: '';
         position: absolute;
         top: 0;
-        right: 0;
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        background: transparent;
-        box-shadow: 80px -80px 0 0 #020307;
+        left: -2px;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+      }
+
+      .biz-card-cutout-right::before {
+        content: '';
+        position: absolute;
+        top: var(--cutout-h);
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+      }
+
+
+
+      /* Hover effect - border color change */
+      .biz-card:hover {
+        border-color: rgba(255, 255, 255, 0.3);
       }
     </style>
 
-    <section
-      class="relative w-full min-h-screen bg-[#020307] py-20 overflow-hidden flex flex-col justify-center z-10 text-white">
+    <section class="relative w-full py-20 overflow-hidden flex flex-col justify-center z-10 text-white">
 
       <!-- Background Layers -->
       <video class="absolute inset-0 w-full h-full object-cover z-0" src="./assets/video/home.mp4" autoplay loop muted
@@ -1500,34 +1561,39 @@
           </div>
         </div>
 
-        <!-- Center Section: Large Text & Nav Button -->
-        <div class="relative flex justify-center items-center mb-8 h-16 w-full z-0">
-          <h3
-            class="text-white text-3xl md:text-5xl font-black uppercase tracking-[0.5em] opacity-100 select-none drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]">
-            BUSINESS
-          </h3>
-
-          <!-- Right Nav Button -->
-          <button id="bizNext"
-            class="absolute right-0 w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#1864FF] shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-110 transition-all z-50">
-            <i class="fa-solid fa-arrow-right text-lg"></i>
-          </button>
-        </div>
-
         <!-- Slider Area -->
         <div class="relative w-full z-10 mt-16 md:mt-24">
-          <div class="swiper bizSwiper !overflow-visible">
-            <!-- items-end makes the short and tall cards align perfectly at the bottom -->
+          <div class="swiper bizSwiper">
+            <div class="absolute inset-0 flex justify-center items-start pt-6 z-30 pointer-events-none">
+              <h3
+                class="text-white section-title uppercase opacity-100 select-none drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]">
+                BUSINESS
+              </h3>
+            </div>
+
+            
+            <!-- Left Nav Button -->
+            <button id="bizPrev"
+              class="absolute w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#1864FF] shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-110 transition-all z-50 pointer-events-auto"
+              style="top: calc(var(--cutout-h) / 2 - 24px); left: calc(var(--cutout-w) / 2 - 24px);">
+              <i class="fa-solid fa-arrow-left text-lg"></i>
+            </button>
+            <!-- Right Nav Button (centered inside top-right cutout) -->
+            <button id="bizNext"
+              class="absolute w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#1864FF] shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-110 transition-all z-50 pointer-events-auto"
+              style="top: calc(var(--cutout-h) / 2 - 24px); right: calc(var(--cutout-w) / 2 - 24px);">
+              <i class="fa-solid fa-arrow-right text-lg"></i>
+            </button>
             <div class="swiper-wrapper">
 
               <!-- Card 1: REAL STATE -->
-              <div class="swiper-slide">
-                <div class="biz-card biz-card-short group p-5 flex flex-col justify-end">
-                  <!-- Cutout Top Left -->
-                  <div class="biz-card-cutout-left"></div>
+              <div class="swiper-slide relative">
+                <!-- Cutout Top Left -->
+                  <div class="biz-card-cutout-left z-50 pointer-events-none"></div>
+                <div class="biz-card biz-card-short group p-5 flex flex-col justify-end group-hover:bg-[#419bd1] w-full h-full">
                   <!-- Building popping out -->
                   <img src="./assets/images/home/history (2).png"
-                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[140%] h-[400px] transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0">
+                    class="object-cover absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[140%] h-[400px] transition-transform duration-700 group-hover:scale-120 pointer-events-none drop-shadow-2xl z-0">
 
                   <!-- Glass inner gradient -->
                   <div
@@ -1565,13 +1631,13 @@
               </div>
 
               <!-- Card 2: HOSPITAL -->
-              <div class="swiper-slide">
-                <div class="biz-card biz-card-tall group p-5 flex flex-col justify-end">
-                  <!-- Cutout Top Right -->
-                  <div class="biz-card-cutout-right"></div>
+              <div class="swiper-slide relative">
+                <!-- Cutout Top Right -->
+                  <div class="biz-card-cutout-right z-50 pointer-events-none"></div>
+                <div class="biz-card biz-card-tall group p-5 flex flex-col justify-end group-hover:bg-[#419bd1] w-full h-full">
                   <!-- Building popping out -->
                   <img src="./assets/images/home/business2.png"
-                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] md:w-[95%] max-w-none h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0">
+                    class="object-cover absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] md:w-[95%] max-w-none h-auto transition-transform duration-700 group-hover:scale-120 pointer-events-none drop-shadow-2xl z-0">
 
                   <div
                     class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent rounded-14px pointer-events-none z-10">
@@ -1607,14 +1673,15 @@
                 </div>
               </div>
 
-              <!-- Card 3: REAL STATE -->
-              <div class="swiper-slide">
-                <div class="biz-card biz-card-short group p-5 flex flex-col justify-end">
-                  <!-- Cutout Top Left -->
-                  <div class="absolute -top-[1px] -left-[1px] w-12 md:w-[100px] h-12 bg-[#020307] rounded-br-2xl z-30">
-                  </div>
-                  <img src="./assets/images/home/business1.png"
-                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[110%] max-w-none h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0">
+              <div class="swiper-slide relative">
+                <!-- Cutout Top Left -->
+                  <div class="biz-card-cutout-left z-50 pointer-events-none"></div>
+                <div class="biz-card biz-card-short group p-5 flex flex-col justify-end group-hover:bg-[#419bd1] w-full h-full">
+                  <!-- Building popping out -->
+                  <img src="./assets/images/home/history (2).png"
+                    class="object-cover absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[140%] h-[400px] transition-transform duration-700 group-hover:scale-120 pointer-events-none drop-shadow-2xl z-0">
+
+                  <!-- Glass inner gradient -->
                   <div
                     class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent rounded-14px pointer-events-none z-10">
                   </div>
@@ -1649,14 +1716,190 @@
                 </div>
               </div>
 
-              <!-- Card 4: HOSPITAL -->
-              <div class="swiper-slide">
-                <div class="biz-card biz-card-tall group p-5 flex flex-col justify-end">
-                  <!-- Cutout Top Right -->
-                  <div class="absolute -top-[1px] -right-[1px] w-12 md:w-[100px] h-12 bg-[#020307] rounded-bl-2xl z-30">
-                  </div>
+              <!-- Card 2: HOSPITAL -->
+              <div class="swiper-slide relative">
+                <!-- Cutout Top Right -->
+                  <div class="biz-card-cutout-right z-50 pointer-events-none"></div>
+                <div class="biz-card biz-card-tall group p-5 flex flex-col justify-end group-hover:bg-[#419bd1] w-full h-full">
+                  <!-- Building popping out -->
                   <img src="./assets/images/home/business2.png"
-                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] md:w-[95%] max-w-none h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none drop-shadow-2xl z-0">
+                    class="object-cover absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] md:w-[95%] max-w-none h-auto transition-transform duration-700 group-hover:scale-120 pointer-events-none drop-shadow-2xl z-0">
+
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent rounded-14px pointer-events-none z-10">
+                  </div>
+
+                  <div class="relative z-20 flex justify-between items-end w-full">
+                    <div class="text-left w-[85%]">
+                      <div class="relative h-5 overflow-hidden">
+                        <h4
+                          class="text-sm md:text-base font-bold tracking-widest uppercase leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                          HOSPITAL</h4>
+                        <h4
+                          class="text-sm md:text-base font-bold tracking-widest uppercase leading-5 absolute top-0 left-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                          HOSPITAL</h4>
+                      </div>
+                      <div class="relative h-4 overflow-hidden mt-1">
+                        <p
+                          class="text-gray-400 section-text leading-4 transition-transform duration-500 group-hover:-translate-y-full">
+                          Lorem Ipsum is simply dummy text of</p>
+                        <p
+                          class="text-gray-400 section-text leading-4 absolute top-0 left-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                          Lorem Ipsum is simply dummy text of</p>
+                      </div>
+                    </div>
+                    <div
+                      class="relative w-8 h-8 md:w-9 md:h-9 rounded-full border border-white flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-white/20 transition-colors duration-500">
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- Card 1: REAL STATE -->
+              <div class="swiper-slide relative">
+                <!-- Cutout Top Left -->
+                  <div class="biz-card-cutout-left z-50 pointer-events-none"></div>
+                <div class="biz-card biz-card-short group p-5 flex flex-col justify-end group-hover:bg-[#419bd1] w-full h-full">
+                  <!-- Building popping out -->
+                  <img src="./assets/images/home/history (2).png"
+                    class="object-cover absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[140%] h-[400px] transition-transform duration-700 group-hover:scale-120 pointer-events-none drop-shadow-2xl z-0">
+
+                  <!-- Glass inner gradient -->
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent rounded-14px pointer-events-none z-10">
+                  </div>
+
+                  <div class="relative z-20 flex justify-between items-end w-full">
+                    <div class="text-left w-[85%]">
+                      <div class="relative h-5 overflow-hidden">
+                        <h4
+                          class="text-sm md:text-base font-bold tracking-widest uppercase leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                          REAL STATE</h4>
+                        <h4
+                          class="text-sm md:text-base font-bold tracking-widest uppercase leading-5 absolute top-0 left-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                          REAL STATE</h4>
+                      </div>
+                      <div class="relative h-4 overflow-hidden mt-1">
+                        <p
+                          class="text-gray-400 section-text leading-4 transition-transform duration-500 group-hover:-translate-y-full">
+                          Lorem Ipsum is simply dummy text of</p>
+                        <p
+                          class="text-gray-400 section-text leading-4 absolute top-0 left-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                          Lorem Ipsum is simply dummy text of</p>
+                      </div>
+                    </div>
+                    <div
+                      class="relative w-8 h-8 md:w-9 md:h-9 rounded-full border border-white flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-white/20 transition-colors duration-500">
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: HOSPITAL -->
+              <div class="swiper-slide relative">
+                <!-- Cutout Top Right -->
+                  <div class="biz-card-cutout-right z-50 pointer-events-none"></div>
+                <div class="biz-card biz-card-tall group p-5 flex flex-col justify-end group-hover:bg-[#419bd1] w-full h-full">
+                  <!-- Building popping out -->
+                  <img src="./assets/images/home/business2.png"
+                    class="object-cover absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] md:w-[95%] max-w-none h-auto transition-transform duration-700 group-hover:scale-120 pointer-events-none drop-shadow-2xl z-0">
+
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent rounded-14px pointer-events-none z-10">
+                  </div>
+
+                  <div class="relative z-20 flex justify-between items-end w-full">
+                    <div class="text-left w-[85%]">
+                      <div class="relative h-5 overflow-hidden">
+                        <h4
+                          class="text-sm md:text-base font-bold tracking-widest uppercase leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                          HOSPITAL</h4>
+                        <h4
+                          class="text-sm md:text-base font-bold tracking-widest uppercase leading-5 absolute top-0 left-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                          HOSPITAL</h4>
+                      </div>
+                      <div class="relative h-4 overflow-hidden mt-1">
+                        <p
+                          class="text-gray-400 section-text leading-4 transition-transform duration-500 group-hover:-translate-y-full">
+                          Lorem Ipsum is simply dummy text of</p>
+                        <p
+                          class="text-gray-400 section-text leading-4 absolute top-0 left-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                          Lorem Ipsum is simply dummy text of</p>
+                      </div>
+                    </div>
+                    <div
+                      class="relative w-8 h-8 md:w-9 md:h-9 rounded-full border border-white flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-white/20 transition-colors duration-500">
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide relative">
+                <!-- Cutout Top Left -->
+                  <div class="biz-card-cutout-left z-50 pointer-events-none"></div>
+                <div class="biz-card biz-card-short group p-5 flex flex-col justify-end group-hover:bg-[#419bd1] w-full h-full">
+                  <!-- Building popping out -->
+                  <img src="./assets/images/home/history (2).png"
+                    class="object-cover absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] md:w-[140%] h-[400px] transition-transform duration-700 group-hover:scale-120 pointer-events-none drop-shadow-2xl z-0">
+
+                  <!-- Glass inner gradient -->
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent rounded-14px pointer-events-none z-10">
+                  </div>
+
+                  <div class="relative z-20 flex justify-between items-end w-full">
+                    <div class="text-left w-[85%]">
+                      <div class="relative h-5 overflow-hidden">
+                        <h4
+                          class="text-sm md:text-base font-bold tracking-widest uppercase leading-5 transition-transform duration-500 group-hover:-translate-y-full">
+                          REAL STATE</h4>
+                        <h4
+                          class="text-sm md:text-base font-bold tracking-widest uppercase leading-5 absolute top-0 left-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                          REAL STATE</h4>
+                      </div>
+                      <div class="relative h-4 overflow-hidden mt-1">
+                        <p
+                          class="text-gray-400 section-text leading-4 transition-transform duration-500 group-hover:-translate-y-full">
+                          Lorem Ipsum is simply dummy text of</p>
+                        <p
+                          class="text-gray-400 section-text leading-4 absolute top-0 left-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                          Lorem Ipsum is simply dummy text of</p>
+                      </div>
+                    </div>
+                    <div
+                      class="relative w-8 h-8 md:w-9 md:h-9 rounded-full border border-white flex items-center justify-center overflow-hidden shrink-0 group-hover:bg-white/20 transition-colors duration-500">
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                      <img src="./assets/images/home/right-arrow.png" alt="arrow"
+                        class="absolute w-3 h-3 md:w-3.5 md:h-3.5 brightness-0 invert transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: HOSPITAL -->
+              <div class="swiper-slide relative">
+                <!-- Cutout Top Right -->
+                  <div class="biz-card-cutout-right z-50 pointer-events-none"></div>
+                <div class="biz-card biz-card-tall group p-5 flex flex-col justify-end group-hover:bg-[#419bd1] w-full h-full">
+                  <!-- Building popping out -->
+                  <img src="./assets/images/home/business2.png"
+                    class="object-cover absolute bottom-0 left-1/2 -translate-x-1/2 w-[105%] md:w-[95%] max-w-none h-auto transition-transform duration-700 group-hover:scale-120 pointer-events-none drop-shadow-2xl z-0">
+
                   <div
                     class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent rounded-14px pointer-events-none z-10">
                   </div>
@@ -1700,17 +1943,19 @@
     <!-- Swiper JS Init -->
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        const bizSwiper = new Swiper('.bizSwiper', {
+                const bizSwiper = new Swiper('.bizSwiper', {
           slidesPerView: 1.2,
           spaceBetween: 25,
-          loop: true,
+          slidesPerGroup: 1,
+          loop: false,
+          navigation: {
+            nextEl: '#bizNext',
+            prevEl: '#bizPrev',
+          },
           breakpoints: {
-            640: { slidesPerView: 2.2, spaceBetween: 24 },
-            1024: { slidesPerView: 4, spaceBetween: 30 }
+            640: { slidesPerView: 2.2, spaceBetween: 24, slidesPerGroup: 2 },
+            1024: { slidesPerView: 4, spaceBetween: 30, slidesPerGroup: 4 }
           }
-        });
-        document.getElementById('bizNext').addEventListener('click', () => {
-          bizSwiper.slideNext();
         });
       });
     </script>
