@@ -25,6 +25,14 @@
   <!-- Local CSS -->
   <link rel="stylesheet" href="../assets/css/input.css" />
   <link rel="stylesheet" href="../assets/css/custom.css" />
+  <style>
+    .white-arrow-filter {
+      filter: brightness(0) invert(1);
+    }
+    .group:hover .hover-emerald-arrow-filter {
+      filter: brightness(0) saturate(100%) invert(56%) sepia(86%) saturate(400%) hue-rotate(113deg) brightness(96%) contrast(89%);
+    }
+  </style>
 </head>
 
 <body class="font-manrope overflow-x-hidden">
@@ -47,11 +55,10 @@
     </nav>
   </aside>
   <!-- Header: Absolute to stay on top of Slider -->
-  <header class="relative top-0 left-0 w-full z-50">
+  <header class="sticky top-0 left-0 w-full z-50">
     <!-- Top Bar -->
     <div class="bg-[#111827] border-b border-white/10 py-2 hidden lg:block text-[#E7E7E7]">
-      <div
-        class="container mx-auto px-4 md:px-10 flex justify-between items-center text-base font-normal tracking-wide">
+      <div class="container mx-auto px-4  flex justify-between items-center text-base font-normal tracking-wide">
         <!-- Left: Phone -->
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-phone"></i>
@@ -64,9 +71,12 @@
         </div>
         <!-- Right: Social Icons -->
         <div class="flex items-center gap-5 text-base">
-          <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-          <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+          <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-x-twitter"></i></a>
+          <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-youtube"></i></a>
           <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
@@ -74,7 +84,7 @@
 
     <!-- Navbar -->
     <div class="bg-[#111827] border-b border-white/10 w-full">
-      <div class="container mx-auto px-4 md:px-10 h-24 flex items-center justify-between text-white">
+      <div class="container mx-auto px-4  h-24 flex items-center justify-between text-white">
         <div class="flex-shrink-0">
           <a href="../index.html">
             <img src="../assets/images/logo.png" alt="logo" class="h-14 md:h-16" />
@@ -439,7 +449,7 @@
             <i
               class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
           </a>
-          <a href="./sustainability.html"
+          <a href="./investor.html.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -454,7 +464,7 @@
             <i
               class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
           </a>
-          <a href="#"
+          <a href="./office-locations.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -472,7 +482,7 @@
         </nav>
 
         <div class="flex items-center gap-4">
-          <a href="#"
+          <a href="./contact.html"
             class="group relative bg-[#1864FF] text-white px-7 py-2.5 rounded-full font-semibold text-base hover:bg-blue-600 transition shadow-md whitespace-nowrap overflow-hidden inline-flex items-center justify-center">
             <div class="relative h-5 overflow-hidden pointer-events-none">
               <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">
@@ -495,33 +505,32 @@
   </header>
 
     <!-- Investor Hero Section -->
-    <section class="relative w-full h-[60vh] min-h-[450px] flex items-end pb-12 md:pb-16 mt-0">
+    <section class="animate-hero-height relative w-full h-[60vh] min-h-[450px] flex items-end pb-12 md:pb-16 mt-0 overflow-hidden">
       <!-- Background Image -->
-      <img src="../assets/images/home/hero1.jpg" alt="Investor Relations" class="absolute inset-0 w-full h-full object-cover z-0">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 z-0"></div>
+      <img src="../assets/images/investor/hero.png" alt="Investor Relations" class="absolute inset-0 w-full h-full object-cover z-0 animate-zoom-slow">
       
       <!-- Content -->
-      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px] relative z-10">
-        <h1 class="text-4xl md:text-5xl lg:text-[56px] font-bold text-white uppercase tracking-wide leading-[1.1] drop-shadow-lg">
+      <div class="container mx-auto px-4 relative z-10">
+        <h1 class="section-title text-white tracking-wide leading-[1.1] drop-shadow-lg">
           SUSTAINABLE GROWTH<br>FOR INVESTORS
         </h1>
       </div>
     </section>
 
     <!-- Sub Navigation Tabs -->
-    <div class="w-full bg-white border-b border-gray-200 shadow-sm sticky top-0 z-40">
-      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px] flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
-        <a href="#" class="py-4 md:py-5 text-[#2563EB] text-sm md:text-[15px] font-semibold border-b-[3px] border-[#2563EB]">Why Invest</a>
-        <a href="#" class="py-4 md:py-5 text-gray-500 hover:text-gray-900 transition-colors text-sm md:text-[15px] font-medium border-b-[3px] border-transparent hover:border-gray-300">Message To Investors</a>
-        <a href="#" class="py-4 md:py-5 text-gray-500 hover:text-gray-900 transition-colors text-sm md:text-[15px] font-medium border-b-[3px] border-transparent hover:border-gray-300">Corporate Directors</a>
+    <div class="w-full bg-white shadow-sm sticky top-[97px] lg:top-[138px] z-40">
+      <div class="container mx-auto px-4 flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
+        <a href="#" class="py-4 md:py-5 text-[#2563EB] section-text font-semibold border-b-[3px] border-[#2563EB]">Why Invest</a>
+        <a href="#" class="py-4 md:py-5 text-gray-900 transition-colors section-text font-medium border-b-[3px] border-transparent hover:border-gray-300">Message To Investors</a>
+        <a href="#" class="py-4 md:py-5 text-gray-900 transition-colors section-text font-medium border-b-[3px] border-transparent hover:border-gray-300">Corporate Directors</a>
       </div>
     </div>
 
     <!-- Intro Text Section -->
     <section class="w-full bg-[#FAFAFA] py-20 md:py-32">
-      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
-        <div class="max-w-4xl mx-auto text-center">
-          <p class="text-gray-600 font-serif italic text-lg md:text-[22px] lg:text-[24px] leading-[1.8] tracking-wide">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto text-center">
+          <p class="text-gray-600 italic text-lg md:text-[22px] font-medium leading-[1.8] tracking-wide">
             Bhaiya Group is one of Bangladesh's leading conglomerates, with a strong presence in real estate, housing, hospitality, food & beverage, and media industries. Driven by innovation and sustainable development, we continue to expand our footprint across the country. Our commitment to transparency, operational excellence, and long-term value creation ensures confidence among investors and stakeholders.
           </p>
         </div>
@@ -529,15 +538,15 @@
     </section>
 
     <!-- Chairman Message Section -->
-    <section class="w-full bg-white py-20 md:py-32 font-manrope">
-      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+    <section class="w-full bg-white py-20 md:py-32">
+      <div class="container mx-auto px-4">
         
-        <h2 class="text-3xl md:text-[40px] font-bold text-[#111827] mb-12 md:mb-16">Chairman Message To Investors</h2>
+        <h2 class="section-title capitalize text-[#111827] mb-12 md:mb-16">Chairman Message To Investors</h2>
         
         <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 items-stretch">
           
           <!-- Left Column (Image & Borders) -->
-          <div class="w-full lg:w-[45%] shrink-0">
+          <div class="w-full lg:w-[45%] shrink-0 scale-in-hor-left">
             <!-- The precise border configuration -->
             <div class="border border-[#93C5FD] w-full aspect-[4/4.2] md:aspect-[4/3.8] lg:aspect-[4/4.5] relative bg-transparent">
               <!-- Image Wrapper -->
@@ -550,9 +559,9 @@
           </div>
 
           <!-- Right Column (Text Content) -->
-          <div class="w-full lg:w-[55%] flex flex-col justify-start">
+          <div class="w-full lg:w-[55%] flex flex-col justify-start scale-in-hor-right">
             
-            <div class="text-gray-600 font-serif italic text-sm md:text-[15px] leading-[1.9] space-y-6 mb-10 lg:mb-12">
+            <div class="text-gray-600 scroll-move italic section-text font-medium leading-[1.9] space-y-6 mb-10 lg:mb-12">
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum. specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, rema
               </p>
@@ -570,7 +579,7 @@
             <!-- Signature block -->
             <div class="mt-auto">
               <h3 class="text-2xl md:text-[28px] font-bold text-[#111827] mb-1.5">Maroof Sattar Ali</h3>
-              <p class="text-[#2563EB] text-[15px] font-semibold">Chairman, Bhaiya Group</p>
+              <p class="text-[#2563EB] section-text font-semibold">Chairman, Bhaiya Group</p>
             </div>
 
           </div>
@@ -580,22 +589,22 @@
     </section>
 
     <!-- Investment Highlights Section -->
-    <section class="w-full bg-[#0F172A] py-20 md:py-28 font-manrope">
-      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+    <section class="w-full bg-[#0F172A] py-20 md:py-28">
+      <div class="container mx-auto px-4">
         
         <!-- Header Row -->
         <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-16">
           <div class="w-full lg:w-1/2">
             <div class="flex items-center gap-4 mb-4">
               <div class="w-12 h-[1px] bg-white"></div>
-              <span class="text-white text-sm tracking-wide">Key Strengths &middot;</span>
+              <span class="text-white section-text tracking-wide">Key Strengths &middot;</span>
             </div>
-            <h2 class="text-3xl md:text-[42px] font-bold text-white leading-tight">
+            <h2 class="section-title capitalize text-white">
               Investment Highlights
             </h2>
           </div>
           <div class="w-full lg:w-1/3">
-            <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
+            <p class="text-gray-400 section-text leading-relaxed">
               Our competitive advantages create a strong foundation for sustainable growth and market leadership.
             </p>
           </div>
@@ -605,67 +614,67 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           <!-- Card 1 -->
-          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+          <div class="bg-[#1E293B] scroll-move p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm fade-in-up anim-delay-1">
             <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
               <i class="fa-solid fa-award"></i>
             </div>
             <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">55+ Years of Excellence</h3>
-            <p class="text-gray-400 text-[13px] leading-[1.8]">
+            <p class="text-gray-400 section-text leading-[1.8]">
               A proven track record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
             </p>
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+          <div class="bg-[#1E293B] scroll-move p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm fade-in-up anim-delay-2">
             <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
               <i class="fa-regular fa-building"></i>
             </div>
-            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">50+ Completed Projects</h3>
-            <p class="text-gray-400 text-[13px] leading-[1.8]">
+            <h3 class="section-subtitle capitalize text-white mb-4">50+ Completed Projects</h3>
+            <p class="text-gray-400 section-text leading-[1.8]">
               Successfully executed and delivered over fifty landmark projects on time and within budget. developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
             </p>
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+          <div class="bg-[#1E293B] scroll-move p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm fade-in-up anim-delay-3">
             <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
               <i class="fa-solid fa-arrow-trend-up"></i>
             </div>
-            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">Strong Financial Performance</h3>
-            <p class="text-gray-400 text-[13px] leading-[1.8]">
+            <h3 class="section-subtitle capitalize text-white mb-4">Strong Financial Performance</h3>
+            <p class="text-gray-400 section-text leading-[1.8]">
               Maintaining robust balance sheets and delivering above-market yields for our investment partners. record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
             </p>
           </div>
 
           <!-- Card 4 -->
-          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+          <div class="bg-[#1E293B] scroll-move p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm fade-in-up anim-delay-4">
             <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
               <i class="fa-solid fa-award"></i>
             </div>
-            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">Prime Land Portfolio</h3>
-            <p class="text-gray-400 text-[13px] leading-[1.8]">
+            <h3 class="section-subtitle capitalize text-white mb-4">Prime Land Portfolio</h3>
+            <p class="text-gray-400 section-text leading-[1.8]">
               A proven track record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
             </p>
           </div>
 
           <!-- Card 5 -->
-          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+          <div class="bg-[#1E293B] scroll-move p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm fade-in-up anim-delay-5">
             <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
               <i class="fa-regular fa-building"></i>
             </div>
-            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">High Customer Trust</h3>
-            <p class="text-gray-400 text-[13px] leading-[1.8]">
+            <h3 class="section-subtitle capitalize text-white mb-4">High Customer Trust</h3>
+            <p class="text-gray-400 section-text leading-[1.8]">
               Successfully executed and delivered over fifty landmark projects on time and within budget. developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
             </p>
           </div>
 
           <!-- Card 6 -->
-          <div class="bg-[#1E293B] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm">
+          <div class="bg-[#1E293B] scroll-move p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300 rounded-sm fade-in-up anim-delay-6">
             <div class="w-10 h-10 bg-[#2563EB] rounded-md flex items-center justify-center text-white mb-6 shrink-0">
               <i class="fa-solid fa-globe"></i>
             </div>
-            <h3 class="text-[17px] md:text-[19px] font-bold text-white mb-4">Diversified Business Model</h3>
-            <p class="text-gray-400 text-[13px] leading-[1.8]">
+            <h3 class="section-subtitle capitalize text-white mb-4">Diversified Business Model</h3>
+            <p class="text-gray-400 section-text leading-[1.8]">
               Maintaining robust balance sheets and delivering above-market yields for our investment partners. record of delivering high-quality developments and consistent returns across market cycles. A proven track record of delivering high-quality developments and consistent returns across market cycles.
             </p>
           </div>
@@ -675,8 +684,8 @@
     </section>
 
     <!-- Portfolio / Business Strength Section -->
-    <section class="w-full bg-[#F9FAFB] py-20 md:py-28 font-manrope">
-      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+    <section class="w-full bg-[#F9FAFB] py-20 md:py-28">
+      <div class="container mx-auto px-4">
         
         <!-- Header -->
         <div class="text-center mb-12 md:mb-16">
@@ -714,8 +723,21 @@
                     <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
                       Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
                     </p>
-                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
-                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    <a href="#" class="group/btn text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      <!-- Text Animation -->
+                      <div class="relative h-5 overflow-hidden pointer-events-none">
+                        <span class="block leading-5 transition-transform duration-500 group-hover/btn:-translate-y-full">
+                          Explore Now
+                        </span>
+                        <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover/btn:translate-y-0">
+                          Explore Now
+                        </span>
+                      </div>
+                      <!-- Arrow Animation -->
+                      <div class="relative w-4 h-4 flex items-center justify-center overflow-hidden">
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform group-hover/btn:-translate-x-6 group-hover/btn:opacity-0" />
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover/btn:translate-x-0 group-hover/btn:opacity-100" />
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -738,8 +760,21 @@
                     <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
                       Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
                     </p>
-                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
-                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    <a href="#" class="group/btn text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      <!-- Text Animation -->
+                      <div class="relative h-5 overflow-hidden pointer-events-none">
+                        <span class="block leading-5 transition-transform duration-500 group-hover/btn:-translate-y-full">
+                          Explore Now
+                        </span>
+                        <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover/btn:translate-y-0">
+                          Explore Now
+                        </span>
+                      </div>
+                      <!-- Arrow Animation -->
+                      <div class="relative w-4 h-4 flex items-center justify-center overflow-hidden">
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform group-hover/btn:-translate-x-6 group-hover/btn:opacity-0" />
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover/btn:translate-x-0 group-hover/btn:opacity-100" />
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -762,8 +797,21 @@
                     <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
                       Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
                     </p>
-                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
-                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    <a href="#" class="group/btn text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      <!-- Text Animation -->
+                      <div class="relative h-5 overflow-hidden pointer-events-none">
+                        <span class="block leading-5 transition-transform duration-500 group-hover/btn:-translate-y-full">
+                          Explore Now
+                        </span>
+                        <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover/btn:translate-y-0">
+                          Explore Now
+                        </span>
+                      </div>
+                      <!-- Arrow Animation -->
+                      <div class="relative w-4 h-4 flex items-center justify-center overflow-hidden">
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform group-hover/btn:-translate-x-6 group-hover/btn:opacity-0" />
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover/btn:translate-x-0 group-hover/btn:opacity-100" />
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -786,8 +834,21 @@
                     <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
                       Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
                     </p>
-                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
-                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    <a href="#" class="group/btn text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      <!-- Text Animation -->
+                      <div class="relative h-5 overflow-hidden pointer-events-none">
+                        <span class="block leading-5 transition-transform duration-500 group-hover/btn:-translate-y-full">
+                          Explore Now
+                        </span>
+                        <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover/btn:translate-y-0">
+                          Explore Now
+                        </span>
+                      </div>
+                      <!-- Arrow Animation -->
+                      <div class="relative w-4 h-4 flex items-center justify-center overflow-hidden">
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform group-hover/btn:-translate-x-6 group-hover/btn:opacity-0" />
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover/btn:translate-x-0 group-hover/btn:opacity-100" />
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -810,8 +871,21 @@
                     <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
                       Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
                     </p>
-                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
-                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    <a href="#" class="group/btn text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      <!-- Text Animation -->
+                      <div class="relative h-5 overflow-hidden pointer-events-none">
+                        <span class="block leading-5 transition-transform duration-500 group-hover/btn:-translate-y-full">
+                          Explore Now
+                        </span>
+                        <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover/btn:translate-y-0">
+                          Explore Now
+                        </span>
+                      </div>
+                      <!-- Arrow Animation -->
+                      <div class="relative w-4 h-4 flex items-center justify-center overflow-hidden">
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform group-hover/btn:-translate-x-6 group-hover/btn:opacity-0" />
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover/btn:translate-x-0 group-hover/btn:opacity-100" />
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -834,22 +908,26 @@
                     <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed mb-5">
                       Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
                     </p>
-                    <a href="#" class="text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
-                      Explore Now <i class="fa-solid fa-location-arrow text-[11px] transform rotate-45"></i>
+                    <a href="#" class="group/btn text-white font-bold text-sm md:text-[15px] flex items-center gap-3 hover:text-[#10B981] transition-colors w-fit">
+                      <!-- Text Animation -->
+                      <div class="relative h-5 overflow-hidden pointer-events-none">
+                        <span class="block leading-5 transition-transform duration-500 group-hover/btn:-translate-y-full">
+                          Explore Now
+                        </span>
+                        <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover/btn:translate-y-0">
+                          Explore Now
+                        </span>
+                      </div>
+                      <!-- Arrow Animation -->
+                      <div class="relative w-4 h-4 flex items-center justify-center overflow-hidden">
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform group-hover/btn:-translate-x-6 group-hover/btn:opacity-0" />
+                        <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 white-arrow-filter group-hover/btn:hover-emerald-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover/btn:translate-x-0 group-hover/btn:opacity-100" />
+                      </div>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-        </div>
-
-        <!-- Slider Pagination Controls -->
-        <div class="flex justify-center mt-12 md:mt-16">
-          <div class="bg-gray-200/80 rounded-full px-5 py-2 flex items-center gap-6 text-gray-500 shadow-sm border border-gray-300/50">
-            <button class="hover:text-[#111827] transition-colors px-2"><i class="fa-solid fa-angle-left text-sm"></i></button>
-            <button class="hover:text-[#111827] transition-colors px-2"><i class="fa-solid fa-angle-right text-sm"></i></button>
           </div>
         </div>
 
@@ -857,34 +935,48 @@
     </section>
 
     <!-- Annual Reports / Downloads Section -->
-    <section class="w-full bg-[#0F172A] py-20 md:py-28 font-manrope border-t border-[#1E293B]">
-      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+    <section class="w-full bg-[#0F172A] py-20 md:py-28 border-t border-[#1E293B]">
+      <div class="container mx-auto px-4">
         
         <!-- Header Row -->
         <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-16">
           <div class="w-full lg:w-1/2">
             <div class="flex items-center gap-4 mb-4">
               <div class="w-12 h-[1px] bg-white"></div>
-              <span class="text-white text-sm tracking-wide">Downloads</span>
+              <span class="text-white section-text tracking-wide">Downloads</span>
             </div>
-            <h2 class="text-3xl md:text-[42px] font-bold text-white leading-tight">
+            <h2 class="section-title capitalize text-white leading-tight">
               Our Annual Reports
             </h2>
           </div>
           <div class="w-full lg:w-1/3">
-            <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
+            <p class="section-text text-gray-400 leading-relaxed">
               Our competitive advantages create a strong foundation for sustainable growth and market leadership.
             </p>
           </div>
         </div>
 
         <!-- Carousel Wrapper -->
-        <div class="relative max-w-[1200px] mx-auto">
+        <div class="relative mx-auto">
           
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Left Arrow -->
+          <button id="investor-reports-prev"
+            class="hidden absolute -left-5 md:-left-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 border border-white bg-[#0F172A]/80 backdrop-blur-sm text-white items-center justify-center hover:bg-white hover:text-[#0F172A] transition-colors">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+  
+          <!-- Right Arrow -->
+          <button id="investor-reports-next"
+            class="hidden absolute -right-5 md:-right-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 border border-white bg-[#0F172A]/80 backdrop-blur-sm text-white items-center justify-center hover:bg-white hover:text-[#0F172A] transition-colors">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+
+          <div class="overflow-hidden">
+            <div id="investor-reports-slider-track" class="flex transition-transform duration-500 ease-in-out -mx-3">
             
             <!-- Card 1 -->
-            <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
+            <div class="investor-report-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
               <!-- Image -->
               <img src="../assets/images/home/hero1.jpg" alt="Annual Report" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
               
@@ -896,10 +988,10 @@
               
               <!-- Bottom Text -->
               <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-50">
-                <h3 class="text-[17px] md:text-[19px] font-bold text-white uppercase tracking-wide mb-1.5">
+                <h3 class="section-text font-bold text-white uppercase tracking-wide mb-1.5">
                   Bhaiya Housing
                 </h3>
-                <p class="text-gray-300 text-xs md:text-[13px] tracking-wide">
+                <p class="text-gray-300 section-text tracking-wide">
                   Integrated Report 2024-2025
                 </p>
               </div>
@@ -910,10 +1002,12 @@
                   <i class="fa-solid fa-download text-lg"></i> Download Now
                 </a>
               </div>
+              </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
+            <div class="investor-report-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
               <img src="../assets/images/home/hero2.jpg" alt="Annual Report" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
               <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-opacity duration-500"></div>
               <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -922,7 +1016,7 @@
                 <h3 class="text-[17px] md:text-[19px] font-bold text-white uppercase tracking-wide mb-1.5">
                   Bhaiya Housing
                 </h3>
-                <p class="text-gray-300 text-xs md:text-[13px] tracking-wide">
+                <p class="text-gray-300 section-text tracking-wide">
                   Integrated Report 2024-2025
                 </p>
               </div>
@@ -932,10 +1026,12 @@
                   <i class="fa-solid fa-download text-lg"></i> Download Now
                 </a>
               </div>
+              </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
+            <div class="investor-report-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
               <img src="../assets/images/home/hero3.jpg" alt="Annual Report" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
               <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-opacity duration-500"></div>
               <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -944,7 +1040,7 @@
                 <h3 class="text-[17px] md:text-[19px] font-bold text-white uppercase tracking-wide mb-1.5">
                   Bhaiya Housing
                 </h3>
-                <p class="text-gray-300 text-xs md:text-[13px] tracking-wide">
+                <p class="text-gray-300 section-text tracking-wide">
                   Integrated Report 2024-2025
                 </p>
               </div>
@@ -954,36 +1050,105 @@
                   <i class="fa-solid fa-download text-lg"></i> Download Now
                 </a>
               </div>
+              </div>
             </div>
 
-          </div>
+            <!-- Card 4 (Duplicate of 1) -->
+            <div class="investor-report-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
+              <img src="../assets/images/home/hero1.jpg" alt="Annual Report" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-opacity duration-500"></div>
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-50">
+                <h3 class="section-text font-bold text-white uppercase tracking-wide mb-1.5">
+                  Bhaiya Housing
+                </h3>
+                <p class="text-gray-300 section-text tracking-wide">
+                  Integrated Report 2024-2025
+                </p>
+              </div>
 
-          <!-- Slider Arrow (Desktop only) -->
-          <button class="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2 w-10 h-10 border border-[#475569] hover:border-white rounded items-center justify-center text-white hover:bg-white hover:text-[#0F172A] transition-colors">
-            <i class="fa-solid fa-angle-right"></i>
-          </button>
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 ease-out pointer-events-none group-hover:pointer-events-auto">
+                <a href="#" class="bg-[#2563EB] hover:bg-blue-700 text-white font-medium py-3.5 px-7 rounded-sm flex items-center gap-3 transition-colors shadow-lg">
+                  <i class="fa-solid fa-download text-lg"></i> Download Now
+                </a>
+              </div>
+              </div>
+            </div>
+
+            <!-- Card 5 (Duplicate of 2) -->
+            <div class="investor-report-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
+              <img src="../assets/images/home/hero2.jpg" alt="Annual Report" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-opacity duration-500"></div>
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-50">
+                <h3 class="text-[17px] md:text-[19px] font-bold text-white uppercase tracking-wide mb-1.5">
+                  Bhaiya Housing
+                </h3>
+                <p class="text-gray-300 section-text tracking-wide">
+                  Integrated Report 2024-2025
+                </p>
+              </div>
+
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 ease-out pointer-events-none group-hover:pointer-events-auto">
+                <a href="#" class="bg-[#2563EB] hover:bg-blue-700 text-white font-medium py-3.5 px-7 rounded-sm flex items-center gap-3 transition-colors shadow-lg">
+                  <i class="fa-solid fa-download text-lg"></i> Download Now
+                </a>
+              </div>
+              </div>
+            </div>
+
+            <!-- Card 6 (Duplicate of 3) -->
+            <div class="investor-report-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden group cursor-pointer rounded-sm">
+              <img src="../assets/images/home/hero3.jpg" alt="Annual Report" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent transition-opacity duration-500"></div>
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col justify-end transition-opacity duration-500 group-hover:opacity-50">
+                <h3 class="text-[17px] md:text-[19px] font-bold text-white uppercase tracking-wide mb-1.5">
+                  Bhaiya Housing
+                </h3>
+                <p class="text-gray-300 section-text tracking-wide">
+                  Integrated Report 2024-2025
+                </p>
+              </div>
+
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 ease-out pointer-events-none group-hover:pointer-events-auto">
+                <a href="#" class="bg-[#2563EB] hover:bg-blue-700 text-white font-medium py-3.5 px-7 rounded-sm flex items-center gap-3 transition-colors shadow-lg">
+                  <i class="fa-solid fa-download text-lg"></i> Download Now
+                </a>
+              </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
 
         </div>
       </div>
     </section>
 
     <!-- Future Growth Opportunities Section -->
-    <section class="w-full bg-[#F9FAFB] py-20 md:py-28 font-manrope">
-      <div class="container mx-auto px-4 md:px-10 lg:px-16 max-w-[1400px]">
+    <section class="w-full bg-[#F9FAFB] py-20 md:py-28">
+      <div class="container mx-auto px-4">
         
         <!-- Header Row -->
         <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-12 md:mb-16">
           <div class="w-full lg:w-1/2">
             <div class="flex items-center gap-4 mb-4">
               <div class="w-12 h-[1.5px] bg-[#111827]"></div>
-              <span class="text-[#111827] text-[15px] font-semibold tracking-wide">Development</span>
+              <span class="text-[#111827] section-text font-semibold tracking-wide">Development</span>
             </div>
             <h2 class="text-3xl md:text-[42px] font-bold text-[#111827] leading-tight">
               Future Growth Opportunities
             </h2>
           </div>
           <div class="w-full lg:w-1/3 lg:pb-2">
-            <p class="text-gray-500 text-sm md:text-[15px] leading-[1.8]">
+            <p class="text-gray-500 section-text leading-[1.8]">
               A robust pipeline of high-value projects securing our revenue streams for the next decade.
             </p>
           </div>
@@ -993,7 +1158,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           
           <!-- Card 1 -->
-          <div class="bg-white rounded-[20px] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1.5 transition-transform duration-300">
+          <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1.5 transition-transform duration-300">
             <!-- Image -->
             <div class="w-full aspect-[16/10.5] overflow-hidden">
               <img src="../assets/images/home/hero3.jpg" alt="Aura Financial Center" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -1001,12 +1166,12 @@
             
             <!-- Body -->
             <div class="p-6 md:p-8 flex flex-col flex-1">
-              <h3 class="text-[17px] md:text-[19px] font-bold text-[#111827] uppercase tracking-wide mb-6">
+              <h3 class="section-subtitle text-[#111827] tracking-wide mb-6">
                 AURA FINANCIAL CENTER
               </h3>
               
               <!-- Info List -->
-              <div class="flex flex-col gap-3.5 mb-8 text-[14px] text-gray-500">
+              <div class="flex flex-col gap-3.5 mb-8 section-text text-gray-500">
                 <div class="flex items-center gap-3">
                   <i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i>
                   <span>Downtown Metro</span>
@@ -1023,7 +1188,7 @@
               
               <!-- Progress Bar -->
               <div class="mt-auto">
-                <div class="flex justify-between items-center mb-2.5 text-[13px]">
+                <div class="flex justify-between items-center mb-2.5 section-text">
                   <span class="text-gray-600 font-medium">Progress</span>
                   <span class="text-[#111827] font-bold">65%</span>
                 </div>
@@ -1035,7 +1200,7 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-white rounded-[20px] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1.5 transition-transform duration-300">
+          <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1.5 transition-transform duration-300">
             <div class="w-full aspect-[16/10.5] overflow-hidden">
               <img src="../assets/images/home/hero3.jpg" alt="Aura Financial Center" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
@@ -1045,7 +1210,7 @@
                 AURA FINANCIAL CENTER
               </h3>
               
-              <div class="flex flex-col gap-3.5 mb-8 text-[14px] text-gray-500">
+              <div class="flex flex-col gap-3.5 mb-8 section-text text-gray-500">
                 <div class="flex items-center gap-3">
                   <i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i>
                   <span>Downtown Metro</span>
@@ -1061,7 +1226,7 @@
               </div>
               
               <div class="mt-auto">
-                <div class="flex justify-between items-center mb-2.5 text-[13px]">
+                <div class="flex justify-between items-center mb-2.5 section-text">
                   <span class="text-gray-600 font-medium">Progress</span>
                   <span class="text-[#111827] font-bold">65%</span>
                 </div>
@@ -1073,17 +1238,17 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-white rounded-[20px] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1.5 transition-transform duration-300">
+          <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1.5 transition-transform duration-300">
             <div class="w-full aspect-[16/10.5] overflow-hidden">
               <img src="../assets/images/home/hero3.jpg" alt="Aura Financial Center" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             
             <div class="p-6 md:p-8 flex flex-col flex-1">
-              <h3 class="text-[17px] md:text-[19px] font-bold text-[#111827] uppercase tracking-wide mb-6">
+              <h3 class="section-subtitle text-[#111827] tracking-wide mb-6">
                 AURA FINANCIAL CENTER
               </h3>
               
-              <div class="flex flex-col gap-3.5 mb-8 text-[14px] text-gray-500">
+              <div class="flex flex-col gap-3.5 mb-8 section-text text-gray-500">
                 <div class="flex items-center gap-3">
                   <i class="fa-solid fa-location-dot w-4 text-center text-gray-400"></i>
                   <span>Downtown Metro</span>
@@ -1099,7 +1264,7 @@
               </div>
               
               <div class="mt-auto">
-                <div class="flex justify-between items-center mb-2.5 text-[13px]">
+                <div class="flex justify-between items-center mb-2.5 section-text">
                   <span class="text-gray-600 font-medium">Progress</span>
                   <span class="text-[#111827] font-bold">65%</span>
                 </div>
@@ -1109,32 +1274,26 @@
               </div>
             </div>
           </div>
-
-        </div>
-
-        <!-- Slider Pagination Controls -->
-        <div class="flex justify-center mt-12 md:mt-16">
-          <div class="bg-[#D1D5DB] rounded-full px-5 py-2 flex items-center gap-6 text-white shadow-sm cursor-pointer">
-            <button class="hover:text-gray-600 transition-colors px-1"><i class="fa-solid fa-angle-left text-sm"></i></button>
-            <button class="hover:text-gray-600 transition-colors px-1"><i class="fa-solid fa-angle-right text-sm"></i></button>
-          </div>
         </div>
 
       </div>
     </section>
 
-<!-- FOOTER SECTION -->
-    <footer class="bg-[#111827] text-[#E7E7E7] pt-20 pb-8 font-manrope">
+    <!-- FOOTER SECTION -->
+    <footer class="bg-[#111827] text-[#E7E7E7] pb-8">
+      <div class="w-full flex mb-10">
+        <img src="../assets/images/home/footer.jpg" alt="Bhaiya Group Banner" class="w-full h-auto object-cover block">
+      </div>
       <div class="container mx-auto px-4 md:px-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
           <!-- Logo and Contact -->
           <div class="lg:col-span-2 space-y-6">
             <img src="../assets/images/logo.png" alt="Bhaiya Group Logo" class="h-17" height="64px" width="78px" />
-            <div class="space-y-5 text-sm md:text-base opacity-90">
+            <div class="space-y-5 section-text opacity-90">
               <div class="flex items-start gap-4">
                 <i class="fa-solid fa-location-dot mt-1 text-xl"></i>
-                <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor), Motijheel
-                  C/A,
+                <p class="leading-relaxed">28/A-3, Toyenbee Circuler Road, Sandwip Shaban (7th<br />Floor),
+                  Motijheel C/A,
                   Dhaka-1000, Bangladesh</p>
               </div>
               <div class="flex items-center gap-4">
@@ -1154,9 +1313,11 @@
             <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
               <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
               <li><a href="./concerns.html" class="hover:text-white transition-colors">Our Concerns</a></li>
-              <li><a href="./our-products.html" class="hover:text-white transition-colors">Our Products</a></li>
+              <li><a href="./our-products.html" class="hover:text-white transition-colors">Our Products</a>
+              </li>
               <li><a href="./stories.html" class="hover:text-white transition-colors">Media Center</a></li>
-              <li><a href="./office-locations.html" class="hover:text-white transition-colors">Office Location</a></li>
+              <li><a href="./office-locations.html" class="hover:text-white transition-colors">Office
+                  Location</a></li>
             </ul>
           </div>
 
@@ -1167,7 +1328,8 @@
               <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
               <li><a href="./newsletter.html" class="hover:text-white transition-colors">Newsletters</a></li>
               <li><a href="./sustainability.html" class="hover:text-white transition-colors">Sustainability</a></li>
-              <li><a href="./investor.html" class="hover:text-white transition-colors">Investor Relation</a></li>
+              <li><a href="./investor.html" class="hover:text-white transition-colors">Investor Relation</a>
+              </li>
               <li><a href="./contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
@@ -1176,23 +1338,23 @@
           <div>
             <h4 class="text-lg md:text-2xl font-semibold mb-6">Concerns Link</h4>
             <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya Housing <svg
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Bhaiya
+                  Housing <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                     stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                   </svg></a></li>
-              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City <svg
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                  </svg></a></li>
-              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food & Beverage
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Pine City
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                     stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                   </svg></a></li>
-              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati Insurance <svg
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Next Food &
+                  Beverage <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg></a></li>
+              <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Provati
+                  Insurance <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                     stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                   </svg></a></li>
@@ -1235,6 +1397,80 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script type="module" src="../assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.scale-in-hor-left, .scale-in-hor-right, .scale-in-ver-bottom, .fade-in-up').forEach(el => observer.observe(el));
+        
+        // Investor Reports Custom Slider Logic
+        const track = document.getElementById('investor-reports-slider-track');
+        if (track) {
+          const slides = track.querySelectorAll('.investor-report-slide');
+          const totalSlides = slides.length;
+          const prevBtn = document.getElementById('investor-reports-prev');
+          const nextBtn = document.getElementById('investor-reports-next');
+          let currentIndex = 0;
+  
+          function getVisibleCount() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+          }
+  
+          function getMaxIndex() {
+            return Math.max(0, totalSlides - getVisibleCount());
+          }
+  
+          function updateSlider() {
+            const visibleCount = getVisibleCount();
+            const slideWidthPercent = 100 / visibleCount;
+            track.style.transform = `translateX(-${currentIndex * slideWidthPercent}%)`;
+  
+            // Show/hide arrows based on position
+            if (prevBtn) {
+              if (currentIndex === 0) {
+                prevBtn.classList.add('hidden');
+                prevBtn.classList.remove('flex');
+              } else {
+                prevBtn.classList.remove('hidden');
+                prevBtn.classList.add('flex');
+              }
+            }
+            if (nextBtn) {
+              if (currentIndex >= getMaxIndex()) {
+                nextBtn.classList.add('hidden');
+                nextBtn.classList.remove('flex');
+              } else {
+                nextBtn.classList.remove('hidden');
+                nextBtn.classList.add('flex');
+              }
+            }
+          }
+  
+          if (prevBtn) prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) { currentIndex--; updateSlider(); }
+          });
+          if (nextBtn) nextBtn.addEventListener('click', () => {
+            if (currentIndex < getMaxIndex()) { currentIndex++; updateSlider(); }
+          });
+          
+          window.addEventListener('resize', () => {
+            if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
+            updateSlider();
+          });
+          
+          // Initial setup
+          updateSlider();
+        }
+      });
+    </script>
 </body>
 
 </html>
