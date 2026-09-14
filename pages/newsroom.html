@@ -47,7 +47,7 @@
     </nav>
   </aside>
   <!-- Header: Absolute to stay on top of Slider -->
-  <header class="relative top-0 left-0 w-full z-50">
+  <header class="sticky top-0 left-0 w-full z-50">
     <!-- Top Bar -->
     <div class="bg-[#111827] border-b border-white/10 py-2 hidden lg:block text-[#E7E7E7]">
       <div
@@ -64,9 +64,12 @@
         </div>
         <!-- Right: Social Icons -->
         <div class="flex items-center gap-5 text-base">
-          <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-          <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+          <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-x-twitter"></i></a>
+          <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-youtube"></i></a>
           <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
@@ -472,7 +475,7 @@
         </nav>
 
         <div class="flex items-center gap-4">
-          <a href="#"
+          <a href="./contact.html"
             class="group relative bg-[#1864FF] text-white px-7 py-2.5 rounded-full font-semibold text-base hover:bg-blue-600 transition shadow-md whitespace-nowrap overflow-hidden inline-flex items-center justify-center">
             <div class="relative h-5 overflow-hidden pointer-events-none">
               <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">
@@ -509,18 +512,19 @@
         <h1 class="section-title text-white mb-4">
           NEWS ROOM
         </h1>
-       <div class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal">
-                    <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
-                    <i class="fa-solid fa-angle-right text-xs mx-1"></i>
-                    <a href="./stories.html" class="hover:text-blue-400 transition">Media Center</a>
-                    <i class="fa-solid fa-angle-right text-xs mx-1"></i>
-                    <span class="text-white">NEWS ROOM</span>
-                </div>
+        <div class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal">
+          <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
+          <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+          <a href="./stories.html" class="hover:text-blue-400 transition">Media Center</a>
+          <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+          <span class="text-white">NEWS ROOM</span>
+        </div>
       </div>
     </section>
-            <!-- Navigation Tabs -->
-    <div class="w-full bg-white border-b border-gray-200 shadow-sm sticky top-0 z-40">
-      <div class="container mx-auto px-4 md:px-10 flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
+    <!-- Navigation Tabs -->
+    <div class="w-full bg-white border-b border-gray-200 shadow-sm sticky top-24 lg:top-[136px] z-40">
+      <div
+        class="container mx-auto px-4 md:px-10 flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
         <a href="stories.html" class="nav-link py-4 border-b-2 border-transparent">Stories</a>
         <a href="events.html" class="nav-link py-4 border-b-2 border-transparent">Events</a>
         <a href="newsroom.html" class="nav-link py-4 active-link border-b-2 border-brand-blue">News Room</a>
@@ -529,55 +533,80 @@
       </div>
     </div>
 
-        <!-- News List Section -->
+    <!-- News List Section -->
     <style>
       .reveal-fade-up {
         opacity: 0;
         transform: translateY(40px);
         transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       }
+
+      .purple-arrow-filter {
+        /* Approximate #7C3AED */
+        filter: brightness(0) saturate(100%) invert(32%) sepia(87%) saturate(2333%) hue-rotate(247deg) brightness(96%) contrast(97%);
+      }
+
       .reveal-fade-up.active {
         opacity: 1;
         transform: translateY(0);
       }
-    
-    /* Hero Animations from legacy.html */
-    @keyframes zoomSlow {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.1); }
-    }
-    .animate-zoom-slow { animation: zoomSlow 20s linear infinite alternate; }
 
-    @keyframes shrinkHeight {
-      0% { height: 100vh; }
-    }
-    .animate-hero-height { animation: shrinkHeight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-</style>
-    
+      /* Hero Animations from legacy.html */
+      @keyframes zoomSlow {
+        0% {
+          transform: scale(1);
+        }
+
+        100% {
+          transform: scale(1.1);
+        }
+      }
+
+      .animate-zoom-slow {
+        animation: zoomSlow 20s linear infinite alternate;
+      }
+
+      @keyframes shrinkHeight {
+        0% {
+          height: 100vh;
+        }
+      }
+
+      .animate-hero-height {
+        animation: shrinkHeight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+    </style>
+
     <section class="w-full bg-[#FAFAFA] py-16 md:py-24 font-manrope">
-      <div class="container mx-auto px-4 md:px-10">
-        
+      <div class="container mx-auto px-4">
+
         <!-- Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-8 md:gap-y-12">
           <!-- News Card 1 -->
           <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
             <!-- Image -->
             <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
-              <img src="../assets/images/news/1.png" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+              <img src="../assets/images/news/1.png" alt="News Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
             </div>
-            
+
             <!-- Overlapping Dark Box -->
-            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+            <div
+              class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
               <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
-              
-              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+
+              <a href="newsroom-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] section-text font-bold transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
-                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden ml-1">
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                 </div>
               </a>
             </div>
@@ -586,21 +615,27 @@
           <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
             <!-- Image -->
             <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
-              <img src="../assets/images/news/2.png" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+              <img src="../assets/images/news/2.png" alt="News Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
             </div>
-            
+
             <!-- Overlapping Dark Box -->
-            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+            <div
+              class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
               <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
-              
-              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+
+              <a href="newsroom-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] section-text font-bold transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
-                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden ml-1">
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                 </div>
               </a>
             </div>
@@ -609,21 +644,27 @@
           <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
             <!-- Image -->
             <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
-              <img src="../assets/images/news/3.png" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+              <img src="../assets/images/news/3.png" alt="News Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
             </div>
-            
+
             <!-- Overlapping Dark Box -->
-            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+            <div
+              class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
               <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
-              
-              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+
+              <a href="newsroom-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] section-text font-bold transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
-                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden ml-1">
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                 </div>
               </a>
             </div>
@@ -632,21 +673,27 @@
           <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
             <!-- Image -->
             <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
-              <img src="../assets/images/home/hero2.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+              <img src="../assets/images/home/hero2.jpg" alt="News Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
             </div>
-            
+
             <!-- Overlapping Dark Box -->
-            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+            <div
+              class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
               <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
-              
-              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+
+              <a href="newsroom-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] section-text font-bold transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
-                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden ml-1">
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                 </div>
               </a>
             </div>
@@ -655,21 +702,27 @@
           <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
             <!-- Image -->
             <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
-              <img src="../assets/images/home/hero3.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+              <img src="../assets/images/home/hero3.jpg" alt="News Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
             </div>
-            
+
             <!-- Overlapping Dark Box -->
-            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+            <div
+              class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
               <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
-              
-              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+
+              <a href="newsroom-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] section-text font-bold transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
-                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden ml-1">
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                 </div>
               </a>
             </div>
@@ -678,21 +731,27 @@
           <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
             <!-- Image -->
             <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
-              <img src="../assets/images/home/hero1.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+              <img src="../assets/images/home/hero1.jpg" alt="News Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
             </div>
-            
+
             <!-- Overlapping Dark Box -->
-            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+            <div
+              class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
               <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
-              
-              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+
+              <a href="#"
+                class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] section-text font-bold transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
-                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden ml-1">
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                  <img src="../assets/images/home/right-arrow.png" alt="arrow" class="absolute w-3 h-3 purple-arrow-filter transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                 </div>
               </a>
             </div>
@@ -701,21 +760,29 @@
           <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
             <!-- Image -->
             <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
-              <img src="../assets/images/home/hero2.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+              <img src="../assets/images/home/hero2.jpg" alt="News Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
             </div>
-            
+
             <!-- Overlapping Dark Box -->
-            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+            <div
+              class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
               <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
-              
-              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+
+              <a href="newsroom-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
@@ -724,21 +791,29 @@
           <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
             <!-- Image -->
             <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
-              <img src="../assets/images/home/hero3.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+              <img src="../assets/images/home/hero3.jpg" alt="News Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
             </div>
-            
+
             <!-- Overlapping Dark Box -->
-            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+            <div
+              class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
               <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
-              
-              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+
+              <a href="#"
+                class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] section-text font-bold transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
@@ -747,21 +822,29 @@
           <div class="reveal-fade-up relative group cursor-pointer w-full mb-6">
             <!-- Image -->
             <div class="w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm">
-              <img src="../assets/images/home/hero1.jpg" alt="News Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+              <img src="../assets/images/home/hero1.jpg" alt="News Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
             </div>
-            
+
             <!-- Overlapping Dark Box -->
-            <div class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
+            <div
+              class="relative z-10 bg-[#161B26] p-6 mx-4 md:mx-6 -mt-12 md:-mt-16 shadow-xl group-hover:-translate-y-2 transition-transform duration-300">
               <h3 class="text-white text-lg md:text-xl font-bold mb-6 tracking-wide">Company Expansion Announced</h3>
-              
-              <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] text-sm font-bold transition w-fit">
+
+              <a href="newsroom-details.html"
+                class="inline-flex items-center gap-3 bg-transparent text-[#7C3AED] hover:text-[#8B5CF6] section-text font-bold transition w-fit">
                 <div class="relative h-5 overflow-hidden pointer-events-none">
-                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                  <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                  <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                    More</span>
+                  <span
+                    class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                    More</span>
                 </div>
                 <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                  <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
+                  <i
+                    class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
                 </div>
               </a>
             </div>
@@ -769,15 +852,21 @@
 
         </div>
 
-  
-      <!-- Pagination -->
+
+        <!-- Pagination -->
         <div class="flex justify-end items-center gap-2 pt-12 md:pt-16">
-          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Prev</a>
-          <a href="#" class="border border-[#2563EB] bg-[#2563EB] text-white px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium transition-colors">1</a>
-          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">2</a>
-          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">3</a>
-          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">4</a>
-          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Next</a>
+          <a href="#"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Prev</a>
+          <a href="#"
+            class="border border-[#2563EB] bg-[#2563EB] text-white px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium transition-colors">1</a>
+          <a href="#"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">2</a>
+          <a href="#"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">3</a>
+          <a href="#"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">4</a>
+          <a href="#"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Next</a>
         </div>
       </div>
     </section>
@@ -793,7 +882,7 @@
             }
           });
         }, { threshold: 0.1 });
-        
+
         document.querySelectorAll('.reveal-fade-up').forEach(el => observer.observe(el));
       });
     </script>
@@ -913,24 +1002,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

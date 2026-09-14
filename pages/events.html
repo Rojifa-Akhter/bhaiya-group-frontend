@@ -64,9 +64,12 @@
         </div>
         <!-- Right: Social Icons -->
         <div class="flex items-center gap-5 text-base">
-          <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-          <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+          <a href="./our-products.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="./sustainability.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-x-twitter"></i></a>
+          <a href="./contact.html" class="hover:text-blue-400 transition-colors"><i
+              class="fa-brands fa-youtube"></i></a>
           <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
@@ -439,7 +442,7 @@
             <i
               class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
           </a>
-          <a href="./sustainability.html"
+          <a href="./investor.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -454,7 +457,7 @@
             <i
               class="fa-solid fa-plus text-[10px] ml-0.5 transition-transform duration-500 group-hover:rotate-180 group-hover:"></i>
           </a>
-          <a href="#"
+          <a href="./office-locations.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -472,7 +475,7 @@
         </nav>
 
         <div class="flex items-center gap-4">
-          <a href="#"
+          <a href="./contact.html"
             class="group relative bg-[#1864FF] text-white px-7 py-2.5 rounded-full font-semibold text-base hover:bg-blue-600 transition shadow-md whitespace-nowrap overflow-hidden inline-flex items-center justify-center">
             <div class="relative h-5 overflow-hidden pointer-events-none">
               <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">
@@ -509,18 +512,19 @@
         <h1 class="section-title text-white mb-4">
           OUR EVENTS
         </h1>
-       <div class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal">
-                    <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
-                    <i class="fa-solid fa-angle-right text-xs mx-1"></i>
-                    <a href="./stories.html" class="hover:text-blue-400 transition">Media Center</a>
-                    <i class="fa-solid fa-angle-right text-xs mx-1"></i>
-                    <span class="text-white">Our Events</span>
-                </div>
+        <div class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal">
+          <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
+          <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+          <a href="./stories.html" class="hover:text-blue-400 transition">Media Center</a>
+          <i class="fa-solid fa-angle-right text-xs mx-1"></i>
+          <span class="text-white">Our Events</span>
+        </div>
       </div>
     </section>
-        <!-- Navigation Tabs -->
+    <!-- Navigation Tabs -->
     <div class="w-full bg-white border-b border-gray-200 shadow-sm sticky top-0 z-40">
-      <div class="container mx-auto px-4 md:px-10 flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
+      <div
+        class="container mx-auto px-4 md:px-10 flex items-center gap-6 md:gap-10 overflow-x-auto whitespace-nowrap hide-scrollbar">
         <a href="stories.html" class="nav-link py-4 border-b-2 border-transparent">Stories</a>
         <a href="events.html" class="nav-link py-4 active-link border-b-2 border-brand-blue">Events</a>
         <a href="newsroom.html" class="nav-link py-4 border-b-2 border-transparent">News Room</a>
@@ -536,40 +540,55 @@
         transform: translateY(50px);
         transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       }
+
       .reveal-fade-up.active {
         opacity: 1;
         transform: translateY(0);
       }
-    
-    /* Hero Animations from legacy.html */
-    @keyframes zoomSlow {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.1); }
-    }
-    .animate-zoom-slow { animation: zoomSlow 20s linear infinite alternate; }
 
-    @keyframes shrinkHeight {
-      0% { height: 100vh; }
-    }
-    .animate-hero-height { animation: shrinkHeight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-</style>
-    
-    <section class="w-full bg-[#FAFAFA] py-16 md:py-24 font-manrope">
-      <div class="container mx-auto px-4 md:px-10">
-        
-        <div class="flex flex-col max-w-7xl mx-auto">
+      /* Hero Animations from legacy.html */
+      @keyframes zoomSlow {
+        0% {
+          transform: scale(1);
+        }
+
+        100% {
+          transform: scale(1.1);
+        }
+      }
+
+      .animate-zoom-slow {
+        animation: zoomSlow 20s linear infinite alternate;
+      }
+
+      @keyframes shrinkHeight {
+        0% {
+          height: 100vh;
+        }
+      }
+
+      .animate-hero-height {
+        animation: shrinkHeight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+    </style>
+
+    <section class="w-full bg-[#FAFAFA] py-16 md:py-24 ">
+      <div class="container mx-auto">
+
+        <div class="flex flex-col mx-auto">
           <!-- Event Card 1 -->
           <div class="reveal-fade-up flex flex-col lg:flex-row bg-transparent overflow-hidden mb-16 md:mb-24 group">
-            
+
             <!-- Left Side: Date / Content -->
             <div class="flex flex-1 flex-col sm:flex-row items-start lg:items-center pr-0 lg:pr-10 mb-6 lg:mb-0">
-              
+
               <!-- Date Column -->
-              <div class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
+              <div
+                class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
                 <span class="text-4xl md:text-5xl font-medium text-gray-800 leading-none mb-1">18</span>
-                <span class="text-xl md:text-2xl font-medium text-gray-800">Jul</span>
+                <span class="section-subtitle text-gray-800">Jul</span>
               </div>
-              
+
               <!-- Content Column -->
               <div class="pl-6 md:pl-10 flex flex-col justify-center pt-2 sm:pt-0">
                 <div class="flex items-center gap-2 text-gray-600 text-xs md:text-sm font-semibold mb-4">
@@ -578,49 +597,59 @@
                   </div>
                   <span>Jul 18, 2024 8:00 am - Aug 5, 2024 8:30 pm</span>
                 </div>
-                
-                <h3 class="text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
+
+                <h3
+                  class="text-2xl md:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
                   Bhaiya Group of Company Vision in Real State Business
                 </h3>
-                
-                <p class="text-xs md:text-sm text-gray-800 font-medium mb-5">
+
+                <p class="section-text text-gray-800 font-medium mb-5">
                   EventCity Club & 19th Street, Chicago,<br>IL, Bangladesh
                 </p>
-                
-                <p class="text-sm text-gray-500 mb-8 leading-relaxed max-w-2xl">
-                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun. Taste, explore, and be part of a vibrant community
+
+                <p class="section-text text-gray-500 mb-8 leading-relaxed max-w-2xl">
+                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun.
+                  Taste, explore, and be part of a vibrant community
                 </p>
-                
-                <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#2563EB] text-sm font-bold transition w-fit">
+
+                <a href="events-details.html"
+                  class="inline-flex items-center gap-3 bg-transparent text-gray-900 section-text font-bold transition w-fit">
                   <div class="relative h-5 overflow-hidden pointer-events-none">
-                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                    <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                      More</span>
+                    <span
+                      class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                      More</span>
                   </div>
-                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden ml-1">
+                    <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                      class="absolute w-3 h-3 brightness-0 transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                    <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                      class="absolute w-3 h-3 brightness-0 transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                   </div>
                 </a>
               </div>
             </div>
-            
+
             <!-- Right Side: Image -->
-            <div class="w-full lg:w-[500px] xl:w-[600px] aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
-              <img src="../assets/images/events/3.png" alt="Event Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
+            <div class="w-full lg:w-[500px] xl:w-[600px] scroll-move aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
+              <img src="../assets/images/events/3.png" alt="Event Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
             </div>
           </div>
           <!-- Event Card 2 -->
           <div class="reveal-fade-up flex flex-col lg:flex-row bg-transparent overflow-hidden mb-16 md:mb-24 group">
-            
+
             <!-- Left Side: Date / Content -->
             <div class="flex flex-1 flex-col sm:flex-row items-start lg:items-center pr-0 lg:pr-10 mb-6 lg:mb-0">
-              
+
               <!-- Date Column -->
-              <div class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
+              <div
+                class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
                 <span class="text-4xl md:text-5xl font-medium text-gray-800 leading-none mb-1">19</span>
-                <span class="text-xl md:text-2xl font-medium text-gray-800">Jul</span>
+                <span class="section-subtitle text-gray-800">Jul</span>
               </div>
-              
+
               <!-- Content Column -->
               <div class="pl-6 md:pl-10 flex flex-col justify-center pt-2 sm:pt-0">
                 <div class="flex items-center gap-2 text-gray-600 text-xs md:text-sm font-semibold mb-4">
@@ -629,49 +658,59 @@
                   </div>
                   <span>Jul 18, 2024 8:00 am - Aug 5, 2024 8:30 pm</span>
                 </div>
-                
-                <h3 class="text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
+
+                <h3
+                  class="text-2xl md:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
                   Bhaiya Group of Company Vision in Real State Business
                 </h3>
-                
-                <p class="text-xs md:text-sm text-gray-800 font-medium mb-5">
+
+                <p class="section-text text-gray-800 font-medium mb-5">
                   EventCity Club & 19th Street, Chicago,<br>IL, Bangladesh
                 </p>
-                
-                <p class="text-sm text-gray-500 mb-8 leading-relaxed max-w-2xl">
-                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun. Taste, explore, and be part of a vibrant community
+
+                <p class="section-text text-gray-500 mb-8 leading-relaxed max-w-2xl">
+                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun.
+                  Taste, explore, and be part of a vibrant community
                 </p>
-                
-                <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#2563EB] text-sm font-bold transition w-fit">
+
+                <a href="events-details.html"
+                  class="inline-flex items-center gap-3 bg-transparent text-gray-900 section-text font-bold transition w-fit">
                   <div class="relative h-5 overflow-hidden pointer-events-none">
-                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                    <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                      More</span>
+                    <span
+                      class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                      More</span>
                   </div>
-                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden ml-1">
+                    <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                      class="absolute w-3 h-3 brightness-0 transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                    <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                      class="absolute w-3 h-3 brightness-0 transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                   </div>
                 </a>
               </div>
             </div>
-            
+
             <!-- Right Side: Image -->
-            <div class="w-full lg:w-[500px] xl:w-[600px] aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
-              <img src="../assets/images/events/3.png" alt="Event Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
+            <div class="w-full lg:w-[500px] xl:w-[600px] scroll-move aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
+              <img src="../assets/images/events/3.png" alt="Event Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
             </div>
           </div>
           <!-- Event Card 3 -->
           <div class="reveal-fade-up flex flex-col lg:flex-row bg-transparent overflow-hidden mb-16 md:mb-24 group">
-            
+
             <!-- Left Side: Date / Content -->
             <div class="flex flex-1 flex-col sm:flex-row items-start lg:items-center pr-0 lg:pr-10 mb-6 lg:mb-0">
-              
+
               <!-- Date Column -->
-              <div class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
+              <div
+                class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
                 <span class="text-4xl md:text-5xl font-medium text-gray-800 leading-none mb-1">20</span>
-                <span class="text-xl md:text-2xl font-medium text-gray-800">Jul</span>
+                <span class="section-subtitle text-gray-800">Jul</span>
               </div>
-              
+
               <!-- Content Column -->
               <div class="pl-6 md:pl-10 flex flex-col justify-center pt-2 sm:pt-0">
                 <div class="flex items-center gap-2 text-gray-600 text-xs md:text-sm font-semibold mb-4">
@@ -680,49 +719,59 @@
                   </div>
                   <span>Jul 18, 2024 8:00 am - Aug 5, 2024 8:30 pm</span>
                 </div>
-                
-                <h3 class="text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
+
+                <h3
+                  class="text-2xl md:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
                   Bhaiya Group of Company Vision in Real State Business
                 </h3>
-                
-                <p class="text-xs md:text-sm text-gray-800 font-medium mb-5">
+
+                <p class="section-text text-gray-800 font-medium mb-5">
                   EventCity Club & 19th Street, Chicago,<br>IL, Bangladesh
                 </p>
-                
-                <p class="text-sm text-gray-500 mb-8 leading-relaxed max-w-2xl">
-                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun. Taste, explore, and be part of a vibrant community
+
+                <p class="section-text text-gray-500 mb-8 leading-relaxed max-w-2xl">
+                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun.
+                  Taste, explore, and be part of a vibrant community
                 </p>
-                
-                <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#2563EB] text-sm font-bold transition w-fit">
+
+                <a href="#"
+                  class="inline-flex items-center gap-3 bg-transparent text-gray-900 section-text font-bold transition w-fit">
                   <div class="relative h-5 overflow-hidden pointer-events-none">
-                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                    <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                      More</span>
+                    <span
+                      class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                      More</span>
                   </div>
-                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden ml-1">
+                    <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                      class="absolute w-3 h-3 brightness-0 transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                    <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                      class="absolute w-3 h-3 brightness-0 transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                   </div>
                 </a>
               </div>
             </div>
-            
+
             <!-- Right Side: Image -->
-            <div class="w-full lg:w-[500px] xl:w-[600px] aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
-              <img src="../assets/images/events/2.png" alt="Event Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
+            <div class="w-full lg:w-[500px] xl:w-[600px] scroll-move aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
+              <img src="../assets/images/events/2.png" alt="Event Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
             </div>
           </div>
           <!-- Event Card 4 -->
           <div class="reveal-fade-up flex flex-col lg:flex-row bg-transparent overflow-hidden mb-16 md:mb-24 group">
-            
+
             <!-- Left Side: Date / Content -->
             <div class="flex flex-1 flex-col sm:flex-row items-start lg:items-center pr-0 lg:pr-10 mb-6 lg:mb-0">
-              
+
               <!-- Date Column -->
-              <div class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
+              <div
+                class="flex flex-col items-center justify-start sm:justify-center pr-6 md:pr-10 border-r-2 border-[#2563EB] min-w-[80px] md:min-w-[120px] shrink-0 h-full py-2">
                 <span class="text-4xl md:text-5xl font-medium text-gray-800 leading-none mb-1">21</span>
-                <span class="text-xl md:text-2xl font-medium text-gray-800">Jul</span>
+                <span class="section-subtitle text-gray-800">Jul</span>
               </div>
-              
+
               <!-- Content Column -->
               <div class="pl-6 md:pl-10 flex flex-col justify-center pt-2 sm:pt-0">
                 <div class="flex items-center gap-2 text-gray-600 text-xs md:text-sm font-semibold mb-4">
@@ -731,47 +780,62 @@
                   </div>
                   <span>Jul 18, 2024 8:00 am - Aug 5, 2024 8:30 pm</span>
                 </div>
-                
-                <h3 class="text-2xl md:text-3xl lg:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
+
+                <h3
+                  class="text-2xl md:text-[32px] font-medium text-[#1F2937] mb-5 leading-tight group-hover:text-[#2563EB] transition-colors">
                   Bhaiya Group of Company Vision in Real State Business
                 </h3>
-                
-                <p class="text-xs md:text-sm text-gray-800 font-medium mb-5">
+
+                <p class="section-text text-gray-800 font-medium mb-5">
                   EventCity Club & 19th Street, Chicago,<br>IL, Bangladesh
                 </p>
-                
-                <p class="text-sm text-gray-500 mb-8 leading-relaxed max-w-2xl">
-                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun. Taste, explore, and be part of a vibrant community
+
+                <p class="section-text text-gray-500 mb-8 leading-relaxed max-w-2xl">
+                  Join us for a flavorful celebration with the best street food vendors, live music, and family fun.
+                  Taste, explore, and be part of a vibrant community
                 </p>
-                
-                <a href="#" class="inline-flex items-center gap-3 bg-transparent text-[#2563EB] text-sm font-bold transition w-fit">
+
+                <a href="#"
+                  class="inline-flex items-center gap-3 bg-transparent text-gray-900 section-text font-bold transition w-fit">
                   <div class="relative h-5 overflow-hidden pointer-events-none">
-                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read More</span>
-                    <span class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read More</span>
+                    <span class="block leading-5 transition-transform duration-500 group-hover:-translate-y-full">Read
+                      More</span>
+                    <span
+                      class="absolute top-0 left-0 block leading-5 translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read
+                      More</span>
                   </div>
-                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 transition-all duration-500 group-hover:-translate-x-6 group-hover:opacity-0"></i>
-                    <i class="fa-solid fa-location-arrow absolute text-[11px] transform rotate-45 translate-x-6 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100"></i>
+                  <div class="relative w-5 h-5 flex items-center justify-center overflow-hidden ml-1">
+                    <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                      class="absolute w-3 h-3 brightness-0 transition-all duration-500 transform group-hover:-translate-x-6 group-hover:opacity-0" />
+                    <img src="../assets/images/home/right-arrow.png" alt="arrow"
+                      class="absolute w-3 h-3 brightness-0 transition-all duration-500 transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
                   </div>
                 </a>
               </div>
             </div>
-            
+
             <!-- Right Side: Image -->
-            <div class="w-full lg:w-[500px] xl:w-[600px] aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
-              <img src="../assets/images/events/1.jpg" alt="Event Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
+            <div class="w-full lg:w-[500px] xl:w-[600px] scroll-move aspect-video lg:aspect-[4/3] overflow-hidden shrink-0">
+              <img src="../assets/images/events/1.jpg" alt="Event Image"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 shadow-sm">
             </div>
           </div>
 
         </div>
-     <!-- Pagination -->
+        <!-- Pagination -->
         <div class="flex justify-end items-center gap-2 pt-12 md:pt-16">
-          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Prev</a>
-          <a href="#" class="border border-[#2563EB] bg-[#2563EB] text-white px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium transition-colors">1</a>
-          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">2</a>
-          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">3</a>
-          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">4</a>
-          <a href="#" class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Next</a>
+          <a href="#"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Prev</a>
+          <a href="#"
+            class="border border-[#2563EB] bg-[#2563EB] text-white px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium transition-colors">1</a>
+          <a href="#"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">2</a>
+          <a href="#"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">3</a>
+          <a href="#"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">4</a>
+          <a href="#"
+            class="border border-[#2563EB] text-[#2563EB] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-medium hover:bg-[#2563EB] hover:text-white transition-colors">Next</a>
         </div>
       </div>
     </section>
@@ -787,13 +851,13 @@
             }
           });
         }, { threshold: 0.15 });
-        
+
         document.querySelectorAll('.reveal-fade-up').forEach(el => observer.observe(el));
       });
     </script>
 
     <!-- FOOTER SECTION -->
-    <footer class="bg-[#111827] text-[#E7E7E7] pt-20 pb-8 font-manrope">
+    <footer class="bg-[#111827] text-[#E7E7E7] pt-20 pb-8 ">
       <div class="container mx-auto px-4 md:px-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10">
           <!-- Logo and Contact -->
@@ -907,22 +971,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
