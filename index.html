@@ -55,7 +55,7 @@
         <!-- Left: Phone -->
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-phone"></i>
-          <span>+880 1938-886333</span>
+          <a href="tel:+8801938886333" class="hover:text-cyan-400 transition-colors">+880 1938-886333</a>
         </div>
         <!-- Center: Text -->
         <div class="opacity-90">
@@ -64,12 +64,9 @@
         </div>
         <!-- Right: Social Icons -->
         <div class="flex items-center gap-5 text-base">
-          <a href="./pages/our-products.html" class="hover:text-blue-400 transition-colors"><i
-              class="fa-brands fa-instagram"></i></a>
-          <a href="./pages/sustainability.html" class="hover:text-blue-400 transition-colors"><i
-              class="fa-brands fa-x-twitter"></i></a>
-          <a href="./pages/contact.html" class="hover:text-blue-400 transition-colors"><i
-              class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
           <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
@@ -162,7 +159,7 @@
                     </svg>
                   </div>
                 </a>
-                <a href="./pages/details.html" class="relative h-28 rounded overflow-hidden group  block">
+                <a href="./pages/leadership.html" class="relative h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header14.png" alt="Leadership"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -213,7 +210,7 @@
               class="dropdown-menu hidden absolute top-full left-0 bg-white text-black shadow-2xl p-4 md:p-5 w-[550px] z-50">
               <div class="grid grid-cols-3 gap-3 md:gap-3.5">
                 <!-- 1. Real state -->
-                <a href="./pages/concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/concerns-details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header21.jpg" alt="Real state"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -230,7 +227,7 @@
                 </a>
 
                 <!-- 2. Restaurant -->
-                <a href="./pages/concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/concerns-details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header22.png" alt="Restaurant"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -247,7 +244,7 @@
                 </a>
 
                 <!-- 3. Media -->
-                <a href="./pages/concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/concerns-details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header23.jpg" alt="Media"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -264,7 +261,7 @@
                 </a>
 
                 <!-- 4. Software -->
-                <a href="./pages/concerns.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
+                <a href="./pages/concerns-details.html" class="relative h-24 md:h-28 rounded overflow-hidden group  block">
                   <img src="./assets/images/home/header24.jpg" alt="Software"
                     class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10"></div>
@@ -281,7 +278,7 @@
                 </a>
 
                 <!-- 5. See all Concerns -->
-                <a href="./pages/details.html"
+                <a href="./pages/concerns.html"
                   class="relative h-24 md:h-28 rounded bg-[#EEF4FF] hover:bg-[#E0EBFF] transition-colors flex items-center justify-center gap-2 group  p-2">
                   <span class="text-[#1864FF] text-sm font-normal whitespace-nowrap">See all Concerns</span>
                   <svg
@@ -427,7 +424,7 @@
               </div>
             </div>
           </div>
-          <a href="./pages/our-products.html"
+          <a href="./pages/sustainability.html"
             class="group relative text-lg font-medium tracking-wide text-[#E7E7E7] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
             <div class="relative h-6 overflow-hidden pointer-events-none">
               <span
@@ -645,14 +642,34 @@
       <div class="container mx-auto px-4 md:px-10">
         <!-- Header -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-8">
-          <h2 class="text-3xl md:text-[40px] font-bold uppercase text-[#050a18] leading-tight tracking-wide">
-            Company<br>
-            <span class="ml-12 md:ml-20">At Glance</span>
-          </h2>
-          <p class="md:max-w-md text-gray-500 text-sm md:text-base leading-relaxed">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since
-          </p>
+          <style>
+            .animate-on-scroll-wrapper {
+              overflow: hidden;
+              display: block;
+              padding-bottom: 5px;
+            }
+
+            .animate-on-scroll-wrapper>* {
+              transform: translateY(105%);
+              transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+
+            .animate-on-scroll-wrapper.is-visible>* {
+              transform: translateY(0);
+            }
+          </style>
+          <div class="animate-on-scroll-wrapper">
+            <h2 class="text-3xl md:text-[40px] font-bold uppercase text-[#050a18] leading-tight tracking-wide">
+              Company<br>
+              <span class="ml-12 md:ml-20">At Glance</span>
+            </h2>
+          </div>
+          <div class="animate-on-scroll-wrapper">
+            <p class="md:max-w-md text-gray-500 text-sm md:text-base leading-relaxed" style="transition-delay: 0.2s;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since
+            </p>
+          </div>
         </div>
 
         <!-- Content Grid -->
@@ -709,7 +726,7 @@
 
           <!-- Right Large Card -->
           <div
-            class="lg:col-span-7 bg-[#EEF4FF] rounded-2xl p-6 md:p-8 scroll-move flex flex-col md:flex-row gap-8 items-stretch relative">
+            class="lg:col-span-7 bg-[#EEF4FF] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-8 items-stretch relative">
             <div class="flex-1 flex flex-col justify-between z-10 py-2">
               <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-8">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -736,7 +753,7 @@
                 </div>
               </a>
             </div>
-            <div class="w-full md:w-[45%] min-h-[250px] relative rounded-2xl shrink-0 z-10">
+            <div class="scroll-move w-full md:w-[45%] min-h-[250px] relative rounded-2xl shrink-0 z-10">
               <div class="absolute -top-1 -left-1 w-14 h-14 bg-[#EEF4FF] rounded-br-2xl"></div>
               <img src="./assets/images/home/glance.jpg" height="401px" width="371px" alt="Building"
                 class="w-full h-full object-cover rounded-2xl" />
@@ -777,7 +794,9 @@
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
               animateCount(entry.target);
-              observer.unobserve(entry.target); // একবারই চলবে
+            } else {
+              var suffix = entry.target.getAttribute('data-suffix') || '';
+              entry.target.textContent = '0' + suffix;
             }
           });
         }, { threshold: 0.4 });
@@ -796,17 +815,21 @@
         <!-- Top Content -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-10 text-white">
           <!-- Title -->
-          <h2 class="text-3xl md:text-[40px] font-semibold uppercase leading-tight tracking-wide">
-            Company<br>
-            <span class="ml-12 md:ml-20">History</span>
-          </h2>
+          <div class="animate-on-scroll-wrapper">
+            <h2 class="text-3xl md:text-[40px] font-semibold uppercase leading-tight tracking-wide">
+              Company<br>
+              <span class="ml-12 md:ml-20">History</span>
+            </h2>
+          </div>
 
           <!-- Text & Button -->
           <div class="md:max-w-xl space-y-6 md:space-y-8 mt-2 md:mt-0 flex flex-col">
-            <p class="text-sm md:text-base leading-relaxed opacity-90">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since
-            </p>
+            <div class="animate-on-scroll-wrapper">
+              <p class="text-sm md:text-base leading-relaxed opacity-90" style="transition-delay: 0.2s;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since
+              </p>
+            </div>
             <!-- See More Button -->
             <a href="#"
               class="group inline-flex items-center gap-4 bg-[#1864FF] text-white pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-blue-600 transition shadow-md w-fit">
@@ -850,10 +873,10 @@
             <div class="min-w-[750px] lg:min-w-0 w-full h-full relative">
               <!-- Timeline Item 1 -->
               <div
-                class="timeline-line absolute bottom-0 left-0 w-[1.5px] bg-white h-[25%] md:h-[65%] origin-bottom transition-all duration-700 ease-out"
+                class="timeline-line absolute bottom-0 left-0 w-[1.5px] bg-white h-[25%] md:h-[65%] origin-bottom transition-all duration-[5000ms] ease-out"
                 style="transform:scaleY(0);opacity:0;">
                 <div
-                  class="timeline-content opacity-0 translate-y-full transition-all duration-[1500ms] ease-out absolute inset-0">
+                  class="timeline-content opacity-0 transition-all duration-[5000ms] ease-out absolute inset-0">
                   <div
                     class="absolute -top-3 -left-[11px] w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
                     <div class="w-2 h-2 bg-white rounded-full"></div>
@@ -870,10 +893,10 @@
 
               <!-- Timeline Item 2 -->
               <div
-                class="timeline-line absolute bottom-0 left-[32%] w-[1.5px] bg-white h-[60%] md:h-[90%] origin-bottom transition-all duration-700 ease-out"
+                class="timeline-line absolute bottom-0 left-[32%] w-[1.5px] bg-white h-[60%] md:h-[90%] origin-bottom transition-all duration-[5000ms] ease-out"
                 style="transform:scaleY(0);opacity:0;">
                 <div
-                  class="timeline-content opacity-0 translate-y-full transition-all duration-[1500ms] delay-[200ms] ease-out absolute inset-0">
+                  class="timeline-content opacity-0 transition-all duration-[5000ms] ease-out absolute inset-0">
                   <div
                     class="absolute -top-3 -left-[11px] w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
                     <div class="w-2 h-2 bg-white rounded-full"></div>
@@ -890,10 +913,10 @@
 
               <!-- Timeline Item 3 -->
               <div
-                class="timeline-line absolute bottom-0 left-[64%] w-[1.5px] bg-white h-[35%] md:h-[50%] origin-bottom transition-all duration-700 ease-out"
+                class="timeline-line absolute bottom-0 left-[64%] w-[1.5px] bg-white h-[35%] md:h-[50%] origin-bottom transition-all duration-[5000ms] ease-out"
                 style="transform:scaleY(0);opacity:0;">
                 <div
-                  class="timeline-content opacity-0 translate-y-full transition-all duration-[1500ms] delay-[400ms] ease-out absolute inset-0">
+                  class="timeline-content opacity-0 transition-all duration-[5000ms] ease-out absolute inset-0">
                   <div
                     class="absolute -top-3 -left-[11px] w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
                     <div class="w-2 h-2 bg-white rounded-full"></div>
@@ -910,10 +933,10 @@
 
               <!-- Timeline Item 4 -->
               <div
-                class="timeline-line absolute bottom-0 left-[90%] w-[1.5px] bg-white h-[50%] md:h-[85%] origin-bottom transition-all duration-700 ease-out"
+                class="timeline-line absolute bottom-0 left-[90%] w-[1.5px] bg-white h-[50%] md:h-[85%] origin-bottom transition-all duration-[5000ms] ease-out"
                 style="transform:scaleY(0);opacity:0;">
                 <div
-                  class="timeline-content opacity-0 translate-y-full transition-all duration-[1500ms] delay-[600ms] ease-out absolute inset-0">
+                  class="timeline-content opacity-0 transition-all duration-[5000ms] ease-out absolute inset-0">
                   <div
                     class="absolute -top-3 -left-[11px] w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
                     <div class="w-2 h-2 bg-white rounded-full"></div>
@@ -933,59 +956,6 @@
       </div>
     </section>
 
-    <!-- Timeline Reveal + Count Up Script -->
-    <script>
-      (function () {
-        function animateYear(el) {
-          var target = parseInt(el.getAttribute('data-target'), 10);
-          var duration = 1500; // ms, matches the reveal duration
-          var startTime = null;
-
-          function step(timestamp) {
-            if (!startTime) startTime = timestamp;
-            var progress = Math.min((timestamp - startTime) / duration, 1);
-            var eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
-            el.textContent = Math.floor(eased * target);
-            if (progress < 1) {
-              requestAnimationFrame(step);
-            } else {
-              el.textContent = target;
-            }
-          }
-          requestAnimationFrame(step);
-        }
-
-        var timelineContainer = document.getElementById('timeline-container');
-        if (!timelineContainer) return;
-
-        var items = timelineContainer.querySelectorAll('.timeline-content');
-
-        var observer = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              var el = entry.target;
-              var delayMatch = (el.className.match(/delay-\[(\d+)ms\]/) || [])[1];
-              var delay = delayMatch ? parseInt(delayMatch, 10) : 0;
-
-              // Reveal (slide up + fade in)
-              el.classList.remove('opacity-0', 'translate-y-full');
-
-              // Count up, synced with the same delay as the reveal
-              var yearEl = el.querySelector('.year-count');
-              if (yearEl) {
-                setTimeout(function () {
-                  animateYear(yearEl);
-                }, delay);
-              }
-
-              observer.unobserve(el); // run once
-            }
-          });
-        }, { threshold: 0.3 });
-
-        items.forEach(function (item) { observer.observe(item); });
-      })();
-    </script>
     <!-- Founder Section -->
     <div class="bg-white z-10 relative">
 
@@ -1075,22 +1045,31 @@
 
     <!-- Directors Section -->
     <div class="bg-white relative z-10">
-      <section class="w-full bg-[#E8EFFF52] py-20">
+      <section class="w-full bg-[#E8EFFF52] py-6 md:py-20">
         <div class="container mx-auto px-4 md:px-10">
           <!-- Header -->
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8 md:gap-0">
+          <div class="flex flex-col md:flex-row justify-between items-start mb-12 gap-8 md:gap-0">
             <!-- Left side -->
             <div class="flex flex-col">
-              <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#111827]">Our Concerns</h2>
-              <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#111827] md:ml-12 mt-1 md:mt-2">Directors</h2>
+              <div class="animate-on-scroll-wrapper">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#111827]">Our Concerns</h2>
+              </div>
+              <div class="animate-on-scroll-wrapper">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#111827] md:ml-12"
+                  style="transition-delay: 0.1s;">Directors</h2>
+              </div>
             </div>
             <!-- Right side -->
-            <div class="md:w-1/2 flex flex-col items-start md:items-end space-y-6">
-              <p class="text-[#4B5563] text-sm md:text-base leading-relaxed max-w-xl text-left">
-                At Bhaiya Group, sustainability isn't just a commitment - it's our way of creating lasting value. We
-                believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
-                programs, we invest in education,
-              </p>
+            <div class="md:w-max-3xl flex flex-col items-start md:items-end space-y-6">
+              <div class="animate-on-scroll-wrapper">
+                <p class="text-[#4B5563] text-sm md:text-base leading-relaxed max-w-xl text-left"
+                  style="transition-delay: 0.2s;">
+                  At Bhaiya Group, sustainability isn't just a commitment - it's our way of creating lasting value. We
+                  believe true progress comes when business growth uplifts people and protects the planet. Through our
+                  CSR
+                  programs, we invest in education,
+                </p>
+              </div>
               <a href="#"
                 class="group inline-flex items-center gap-4 border border-[#111827] bg-transparent text-[#111827] pl-6 pr-2 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition mt-2 w-fit">
                 <!-- Text Animation -->
@@ -1548,17 +1527,21 @@
         <!-- Header -->
         <div class="flex flex-col md:flex-row justify-between items-start mb-10">
           <div class="max-w-xl">
-            <h2 class="text-3xl md:text-[40px] font-bold uppercase leading-[1.0] tracking-tight">
-              COMPANY<br />
-              <span class="ml-24 md:ml-37">BUSINESS</span>
-            </h2>
+            <div class="animate-on-scroll-wrapper">
+              <h2 class="text-3xl md:text-[40px] font-bold uppercase leading-[1.0] tracking-tight">
+                COMPANY<br />
+                <span class="ml-24 md:ml-37">BUSINESS</span>
+              </h2>
+            </div>
           </div>
           <div class="md:w-[50%] mt-8 md:mt-4">
-            <p class="text-white text-sm md:text-base font-normal">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since
-            </p>
+            <div class="animate-on-scroll-wrapper">
+              <p class="text-white text-sm md:text-base font-normal" style="transition-delay: 0.2s;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since
+              </p>
+            </div>
           </div>
         </div>
 
@@ -1971,6 +1954,21 @@
     </script>
 
     <!-- Our Concerns Section -->
+    <style>
+      .animate-on-scroll-wrapper.slide-right-custom > * {
+        transform: translateX(100px) !important;
+        opacity: 0;
+        transition: all 2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+      .animate-on-scroll-wrapper.slide-right-custom.is-visible > * {
+        transform: translateX(0) !important;
+        opacity: 1;
+      }
+      .animate-on-scroll-wrapper.slide-right-custom > *:nth-child(1) { transition-delay: 0.3s !important; }
+      .animate-on-scroll-wrapper.slide-right-custom > *:nth-child(2) { transition-delay: 0.6s !important; }
+      .animate-on-scroll-wrapper.slide-right-custom > *:nth-child(3) { transition-delay: 0.9s !important; }
+      .animate-on-scroll-wrapper.slide-right-custom > *:nth-child(4) { transition-delay: 1.2s !important; }
+    </style>
     <section id="concerns-section"
       class="relative w-full py-16 md:py-24 bg-cover bg-center overflow-hidden z-10 text-white transition-all duration-500"
       style="background-image: url('./assets/images/home/concern.jpg');">
@@ -1996,20 +1994,26 @@
                 class="w-full h-full object-contain transition-opacity duration-300" />
             </div>
             <!-- Title Text -->
-            <h2 id="concern-title" class="text-4xl md:text-5xl font-bold tracking-wide transition-all duration-300">
-              Bhaiya Housing</h2>
+            <div class="animate-on-scroll-wrapper w-full">
+              <h2 id="concern-title" class="text-4xl md:text-5xl font-bold tracking-wide">
+                Bhaiya Housing</h2>
+            </div>
           </div>
 
           <!-- Description -->
-          <div class="space-y-6 text-[#E7E8E9] text-xs md:text-base leading-relaxed max-w-[95%] mb-10">
-            <p>
-              Our quest to make India energy sufficient led us to become one of the largest oil & gas exploration and
-              production players in India. Our refinery at Jamnagar is the world's largest,single-location refining
-              complex.r. the largest oil & gas exploration and production players in India.
-            </p>
-            <p>
-              Our quest to make India energy sufficient led us to become one of the largest oil & gas exploration and
-              production players in India. Our refinery at Jamnagar is the world's largest,</p>
+          <div class="animate-on-scroll-wrapper">
+            <div id="concern-desc"
+              class="space-y-6 text-[#E7E8E9] text-xs md:text-base leading-relaxed max-w-[95%] mb-10 transition-all duration-300"
+              style="transition-delay: 0.1s;">
+              <p>
+                Our quest to make India energy sufficient led us to become one of the largest oil & gas exploration and
+                production players in India. Our refinery at Jamnagar is the world's largest,single-location refining
+                complex.r. the largest oil & gas exploration and production players in India.
+              </p>
+              <p>
+                Our quest to make India energy sufficient led us to become one of the largest oil & gas exploration and
+                production players in India. Our refinery at Jamnagar is the world's largest,</p>
+            </div>
           </div>
 
           <!-- Housing Projects Glass Box -->
@@ -2096,7 +2100,7 @@
 
         <!-- Right Content: List of Concerns -->
         <div class="w-full lg:w-[35%] flex flex-col justify-center mt-12 lg:mt-0 lg:pl-10 xl:pl-20">
-          <ul class="flex flex-col w-full max-w-lg ml-auto relative z-20">
+          <ul class="flex flex-col w-full max-w-lg ml-auto relative z-20 animate-on-scroll-wrapper slide-right-custom">
 
             <!-- Active Item -->
             <li
@@ -2157,13 +2161,18 @@
             <div class="w-16 md:w-20 h-[2px] bg-[#E7E8E9]"></div>
             <span class="text-sm md:text-lg text-[#E7E8E9] font-normal">Legacy Timeline</span>
           </div>
-          <h2 class="text-3xl md:text-[40px] font-semibold uppercase leading-[1.2] mb-8">
-            OUR HISTORY<br>
-            <span class="ml-16 md:ml-45 block">ROAD MAP</span>
-          </h2>
-          <p class="text-sm md:text-base text-gray-300 max-w-[100%] md:max-w-md leading-[1.8] font-light pr-4">
-            A timeline of milestones, innovations, and achievements that shaped who we are today a journey built on
-            vision, dedication, and trust.</p>
+          <div class="animate-on-scroll-wrapper">
+            <h2 class="text-3xl md:text-[40px] font-semibold uppercase leading-[1.2] mb-8">
+              OUR HISTORY<br>
+              <span class="ml-16 md:ml-45 block">ROAD MAP</span>
+            </h2>
+          </div>
+          <div class="animate-on-scroll-wrapper">
+            <p class="select-text text-gray-300 max-w-[100%] md:max-w-md leading-[1.8] font-light pr-4"
+              style="transition-delay: 0.2s;">
+              A timeline of milestones, innovations, and achievements that shaped who we are today a journey built on
+              vision, dedication, and trust.</p>
+          </div>
         </div>
 
         <!-- Right Scrolling Timeline Cards -->
@@ -2269,18 +2278,26 @@
 
           <!-- Cell 1: Text & Button -->
           <div class="flex flex-col justify-center bg-white">
-            <h2 class="text-3xl md:text-[40px] font-bold uppercase leading-[1.2] mb-6">
-              EXPLORE OUR<br>FEATURED PRODUCTS
-            </h2>
-            <p class="text-sm md:text-base font-normal text-[#3F3F3F] leading-relaxed mb-4">
-              At Bhaiya Group, sustainability isn't just a commitment — it's our way of creating lasting value. We
-              believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
-              programs, we invest in education,
-            </p>
-            <p class="text-sm md:text-base font-normal text-[#3F3F3F] leading-relaxed mb-8">
-              We believe true progress comes when business growth uplifts people and protects the planet. Through our
-              CSR programs, we invest in education,
-            </p>
+            <div class="animate-on-scroll-wrapper">
+              <h2 class="text-3xl md:text-[40px] font-bold uppercase leading-[1.2] mb-6">
+                EXPLORE OUR<br>FEATURED PRODUCTS
+              </h2>
+            </div>
+            <div class="animate-on-scroll-wrapper">
+              <p class="text-sm md:text-base font-normal text-[#3F3F3F] leading-relaxed mb-4"
+                style="transition-delay: 0.1s;">
+                At Bhaiya Group, sustainability isn't just a commitment — it's our way of creating lasting value. We
+                believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
+                programs, we invest in education,
+              </p>
+            </div>
+            <div class="animate-on-scroll-wrapper">
+              <p class="text-sm md:text-base font-normal text-[#3F3F3F] leading-relaxed mb-8"
+                style="transition-delay: 0.2s;">
+                We believe true progress comes when business growth uplifts people and protects the planet. Through our
+                CSR programs, we invest in education,
+              </p>
+            </div>
             <a href="#"
               class="group inline-flex items-center gap-4 border border-[#111827] bg-transparent text-[#111827] pl-6 pr-2 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition mt-2 w-fit">
               <!-- Text Animation -->
@@ -2364,26 +2381,31 @@
       <div class="container mx-auto px-4">
 
         <!-- Header Area -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
 
           <!-- Left Header -->
           <div class="w-full md:w-1/2">
             <div class="flex items-center gap-4 mb-4">
               <div class="w-16 h-[2px] bg-[#111827]"></div>
-              <span class="text-sm md:text-lg font-semibold text-[#111827]">Bhaiya Groupof procucts</span>
+              <span class="text-sm md:text-lg font-semibold text-[#111827]">Bhaiya Group of procucts</span>
             </div>
-            <h2 class="text-3xl md:text-[40px] font-bold uppercase text-[#070707] leading-[1.4]">
-              EXPLORE OUR<br> <span class="ml-16 md:ml-45 block">PRODUCTS</span>
-            </h2>
+            <div class="animate-on-scroll-wrapper">
+              <h2 class="text-3xl md:text-[40px] font-bold uppercase text-[#070707] leading-[1.4]">
+                EXPLORE OUR<br> <span class="ml-16 md:ml-45 block">PRODUCTS</span>
+              </h2>
+            </div>
           </div>
 
           <!-- Right Header -->
           <div class="w-full md:w-1/2 flex flex-col items-start md:items-end text-left md:text-left">
-            <p class="text-sm md:text-base text-[#3F3F3F] leading-relaxed mb-6 max-w-lg md:text-left">
-              At Bhaiya Group, sustainability isn't just a commitment — it's our way of creating lasting value. We
-              believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
-              programs, we invest in education,
-            </p>
+            <div class="animate-on-scroll-wrapper">
+              <p class="select-text text-[#3F3F3F] leading-relaxed mb-6 max-w-2xl md:text-left"
+                style="transition-delay: 0.2s;">
+                At Bhaiya Group, sustainability isn't just a commitment — it's our way of creating lasting value. We
+                believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
+                programs, we invest in education,
+              </p>
+            </div>
             <a href="./pages/sustainability.html"
               class="group inline-flex items-center gap-4 border border-[#111827] bg-transparent text-[#111827] pl-6 pr-2 py-2 rounded-full text-sm md:text-base font-semibold hover:bg-gray-100 transition w-fit">
               <div class="relative h-5 overflow-hidden pointer-events-none">
@@ -2475,10 +2497,11 @@
       <!-- Globe Hero Area (spacer with title) -->
       <div id="globe-hero" class="relative w-full min-h-[100vh] flex items-center justify-center">
         <div class="relative z-10 text-center px-4 w-full mx-auto">
-          <h2 id="globe-title"
-            class="text-white text-2xl md:text-[48px] font-bold leading-tight opacity-0 transition-opacity duration-700">
-            Bhaiya groups of Awards & Recognition
-          </h2>
+          <div class="animate-on-scroll-wrapper">
+            <h2 id="globe-title" class="text-white text-2xl md:text-[48px] font-bold leading-tight">
+              Bhaiya groups of Awards & Recognition
+            </h2>
+          </div>
         </div>
       </div>
 
@@ -2549,10 +2572,8 @@
             globe.style.transform = 'translate(-50%, -50%) scale(' + Math.max(scale, 1) + ') rotate(' + rotate + 'deg)';
             globe.style.opacity = opacity;
 
-            // Title appears after globe settles
-            if (title) {
-              title.style.opacity = heroProgress > 0.3 ? '1' : '0';
-            }
+            // Title is now handled by animate-on-scroll-wrapper
+            // opacity logic removed to avoid conflict
           }
 
           window.addEventListener('scroll', onScroll, { passive: true });
@@ -2593,13 +2614,17 @@
             <span class="text-xs md:text-sm text-white/70 font-normal uppercase tracking-wider">Awards &
               Recognition</span>
           </div>
-          <h2 class="text-3xl md:text-[40px] font-bold uppercase leading-[1.2] mb-6">
-            THIS ARE OUR LEGACY<br> <span class="block text-right pr-8 md:pr-0">OF ACHIEVEMENT</span>
-          </h2>
-          <p class="text-sm md:text-base text-white/80 font-light leading-[1.8]">
-            A timeline of milestones, innovations, and achievements that shaped who we are today a journey built on
-            vision, dedication, and trust.
-          </p>
+          <div class="animate-on-scroll-wrapper">
+            <h2 class="text-3xl md:text-[40px] font-bold uppercase leading-[1.2] mb-6">
+              THIS ARE OUR LEGACY<br> <span class="block text-right pr-8 md:pr-0">OF ACHIEVEMENT</span>
+            </h2>
+          </div>
+          <div class="animate-on-scroll-wrapper">
+            <p class="text-sm md:text-base text-white/80 font-light leading-[1.8]" style="transition-delay: 0.2s;">
+              A timeline of milestones, innovations, and achievements that shaped who we are today a journey built on
+              vision, dedication, and trust.
+            </p>
+          </div>
         </div>
 
         <!-- Right Scrolling Awards Cards -->
@@ -2690,18 +2715,23 @@
               <span class="text-xs md:text-lg font-semibold uppercase tracking-wider text-gray-800">Bhaiya Group · CSR ·
                 Sustainability</span>
             </div>
-            <h2 class="text-3xl md:text-[40px] font-bold">
-              Sustainability & CSR Impact
-            </h2>
+            <div class="animate-on-scroll-wrapper">
+              <h2 class="text-3xl md:text-[40px] font-bold">
+                Sustainability & CSR Impact
+              </h2>
+            </div>
           </div>
 
           <!-- Right side text and button -->
           <div class="w-full md:w-1/2 flex flex-col scroll-move md:items-end text-left">
-            <p class="text-sm md:text-base text-gray-600 mb-8  leading-[1.8] font-light">
-              At Bhaiya Group, sustainability isn't just a commitment — it's our way of creating lasting value. We
-              believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
-              programs, we invest in education,
-            </p>
+            <div class="animate-on-scroll-wrapper">
+              <p class="select-text text-gray-600 mb-8  leading-[1.8] font-light"
+                style="transition-delay: 0.2s;">
+                At Bhaiya Group, sustainability isn't just a commitment — it's our way of creating lasting value. We
+                believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
+                programs, we invest in education,
+              </p>
+            </div>
             <a href="#"
               class="group inline-flex items-center gap-4 border border-[#111827] bg-transparent text-[#111827] pl-6 pr-2 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition mt-2 w-fit">
               <!-- Text Animation -->
@@ -2760,7 +2790,7 @@
 
           <!-- Right Text Block with Brackets (Takes remaining 5 columns) -->
           <div class="lg:col-span-5 flex justify-center lg:justify-start lg:translate-x-4">
-            <div class="relative p-2 max-w-[480px]">
+            <div class="relative p-2 scroll-move max-w-[480px]">
               <!-- Top Left Bracket -->
               <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-black"></div>
 
@@ -2797,19 +2827,24 @@
         <div class="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
           <!-- Left side title -->
           <div class="w-full md:w-1/2">
-            <h2 class="text-white text-4xl md:text-[40px] font-bold flex flex-col tracking-wide leading-[1.2]">
-              <span>Explore</span>
-              <span class="pl-12 md:pl-24">Our Events</span>
-            </h2>
+            <div class="animate-on-scroll-wrapper">
+              <h2 class="text-white text-4xl md:text-[40px] font-bold flex flex-col tracking-wide leading-[1.2]">
+                <span>Explore</span>
+                <span class="pl-12 md:pl-24">Our Events</span>
+              </h2>
+            </div>
           </div>
 
           <!-- Right side text and button -->
           <div class="w-full md:w-1/2 flex flex-col md:items-end text-left md:text-right">
-            <p class="text-sm md:text-base text-[#E7E8E9] mb-8 leading-[1.8] font-light text-left">
-              At Bhaiya Group, sustainability isn't just a commitment — it's our way of creating lasting value. We
-              believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
-              programs, we invest in education,
-            </p>
+            <div class="animate-on-scroll-wrapper">
+              <p class="text-sm md:text-base text-[#E7E8E9] mb-8 leading-[1.8] font-light text-left"
+                style="transition-delay: 0.2s;">
+                At Bhaiya Group, sustainability isn't just a commitment — it's our way of creating lasting value. We
+                believe true progress comes when business growth uplifts people and protects the planet. Through our CSR
+                programs, we invest in education,
+              </p>
+            </div>
             <a href="./pages/sustainability.html"
               class="group inline-flex items-center gap-4 border border-white bg-transparent text-white pl-6 pr-2 py-2 rounded-full text-sm font-semibold transition mt-2 w-fit">
               <!-- Text Animation -->
@@ -3042,10 +3077,16 @@
             <span class="text-xs md:text-lg font-medium tracking-widest text-[#414652]">Investment Opportunities</span>
             <div class="w-12 h-[1px] bg-gray-400"></div>
           </div>
-          <h2 class="text-3xl md:text-[40px] font-bold text-black uppercase tracking-tight mb-3">Our Flagship Highlight
-          </h2>
-          <p class="text-gray-500 text-sm md:text-lg">Explore premium investment opportunities across our diverse
-            portfolio</p>
+          <div class="animate-on-scroll-wrapper">
+            <h2 class="text-3xl md:text-[40px] font-bold text-black uppercase tracking-tight mb-3">Our Flagship
+              Highlight
+            </h2>
+          </div>
+          <div class="animate-on-scroll-wrapper">
+            <p class="text-gray-500 text-sm md:text-lg" style="transition-delay: 0.2s;">Explore premium investment
+              opportunities across our diverse
+              portfolio</p>
+          </div>
         </div>
 
         <!-- Tab Filters -->
@@ -3065,8 +3106,8 @@
         <div class="bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row mb-14 border border-gray-200">
           <!-- Left: Image -->
           <div class="relative w-full md:w-[55%] min-h-[300px] md:min-h-[380px]">
-            <img src="./assets/images/home/flagship_hotel.jpg" alt="Salt By 5 Star Hotel"
-              class="w-full h-full object-cover">
+            <img id="flagship-image" src="./assets/images/home/flagship_hotel.jpg" alt="Featured Investment"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300">
             <div
               class="absolute top-4 left-4 group bg-white text-[#D4A017] text-base font-bold px-5 py-2 rounded-xl shadow cursor-default flex items-center justify-center">
               <div class="relative h-6 overflow-hidden pointer-events-none">
@@ -3090,15 +3131,12 @@
                     d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>Inani beach, Cox's bazar, Chittagong, Bangladesh</span>
+                <span id="flagship-location" class="transition-opacity duration-300">Inani beach, Cox's bazar, Chittagong, Bangladesh</span>
               </div>
               <!-- Title -->
-              <h3 class="text-2xl md:text-3xl font-bold text-black mb-4 leading-tight">Salt By 5 Star Hotel in
-                Cox'sbazar</h3>
+              <h3 id="flagship-title" class="text-2xl md:text-3xl font-bold text-black mb-4 leading-tight transition-opacity duration-300">Salt By 5 Star Hotel in Cox'sbazar</h3>
               <!-- Description -->
-              <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-6">A 5-star eco-luxury resort nestled
-                along pristine coastline, featuring 80 oceanfront villas with world-class amenities and sustainable
-                design principles. featuring 80 oceanfront villas</p>
+              <p id="flagship-desc" class="text-gray-500 text-sm md:text-base leading-relaxed mb-6 transition-opacity duration-300">A 5-star eco-luxury resort nestled along pristine coastline, featuring 80 oceanfront villas with world-class amenities and sustainable design principles. featuring 80 oceanfront villas</p>
 
               <!-- Stats Grid -->
               <div class="grid grid-cols-2 gap-x-8 gap-y-5 mb-8">
@@ -3107,7 +3145,7 @@
                   <img src="./assets/images/home/investicon (1).png" alt="investicon (1)" />
                   <div>
                     <p class=" text-base mb-0.5">Investment from</p>
-                    <p class="text-[#5E5E5E] font-bold text-base md:text-xl">10 Lak's</p>
+                    <p id="flagship-investment" class="text-[#5E5E5E] font-bold text-base md:text-xl transition-opacity duration-300">10 Lak's</p>
                   </div>
                 </div>
                 <!-- Expected ROI -->
@@ -3115,7 +3153,7 @@
                   <img src="./assets/images/home/investicon (2).png" alt="investicon (2)" />
                   <div>
                     <p class=" text-base mb-0.5">Expected ROI</p>
-                    <p class="text-[#5E5E5E] font-bold text-base md:text-xl">14% p.a.</p>
+                    <p id="flagship-roi" class="text-[#5E5E5E] font-bold text-base md:text-xl transition-opacity duration-300">14% p.a.</p>
                   </div>
                 </div>
                 <!-- Project Size -->
@@ -3123,7 +3161,7 @@
                   <img src="./assets/images/home/investicon (3).png" alt="investicon (3)" />
                   <div>
                     <p class=" text-base mb-0.5">Project Size</p>
-                    <p class="text-[#5E5E5E] font-bold text-base md:text-xl">80 Keys</p>
+                    <p id="flagship-size" class="text-[#5E5E5E] font-bold text-base md:text-xl transition-opacity duration-300">80 Keys</p>
                   </div>
                 </div>
                 <!-- Completion -->
@@ -3131,7 +3169,7 @@
                   <img src="./assets/images/home/investicon (4).png" alt="investicon (4)" />
                   <div>
                     <p class=" text-base mb-0.5">Completion</p>
-                    <p class="text-[#5E5E5E] font-bold text-base md:text-xl">Q4 2027</p>
+                    <p id="flagship-completion" class="text-[#5E5E5E] font-bold text-base md:text-xl transition-opacity duration-300">Q4 2027</p>
                   </div>
                 </div>
               </div>
@@ -3297,7 +3335,39 @@
 
   </main>
   <script>
-    // Investment Tab Switcher
+    const flagshipData = {
+      hotels: {
+        image: './assets/images/home/flagship_hotel.jpg',
+        location: "Inani beach, Cox's bazar, Chittagong, Bangladesh",
+        title: "Salt By 5 Star Hotel in Cox'sbazar",
+        desc: "A 5-star eco-luxury resort nestled along pristine coastline, featuring 80 oceanfront villas with world-class amenities and sustainable design principles.",
+        investment: "10 Lak's",
+        roi: "14% p.a.",
+        size: "80 Keys",
+        completion: "Q4 2027"
+      },
+      housing: {
+        image: './assets/images/home/biz_realestate_hd.jpg',
+        location: "Bashundhara, Dhaka, Bangladesh",
+        title: "Bhaiya Luxury Apartments",
+        desc: "Premium residential apartments in the heart of the city with state-of-the-art facilities and green spaces.",
+        investment: "50 Lak's",
+        roi: "12% p.a.",
+        size: "120 Units",
+        completion: "Q2 2026"
+      },
+      food: {
+        image: './assets/images/home/product (2).png',
+        location: "Gazipur, Dhaka, Bangladesh",
+        title: "Next Food Processing Plant",
+        desc: "High-tech food and beverage manufacturing plant with global standards and export potential.",
+        investment: "20 Lak's",
+        roi: "16% p.a.",
+        size: "5 Acres",
+        completion: "Q1 2025"
+      }
+    };
+
     function switchInvestmentTab(btn, tab) {
       document.querySelectorAll('.invest-tab').forEach(t => {
         t.classList.remove('bg-[#195AFF]', 'text-white', 'border-[#195AFF]', 'active-tab');
@@ -3305,6 +3375,31 @@
       });
       btn.classList.add('bg-[#195AFF]', 'text-white', 'border-[#195AFF]', 'active-tab');
       btn.classList.remove('bg-white', 'text-gray-700', 'border-gray-300');
+
+      const data = flagshipData[tab];
+      if(data) {
+        const elements = ['image', 'location', 'title', 'desc', 'investment', 'roi', 'size', 'completion'];
+        elements.forEach(id => {
+           const el = document.getElementById('flagship-' + id);
+           if(el) el.style.opacity = '0';
+        });
+
+        setTimeout(() => {
+          document.getElementById('flagship-image').src = data.image;
+          document.getElementById('flagship-location').innerText = data.location;
+          document.getElementById('flagship-title').innerText = data.title;
+          document.getElementById('flagship-desc').innerText = data.desc;
+          document.getElementById('flagship-investment').innerText = data.investment;
+          document.getElementById('flagship-roi').innerText = data.roi;
+          document.getElementById('flagship-size').innerText = data.size;
+          document.getElementById('flagship-completion').innerText = data.completion;
+
+          elements.forEach(id => {
+             const el = document.getElementById('flagship-' + id);
+             if(el) el.style.opacity = '1';
+          });
+        }, 300);
+      }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -3328,13 +3423,35 @@
           const bg = this.getAttribute('data-bg');
           if (concernsSection) concernsSection.style.backgroundImage = `url('${bg}')`;
 
-          // 3. Update Title text (with a tiny fade effect)
+          // 3. Update Title and Description with slide-up effect
           if (concernTitle) {
-            concernTitle.style.opacity = 0;
-            setTimeout(() => {
-              concernTitle.innerText = this.getAttribute('data-title');
-              concernTitle.style.opacity = 1;
-            }, 150);
+            const titleWrapper = concernTitle.closest('.animate-on-scroll-wrapper');
+            const concernDesc = document.getElementById('concern-desc');
+            const descWrapper = concernDesc ? concernDesc.closest('.animate-on-scroll-wrapper') : null;
+
+            if (titleWrapper) {
+              // Instant snap to bottom
+              concernTitle.style.transition = 'none';
+              titleWrapper.classList.remove('is-visible');
+              if (descWrapper && concernDesc) {
+                concernDesc.style.transition = 'none';
+                descWrapper.classList.remove('is-visible');
+              }
+
+              setTimeout(() => {
+                // Change text
+                concernTitle.innerText = this.getAttribute('data-title');
+
+                // Restore CSS transition and animate up
+                concernTitle.style.transition = '';
+                titleWrapper.classList.add('is-visible');
+
+                if (descWrapper && concernDesc) {
+                  concernDesc.style.transition = '';
+                  descWrapper.classList.add('is-visible');
+                }
+              }, 50);
+            }
           }
 
           // 4. Update Logo image
@@ -3373,7 +3490,7 @@
       class="relative bg-white w-full max-w-[1151px] h-auto md:h-[752px] overflow-hidden shadow-2xl flex flex-col md:flex-row scale-95 transition-transform duration-300">
       <!-- Close Button -->
       <button onclick="closeDirectorModal()"
-        class="absolute top-4 right-5 text-[#c0392b] text-3xl md:text-4xl font-thin z-20 leading-none hover:scale-125 transition-transform"
+        class="absolute top-4 right-5 text-[#c0392b] text-3xl md:text-4xl cursor-pointer font-thin z-20 leading-none hover:scale-125 transition-transform"
         aria-label="Close">&times;</button>
 
       <!-- Left: Image Panel -->
@@ -3459,11 +3576,14 @@
             </div>
             <div class="flex items-center gap-4">
               <i class="fa-regular fa-envelope text-xl"></i>
-              <p>info@bhaiya-group.com</p>
+              <a href="mailto:info@bhaiya-group.com" class="hover:text-cyan-400 transition-colors">info@bhaiya-group.com</a>
             </div>
             <div class="flex items-center gap-4">
               <i class="fa-solid fa-phone-volume text-xl"></i>
-              <p>+88-02-9551750, +88-02-9552395</p>
+              <p>
+                <a href="tel:+88029551750" class="hover:text-cyan-400 transition-colors">+88-02-9551750</a>, 
+                <a href="tel:+88029552395" class="hover:text-cyan-400 transition-colors">+88-02-9552395</a>
+              </p>
             </div>
           </div>
         </div>
@@ -3472,12 +3592,11 @@
         <div>
           <h4 class="text-lg md:text-2xl font-semibold mb-6">Quick Links</h4>
           <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-            <li><a href="./pages/concerns.html" class="hover:text-white transition-colors">Our Concerns</a></li>
-            <li><a href="./pages/our-products.html" class="hover:text-white transition-colors">Our Products</a></li>
-            <li><a href="./pages/stories.html" class="hover:text-white transition-colors">Media Center</a></li>
-            <li><a href="./pages/office-locations.html" class="hover:text-white transition-colors">Office Location</a>
-            </li>
+            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">About Us <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg></a></li>
+            <li><a href="./pages/concerns.html" class="flex items-center gap-2 hover:text-white transition-colors">Our Concerns <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg></a></li>
+            <li><a href="./pages/our-products.html" class="flex items-center gap-2 hover:text-white transition-colors">Our Products <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg></a></li>
+            <li><a href="./pages/stories.html" class="flex items-center gap-2 hover:text-white transition-colors">Media Center <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg></a></li>
+            <li><a href="./pages/office-locations.html" class="flex items-center gap-2 hover:text-white transition-colors">Office Location <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg></a></li>
           </ul>
         </div>
 
@@ -3485,11 +3604,11 @@
         <div>
           <h4 class="text-lg md:text-2xl font-semibold mb-6">Others Links</h4>
           <ul class="space-y-4 text-sm md:text-lg font-normal opacity-90">
-            <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
-            <li><a href="./pages/newsletter.html" class="hover:text-white transition-colors">Newsletters</a></li>
-            <li><a href="./pages/sustainability.html" class="hover:text-white transition-colors">Sustainability</a></li>
-            <li><a href="./pages/investor.html" class="hover:text-white transition-colors">Investor Relation</a></li>
-            <li><a href="./pages/contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="flex items-center gap-2 hover:text-white transition-colors">Events <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg></a></li>
+            <li><a href="./pages/newsletter.html" class="flex items-center gap-2 hover:text-white transition-colors">Newsletters <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg></a></li>
+            <li><a href="./pages/sustainability.html" class="flex items-center gap-2 hover:text-white transition-colors">Sustainability <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg></a></li>
+            <li><a href="./pages/investor.html" class="flex items-center gap-2 hover:text-white transition-colors">Investor Relation <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg></a></li>
+            <li><a href="./pages/contact.html" class="flex items-center gap-2 hover:text-white transition-colors">Contact Us <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 text-cyan-400"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg></a></li>
           </ul>
         </div>
 
@@ -3546,7 +3665,7 @@
       <!-- Footer Bottom -->
       <div
         class="mt-16 pt-8 border-t border-white flex flex-col md:flex-row justify-between items-center gap-4 text-sm md:text-lg font-normal opacity-80">
-        <p>Copyright &copy; 1972-2026 BHAIYA GROUP, All rights reserved</p>
+        <p>Copyright &copy; 1972-2026 BHAIYA DIGITAL, All rights reserved</p>
         <p>Designed by Bhaiya Digital</p>
       </div>
     </div>
@@ -3556,6 +3675,25 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script type="module" src="./assets/js/main.js"></script>
+  <script>
+    // Self-executing script to handle repeating scroll animations
+    (function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      // We use a small delay to ensure elements are found even in some HMR situations
+      setTimeout(() => {
+        document.querySelectorAll('.animate-on-scroll-wrapper').forEach(el => observer.observe(el));
+      }, 100);
+    })();
+  </script>
 </body>
 
 </html>

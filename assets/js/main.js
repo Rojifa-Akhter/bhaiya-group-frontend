@@ -182,31 +182,51 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Timeline Animation - Line + dot + name + year সব একসাথে নিচ থেকে উঠবে
 const timelineObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
+    const lines = entry.target.querySelectorAll('.timeline-line');
     if (entry.isIntersecting) {
-      const lines = entry.target.querySelectorAll('.timeline-line');
       lines.forEach((line, i) => {
-        setTimeout(() => {
+        if (line.resetTimeout) clearTimeout(line.resetTimeout);
+        
+        line.animTimeout = setTimeout(() => {
           line.style.transform = 'scaleY(1)';
           line.style.opacity = '1';
           const content = line.querySelector('.timeline-content');
           if (content) {
-            content.classList.remove('opacity-0', 'translate-y-full');
-            content.classList.add('opacity-100', 'translate-y-0');
+            content.classList.remove('opacity-0');
+            content.classList.add('opacity-100');
           }
           const yearEl = line.querySelector('.year-count');
           if (yearEl) {
             const target = parseInt(yearEl.dataset.target);
-            let current = target - 30;
-            const step = () => {
-              current += 1;
-              yearEl.textContent = current;
-              if (current < target) requestAnimationFrame(step);
+            const duration = 5000;
+            let startTime = null;
+            const step = (timestamp) => {
+              if (!startTime) startTime = timestamp;
+              const progress = Math.min((timestamp - startTime) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              yearEl.textContent = Math.floor(eased * target);
+              if (progress < 1) requestAnimationFrame(step);
+              else yearEl.textContent = target;
             };
             requestAnimationFrame(step);
           }
         }, i * 250);
       });
-      observer.unobserve(entry.target);
+    } else {
+      lines.forEach((line) => {
+        if (line.animTimeout) clearTimeout(line.animTimeout);
+        line.style.transform = 'scaleY(0)';
+        line.style.opacity = '0';
+        const content = line.querySelector('.timeline-content');
+        if (content) {
+          content.classList.add('opacity-0');
+          content.classList.remove('opacity-100');
+        }
+        const yearEl = line.querySelector('.year-count');
+        if (yearEl) {
+           yearEl.textContent = "0";
+        }
+      });
     }
   });
 }, { threshold: 0.3 });
