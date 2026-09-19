@@ -38,6 +38,21 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="../assets/css/input.css" />
     <style>
+      .animate-on-scroll-wrapper {
+        overflow: hidden;
+        display: block;
+        padding-bottom: 5px;
+      }
+
+      .animate-on-scroll-wrapper > * {
+        transform: translateY(105%);
+        transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .animate-on-scroll-wrapper.is-visible > * {
+        transform: translateY(0);
+      }
+
       .h1-wrapper {
         overflow: hidden;
         display: block;
@@ -77,7 +92,7 @@
 
       .down-indicator {
         opacity: 0;
-        transform: translateX(-50%) translateY(-4px) scale(0.5);
+        transform: translateY(-4px) scale(0.5);
         transition:
           opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
           transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
@@ -85,7 +100,7 @@
 
       .down-indicator.open {
         opacity: 1;
-        transform: translateX(-50%) translateY(0) scale(1);
+        transform: translateY(0) scale(1);
       }
 
       @keyframes zoomSlow {
@@ -973,11 +988,13 @@
         <div class="absolute inset-0 bg-black/40"></div>
 
         <div class="relative z-10 text-center text-white px-4 mt-10">
-          <h1
-            class="text-3xl md:text-5xl font-bold uppercase tracking-wide leading-tight mb-4"
-          >
-            Creating a Legacy<br />of Success
-          </h1>
+          <div class="animate-on-scroll-wrapper">
+            <h1
+              class="text-3xl md:text-5xl font-bold uppercase tracking-wide leading-tight mb-4"
+            >
+              Creating a Legacy<br />of Success
+            </h1>
+          </div>
           <div
             class="flex items-center justify-center gap-2 text-sm md:text-lg font-normal"
           >
@@ -1036,9 +1053,9 @@
       >
         <div class="mx-auto px-4">
           <!-- Title -->
-          <h2 class="section-title text-[#111827] text-center mb-16">
-            Our Legacy
-          </h2>
+          <div class="animate-on-scroll-wrapper flex justify-center mb-16">
+            <h2 class="section-title text-[#111827] text-center">Our Legacy</h2>
+          </div>
 
           <!-- Swiper -->
           <div class="swiper legacySwiper">
@@ -1095,13 +1112,17 @@
           <div
             class="container mx-auto text-center mt-12 text-[#111827] md:mt-16"
           >
-            <h3 class="text-2xl md:text-3xl font-bold uppercase mb-4">
-              Founder Chairman
-            </h3>
-            <p class="text-base italic mb-8">
-              Founding father and the man who set up many of pre-independent
-              India's critical industries.
-            </p>
+            <div class="animate-on-scroll-wrapper">
+              <h3 class="text-2xl md:text-3xl font-bold uppercase mb-4">
+                Founder Chairman
+              </h3>
+            </div>
+            <div class="animate-on-scroll-wrapper">
+              <p class="text-base italic mb-8" style="transition-delay: 0.1s">
+                Founding father and the man who set up many of pre-independent
+                India's critical industries.
+              </p>
+            </div>
             <div class="relative p-2 md:p-4 inline-block text-left">
               <!-- Top Left Bracket -->
               <div
@@ -1234,29 +1255,34 @@
               >
                 Company About
               </h4>
-              <h2 class="section-title text-[#111827] leading-tight mb-6">
-                One Of The Fastest Way To Gain<br
-                  class="hidden md:block"
-                />Business
-              </h2>
+              <div class="animate-on-scroll-wrapper">
+                <h2 class="section-title text-[#111827] leading-tight mb-6">
+                  One Of The Fastest Way To Gain<br
+                    class="hidden md:block"
+                  />Business
+                </h2>
+              </div>
 
-              <div
-                class="text-gray-600 text-sm md:text-base space-y-5 mb-8 leading-relaxed"
-              >
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting.
-                </p>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled
-                </p>
+              <div class="animate-on-scroll-wrapper">
+                <div
+                  class="text-gray-600 text-sm md:text-base space-y-5 mb-8 leading-relaxed"
+                  style="transition-delay: 0.2s"
+                >
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting.
+                  </p>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled
+                  </p>
+                </div>
               </div>
 
               <h5 class="text-[#111827] text-lg font-bold mb-6">
@@ -1394,21 +1420,26 @@
         <div class="container mx-auto px-4 md:px-10">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <!-- Left: Text -->
-            <div class="lg:col-span-4 space-y-6">
-              <h2 class="scroll-move section-title text-[#111827] mb-6 md:mb-0">
-                Our Heritage
-              </h2>
-              <p
-                class="scroll-move text-gray-600 text-sm md:text-base leading-relaxed"
-              >
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
-                slightly.
-              </p>
+            <div class="scroll-move lg:col-span-4 space-y-6">
+              <div class="animate-on-scroll-wrapper mb-6 md:mb-0">
+                <h2 class=" section-title text-[#111827]">
+                  Our Heritage
+                </h2>
+              </div>
+              <div class="animate-on-scroll-wrapper">
+                <p
+                  class=" text-gray-600 text-sm md:text-base leading-relaxed"
+                  style="transition-delay: 0.2s"
+                >
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly.
+                </p>
+              </div>
               <a
                 href="#"
-                class="scroll-move group inline-flex items-center gap-4 bg-transparent border border-[#111827] text-[#111827] pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-[#111827] hover:text-white transition-colors duration-300 w-fit"
+                class=" group inline-flex items-center gap-4 bg-transparent border border-[#111827] text-[#111827] pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-[#111827] hover:text-white transition-colors duration-300 w-fit"
               >
                 <!-- Text Animation -->
                 <div class="relative h-5 overflow-hidden pointer-events-none">
@@ -1465,23 +1496,16 @@
                   height: 110px;
                   object-fit: cover;
                 }
-
                 .tape {
                   position: absolute;
                   top: -8px;
-                  left: 50%;
-                  transform: translateX(-50%);
+                  left: calc(50% - 17.5px);
                   width: 35px;
                   height: 16px;
                   background-color: rgba(147, 197, 253, 0.7);
-                  /* Light blue translucent tape */
-                  z-index: 5;
-                }
-
-                @media (min-width: 768px) {
-                  .polaroid img {
-                    height: 130px;
-                  }
+                  z-index: 25;
+                  border-radius: 2px;
+                  transform-origin: left center;
                 }
 
                 @media (min-width: 1024px) {
@@ -1492,13 +1516,13 @@
               </style>
 
               <div
-                class="grid grid-cols-2 md:grid-cols-5 gap-x-4 gap-y-10 md:gap-y-14 relative mt-10 lg:mt-0"
+                id="polaroid-grid" class="grid grid-cols-2 md:grid-cols-5 gap-x-4 gap-y-10 md:gap-y-14 relative mt-10 lg:mt-0"
               >
                 <!-- Row 1 -->
-                <div class="polaroid" style="transform: rotate(-3deg)">
+                <div class="polaroid" style="transform: rotate(2deg)">
                   <div
                     class="tape"
-                    style="transform: translateX(-50%) rotate(-2deg)"
+                      style="transform: rotate(1deg)"
                   ></div>
                   <img
                     src="../assets/images/legacy/heritage (1).jpg"
@@ -1507,11 +1531,11 @@
                 </div>
                 <div
                   class="polaroid"
-                  style="transform: rotate(3deg); margin-top: 15px"
+                  style="transform: rotate(-4deg); margin-top: 15px"
                 >
                   <div
                     class="tape"
-                    style="transform: translateX(-50%) rotate(3deg)"
+                      style="transform: rotate(-2deg)"
                   ></div>
                   <img
                     src="../assets/images/legacy/heritage (8).png"
@@ -1520,11 +1544,11 @@
                 </div>
                 <div
                   class="polaroid"
-                  style="transform: rotate(-2deg); margin-top: -5px"
+                  style="transform: rotate(3deg); margin-top: -8px"
                 >
                   <div
                     class="tape"
-                    style="transform: translateX(-50%) rotate(-1deg)"
+                      style="transform: rotate(4deg)"
                   ></div>
                   <img
                     src="../assets/images/legacy/heritage (6).png"
@@ -1533,11 +1557,11 @@
                 </div>
                 <div
                   class="polaroid"
-                  style="transform: rotate(4deg); margin-top: 10px"
+                  style="transform: rotate(-2deg); margin-top: 5px"
                 >
                   <div
                     class="tape"
-                    style="transform: translateX(-50%) rotate(2deg)"
+                      style="transform: rotate(-1deg)"
                   ></div>
                   <img
                     src="../assets/images/legacy/heritage (3).png"
@@ -1546,11 +1570,11 @@
                 </div>
                 <div
                   class="polaroid"
-                  style="transform: rotate(4deg); margin-top: 10px"
+                  style="transform: rotate(-2deg); margin-top: 5px"
                 >
                   <div
                     class="tape"
-                    style="transform: translateX(-50%) rotate(2deg)"
+                      style="transform: rotate(-1deg)"
                   ></div>
                   <img
                     src="../assets/images/legacy/heritage (1).png"
@@ -1562,7 +1586,7 @@
                 <div class="polaroid" style="transform: rotate(2deg)">
                   <div
                     class="tape"
-                    style="transform: translateX(-50%) rotate(1deg)"
+                    style="transform: rotate(1deg)"
                   ></div>
                   <img
                     src="../assets/images/legacy/heritage (4).png"
@@ -1575,7 +1599,7 @@
                 >
                   <div
                     class="tape"
-                    style="transform: translateX(-50%) rotate(-2deg)"
+                    style="transform: rotate(-2deg)"
                   ></div>
                   <img
                     src="../assets/images/legacy/heritage (2).png"
@@ -1588,7 +1612,7 @@
                 >
                   <div
                     class="tape"
-                    style="transform: translateX(-50%) rotate(4deg)"
+                    style="transform: rotate(4deg)"
                   ></div>
                   <img
                     src="../assets/images/legacy/heritage (2).jpg"
@@ -1601,7 +1625,7 @@
                 >
                   <div
                     class="tape"
-                    style="transform: translateX(-50%) rotate(-1deg)"
+                    style="transform: rotate(-1deg)"
                   ></div>
                   <img
                     src="../assets/images/legacy/heritage (7).png"
@@ -1614,7 +1638,7 @@
                 >
                   <div
                     class="tape"
-                    style="transform: translateX(-50%) rotate(-1deg)"
+                    style="transform: rotate(-1deg)"
                   ></div>
                   <img
                     src="../assets/images/legacy/heritage (5).png"
@@ -1628,74 +1652,76 @@
       </section>
 
       <!-- Our Journey Section -->
-      <section
-        id="our-journey"
-        class="relative w-full h-[50vh] md:h-[120vh] flex items-center justify-center overflow-hidden"
-      >
-        <!-- Background Video Player -->
-        <video
-          id="journey-video"
-          class="absolute inset-0 w-full h-full object-cover"
-          autoplay
-          muted
-          loop
-          playsinline
+              <section
+          id="our-journey-section"
+          class="w-full h-[60vh] md:h-screen bg-white flex items-center justify-center overflow-hidden"
         >
-          <source src="../assets/video/legacy.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
-        <!-- Dark tint for text readability -->
-        <div
-          id="journey-tint"
-          class="absolute inset-0 bg-black/40 pointer-events-none"
-        ></div>
-
-        <!-- Content Overlay -->
-        <div
-          id="journey-overlay"
-          class="relative z-10 flex flex-col items-center text-center text-white w-full h-full justify-center"
-        >
-          <h2
-            class="text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase tracking-widest mb-6"
+          <div
+            id="our-journey-wrapper"
+            class="relative w-[90%] h-[90%] md:w-[85%] md:h-[85%] overflow-hidden transition-all duration-[1200ms] ease-in-out"
           >
-            Our Journey
-          </h2>
+            <!-- Background Video Player -->
+            <video
+              id="journey-video"
+              class="absolute inset-0 w-full h-full object-cover"
+              muted
+              loop
+              playsinline
+            >
+              <source src="../assets/video/legacy.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
-          <button
-            onclick="playJourneyVideo()"
-            class="flex flex-col items-center justify-center group hover:scale-110 transition-transform duration-300 cursor-pointer"
-          >
+            <!-- Dark tint for text readability -->
             <div
-              class="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-white flex items-center justify-center mb-3 group-hover:bg-white group-hover:text-[#111827] transition-colors"
+              id="journey-tint"
+              class="absolute inset-0 bg-black/40 pointer-events-none transition-opacity duration-500"
+            ></div>
+
+            <!-- Content Overlay -->
+            <div
+              id="journey-overlay"
+              class="relative z-10 flex flex-col items-center text-center text-white w-full h-full justify-center transition-opacity duration-500"
             >
-              <i class="fa-solid fa-play text-xl md:text-2xl ml-1"></i>
+              <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase tracking-widest mb-6"
+              >
+                Our Journey
+              </h2>
+
+              <button
+                onclick="playJourneyVideo()"
+                class="flex flex-col items-center justify-center group hover:scale-110 transition-transform duration-300 cursor-pointer"
+              >
+                <div
+                  class="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-white flex items-center justify-center mb-3 group-hover:bg-white group-hover:text-[#111827] transition-colors"
+                >
+                  <i class="fa-solid fa-play text-xl md:text-2xl ml-1"></i>
+                </div>
+                <span
+                  class="text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase"
+                  >Watch Video</span
+                >
+              </button>
             </div>
-            <span
-              class="text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase"
-              >Watch Video</span
-            >
-          </button>
-        </div>
+          </div>
 
-        <script>
-          function playJourneyVideo() {
-            const video = document.getElementById("journey-video");
-            const overlay = document.getElementById("journey-overlay");
-            const tint = document.getElementById("journey-tint");
+          <script>
+            function playJourneyVideo() {
+              const video = document.getElementById("journey-video");
+              const overlay = document.getElementById("journey-overlay");
+              const tint = document.getElementById("journey-tint");
 
-            // Enable sound and controls
-            video.muted = false;
-            video.setAttribute("controls", "true");
-            video.currentTime = 0;
-            video.play();
+              video.muted = false;
+              video.setAttribute("controls", "true");
+              video.currentTime = 0;
+              video.play();
 
-            // Hide the overlay elements
-            overlay.classList.add("hidden");
-            if (tint) tint.classList.add("hidden");
-          }
-        </script>
-      </section>
+              overlay.classList.add("opacity-0", "pointer-events-none");
+              if (tint) tint.classList.add("opacity-0");
+            }
+          </script>
+        </section>
     </main>
 
     <!-- FOOTER SECTION -->
@@ -2132,7 +2158,7 @@
     <!-- Script for Mobile Hamburger Menu Toggle -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="../assets/js/main.js?v=24"></script>
 
     <!-- Page Specific Script -->
     <script>
@@ -2157,55 +2183,63 @@
               prevEl: ".legacy-prev",
             },
           });
-          // Counter Animation
+          // Counter Animation with Reset on Scroll
           const counters = document.querySelectorAll(".counter");
           const speed = 200; // The lower the slower
 
-          const animateCounters = () => {
-            counters.forEach((counter) => {
-              const updateCount = () => {
-                const target = +counter.getAttribute("data-target");
-                const count = +counter.innerText.replace(/,/g, "");
-                const inc = target / speed;
+          const animateCounter = (counter) => {
+            counter.setAttribute("data-animating", "true");
+            const target = +counter.getAttribute("data-target");
 
-                if (count < target) {
-                  let nextValue = Math.ceil(count + inc);
-                  counter.innerText = nextValue.toLocaleString();
-                  setTimeout(updateCount, 20);
+            // Set initial state based on format
+            const format = counter.getAttribute("data-format");
+            counter.innerText = format === "pad2" ? "00" : "0";
+
+            const updateCount = () => {
+              // Stop if it went out of view
+              if (counter.getAttribute("data-animating") !== "true") return;
+
+              const count = +counter.innerText.replace(/,/g, "");
+              const inc = Math.max(1, target / speed);
+
+              if (count < target) {
+                let nextValue = Math.ceil(count + inc);
+                counter.innerText = nextValue.toLocaleString();
+                setTimeout(updateCount, 20);
+              } else {
+                if (format === "pad2") {
+                  counter.innerText = target.toString().padStart(2, "0");
                 } else {
-                  const format = counter.getAttribute("data-format");
-                  if (format === "pad2") {
-                    counter.innerText = target.toString().padStart(2, "0");
-                  } else {
-                    counter.innerText = target.toLocaleString();
-                  }
+                  counter.innerText = target.toLocaleString();
                 }
-              };
-              updateCount();
-            });
+              }
+            };
+
+            updateCount();
           };
 
-          // Intersection Observer for Counter
           const counterObserver = new IntersectionObserver(
-            (entries, observer) => {
-              let hasIntersected = false;
+            (entries) => {
               entries.forEach((entry) => {
+                const counter = entry.target;
                 if (entry.isIntersecting) {
-                  hasIntersected = true;
-                  observer.unobserve(entry.target);
+                  // Only start if not already at target or not animating
+                  animateCounter(counter);
+                } else {
+                  // Reset counter when out of view
+                  counter.setAttribute("data-animating", "false");
+                  const format = counter.getAttribute("data-format");
+                  counter.innerText = format === "pad2" ? "00" : "0";
                 }
               });
-              if (hasIntersected) {
-                animateCounters();
-              }
             },
-            { threshold: 0.5 },
+            { threshold: 0.1 },
           );
 
-          const aboutSection = document.getElementById("about-company");
-          const statsSection = document.querySelector(".bg-\\[\\#111827\\]"); // Stats section
-          if (aboutSection) counterObserver.observe(aboutSection);
-          if (statsSection) counterObserver.observe(statsSection);
+          // Observe individual counters instead of entire sections
+          counters.forEach((counter) => {
+            counterObserver.observe(counter);
+          });
 
           // Image Zoom Modal Logic
           const imageModal = document.getElementById("imageModal");
@@ -2266,5 +2300,123 @@
         class="max-w-full max-h-[90vh] object-contain rounded-lg transform scale-95 transition-transform duration-300"
       />
     </div>
-  </body>
+  
+    <script>
+// Tape Connector Logic
+function drawTapeConnections() {
+  const grid = document.getElementById("polaroid-grid");
+  if (!grid) return;
+  
+  let oldSvg = document.getElementById("tape-connector-svg");
+  if (oldSvg) oldSvg.remove();
+
+  const tapes = Array.from(grid.querySelectorAll(".polaroid .tape"));
+  if (tapes.length < 2) return;
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.id = "tape-connector-svg";
+  svg.style.position = "absolute";
+  svg.style.top = "0";
+  svg.style.left = "0";
+  svg.style.width = "100%";
+  svg.style.height = "100%";
+  svg.style.pointerEvents = "none";
+  svg.style.zIndex = "30";
+  svg.style.overflow = "visible";
+
+  const gridRect = grid.getBoundingClientRect();
+  
+  const isDesktop = window.innerWidth >= 768;
+  const cols = isDesktop ? 5 : 2;
+  
+  for (let i = 0; i < tapes.length; i += cols) {
+    const rowTapes = tapes.slice(i, i + cols);
+    if (rowTapes.length < 2) continue;
+    
+    let d = "";
+    rowTapes.forEach((tape, index) => {
+      const rect = tape.getBoundingClientRect();
+      const x = rect.left - gridRect.left + (rect.width / 2);
+      let y = rect.top - gridRect.top + (rect.height / 2);
+      
+
+      
+      if (index === 0) {
+        d += "M " + x + " " + y + " ";
+      } else {
+        d += "L " + x + " " + y + " ";
+      }
+    });
+    
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", d);
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", "rgba(147, 197, 253, 0.7)");
+    path.setAttribute("stroke-width", "16");
+    path.setAttribute("stroke-linecap", "round");
+    path.setAttribute("stroke-linejoin", "round");
+    
+    svg.appendChild(path);
+    
+    setTimeout(() => {
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+      path.style.setProperty("--path-length", length);
+      path.style.animation = "drawPathExact 4s infinite linear";
+    }, 10);
+  }
+  
+      if (!document.getElementById("tape-keyframes-exact")) {
+    const style = document.createElement("style");
+    style.id = "tape-keyframes-exact";
+    style.innerHTML = `
+      @keyframes drawPathExact {
+        0%, 10% { stroke-dashoffset: var(--path-length); opacity: 1; }
+        80%, 95% { stroke-dashoffset: 0; opacity: 1; }
+        100% { stroke-dashoffset: 0; opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  grid.appendChild(svg);
+}
+
+window.addEventListener("load", drawTapeConnections);
+window.addEventListener("resize", drawTapeConnections);
+// Video Expand on Scroll Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const journeySec = document.getElementById("our-journey-section");
+  const wrapper = document.getElementById("our-journey-wrapper");
+  const video = document.getElementById("journey-video");
+
+  if (journeySec && wrapper && video) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Expand to full width/height and remove border radius
+          wrapper.classList.remove("w-[90%]", "h-[90%]", "md:w-[85%]", "md:h-[85%]");
+          wrapper.classList.add("w-full", "h-full", "rounded-none");
+          // Play video
+          if (video.paused) {
+            video.play().catch(e => console.log("Autoplay prevented:", e));
+          }
+        } else {
+          // Shrink back
+          wrapper.classList.remove("w-full", "h-full", "rounded-none");
+          wrapper.classList.add("w-[90%]", "h-[90%]", "md:w-[85%]", "md:h-[85%]");
+          // Pause video
+          if (!video.paused && !video.hasAttribute("controls")) {
+            video.pause();
+          }
+        }
+      });
+    }, { threshold: 0.4 });
+
+    observer.observe(journeySec);
+  }
+});
+    </script>
+</body>
 </html>
