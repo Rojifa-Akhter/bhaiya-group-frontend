@@ -25,7 +25,7 @@
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="../assets/css/input.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="../assets/css/custom.css?v=16" />
 </head>
 
 <body class="font-manrope overflow-x-hidden">
@@ -549,33 +549,26 @@
         </section>
 
         <!-- Tabs Navigation Section -->
-        <section class="relative w-full bg-white shadow-sm">
+        <section class="relative w-full bg-white shadow-sm sticky top-[96px] lg:top-[136px] z-40">
             <div class="container mx-auto px-4 md:px-10">
-                <ul
-                    class="flex items-start justify-start gap-8 md:gap-14 overflow-x-auto no-scrollbar whitespace-nowrap">
+                <ul class="scrollspy-tabs flex items-start justify-start gap-8 md:gap-14 overflow-x-auto text-[#111827] no-scrollbar whitespace-nowrap">
                     <li>
-                        <a href="#our-legacy"
-                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium text-[#111827] border-b-2 border-[#1864FF]">Our
-                            Chairman</a>
+                        <a href="#our-chairman" class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium border-b-2 border-[#1864FF]">Our Chairman</a>
                     </li>
                     <li>
-                        <a href="#about-company"
-                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium text-[#4B5563] hover:text-[#111827] transition-colors border-b-2 border-transparent hover:border-gray-300">Our
-                            Concerns Directors</a>
+                        <a href="#concerns-directors" class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium border-b-2 border-transparent hover:border-gray-300 transition-colors">Our Concerns Directors</a>
                     </li>
                     <li>
-                        <a href="#our-heritage"
-                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium text-[#4B5563] hover:text-[#111827] transition-colors border-b-2 border-transparent hover:border-gray-300">Corporate
-                            Directors</a>
+                        <a href="#corporate-directors" class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium border-b-2 border-transparent hover:border-gray-300 transition-colors">Corporate Directors</a>
                     </li>
                 </ul>
             </div>
         </section>
         <!-- Chairman Message Section -->
-        <section class="w-full bg-[#E8EFFF52] py-6 md:py-10">
+        <section id="our-chairman" class="w-full bg-[#E8EFFF52] py-6 md:py-10 scroll-mt-40">
             <div class="container mx-auto">
 
-                <h2 class="section-title text-[#111827] mb-12 md:mb-16">Our Chairman</h2>
+                <h2 class="section-title text-[#111827] mb-10">Our Chairman</h2>
 
                 <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 items-stretch">
 
@@ -595,16 +588,16 @@
                     </div>
 
                     <!-- Right Column (Text Content) -->
-                    <div class="w-full lg:w-[55%] flex flex-col justify-center">
+                    <div class="w-full lg:w-[55%] scroll-move flex flex-col justify-center">
 
                         <!-- Name & Title (top) -->
                         <div class="mb-6">
-                            <h3 class="scroll-move section-subtitle text-[#111827] mb-1.5">Maroof Sattar Ali</h3>
-                            <p class="scroll-move text-[#2563EB] section-text font-semibold">Chairman, Bhaiya Group</p>
+                            <h3 class=" section-subtitle text-[#111827] mb-1.5">Maroof Sattar Ali</h3>
+                            <p class="text-[#2563EB] section-text font-semibold">Chairman, Bhaiya Group</p>
                         </div>
 
                         <!-- Italic serif paragraph -->
-                        <div class="scroll-move text-gray-500 font-serif italic section-text leading-[1.9] mb-8">
+                        <div class="text-gray-500 font-serif italic section-text leading-[1.9] mb-8">
                             <p>
                                 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
                                 piece
@@ -653,8 +646,8 @@
                 </div>
             </div>
         </section>
-        <!-- Directors Section -->
-        <section class="w-full py-6 md:py-20">
+        <!-- Concerns Directors Section -->
+        <section id="concerns-directors" class="w-full py-6 md:py-20 scroll-mt-40">
             <div class="container mx-auto">
                 <!-- Header -->
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8 md:gap-0">
@@ -951,8 +944,8 @@
                 </div>
             </div>
         </section>
-        <!-- Directors Section -->
-        <section class="w-full bg-[#E8EFFF52] py-6 md:py-20">
+        <!-- Corporate Directors Section -->
+        <section id="corporate-directors" class="w-full bg-[#E8EFFF52] py-6 md:py-20 scroll-mt-40">
             <div class="container mx-auto">
                 <!-- Header -->
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8 md:gap-0">
@@ -1377,7 +1370,7 @@
     <!-- Script for Mobile Hamburger Menu Toggle -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="../assets/js/main.js?v=24"></script>
 </body>
 
 </html>

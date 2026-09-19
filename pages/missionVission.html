@@ -25,7 +25,7 @@
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="../assets/css/input.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="../assets/css/custom.css?v=16" />
 </head>
 
 <body class="font-manrope overflow-x-hidden">
@@ -551,19 +551,19 @@
         <!-- Tabs Navigation Section -->
         <section class="relative w-full bg-white shadow-sm sticky top-[96px] lg:top-[136px] z-40 mb-4 md:mb-10">
             <div class="container mx-auto px-4 md:px-10">
-                <ul
-                    class="flex items-start justify-start gap-8 md:gap-14 overflow-x-auto text-[#111827] no-scrollbar whitespace-nowrap">
+                                <ul class="scrollspy-tabs flex items-start justify-start gap-8 md:gap-14 overflow-x-auto text-[#111827] no-scrollbar whitespace-nowrap">
                     <li>
-                        <a href="./missionVission.html"
-                            class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium  border-b-2 border-[#1864FF]">Our
-                            Mission & Vision</a>
+                        <a href="#mission" class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium border-b-2 border-[#1864FF]">Our Mission</a>
+                    </li>
+                    <li>
+                        <a href="#vision" class="inline-block py-4 md:py-5 text-sm md:text-lg font-medium border-b-2 border-transparent hover:border-gray-300 transition-colors">Our Vision</a>
                     </li>
                 </ul>
             </div>
         </section>
 
         <!-- Our Mission Section -->
-        <section class="py-6 md:py-24 bg-white overflow-hidden">
+        <section id="mission" class="py-6 md:py-24 bg-white overflow-hidden scroll-mt-40">
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -647,7 +647,7 @@
             </div>
         </section>
         <!-- Our Vision Section -->
-        <section class="py-6 md:py-24 bg-white overflow-hidden">
+        <section id="vision" class="py-6 md:py-24 bg-white overflow-hidden scroll-mt-40">
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -721,7 +721,7 @@
                         </div>
 
                         <!-- Aerial pool image (overlapping in the cutout, lower-left) -->
-                        <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[52%] md:w-[46%] z-10">
+                        <div class="absolute left-0 top-[60%] -translate-y-1/2 w-[52%] md:w-[46%] z-10">
                             <img src="../assets/images/mission/Rectangle 11.png" alt="Aerial view of pool amenities"
                                 class="w-full md:h-[392px] object-cover rounded-3xl">
                         </div>
@@ -858,7 +858,7 @@
     <!-- Script for Mobile Hamburger Menu Toggle -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="../assets/js/main.js?v=24"></script>
 </body>
 
 </html>

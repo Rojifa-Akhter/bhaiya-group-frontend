@@ -53,8 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeAllMenus = (exceptDropdownId) => {
     document.querySelectorAll('[id$="-dropdown"]').forEach(drop => {
       if (drop.id !== exceptDropdownId) {
-        drop.classList.remove('open');
-        setTimeout(() => {
+        drop.classList.remove('open');setTimeout(() => {
           if (!drop.classList.contains('open')) {
             drop.classList.add('hidden');
           }
@@ -64,8 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[id$="-indicator"]').forEach(ind => {
       const prefix = ind.id.replace('-indicator', '');
       if (!exceptDropdownId || !exceptDropdownId.startsWith(prefix)) {
-        ind.classList.remove('open');
-        setTimeout(() => {
+        ind.classList.remove('open');setTimeout(() => {
           if (!ind.classList.contains('open')) {
             ind.classList.add('hidden');
           }
@@ -95,15 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeMenu = () => {
       if (indicator) {
-        indicator.classList.remove('open');
-        setTimeout(() => {
+        indicator.classList.remove('open');setTimeout(() => {
           if (!indicator.classList.contains('open')) {
             indicator.classList.add('hidden');
           }
         }, 200);
       }
-      dropdown.classList.remove('open');
-      setTimeout(() => {
+      dropdown.classList.remove('open');setTimeout(() => {
         if (!dropdown.classList.contains('open')) {
           dropdown.classList.add('hidden');
         }
@@ -187,7 +183,7 @@ const timelineObserver = new IntersectionObserver((entries, observer) => {
       lines.forEach((line, i) => {
         if (line.resetTimeout) clearTimeout(line.resetTimeout);
         
-        line.animTimeout = setTimeout(() => {
+        line.animTimeout =setTimeout(() => {
           line.style.transform = 'scaleY(1)';
           line.style.opacity = '1';
           const content = line.querySelector('.timeline-content');
@@ -300,16 +296,7 @@ if (timelineContainer) timelineObserver.observe(timelineContainer);
     });
   }
 
-  // 9. Purpose Cards Animation
-  const purposeObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-  document.querySelectorAll('.purpose-text-animate').forEach(card => purposeObserver.observe(card));
+  
 
   // Counter + circular progress-ring animation
   // Observes .impact-circle wrappers — fires after section becomes visible
@@ -430,3 +417,91 @@ if (timelineContainer) timelineObserver.observe(timelineContainer);
     });
   });
 })();
+
+
+// Global animate-on-scroll logic
+function initScrollAnimations() {
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      } else {
+        entry.target.classList.remove('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  setTimeout(() => {
+    document.querySelectorAll('.section-title, .section-subtitle, .section-text, .animate-hero-height h1, .animate-hero-height .relative.z-10 > .flex').forEach(el => {
+      if (el.closest('.animate-on-scroll-wrapper') || el.closest('.purpose-text-animate')) return;
+      el.classList.add('safe-fade-up');
+    });
+
+    setTimeout(() => {
+      document.querySelectorAll('.safe-fade-up').forEach(el => scrollObserver.observe(el));
+      document.querySelectorAll('.animate-on-scroll-wrapper').forEach(el => scrollObserver.observe(el));
+    }, 100);
+  }, 100);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScrollAnimations);
+} else {
+  initScrollAnimations();
+}
+
+
+// Global Scrollspy for Tabs Navigation
+document.addEventListener("DOMContentLoaded", () => {
+    const tabGroups = document.querySelectorAll('.scrollspy-tabs');
+    
+    tabGroups.forEach(group => {
+        const tabs = group.querySelectorAll('a[href^="#"]');
+        const sections = [];
+        
+        tabs.forEach(tab => {
+            const targetId = tab.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const sec = document.querySelector(targetId);
+                if (sec) sections.push({ tab, sec });
+            }
+            
+            // Click handler (instant update)
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => {
+                    t.classList.remove('border-[#1864FF]', 'border-[#2563EB]', 'text-[#2563EB]', 'font-semibold');
+                    t.classList.add('border-transparent', 'hover:border-gray-300', 'text-gray-900', 'font-medium');
+                });
+                this.classList.remove('border-transparent', 'hover:border-gray-300', 'text-gray-900', 'font-medium');
+                this.classList.add('border-[#2563EB]', 'text-[#2563EB]', 'font-semibold');
+            });
+        });
+
+        // Scroll listener for auto-updating
+        if (sections.length > 0) {
+            window.addEventListener('scroll', () => {
+                let currentTab = null;
+                // Find the last section whose top is above or near the sticky header (136px + buffer)
+                sections.forEach(({tab, sec}) => {
+                    const rect = sec.getBoundingClientRect();
+                    if (rect.top <= 250) {
+                        currentTab = tab;
+                    }
+                });
+                
+                if (currentTab) {
+                    tabs.forEach(t => {
+                        if (t === currentTab) {
+                            t.classList.remove('border-transparent', 'hover:border-gray-300', 'text-gray-900', 'font-medium');
+                            t.classList.add('border-[#2563EB]', 'text-[#2563EB]', 'font-semibold');
+                        } else {
+                            t.classList.remove('border-[#1864FF]', 'border-[#2563EB]', 'text-[#2563EB]', 'font-semibold');
+                            t.classList.add('border-transparent', 'hover:border-gray-300', 'text-gray-900', 'font-medium');
+                        }
+                    });
+                }
+            }, { passive: true });
+        }
+    });
+});
+
